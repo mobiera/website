@@ -1,3 +1,61 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Mobiera'
+theme = 'mobiera'
+# sectionPagesMenu = "main"
+
+[menu]
+  [[menu.txt]]
+    text = "We’re showcasing our Web5 Accelerator suite at Geneva."
+  [[menu.link]]
+    name = "Learn more"
+    url = ""
+  [[menu.btn1]]
+    name = "Contact"
+    url = "/contact/"
+  [[menu.btn2]]
+    name = "Login"
+    url = "/login/"
+  [[menu.main]]
+    name = "Telecom"
+    url = "/telecom/"
+    weight = 10
+  [[menu.main]]
+    name = "DevSecOps"
+    url = "/dev-sec-ops/"
+    weight = 20
+  [[menu.main]]
+    name = "Innovation"
+    url = "/innovation/"
+    weight = 30
+  [[menu.main]]
+    name = "Company"
+    url = "/company/"
+    weight = 40
+  [[menu.footer]]
+    name = 'Contact Us'
+    pageRef = '/contact-us'
+    weight = 10
+  [[menu.footer]]
+    name = 'Privacy Policy'
+    pageRef = '/privacy-policy'
+    weight = 20
+  [[menu.footer]]
+    name = 'Careers'
+    pageRef = '/careers'
+    weight = 30
+  [[menu.footer]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 40
+  [[menu.footer]]
+    name = 'About Us'
+    pageRef = '/about-us'
+    weight = 50
+
+
+[params]
+ copyright = "© All rights reserved - 2011-2023"
+
+ 
+    
