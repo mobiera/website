@@ -7,6 +7,8 @@
     "compile": "npx tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --watch"
   },
   "devDependencies": {
+    "prettier": "3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {}
