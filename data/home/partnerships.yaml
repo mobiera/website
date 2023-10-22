@@ -1,0 +1,55 @@
+enabled: true
+
+title: "Partnerships"
+subtitle: "We partner with bluechip players and innovators to deliver world-class digital experiences and platforms."
+text1: "We aim to create lasting value for our customers by fostering win-win partnerships, to unlock greater business potential, broaden our scope, enrich our experiences, and share our expertise effectively."
+text2: "We continuously seek opportunities to expand our network of like-minded partners. Feel free to contact us and explore potential avenues for collaboration."
+btn: "Contact us"
+link: "/"
+partners: "Some of our partners:"
+
+content:
+  logo:
+    - name: "Digicel"
+      image: "images/partnerships/digicel.svg"
+      link: ""
+
+    - name: "Viettel"
+      image: "images/partnerships/viettel.svg"
+      link: ""
+
+    - name: "2060"
+      image: "images/partnerships/2060.svg"
+      link: ""
+
+    - name: "Ooredoo"
+      image: "images/partnerships/ooredoo.svg"
+      link: ""
+
+    - name: "Viva"
+      image: "images/partnerships/viva.svg"
+      link: ""
+
+    - name: "Bitel"
+      image: "images/partnerships/bitel.svg"
+      link: ""
+
+    - name: "Claro"
+      image: "images/partnerships/claro.svg"
+      link: ""
+
+    - name: "Bitdefender"
+      image: "images/partnerships/bitdefender.svg"
+      link: ""
+
+    - name: "Halotel"
+      image: "images/partnerships/halotel.svg"
+      link: ""
+
+    - name: "America movil"
+      image: "images/partnerships/america-movil.png"
+      link: ""
+
+    - name: "Amplitudes"
+      image: "images/partnerships/amplitudes.svg"
+      link: ""

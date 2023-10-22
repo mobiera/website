@@ -13,4 +13,3 @@ date: {{ .Date }}
 >>>>>>> f00cdc6 (first commit : hugo init)
 draft: true
 ---
-

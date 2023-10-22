@@ -1,0 +1,37 @@
+enabled: true
+
+title: "Press Centre"
+btn: "Learn more"
+link: "/blog"
+
+content:
+  news:
+    - title_news: "Enabling MNOs and ISPs with full digital control"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      image: "images/info1.jpg"
+      slug: ""
+      btn: "And many more"
+
+    - title_news: "Enabling MNOs and ISPs with full digital control"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      image: "images/info1.jpg"
+      slug: ""
+      btn: "And many more"
+
+    - title_news: "Enabling MNOs and ISPs with full digital control"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      image: "images/info1.jpg"
+      slug: ""
+      btn: "And many more"
+
+    - title_news: "Enabling MNOs and ISPs with full digital control"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      image: "images/info1.jpg"
+      slug: ""
+      btn: "And many more"
+
+    - title_news: "Enabling MNOs and ISPs with full digital control"
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      image: "images/info1.jpg"
+      slug: ""
+      btn: "And many more"

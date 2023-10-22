@@ -1,0 +1,11 @@
+{{ if .Params.js }}
+<script src="{{ .Params.js }}"></script>
+{{ end }}
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+{{ $swiper := resources.Get "js/swiper.js" }} {{ with $swiper }}
+<script src="{{ $swiper.RelPermalink }}"></script>
+{{ end}} {{ $tabs := resources.Get "js/tabs.js" }} {{ with $tabs }}
+<script src="{{ $tabs.RelPermalink }}"></script>
+{{ end}} {{ $nav := resources.Get "js/nav.js" }} {{ with $nav }}
+<script src="{{ $nav.RelPermalink }}"></script>
+{{ end}}

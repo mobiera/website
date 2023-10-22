@@ -1,0 +1,21 @@
+enabled: true
+
+title: "Innovation"
+subtitle: "Combining expertise, cutting-edge technologies, forward-thinking strategies for a sustainable future."
+
+content:
+  steps:
+    - title_section: "Agriculture Chain Management"
+      text: "Integrating data, technology and agricultural expertise to provide a comprehensive platform to optimise every step of the agricultural supply chain with real-time monitoring and advanced analytics to drive profitability."
+      link: "develop"
+      image: "icons/icon_innovation1.html"
+
+    - title_section: "Biometric Know Your Customer (KYC)"
+      text: "Ensuring secure and efficient real-time identity verification, implementing fraud prevention measures, and streamline customer onboarding by harnessing the power of biometric identification: fingerprints and facial features."
+      link: "operate"
+      image: "icons/icon_innovation2.html"
+
+    - title_section: "Verifiable Credentials"
+      text: "Revolutionising personal information access control management by integrating cutting-edge self-sovereign identity (SSI) technologies to provide tamper-proof and reliable identity verification processes."
+      link: "integrate"
+      image: "icons/icon_innovation3.html"

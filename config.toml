@@ -1,61 +1,74 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Mobiera'
-theme = 'mobiera'
+# theme = 'mobiera'
 # sectionPagesMenu = "main"
 
 [menu]
-  [[menu.txt]]
-    text = "We’re showcasing our Web5 Accelerator suite at Geneva."
-  [[menu.link]]
-    name = "Learn more"
-    url = ""
-  [[menu.btn1]]
-    name = "Contact"
-    url = "/contact/"
-  [[menu.btn2]]
-    name = "Login"
-    url = "/login/"
   [[menu.main]]
     name = "Telecom"
-    url = "/telecom/"
+    url = "/telecom"
     weight = 10
   [[menu.main]]
     name = "DevSecOps"
-    url = "/dev-sec-ops/"
+    url = "/dev-sec-ops"
     weight = 20
   [[menu.main]]
     name = "Innovation"
-    url = "/innovation/"
+    url = "/innovation"
     weight = 30
   [[menu.main]]
     name = "Company"
-    url = "/company/"
+    url = "/company"
     weight = 40
   [[menu.footer]]
     name = 'Contact Us'
-    pageRef = '/contact-us'
+    url = '/contact-us'
     weight = 10
   [[menu.footer]]
     name = 'Privacy Policy'
-    pageRef = '/privacy-policy'
+    url = '/privacy-policy'
     weight = 20
   [[menu.footer]]
     name = 'Careers'
-    pageRef = '/careers'
+    url = '/careers'
     weight = 30
   [[menu.footer]]
     name = 'Blog'
-    pageRef = '/blog'
+    url = '/blog'
     weight = 40
   [[menu.footer]]
     name = 'About Us'
-    pageRef = '/about-us'
+    url = '/about-us'
     weight = 50
 
 
 [params]
- copyright = "© All rights reserved - 2011-2023"
+  copyright = "© All rights reserved - 2011-2023"
+  text = "We’re showcasing our Web5 Accelerator suite at Geneva."
+  link = "Learn more"
+  url = "/"
+  [[params.btn1]]
+    name = "Blog"
+    url = "/blog"
+  [[params.btn2]]
+    name = "Contact"
+    url = "/contact"
+  [[params.btn3]]
+    name = "Login"
+    url = "/login"
+  [[params.social]]
+    name = "Medium"
+    url = "https://www.medium.com"
+    icon = "icons/icon-medium.html"
+  [[params.social]]
+    name = "Linkedin"
+    url = "https://www.linkedin.com"
+    icon = "icons/icon-linkedin.html"
+  [[params.social]]
+    name = "X"
+    url = "https://www.x.com"
+    icon = "icons/icon-x.html"
 
  
     

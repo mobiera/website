@@ -1,0 +1,91 @@
+<div class="w-full bg-white py-10 lg:py-16">
+  <div class="container">
+    <h2 class="title">{{ .title }}</h2>
+    <p class="subtitle">{{ .subtitle }}</p>
+
+    <ul
+      class="flex w-full justify-between pt-8 lg:justify-center lg:gap-10"
+      id="tabs"
+    >
+      {{ range .content.tabs }}
+      <li>
+        <a
+          href="#{{ .link_tab }}"
+          class="border-b-2 border-transparent px-2 py-1 text-heading2 hover:border-green hover:text-blue-200 lg:px-3"
+        >
+          {{ .title_tab }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    <div id="tab-contents">
+      {{ range .content.tabs }}
+      <div id="{{ .link_tab }}" class="hidden">
+        <div class="swiper2 relative mt-5 overflow-hidden">
+          <div class="swiper-wrapper">
+            {{ range .content_tab }}
+            <div class="swiper-slide">
+              <div
+                class="flex flex-col items-center justify-between pb-20 lg:flex-row"
+              >
+                {{ $image := resources.Get .image }} {{ with $image }}
+                <img
+                  src="{{ $image.RelPermalink }}"
+                  width="{{ $image.Width }}"
+                  height="{{ $image.Height }}"
+                  class="lg:w-1/2"
+                />
+                {{ end}}
+                <div class="w-full lg:w-2/5">
+                  <h3
+                    class="mb-7 text-[2rem] font-bold leading-tight text-blue-200 lg:text-heading1"
+                  >
+                    <strong class="text-purple-200"
+                      >{{ .title_section }}:</strong
+                    >
+                    {{ .subtitle_section }}
+                  </h3>
+                  <p class="mb-7 text-heading4 lg:text-heading3">{{ .text }}</p>
+                  <a href="{{ .link }}" class="btn-primary">Find out more</a>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g transform="translate(17029 10127)">
+                <rect width="24" height="24" fill="none" />
+                <path
+                  d="M19.352,27a1.682,1.682,0,0,1-1.162-.458L7.231,16.107a1.513,1.513,0,0,1,0-2.214L18.19,3.458a1.7,1.7,0,0,1,2.325,0,1.513,1.513,0,0,1,0,2.214L10.718,15l9.8,9.328a1.513,1.513,0,0,1,0,2.214A1.682,1.682,0,0,1,19.352,27Z"
+                  transform="translate(-17003.004 -10100) rotate(180)"
+                />
+              </g>
+            </svg>
+          </div>
+          <div class="swiper-button-prev2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <rect width="24" height="24" fill="none" />
+              <path
+                d="M12.6,0A1.682,1.682,0,0,0,11.44.458L.481,10.893a1.513,1.513,0,0,0,0,2.214L11.44,23.542a1.7,1.7,0,0,0,2.325,0,1.513,1.513,0,0,0,0-2.214L3.968,12l9.8-9.328a1.513,1.513,0,0,0,0-2.214A1.682,1.682,0,0,0,12.6,0Z"
+                transform="translate(4.754 0)"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

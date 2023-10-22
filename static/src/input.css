@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/itcavantgardestd-md-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/itcavantgardestd-demi-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/itcavantgardestd-bold-webfont.woff) format("woff");
+}
+
+@layer base {
+  body,
+  html {
+    @apply font-itc text-[12px] text-primary md:text-[14px] lg:text-[16px];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block rounded-md border-2 border-green px-8 py-3 text-center text-heading4 font-bold text-green lg:text-heading3;
+  }
+  .btn-secondary {
+    @apply flex gap-3 text-heading4 font-bold text-green transition-all after:text-blue-200 after:content-['\2192'] hover:gap-4;
+  }
+  .title {
+    @apply mb-5 block text-left text-heading1 font-bold text-purple-200 lg:text-center;
+  }
+  .subtitle {
+    @apply mx-auto mb-5 w-full text-start text-heading3 lg:w-1/2 lg:text-center;
+  }
+}
+
+.tab-selected {
+  @apply border-green font-bold text-blue-200;
+}
+.tab-selectedVertical {
+  @apply opacity-100;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply absolute bottom-4 end-[154px] left-auto w-fit lg:bottom-9;
+}
+.swiper-pagination-bullet {
+  @apply h-4 w-4 bg-blue-200 opacity-10;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-purple-200 opacity-100;
+}
+
+.swiper-button-next2,
+.swiper-button-prev2 {
+  @apply absolute bottom-0 end-1 z-20 bg-purple-200 fill-white p-4 shadow-lg after:content-none lg:bottom-5 lg:p-5;
+}
+.swiper-button-prev2 {
+  @apply end-[52px] lg:end-[64px];
+}
+.swiper-button-disabled {
+  @apply bg-white fill-[#1924420E];
+}
