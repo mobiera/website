@@ -1,0 +1,25 @@
+enabled: true
+
+title: "Long-Lasting Partnerships"
+subtitle: "In the fast-paced world of digital innovation and transformation, long-lasting partnerships are the bedrock of success. By establishing trust, understanding business goals, embracing continuous improvement, fostering flexibility, encouraging collaboration, and adopting a value-driven approach, together we can cultivate relationships that stand the test of time, and drive meaningful impact for your business"
+
+content:
+  logo:
+    - name: "Viettel"
+      image: "images/home/partnerships/viettel.svg"
+      link: ""
+    - name: "Claro"
+      image: "images/home/partnerships/claro.svg"
+      link: ""
+    - name: "Bitel"
+      image: "images/home/partnerships/bitel.svg"
+      link: ""
+    - name: "Halotel"
+      image: "images/home/partnerships/halotel.svg"
+      link: ""
+    - name: "America movil"
+      image: "images/home/partnerships/america-movil.png"
+      link: ""
+    - name: "Amplitudes"
+      image: "images/home/partnerships/amplitudes.svg"
+      link: ""

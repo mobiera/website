@@ -1,0 +1,43 @@
+enabled: true
+
+title: "History"
+subtitle: "Driven by achievements, we grow our portfolio of products to effectively address market challenges and extend our reach. Here are the key milestones of our journey so far:"
+text_bottom: "As we steadily progress towards diversifying our offerings and extending our reach, we remain steadfast in our commitment to prioritise delivery excellence, customer centricity, and sustainable operations."
+
+content:
+  steps:
+    - title_section: "2012"
+      text: "Company incorporation in Bogotá, Colombia "
+
+    - title_section: "2013"
+      text: "Start of operations in Mexico through a local office "
+
+    - title_section: "2014"
+      text: "Start of operations in Peru through a local office"
+
+    - title_section: "2015"
+      text: "Start of operations in the US and Bolivia through local offices"
+
+    - title_section: "2016"
+      text: "Launching the Innovation and IT Outsourcing business units"
+
+    - title_section: "2017"
+      text: "Tax credit offered by Colciencias for billing platforms and big data solutions for developing markets"
+
+    - title_section: "2018"
+      text: "Start of commercial operations in Europe through the Spain Office. Start of commercial operations in Asia Pacific through the Ha Noi Office."
+
+    - title_section: "2019"
+      text: "Scaling up the IT Outsourcing business with digital transformation and DevOps as a main focus."
+
+    - title_section: "2020"
+      text: "Start of Africa and GCC expansion strategy. Significant scale up of the Innovation business unit"
+
+    - title_section: "2021"
+      text: "Delivering the first biometric KYC solutions"
+
+    - title_section: "2022"
+      text: "Premiering Verifiable Credentials as a new service from the Innovation business Unit"
+
+    - title_section: "2023"
+      text: "Rebranding and the expansion of strategic partnerships"

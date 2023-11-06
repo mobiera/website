@@ -1,6 +1,7 @@
 <div class="mb-5 flex items-center gap-4">
-  {{ $image := resources.Get "images/icon-newsletter.svg" }} {{ with $image }}
-  <img src="{{ .RelPermalink }}" alt="newsletter" />
+  {{ $image := resources.Get "images/icon-newsletter.svg" }}
+  {{ with $image }}
+    <img src="{{ .RelPermalink }}" alt="newsletter" />
   {{ end }}
   <h5 class="text-[2rem] font-bold text-white">{{ .title }}</h5>
 </div>

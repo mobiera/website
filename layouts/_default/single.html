@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br /><br />
-{{ .Content }} {{ end }}
+  <h1>{{ .Params.Title }}</h1>
+  <p>{{ .Date.Format "January 2, 2006" }}</p>
+  {{ .Content }}
+{{ end }}

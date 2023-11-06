@@ -1,0 +1,15 @@
+<div class="container py-10 pb-20">
+  <h2 class="big-title mb-10">{{ safeHTML .title }}</h2>
+  <p class="mb-7 text-heading2">{{ .subtitle }}</p>
+  <div class="flex flex-wrap pt-5">
+    {{ range .content.blocks }}
+      <div class="mb-10 w-1/2">
+        {{ with .image }}{{ partial . }}{{ end }}
+        <h4 class="mb-3 mt-7 text-heading3 font-bold text-blue-200">
+          {{ .title_section }}
+        </h4>
+        <p class="mr-10 opacity-80">{{ .text }}</p>
+      </div>
+    {{ end }}
+  </div>
+</div>

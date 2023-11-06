@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <div class="container pt-36">
+    <h1 class="my-5 text-heading2 font-bold text-purple-200">
+      {{ .Page.Title }}
+    </h1>
+  </div>
+  {{ with .Site.Data.devsecops.success }}
+    {{ partial "sections/devsecops/success.html" . }}
+  {{ end }}
+  {{ with .Site.Data.devsecops.devsecops }}
+    {{ partial "sections/devsecops/devsecops.html" . }}
+  {{ end }}
+  {{ with .Site.Data.home.outsourcing }}
+    {{ partial "sections/home/outsourcing.html" . }}
+  {{ end }}
+  {{ with .Site.Data.devsecops.consulting }}
+    {{ partial "sections/devsecops/consulting.html" . }}
+  {{ end }}
+  {{ with .Site.Data.devsecops.partnerships }}
+    {{ partial "sections/devsecops/partnerships.html" . }}
+  {{ end }}
+  {{ with .Site.Data.devsecops.working }}
+    {{ partial "sections/devsecops/working.html" . }}
+  {{ end }}
+  {{ with .Site.Data.home.careers }}
+    {{ partial "sections/careers.html" . }}
+  {{ end }}
+{{ end }}

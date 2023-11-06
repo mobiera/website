@@ -38,11 +38,33 @@
     @apply flex gap-3 text-heading4 font-bold text-green transition-all after:text-blue-200 after:content-['\2192'] hover:gap-4;
   }
   .title {
-    @apply mb-5 block text-left text-heading1 font-bold text-purple-200 lg:text-center;
+    @apply mb-5 block text-left text-heading font-bold text-purple-200 lg:text-center;
+  }
+  .title b {
+    @apply text-blue-200;
   }
   .subtitle {
     @apply mx-auto mb-5 w-full text-start text-heading3 lg:w-1/2 lg:text-center;
   }
+  .big-title {
+    @apply relative text-heading font-bold text-blue-200 after:absolute after:-bottom-4 after:left-5 after:h-2 after:w-24 after:bg-green after:content-[''];
+  }
+  .big-title b {
+    @apply text-purple-200;
+  }
+  .green b {
+    @apply text-green;
+  }
+  .caption {
+    @apply absolute bottom-10 left-10 text-heading text-white drop-shadow-[0_2px_3px_rgba(25,36,66,1)];
+  }
+  .caption b {
+    @apply text-green;
+  }
+}
+
+.missing b {
+  @apply font-normal text-purple-200;
 }
 
 .tab-selected {
@@ -69,6 +91,41 @@
 .swiper-button-prev2 {
   @apply end-[52px] lg:end-[64px];
 }
-.swiper-button-disabled {
+.swiper2 .swiper-button-disabled,
+.swiper-blog .swiper-button-disabled {
   @apply bg-white fill-[#1924420E];
+}
+
+.swiper4 .swiper-button-disabled svg {
+  @apply opacity-20 grayscale;
+}
+.swiper4 .swiper-button-disabled {
+  @apply bg-white;
+}
+
+.platforms .swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply absolute bottom-0 right-[140px] w-fit lg:bottom-5;
+}
+.platforms .swiper-pagination-bullet {
+  @apply h-4 w-4 bg-purple-100 opacity-100;
+}
+.platforms .swiper-pagination-bullet-active {
+  @apply bg-green opacity-100;
+}
+
+.platforms .swiper-button-next2,
+.platforms .swiper-button-prev2 {
+  @apply absolute -right-[50px] bottom-0 z-20 bg-purple-200 fill-white p-4 shadow-lg after:content-none  lg:p-5;
+}
+.platforms .swiper-button-prev2 {
+  @apply right-[15px];
+}
+.platforms .swiper-button-disabled {
+  @apply bg-white fill-[#1924420E];
+}
+
+.swiper5 .swiper-slide,
+.swiper6 .swiper-slide,
+.swiper7 .swiper-slide {
+  height: initial;
 }

@@ -1,0 +1,38 @@
+{{ define "main" }}
+  <div class="container pt-36">
+    <h1 class="my-5 text-heading2 font-bold text-purple-200">
+      {{ .Page.Title }}
+    </h1>
+  </div>
+  {{ with .Site.Data.about.mission }}
+    {{ partial "sections/about/our-mission.html"
+      .
+    }}
+  {{ end }}
+  {{ with .Site.Data.about.values }}
+    {{ partial
+      "sections/about/our-values.html" .
+    }}
+  {{ end }}
+  {{ with .Site.Data.about.numbers }}
+    {{ partial "sections/about/numbers.html" . }}
+  {{ end }}
+  {{ with
+    .Site.Data.about.history
+  }}
+    {{ partial "sections/about/history.html" . }}
+  {{ end }}
+  {{ with .Site.Data.about.locations }}
+    {{ partial
+      "sections/about/locations.html" .
+    }}
+  {{ end }}
+  {{ with .Site.Data.about.ethics }}
+    {{ partial "sections/about/ethics.html" . }}
+  {{ end }}
+  {{ with
+    .Site.Data.home.careers
+  }}
+    {{ partial "sections/careers.html" . }}
+  {{ end }}
+{{ end }}

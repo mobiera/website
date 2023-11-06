@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <div class="container pt-36">
+    <h1 class="my-5 text-heading2 font-bold text-purple-200">
+      {{ .Page.Title }}
+    </h1>
+  </div>
+  {{ with .Site.Data.telecom.link }}
+    {{ partial "sections/telecom/link.html" . }}
+  {{ end }}
+  {{ with .Site.Data.telecom.platforms }}
+    {{ partial
+      "sections/telecom/platforms.html" .
+    }}
+  {{ end }}
+  {{ with
+    .Site.Data.telecom.applications
+  }}
+    {{ partial
+      "sections/telecom/applications.html" .
+    }}
+  {{ end }}
+  {{ with
+    .Site.Data.telecom.services
+  }}
+    {{ partial "sections/telecom/services.html" . }}
+  {{ end }}
+  {{ with .Site.Data.telecom.consultants }}
+    {{ partial
+      "sections/telecom/consultants.html" .
+    }}
+  {{ end }}
+  {{ with
+    .Site.Data.telecom.working
+  }}
+    {{ partial "sections/telecom/working.html" . }}
+  {{ end }}
+{{ end }}

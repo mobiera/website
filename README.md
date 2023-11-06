@@ -34,6 +34,6 @@ project folder to get an initial version of the website up and running.
 Hugo Up Business Theme is based on a [Figma Design by Abell
 Vo](https://www.figma.com/community/file/1022163547182520272).
 
-## License 
+## License
 
 Up Business is licensed under the MIT license.

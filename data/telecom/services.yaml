@@ -1,0 +1,22 @@
+enabled: true
+
+title: "Services"
+subtitle: "Enrich the digital offerings of telecom providers to leverage captivating experiences and unlock untapped revenue opportunities."
+
+content:
+  blocks:
+    - title_section: "Olympia"
+      subtitle_section: "Next-Gen Gamified Gaming Portal"
+      text: "A playful escape of a captivating gaming journey that will keep your customers craving for more where entertainment and imagination collide in a pocket-sized wonderland"
+      link: "service/1"
+      image: "images/home/telecom/telecom-img1.png"
+    - title_section: "Delphi"
+      subtitle_section: "Quiz promos Integration with Core Services"
+      text: "The entertainment and imagination wonderland where players ascend the ladder of multi-thematic trivia. A guaranteed recipe to boost engagement and revenues."
+      link: "service/1"
+      image: "images/home/telecom/telecom-img1.png"
+    - title_section: "Fulcrum"
+      subtitle_section: "All-in-One Digital Entertainment Shop"
+      text: "Let your customers experience the ultimate fusion of all digital entertainment: music, video, gaming, trivia, e-learning, cybersecurity … etc. All in one big wonderland. "
+      link: "service/1"
+      image: "images/home/telecom/telecom-img1.png"

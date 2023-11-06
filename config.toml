@@ -39,7 +39,7 @@ title = 'Mobiera'
     weight = 40
   [[menu.footer]]
     name = 'About Us'
-    url = '/about-us'
+    url = '/about-us/'
     weight = 50
 
 

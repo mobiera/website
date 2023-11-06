@@ -1,0 +1,58 @@
+<div class="relative h-[100vh] w-full">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {{ range .content.slides }}
+        <div class="swiper-slide">
+          {{ $image := resources.Get .image }}
+          {{ with $image }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+              class="absolute left-0 top-0 h-full w-full object-cover after:mt-2"
+            />
+          {{ end }}
+          <div
+            class="absolute left-0 top-0 h-full w-full bg-blue-200 opacity-50"
+          ></div>
+          <div class="relative flex h-[100vh] w-full items-center">
+            <div class="container relative">
+              <div class="w-full lg:mx-32 lg:mt-60 lg:w-[40rem]">
+                <h2
+                  class="text-center text-head-slide font-bold text-white lg:text-start"
+                >
+                  Digital <strong class="text-purple-200">{{ .title }}</strong>
+                </h2>
+                <div class="mx-auto my-5 h-1 w-20 bg-green lg:ms-5"></div>
+                <p
+                  class="text-center text-heading3 text-purple-100 lg:ms-5 lg:pe-20 lg:text-start"
+                >
+                  <strong class="text-green">{{ .subtitle }}</strong>{{ .text }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    <div
+      class="start-0; absolute top-1/2 z-10 mt-[10px] h-[1px] w-full bg-white lg:mt-[111px]"
+    ></div>
+    <div
+      class="swiper-button-next end-[38%] mt-60 after:content-none lg:end-20 lg:mt-[90px]"
+    >
+      {{ $image := resources.Get "images/home/hero/icon-right-arrow.svg" }}
+      {{ with $image }}
+        <img src="{{ $image.RelPermalink }}" class="h-12 w-12 max-w-none" />
+      {{ end }}
+    </div>
+    <div
+      class="swiper-button-prev start-[38%] mt-60 after:content-none lg:start-20 lg:mt-[90px]"
+    >
+      {{ $image := resources.Get "images/home/hero/icon-left-arrow.svg" }}
+      {{ with $image }}
+        <img src="{{ $image.RelPermalink }}" class="h-12 w-12 max-w-none" />
+      {{ end }}
+    </div>
+  </div>
+</div>

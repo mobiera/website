@@ -1,9 +1,35 @@
-{{define "main"}} {{ with .Site.Data.home.hero }}{{ partial "sections/hero.html"
-. }}{{ end }} {{ with .Site.Data.home.telecom }}{{ partial
-"sections/telecom.html" . }}{{ end }} {{ with .Site.Data.home.outsourcing }}{{
-partial "sections/outsourcing.html" . }}{{ end }} {{ with
-.Site.Data.home.innovation }}{{ partial "sections/innovation.html" . }}{{ end }}
-{{ with .Site.Data.home.partnerships }}{{ partial "sections/partnerships.html" .
-}}{{ end }} {{ with .Site.Data.home.blog }}{{ partial "sections/blog.html" .
-}}{{ end }} {{ with .Site.Data.home.careers }}{{ partial "sections/careers.html"
-. }}{{ end }} {{end}}
+{{ define "main" }}
+  {{ with .Site.Data.home.hero }}
+    {{ partial
+      "sections/home/hero.html" .
+    }}
+  {{ end }}
+  {{ with .Site.Data.home.telecom }}
+    {{ partial "sections/home/telecom.html" . }}
+  {{ end }}
+  {{ with
+    .Site.Data.home.outsourcing
+  }}
+    {{ partial "sections/home/outsourcing.html" . }}
+  {{ end }}
+  {{ with .Site.Data.home.innovation }}
+    {{ partial
+      "sections/home/innovation.html" .
+    }}
+  {{ end }}
+  {{ with
+    .Site.Data.home.partnerships
+  }}
+    {{ partial "sections/home/partnerships.html" . }}
+  {{ end }}
+  {{ with .Site.Data.home.blog }}
+    {{ partial "sections/home/blog.html"
+      .
+    }}
+  {{ end }}
+  {{ with .Site.Data.home.careers }}
+    {{ partial
+      "sections/careers.html" .
+    }}
+  {{ end }}
+{{ end }}

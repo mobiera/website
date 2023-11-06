@@ -1,0 +1,27 @@
+<div class="bg-blue-200">
+  <div class="container py-10 pb-20">
+    <h2 class="title mx-auto mb-10 flex w-fit gap-5 text-purple-200">
+      {{ $image := resources.Get "images/logo_mobiera-footer.svg" }}
+      {{ with
+        $image
+      }}
+        <img src="{{ .RelPermalink }}" alt="Mobiera" class="h-8 md:h-auto" />
+      {{ end }} <strong>{{ .title }}</strong>
+    </h2>
+    <p class="mx-auto mb-7 w-2/3 text-center text-heading2 text-purple-100">
+      {{ .subtitle }}
+    </p>
+    <div class="flex flex-wrap justify-between pt-5">
+      {{ range .content.blocks }}
+        <div class="mb-10 w-2/5">
+          {{ with .image }}{{ partial . }}{{ end }}
+          <h4 class="mb-3 mt-3 flex gap-3 text-heading2 font-bold">
+            <strong class="text-purple-200">{{ .number }}</strong>
+            <strong class="text-white">{{ .title_section }}</strong>
+          </h4>
+          <p class="mr-10 text-purple-100">{{ .text }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

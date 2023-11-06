@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="container pt-36">
+    <h1 class="my-5 text-heading2 font-bold text-purple-200">
+      {{ .Page.Title }}
+    </h1>
+  </div>
+  {{ with .Site.Data.privacy.content }}
+    {{ partial "sections/privacy/content.html"
+      .
+    }}
+  {{ end }}
+{{ end }}

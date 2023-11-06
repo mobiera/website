@@ -1,0 +1,70 @@
+<div class="w-full bg-[#8353F216] py-16">
+  <div class="container">
+    <h2 class="title">{{ .title }}</h2>
+    <p class="subtitle">{{ .subtitle }}</p>
+
+    <div class="flex pt-5">
+      <ul class="flex w-1/12 flex-col pb-6" id="tabsVertical">
+        {{ range .content.tabs }}
+          <li class="flex h-1/4 items-center">
+            <a
+              href="#{{ .link_tab }}"
+              class="block text-heading2 font-bold text-purple-200 opacity-20"
+            >
+              {{ .title_tab }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      <div class="relative flex w-1/12 justify-center pb-6">
+        <div class="h-full w-[1px] bg-purple-200 opacity-20"></div>
+        <div
+          class="absolute start-1/2 top-0 h-1/4 w-[5px] -translate-x-1/2 bg-green"
+        ></div>
+      </div>
+      <div id="tab-contentsVertical" class="flex w-10/12">
+        {{ range .content.tabs }}
+          <div id="{{ .link_tab }}" class="hidden">
+            <div class="relative">
+              {{ range .content_tab }}
+                <div class="flex items-center justify-between gap-10 pb-6">
+                  <div class="w-7/12">
+                    <h3
+                      class="mb-7 text-heading1 font-bold leading-tight text-blue-200"
+                    >
+                      {{ .title_section }}
+                    </h3>
+                    <p class="mb-7 me-5 text-heading4 font-normal">
+                      {{ safeHTML .text }}
+                    </p>
+                    <a
+                      href="{{ .link }}"
+                      class="btn-primary inline-block rounded-md border-2 border-green px-8 py-3 text-heading3 text-green"
+                      >Find out more</a
+                    >
+                  </div>
+                  <div class="flex w-5/12 justify-center">
+                    <div class="relative w-fit">
+                      {{ $image := resources.Get .image }}
+                      {{ with $image }}
+                        <img
+                          src="{{ $image.RelPermalink }}"
+                          width="{{ $image.Width }}"
+                          height="{{ $image.Height }}"
+                          class="w-80 overflow-hidden rounded-2xl shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200"
+                        />
+                        <div
+                          class="absolute right-0 top-0 -z-10 h-full w-full translate-x-6 translate-y-6 overflow-hidden rounded-2xl bg-[url('/images/charte-bg.svg')] bg-cover bg-center bg-no-repeat"
+                        ></div>
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

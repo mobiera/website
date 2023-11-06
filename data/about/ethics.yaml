@@ -1,0 +1,30 @@
+enabled: true
+
+title: "Ethics and Code of Conduct"
+subtitle: "In alignment with our Mission and Vision, we are committed to upholding the highest standards of integrity, professionalism, and responsibility in all aspects of our operations."
+
+content:
+  blocks:
+    - icon: "icons/icon_ethics1.html"
+      title_section: "Client Service Excellence"
+      text: "Delivering exceptional value with no compromise on quality and commitments on the highest professional standards."
+      image: "images/about/ethics-image1.jpg"
+      caption: "Client Service <b>Excellence</b>"
+
+    - icon: "icons/icon_ethics2.html"
+      title_section: "Inspiring Work Environment"
+      text: "We foster a supportive and motivating atmosphere  that encourages the growth and development of our employees to better support our clients and partners."
+      image: "images/about/ethics-image1.jpg"
+      caption: "Inspiring Work <b>Environment</b>"
+
+    - icon: "icons/icon_ethics3.html"
+      title_section: "Privacy, Data Security, and Compliance"
+      text: "We prioritise protecting privacy, maintaining data security, and complying with applicable laws and regulations in all the jurisdictions we serve our clients and our partners from."
+      image: "images/about/ethics-image1.jpg"
+      caption: "Privacy, Data Security, and <b>Compliance</b>"
+
+    - icon: "icons/icon_ethics4.html"
+      title_section: "Open Communication"
+      text: "We encourage our employees to seek advice, raise concerns, and promote a culture of open dialogue and accountability."
+      image: "images/about/ethics-image1.jpg"
+      caption: "Open <b>Communication</b>"

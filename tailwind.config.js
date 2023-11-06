@@ -41,6 +41,7 @@ module.exports = {
     },
     fontSize: {
       "head-slide": ["3.375rem"],
+      heading: ["2.875rem"],
       heading1: ["2.25rem"],
       heading2: ["1.5rem"],
       heading3: ["1.375rem"],

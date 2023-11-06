@@ -1,0 +1,18 @@
+<div
+  class="relative flex h-screen w-full items-center overflow-hidden bg-[url('/images/info1.jpg')] bg-cover bg-center bg-no-repeat"
+>
+  <div class="absolute left-0 top-0 h-full w-full bg-blue-200 opacity-50"></div>
+  <div class="container relative">
+    <h1 class="big-title green w-1/2 leading-tight text-white after:h-0">
+      {{ safeHTML .title }}
+    </h1>
+    <div class="mt-7 flex gap-10 text-heading2 text-white">
+      <div class="w-1/2">
+        <p>{{ .text1 }}</p>
+      </div>
+      <div class="w-1/2">
+        <p>{{ .text2 }}</p>
+      </div>
+    </div>
+  </div>
+</div>

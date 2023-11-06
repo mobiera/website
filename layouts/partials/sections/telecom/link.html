@@ -1,0 +1,15 @@
+<div class="container py-10 pb-20">
+  <div class="flex flex-row-reverse justify-between">
+    <div class="flex w-5/12 justify-center">
+      {{ $image := resources.Get .image }}
+      {{ with $image }}
+        <img src="{{ $image.RelPermalink }}" class="w-full" />
+      {{ end }}
+    </div>
+    <div class="flex w-6/12 flex-col">
+      <h2 class="big-title mb-10">{{ safeHTML .title }}</h2>
+      <p class="missing mb-7 text-heading2">{{ safeHTML .subtitle }}</p>
+      <p class="text-heading3 opacity-80">{{ .text }}</p>
+    </div>
+  </div>
+</div>

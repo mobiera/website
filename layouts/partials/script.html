@@ -1,11 +1,19 @@
 {{ if .Params.js }}
-<script src="{{ .Params.js }}"></script>
+  <script src="{{ .Params.js }}"></script>
 {{ end }}
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-{{ $swiper := resources.Get "js/swiper.js" }} {{ with $swiper }}
-<script src="{{ $swiper.RelPermalink }}"></script>
-{{ end}} {{ $tabs := resources.Get "js/tabs.js" }} {{ with $tabs }}
-<script src="{{ $tabs.RelPermalink }}"></script>
-{{ end}} {{ $nav := resources.Get "js/nav.js" }} {{ with $nav }}
-<script src="{{ $nav.RelPermalink }}"></script>
-{{ end}}
+{{ if .Params.js2 }}
+  {{ $js2 := resources.Get .Params.js2 }}
+  {{ with $js2 }}
+    <script src="{{ $js2.RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
+{{ if .Params.js3 }}
+  {{ $js3 := resources.Get .Params.js3 }}
+  {{ with $js3 }}
+    <script src="{{ $js3.RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
+{{ $nav := resources.Get "js/nav.js" }}
+{{ with $nav }}
+  <script src="{{ $nav.RelPermalink }}"></script>
+{{ end }}
