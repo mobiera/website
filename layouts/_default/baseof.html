@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   {{ partial "head/head.html" . }}
   <body>
-    {{- partial "shared/header.html" . -}}
-    {{- block "main" . -}}{{- end -}}
-    {{- partial "shared/footer.html" . -}}
+    <!-- {{- partial "shared/header.html" . -}} -->
+    {{- block "main" . -}}{{- end -}} {{- partial "shared/footer-mobiera.html" .
+    -}}
   </body>
 </html>

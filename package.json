@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "compile": "npx tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --watch"
+    "compile": "npx tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --watch --minify"
   },
   "devDependencies": {
     "prettier": "3.0.3",

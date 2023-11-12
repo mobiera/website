@@ -1,0 +1,12 @@
+<footer class="absolute bottom-0 left-0 w-full">
+  <div class="bg-purple-200">
+    <div class="container flex items-center justify-between py-4">
+      {{ $image := resources.Get "images/logo_mobiera-white.svg" }} {{ with
+      $image }}
+      <img src="{{ .RelPermalink }}" alt="Mobiera" class="w-28 md:w-auto" />
+      {{ end }} {{ with .Site.Params.copyright }}
+      <p class="text-body-medium text-white">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,30 @@
+<div class="relative h-screen w-full bg-blue-200 text-white">
+  <div class="container relative h-full">
+    <div class="absolute left-1/2 -translate-x-1/2 pt-20">
+      {{ $image := resources.Get "images/logo_mobiera.svg" }} {{ with $image }}
+      <img src="{{ .RelPermalink }}" alt="Mobiera" class="w-56" />
+      {{ end }}
+    </div>
+    <div class="flex h-full w-full flex-col items-center justify-center">
+      {{ $image := resources.Get "images/coming-soon.png" }} {{ with $image }}
+      <img
+        src="{{ .RelPermalink }}"
+        alt="Mobiera"
+        class="h-64 w-[460px] object-cover object-top"
+      />
+      {{ end }}
+      <h2 class="title -mt-20">{{ safeHTML .title }}</h2>
+      <p class="subtitle w-3/4 md:w-full">{{ .subtitle }}</p>
+      <p class="subtitle flex justify-center gap-2">
+        {{ $image := resources.Get "images/logo_mobiera-min.svg" }} {{ with
+        $image }}
+        <img
+          src="{{ .RelPermalink }}"
+          alt="Mobiera"
+          class="w-[64px] md:w-[92px]"
+        />
+        {{ end }} soon
+      </p>
+    </div>
+  </div>
+</div>
