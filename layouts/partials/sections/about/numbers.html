@@ -2,9 +2,7 @@
   <div class="container py-10 pb-20">
     <h2 class="title mx-auto mb-10 flex w-fit gap-5 text-purple-200">
       {{ $image := resources.Get "images/logo_mobiera-footer.svg" }}
-      {{ with
-        $image
-      }}
+      {{ with $image }}
         <img src="{{ .RelPermalink }}" alt="Mobiera" class="h-8 md:h-auto" />
       {{ end }} <strong>{{ .title }}</strong>
     </h2>

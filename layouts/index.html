@@ -1,21 +1,15 @@
 {{ define "main" }}
   {{ with .Site.Data.home.hero }}
-    {{ partial
-      "sections/home/hero.html" .
-    }}
+    {{ partial "sections/home/hero.html" . }}
   {{ end }}
   {{ with .Site.Data.home.telecom }}
     {{ partial "sections/home/telecom.html" . }}
   {{ end }}
-  {{ with
-    .Site.Data.home.outsourcing
-  }}
+  {{ with .Site.Data.home.outsourcing }}
     {{ partial "sections/home/outsourcing.html" . }}
   {{ end }}
   {{ with .Site.Data.home.innovation }}
-    {{ partial
-      "sections/home/innovation.html" .
-    }}
+    {{ partial "sections/home/innovation.html" . }}
   {{ end }}
   {{ with
     .Site.Data.home.partnerships
@@ -28,8 +22,6 @@
     }}
   {{ end }}
   {{ with .Site.Data.home.careers }}
-    {{ partial
-      "sections/careers.html" .
-    }}
+    {{ partial "sections/careers.html" . }}
   {{ end }}
 {{ end }}
