@@ -8,30 +8,18 @@
     {{ partial "sections/telecom/link.html" . }}
   {{ end }}
   {{ with .Site.Data.telecom.platforms }}
-    {{ partial
-      "sections/telecom/platforms.html" .
-    }}
+    {{ partial "sections/telecom/platforms.html" . }}
   {{ end }}
-  {{ with
-    .Site.Data.telecom.applications
-  }}
-    {{ partial
-      "sections/telecom/applications.html" .
-    }}
+  {{ with .Site.Data.telecom.applications }}
+    {{ partial "sections/telecom/applications.html" . }}
   {{ end }}
-  {{ with
-    .Site.Data.telecom.services
-  }}
+  {{ with .Site.Data.telecom.services }}
     {{ partial "sections/telecom/services.html" . }}
   {{ end }}
   {{ with .Site.Data.telecom.consultants }}
-    {{ partial
-      "sections/telecom/consultants.html" .
-    }}
+    {{ partial "sections/telecom/consultants.html" . }}
   {{ end }}
-  {{ with
-    .Site.Data.telecom.working
-  }}
+  {{ with .Site.Data.telecom.working }}
     {{ partial "sections/telecom/working.html" . }}
   {{ end }}
 {{ end }}

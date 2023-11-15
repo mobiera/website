@@ -11,15 +11,11 @@
   {{ with .Site.Data.home.innovation }}
     {{ partial "sections/home/innovation.html" . }}
   {{ end }}
-  {{ with
-    .Site.Data.home.partnerships
-  }}
+  {{ with .Site.Data.home.partnerships }}
     {{ partial "sections/home/partnerships.html" . }}
   {{ end }}
   {{ with .Site.Data.home.blog }}
-    {{ partial "sections/home/blog.html"
-      .
-    }}
+    {{ partial "sections/home/blog.html" . }}
   {{ end }}
   {{ with .Site.Data.home.careers }}
     {{ partial "sections/careers.html" . }}
