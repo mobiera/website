@@ -787,6 +787,10 @@ body,
   right: 5rem;
 }
 
+.right-5 {
+  right: 1.25rem;
+}
+
 .start-0 {
   inset-inline-start: 0px;
 }
@@ -827,10 +831,6 @@ body,
   top: 92px;
 }
 
-.right-5 {
-  right: 1.25rem;
-}
-
 .-z-10 {
   z-index: -10;
 }
@@ -849,6 +849,11 @@ body,
 
 .m-0 {
   margin: 0px;
+}
+
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .mx-3 {
@@ -876,9 +881,8 @@ body,
   margin-bottom: 1.25rem;
 }
 
-.mx-20 {
-  margin-left: 5rem;
-  margin-right: 5rem;
+.-mt-32 {
+  margin-top: -8rem;
 }
 
 .mb-1 {
@@ -962,12 +966,20 @@ body,
   margin-top: 2.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-24 {
   margin-top: 6rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
 }
 
 .mt-5 {
@@ -986,24 +998,17 @@ body,
   margin-top: 10px;
 }
 
-.mt-20 {
-  margin-top: 5rem;
+.me-10 {
+  -webkit-margin-end: 2.5rem;
+          margin-inline-end: 2.5rem;
 }
 
-.mt-28 {
-  margin-top: 7rem;
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
 .block {
@@ -1052,6 +1057,10 @@ body,
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-72 {
+  height: 18rem;
 }
 
 .h-8 {
@@ -1211,8 +1220,8 @@ body,
   width: 100vw;
 }
 
-.w-\[40\%\] {
-  width: 40%;
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .min-w-\[100px\] {
@@ -1229,6 +1238,11 @@ body,
 
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1259,11 +1273,6 @@ body,
 
 .translate-y-6 {
   --tw-translate-y: 1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1305,6 +1314,10 @@ body,
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .items-stretch {
@@ -1498,6 +1511,10 @@ body,
   background-color: #FFFFFFE6;
 }
 
+.bg-blue-100 {
+  background-color: #1924420E;
+}
+
 .bg-blue-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(25 36 66 / var(--tw-bg-opacity));
@@ -1508,6 +1525,11 @@ body,
   background-color: rgb(80 226 170 / var(--tw-bg-opacity));
 }
 
+.bg-purple-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 219 247 / var(--tw-bg-opacity));
+}
+
 .bg-purple-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(131 83 242 / var(--tw-bg-opacity));
@@ -1516,10 +1538,6 @@ body,
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-blue-100 {
-  background-color: #1924420E;
 }
 
 .bg-\[url\(\'\/images\/careers-bg\.jpg\'\)\] {
@@ -1615,11 +1633,6 @@ body,
   padding-right: 0.5rem;
 }
 
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1698,6 +1711,11 @@ body,
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+}
+
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .pb-20 {
@@ -1810,6 +1828,10 @@ body,
   font-size: 1.125rem;
 }
 
+.text-heading {
+  font-size: 2.875rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1859,6 +1881,10 @@ body,
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-blue-100 {
+  color: #1924420E;
 }
 
 .underline {
@@ -2336,6 +2362,10 @@ body,
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:min-h-\[400px\] {
+    min-height: 400px;
   }
 
   .lg\:w-1\/2 {

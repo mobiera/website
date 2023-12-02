@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <div class="container pt-36">
+    <h1 class="my-5 text-heading2 font-bold text-purple-200">
+      {{ .Page.Title }}
+    </h1>
+  </div>
+  {{ with .Site.Data.careers.join }}
+    {{ partial "sections/careers/join.html" . }}
+  {{ end }}
+  {{ with .Site.Data.careers.multicultural }}
+    {{ partial "sections/careers/multicultural.html" . }}
+  {{ end }}
+  {{ with .Site.Data.careers.meaningful }}
+    {{ partial "sections/careers/meaningful.html" . }}
+  {{ end }}
+  {{ with .Site.Data.careers.connect }}
+    {{ partial "sections/careers/connect.html" . }}
+  {{ end }}
+{{ end }}

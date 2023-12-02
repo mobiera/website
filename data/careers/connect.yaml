@@ -1,0 +1,13 @@
+enabled: true
+
+title: "<b>Connect</b> with our HR"
+subtitle: "Send us <b>your resume<b/>"
+text: "If you believe that your skills and aspirations align with our core values and objectives, please send us your resume for assessment."
+link: "Send your CV"
+
+content:
+  persons:
+    - picture: "images/careers/jane.jpg"
+      name: "Jane Doe"
+      job: "Head of People"
+      email: "j.doe@mobiera.com"
