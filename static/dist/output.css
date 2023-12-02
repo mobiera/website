@@ -827,6 +827,10 @@ body,
   top: 92px;
 }
 
+.right-5 {
+  right: 1.25rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -870,6 +874,11 @@ body,
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .mb-1 {
@@ -953,6 +962,10 @@ body,
   margin-top: 2.5rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -973,20 +986,24 @@ body,
   margin-top: 10px;
 }
 
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mt-32 {
-  margin-top: 8rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-28 {
   margin-top: 7rem;
 }
 
-.mt-24 {
-  margin-top: 6rem;
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
 }
 
 .block {
@@ -1194,6 +1211,10 @@ body,
   width: 100vw;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .min-w-\[100px\] {
   min-width: 100px;
 }
@@ -1241,6 +1262,11 @@ body,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1271,6 +1297,10 @@ body,
 
 .items-start {
   align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -1412,6 +1442,11 @@ body,
   border-color: rgb(80 226 170 / var(--tw-border-opacity));
 }
 
+.border-purple-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 219 247 / var(--tw-border-opacity));
+}
+
 .border-purple-200 {
   --tw-border-opacity: 1;
   border-color: rgb(131 83 242 / var(--tw-border-opacity));
@@ -1481,6 +1516,10 @@ body,
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-100 {
+  background-color: #1924420E;
 }
 
 .bg-\[url\(\'\/images\/careers-bg\.jpg\'\)\] {
@@ -1576,6 +1615,11 @@ body,
   padding-right: 0.5rem;
 }
 
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1649,6 +1693,11 @@ body,
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .pb-20 {
@@ -2092,6 +2141,11 @@ body,
   height: initial;
 }
 
+.after\:left-1\/2::after {
+  content: var(--tw-content);
+  left: 50%;
+}
+
 .after\:mt-2::after {
   content: var(--tw-content);
   margin-top: 0.5rem;
@@ -2100,6 +2154,12 @@ body,
 .after\:h-0::after {
   content: var(--tw-content);
   height: 0px;
+}
+
+.after\:-translate-x-1\/2::after {
+  content: var(--tw-content);
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .after\:bg-blue-200::after {
@@ -2164,6 +2224,11 @@ body,
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .group:hover .group-hover\:-translate-y-5 {
