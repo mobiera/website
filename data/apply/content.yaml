@@ -1,0 +1,46 @@
+enabled: true
+
+title: "Thanks for reaching out. We’ll get back to you shortly."
+
+content:
+  steps:
+    - icon: "images/careers/icon1.svg"
+      title: "What’s your name?"
+      input: "name"
+      placeholder: "Type your name here …"
+      type: input
+    - icon: "images/careers/icon2.svg"
+      title: "What’s your email address?"
+      input: "email"
+      placeholder: "Type your email here …"
+      type: input
+    - icon: "images/careers/icon3.svg"
+      title: "What’s your phone number?"
+      input: "phone"
+      placeholder: "Type your phone number here …"
+      type: input
+    - icon: "images/careers/icon4.svg"
+      title: "What’s your academic background, if you have any?"
+      input: "background"
+      placeholder: "Type your answer here here …"
+      type: input
+    - icon: "images/careers/icon5.svg"
+      title: "What’s your current position?"
+      input: "job"
+      placeholder: "Type your job title here …"
+      type: input
+    - icon: "images/careers/icon6.svg"
+      title: "Where are you based currently?"
+      input: "location"
+      placeholder: "Type your answer here …"
+      type: input
+    - icon: "images/careers/icon7.svg"
+      title: "Are you interested in working remotely, or from office?"
+      input: "remote"
+      placeholder: "Type your answer here …"
+      type: input
+    - icon: "images/careers/icon8.svg"
+      title: "Upload your resume, and any supporting documents here"
+      input: "resume"
+      placeholder: "Only upload PDF or Word files"
+      type: file

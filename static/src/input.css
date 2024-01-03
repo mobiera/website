@@ -129,3 +129,15 @@
 .swiper7 .swiper-slide {
   height: initial;
 }
+
+.hidden-element {
+  @apply hidden;
+}
+
+.flex-element {
+  @apply flex;
+}
+
+.selectedBtn {
+  @apply rounded-lg border-2 border-solid border-purple-200 bg-purple-200 text-white;
+}

@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ with .Site.Data.apply.content }}
+    {{ partial "sections/apply/content.html" . }}
+  {{ end }}
+{{ end }}

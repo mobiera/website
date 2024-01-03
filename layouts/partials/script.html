@@ -1,18 +1,16 @@
 {{ if .Params.js }}
   <script src="{{ .Params.js }}"></script>
 {{ end }}
+{{ if .Params.js3 }}
+  <script src="{{ .Params.js3 }}"></script>
+{{ end }}
 {{ if .Params.js2 }}
   {{ $js2 := resources.Get .Params.js2 }}
   {{ with $js2 }}
     <script src="{{ $js2.RelPermalink }}"></script>
   {{ end }}
 {{ end }}
-{{ if .Params.js3 }}
-  {{ $js3 := resources.Get .Params.js3 }}
-  {{ with $js3 }}
-    <script src="{{ $js3.RelPermalink }}"></script>
-  {{ end }}
-{{ end }}
+
 {{ $nav := resources.Get "js/nav.js" }}
 {{ with $nav }}
   <script src="{{ $nav.RelPermalink }}"></script>

@@ -1,0 +1,138 @@
+<div class="flex h-screen w-full items-center justify-center pt-40">
+  {{ $list := (.content.steps) }}
+  {{ $len := (len $list) }}
+  <div class="container">
+    <form id="regForm" method="post" action="/apply.php">
+      {{ range $index, $element := .content.steps }}
+        <section class="tab hidden">
+          <div class="mb-20 flex items-center justify-between">
+            <div class="flex items-center gap-5">
+              {{ $icon := resources.Get .icon }}
+              {{ with $icon }}
+                <img src="{{ $icon.RelPermalink }}" class="h-12 w-12" />
+              {{ end }}
+              <h2 class="text-[52px] font-bold leading-tight text-blue-200">
+                {{ $element.title }}
+              </h2>
+            </div>
+            <h5 class="text-[52px] font-bold leading-tight text-purple-200">
+              {{ add $index 1 }}/{{ $len }}
+            </h5>
+          </div>
+          {{ if (eq $element.type "input") }}
+            <input
+              type="text"
+              name="{{ $element.input }}"
+              id="{{ $element.input }}"
+              placeholder="{{ $element.placeholder }}"
+              class="mb-[2px] w-2/3 border-b-2 border-b-blue-200 px-10 py-3 font-itc text-heading1 text-blue-200 transition-all focus:mb-0 focus:border-b-4 focus:outline-none"
+            />
+          {{ else if (eq $element.type "file") }}
+            <input
+              type="file"
+              name="{{ $element.input }}"
+              id="{{ $element.input }}"
+              hidden
+              multiple
+            />
+            <label
+              for="resume"
+              class="mb-[2px] flex w-2/3 flex-row-reverse items-center justify-between border-b-2 border-b-blue-200 py-3 pl-10  transition-all focus:mb-0 focus:border-b-4 focus:outline-none"
+              ><div
+                class="rounded-lg border-2 border-primary px-5 py-3 text-heading3"
+              >
+                Browse
+              </div>
+              <span
+                id="file-chosen"
+                class="font-itc text-heading3 text-blue-200"
+                >{{ .placeholder }}</span
+              ></label
+            >
+          {{ else }}
+            <p class="w-2/3 text-[34px] text-blue-200">{{ .text1 }}</p>
+          {{ end }}
+          <div class="mt-10 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+              <button
+                type="button"
+                id="nextBtn"
+                onclick="nextPrev(1)"
+                class="cursor-pointer rounded-lg bg-purple-200 px-20 py-4 font-itc text-heading2 text-white"
+              >
+                Next
+              </button>
+              <div class="flex items-center gap-5">
+                <p class="text-heading2 text-blue-200">Or press <b>Enter</b></p>
+                <img src="/images/enter-icon.svg" alt="enter" class="w-6" />
+              </div>
+            </div>
+            <div
+              class="error hidden-element gap-5 rounded-md border border-[#D32E20] bg-[#EF476F0A] px-7 py-4 text-heading2 text-[#D32E20]"
+            >
+              <img src="/images/warning-icon.svg" alt="" class="w-5" />
+              <p class="">Please fill this in</p>
+            </div>
+          </div>
+          <div class="mt-20 flex justify-between">
+            <div class="">
+              {{ if (eq $element.input "resume") }}
+                <button
+                  type="submit"
+                  class="flex cursor-pointer items-center gap-5 rounded-lg bg-green px-16 py-4 font-itc text-heading2 text-white"
+                >
+                  <img src="/images/send-icon.svg" alt="" class="w-5" />
+                  <span>Send</span>
+                </button>
+              {{ end }}
+            </div>
+            <div class="">
+              <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                <div
+                  class="flex h-14 w-14 -rotate-90 items-center justify-center bg-purple-200 first-of-type:fill-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <g transform="translate(17029 10127)">
+                      <rect width="24" height="24" fill="none" />
+                      <path
+                        d="M19.352,27a1.682,1.682,0,0,1-1.162-.458L7.231,16.107a1.513,1.513,0,0,1,0-2.214L18.19,3.458a1.7,1.7,0,0,1,2.325,0,1.513,1.513,0,0,1,0,2.214L10.718,15l9.8,9.328a1.513,1.513,0,0,1,0,2.214A1.682,1.682,0,0,1,19.352,27Z"
+                        transform="translate(-17003.004 -10100) rotate(180)"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </button>
+              {{ if (ne $element.type "recap") }}
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                  <div
+                    class="flex h-14 w-14 rotate-90 items-center justify-center bg-purple-200 first-of-type:fill-white"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <g transform="translate(17029 10127)">
+                        <rect width="24" height="24" fill="none" />
+                        <path
+                          d="M19.352,27a1.682,1.682,0,0,1-1.162-.458L7.231,16.107a1.513,1.513,0,0,1,0-2.214L18.19,3.458a1.7,1.7,0,0,1,2.325,0,1.513,1.513,0,0,1,0,2.214L10.718,15l9.8,9.328a1.513,1.513,0,0,1,0,2.214A1.682,1.682,0,0,1,19.352,27Z"
+                          transform="translate(-17003.004 -10100) rotate(180)"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </button>
+              {{ end }}
+            </div>
+          </div>
+        </section>
+      {{ end }}
+    </form>
+  </div>
+</div>
