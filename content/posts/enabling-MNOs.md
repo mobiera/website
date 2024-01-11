@@ -1,4 +1,5 @@
 ---
+id: 1
 title: Enabling MNOs and ISPs with full digital control
 date: 2023-09-10
 image: "images/posts/meet-mvc.jpg"

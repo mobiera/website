@@ -26,7 +26,7 @@
 @layer base {
   body,
   html {
-    @apply font-itc text-[12px] text-primary md:text-[14px] lg:text-[16px];
+    @apply w-screen overflow-x-hidden font-itc text-[12px] text-primary md:text-[14px] lg:text-[16px];
   }
 }
 
@@ -56,10 +56,13 @@
     @apply text-green;
   }
   .caption {
-    @apply absolute bottom-10 left-10 text-heading text-white drop-shadow-[0_2px_3px_rgba(25,36,66,1)];
+    @apply absolute bottom-10 left-10 right-10 text-heading1 text-white drop-shadow-[0_2px_3px_rgba(25,36,66,1)] md:text-heading;
   }
   .caption b {
     @apply text-green;
+  }
+  .content b {
+    @apply mb-2 mt-5 block font-bold;
   }
 }
 
@@ -96,10 +99,14 @@
   @apply bg-white fill-[#1924420E];
 }
 
-.swiper4 .swiper-button-disabled svg {
+.swiper4 .swiper-button-disabled svg,
+.swiper3 .swiper-button-disabled svg,
+.swiper6 .swiper-button-disabled svg {
   @apply opacity-20 grayscale;
 }
-.swiper4 .swiper-button-disabled {
+.swiper4 .swiper-button-disabled,
+.swiper3 .swiper-button-disabled,
+.swiper6 .swiper-button-disabled {
   @apply bg-white;
 }
 

@@ -3,9 +3,13 @@
     <h2 class="title">{{ .title }}</h2>
     <p class="subtitle">{{ .subtitle }}</p>
 
-    <div class="absolute left-0 top-[22rem] h-[1px] w-full bg-[#E6E7EB]"></div>
+    <div
+      class="absolute left-0 top-[25rem] h-[1px] w-full bg-[#E6E7EB] md:top-[22rem]"
+    ></div>
 
-    <div class="swiper3 relative mx-auto w-4/5 overflow-hidden pt-5 2xl:w-8/12">
+    <div
+      class="swiper3 relative mx-auto w-full overflow-hidden pt-5 md:w-4/5 2xl:w-8/12"
+    >
       <div class="swiper-wrapper">
         {{ range .content.steps }}
           <div class="swiper-slide">
@@ -23,7 +27,9 @@
                   <h3 class="mx-3 mb-5 text-heading2 font-bold text-purple-200">
                     {{ .title_section }}
                   </h3>
-                  <p class="mb-7 text-body-medium font-normal">{{ .text }}</p>
+                  <p class="mb-7 text-heading4 font-normal md:text-body-medium">
+                    {{ .text }}
+                  </p>
                   <a href="{{ .link }}" class="btn-secondary">Learn more</a>
                 </div>
                 <div
@@ -35,7 +41,7 @@
         {{ end }}
       </div>
       <div
-        class="swiper-button-next3 absolute end-0 top-[5.3rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none"
+        class="swiper-button-next3 absolute end-0 top-[6.2rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none md:top-[5.3rem]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +64,7 @@
         </svg>
       </div>
       <div
-        class="swiper-button-prev3 absolute start-0 top-[5.3rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none"
+        class="swiper-button-prev3 absolute start-0 top-[6.2rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none md:top-[5.3rem]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

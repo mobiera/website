@@ -1,4 +1,5 @@
 ---
+id: 4
 title: sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 date: 2023-08-01
 image: "images/posts/meet-mvc.jpg"

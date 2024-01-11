@@ -1,7 +1,7 @@
 <div class="container py-10 pb-20">
-  <div class="flex flex-row justify-between">
-    <div class="flex w-5/12 justify-center">
-      <div class="relative w-fit">
+  <div class="flex flex-col justify-between md:flex-row">
+    <div class="mb-14 flex w-full justify-center md:mb-0 md:w-5/12">
+      <div class="relative w-11/12">
         {{ $image := resources.Get .image }}
         {{ with $image }}
           <img
@@ -21,8 +21,8 @@
         ></div>
       </div>
     </div>
-    <div class="flex w-5/12 flex-col">
-      <h2 class="big-title mb-10">{{ safeHTML .title }}</h2>
+    <div class="flex w-full flex-col md:w-5/12">
+      <h2 class="big-title mb-10 leading-tight">{{ safeHTML .title }}</h2>
       <p class="missing mb-7 text-heading2 text-blue-200">
         {{ safeHTML .subtitle }}
       </p>

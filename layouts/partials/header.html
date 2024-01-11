@@ -46,7 +46,7 @@
         {{ end }}
       </a>
       <div class="block md:hidden">
-        <button id="menu-button" class="flex items-center">
+        <button id="menu-button" class="mr-2 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -91,7 +91,7 @@
                 </li>
               {{ end }}
             </ul>
-            <div class="flex flex-col items-center gap-2">
+            <div class="flex flex-col items-center gap-4">
               {{ range .Site.Params.Btn1 }}
                 <a
                   href="{{ .url }}"
@@ -118,7 +118,7 @@
               {{ end }}
             </div>
 
-            <p class="my-5 text-center text-body-medium text-white">
+            <p class="mt-20 text-center text-body-medium text-white">
               {{ .Site.Params.Text }}
               <a href="{{ .Site.Params.url }}" class="underline"
                 >{{ .Site.Params.Link }}</a

@@ -29,19 +29,27 @@ const swiper3 = new Swiper(".swiper3", {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      navigation: { enabled: false },
+      // navigation: { enabled: false },
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
       spaceBetween: 30,
-      navigation: { enabled: false },
     },
     // when window width is >= 640px
     640: {
       slidesPerView: 2,
       spaceBetween: 40,
     },
+  },
+});
+
+const swiper6 = new Swiper(".swiper6", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next6",
+    prevEl: ".swiper-button-prev6",
   },
 });
 

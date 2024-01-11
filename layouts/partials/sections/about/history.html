@@ -4,7 +4,9 @@
     <p class="subtitle">{{ .subtitle }}</p>
 
     <div class="swiper4 relative mx-auto w-full overflow-hidden pt-5">
-      <div class="absolute left-0 top-[92px] h-[1px] w-full bg-[#E6E7EB]"></div>
+      <div
+        class="absolute left-0 top-[68px] h-[1px] w-full bg-[#E6E7EB] md:top-[92px]"
+      ></div>
       <div class="swiper-wrapper">
         {{ range .content.steps }}
           <div class="swiper-slide">
@@ -21,7 +23,7 @@
         {{ end }}
       </div>
       <div
-        class="swiper-button-next3 absolute end-0 top-[4rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none"
+        class="swiper-button-next4 absolute end-0 top-[4rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +46,7 @@
         </svg>
       </div>
       <div
-        class="swiper-button-prev3 absolute start-0 top-[4rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none"
+        class="swiper-button-prev4 absolute start-0 top-[4rem] z-10 flex h-14 w-14 cursor-pointer items-center justify-center after:content-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

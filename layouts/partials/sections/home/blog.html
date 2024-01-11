@@ -5,7 +5,7 @@
     <!-- <div
       class="grid grid-cols[repeat(4, 1fr)] grid-rows-[(1fr 1fr)] first:grid-cols-[span 2] first:grid-row-[span 2]"
     > -->
-    <div class="my-10 grid grid-cols-3 gap-7">
+    <div class="my-10 hidden grid-cols-3 gap-7 md:grid">
       {{ range first 1 .content.news }}
         <div
           class="row-span-2 overflow-hidden rounded-lg border-2 border-green"
@@ -51,6 +51,82 @@
         </div>
       {{ end }}
     </div>
+    <div class="swiper6 my-5 block md:hidden">
+      <div class="swiper-wrapper">
+        {{ range first 5 .content.news }}
+          <div class="swiper-slide w-4/5">
+            <div class="overflow-hidden rounded-lg border-2 border-green">
+              {{ $image := resources.Get .image }}
+              {{ with $image }}
+                <img
+                  src="{{ $image.RelPermalink }}"
+                  alt=""
+                  class="h-48 w-full object-cover"
+                />
+              {{ end }}
+              <div class="px-5 py-4">
+                <h3
+                  class="mb-5 text-heading3 font-bold leading-tight text-blue-200 md:mb-2"
+                >
+                  {{ .title_news }}
+                </h3>
+                <p class="mb-5 text-heading4 md:mb-2">{{ .description }}</p>
+                <a href="{{ .link }}" class="btn-secondary">{{ .btn }}</a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <div class="mt-5 flex justify-center gap-5">
+        <div
+          class="swiper-button-prev6 relative flex h-14 w-14 cursor-pointer items-center justify-center after:content-none md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="59.662"
+            height="59.662"
+            viewBox="0 0 59.662 59.662"
+          >
+            <g transform="translate(0.662 0.662)">
+              <circle cx="29" cy="29" r="29" fill="#fff" />
+              <path
+                d="M29.428,41.441l-9.61-9.61m0,0,9.61-9.61m-9.61,9.61H43.844M3,31.831A28.831,28.831,0,1,0,31.831,3,28.831,28.831,0,0,0,3,31.831Z"
+                transform="translate(-2.662 -2.662)"
+                fill="none"
+                stroke="#8353f2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          class="swiper-button-next6 relative flex h-14 w-14 cursor-pointer items-center justify-center after:content-none md:hidden"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="59.662"
+            height="59.662"
+            viewBox="0 0 59.662 59.662"
+          >
+            <g transform="translate(1 0.662)">
+              <circle cx="29" cy="29" r="29" fill="#fff" />
+              <path
+                d="M34.234,41.441l9.61-9.61m0,0-9.61-9.61m9.61,9.61H19.818m40.844,0A28.831,28.831,0,1,1,31.831,3,28.831,28.831,0,0,1,60.662,31.831Z"
+                transform="translate(-3 -2.662)"
+                fill="none"
+                stroke="#8353f2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
     <div class="flex items-center justify-center">
       <a
         href="{{ .link }}"

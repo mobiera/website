@@ -1,4 +1,5 @@
 ---
+id: 3
 title: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 date: 2023-08-20
 image: "images/posts/meet-mvc.jpg"

@@ -1,6 +1,6 @@
-<div class="container py-10">
-  <div class="flex flex-row justify-between">
-    <div class="w-1/2">
+<div class="container py-5 pb-20 md:py-10">
+  <div class="flex flex-col justify-between md:flex-row">
+    <div class="w-full md:w-1/2">
       <div class="flex flex-col gap-5">
         <div class="w-full">
           {{ $image := resources.Get .image }}
@@ -22,14 +22,14 @@
               <div class="first:fill-green">
                 {{ partial "icons/bullet.html" }}
               </div>
-              <p class="text-heading3">{{ .tag }}</p>
+              <p class="text-heading4 md:text-heading3">{{ .tag }}</p>
             </div>
           {{ end }}
         </div>
       </div>
     </div>
-    <div class="flex w-[45%] flex-col gap-3">
-      <h1 class="big-title mb-10">{{ safeHTML .title }}</h1>
+    <div class="mt-10 flex w-full flex-col gap-3 md:mt-0 md:w-[45%]">
+      <h1 class="big-title mb-10 leading-tight">{{ safeHTML .title }}</h1>
       <p class="mb-7 text-heading2">{{ .subtitle }}</p>
       <p class="text-heading3 opacity-80">{{ .text }}</p>
     </div>

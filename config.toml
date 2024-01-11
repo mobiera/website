@@ -1,74 +1,88 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Mobiera'
+
 # theme = 'mobiera'
 # sectionPagesMenu = "main"
-
 [menu]
-  [[menu.main]]
-    name = "Telecom"
-    url = "/telecom"
-    weight = 10
-  [[menu.main]]
-    name = "DevSecOps"
-    url = "/dev-sec-ops"
-    weight = 20
-  [[menu.main]]
-    name = "Innovation"
-    url = "/innovation"
-    weight = 30
-  [[menu.main]]
-    name = "Company"
-    url = "/company"
-    weight = 40
-  [[menu.footer]]
-    name = 'Contact Us'
-    url = '/contact-us'
-    weight = 10
-  [[menu.footer]]
-    name = 'Privacy Policy'
-    url = '/privacy-policy'
-    weight = 20
-  [[menu.footer]]
-    name = 'Careers'
-    url = '/careers'
-    weight = 30
-  [[menu.footer]]
-    name = 'Blog'
-    url = '/blog'
-    weight = 40
-  [[menu.footer]]
-    name = 'About Us'
-    url = '/about-us/'
-    weight = 50
 
+[[menu.main]]
+name = "Telecom"
+url = "/telecom"
+weight = 10
+
+[[menu.main]]
+name = "DevSecOps"
+url = "/dev-sec-ops"
+weight = 20
+
+[[menu.main]]
+name = "Innovation"
+url = "/innovation"
+weight = 30
+
+[[menu.main]]
+name = "Company"
+url = "/about-us"
+weight = 40
+
+[[menu.footer]]
+name = 'Contact Us'
+url = '/contact-us'
+weight = 10
+
+[[menu.footer]]
+name = 'Privacy Policy'
+url = '/privacy-policy'
+weight = 20
+
+[[menu.footer]]
+name = 'Careers'
+url = '/careers'
+weight = 30
+
+[[menu.footer]]
+name = 'Blog'
+url = '/posts'
+weight = 40
+
+[[menu.footer]]
+name = 'About Us'
+url = '/about-us/'
+weight = 50
 
 [params]
-  copyright = "© All rights reserved - 2011-2023"
-  text = "We’re showcasing our Web5 Accelerator suite at Geneva."
-  link = "Learn more"
-  url = "/"
-  [[params.btn1]]
-    name = "Blog"
-    url = "/blog"
-  [[params.btn2]]
-    name = "Contact"
-    url = "/contact"
-  [[params.btn3]]
-    name = "Login"
-    url = "/login"
-  [[params.social]]
-    name = "Medium"
-    url = "https://www.medium.com"
-    icon = "icons/icon-medium.html"
-  [[params.social]]
-    name = "Linkedin"
-    url = "https://www.linkedin.com"
-    icon = "icons/icon-linkedin.html"
-  [[params.social]]
-    name = "X"
-    url = "https://www.x.com"
-    icon = "icons/icon-x.html"
+copyright = "© All rights reserved - 2011-2023"
+text = "We’re showcasing our Web5 Accelerator suite at Geneva."
+link = "Learn more"
+url = "/"
 
- 
-    
+[[params.btn1]]
+name = "Blog"
+url = "/posts"
+
+[[params.btn2]]
+name = "Contact"
+url = "/contact"
+
+[[params.btn3]]
+name = "Login"
+url = "/login"
+
+[[params.social]]
+name = "Medium"
+url = "https://www.medium.com"
+icon = "icons/icon-medium.html"
+
+[[params.social]]
+name = "Linkedin"
+url = "https://www.linkedin.com"
+icon = "icons/icon-linkedin.html"
+
+[[params.social]]
+name = "X"
+url = "https://www.x.com"
+icon = "icons/icon-x.html"
+
+[markup.goldmark.renderer]
+unsafe= true

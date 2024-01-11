@@ -1,11 +1,13 @@
 {{ define "main" }}
-  <div class="container pt-36">
+  <div class="container pb-10 pt-20 md:pb-0 md:pt-36">
     <h1 class="my-5 text-heading2 font-bold text-purple-200">
       {{ .Page.Title }}
     </h1>
     {{ range first 1 .Pages }}
-      <div class="mb-5 flex overflow-hidden rounded-lg border-2 border-green">
-        <div class="w-1/2">
+      <div
+        class="mb-5 flex flex-col overflow-hidden rounded-lg border-2 border-green md:flex-row"
+      >
+        <div class="w-full md:w-1/2">
           {{ $image := resources.Get .Params.image }}
           {{ with $image }}
             <img
@@ -16,14 +18,14 @@
             />
           {{ end }}
         </div>
-        <div class="w-1/2 p-5">
+        <div class="w-full p-5 md:w-1/2">
           <h2 class="mb-2 text-heading2 font-bold leading-tight text-blue-200">
             {{ .Title }}
           </h2>
-          <p class="mb-5 text-body-small opacity-50">
+          <p class="mb-5 text-heading4 opacity-50 md:text-body-small">
             {{ .Date.Format "01/02/2006" }}
           </p>
-          <div class="mb-5">
+          <div class="mb-5 text-heading4 md:text-body-medium">
             {{ .Content | truncate 150 }}
           </div>
           <a href="{{ .Permalink }}" class="btn-secondary">And many more</a>
@@ -37,8 +39,8 @@
             <div
               class="flex h-full flex-col items-center overflow-hidden rounded-lg border-2 border-green"
             >
-              <div class="flex flex-col">
-                <div class="h-40 w-full">
+              <div class="flex w-full flex-col">
+                <div class="h-60 w-full md:h-40">
                   {{ $image := resources.Get .Params.image }}
                   {{ with $image }}
                     <img
@@ -49,24 +51,24 @@
                     />
                   {{ end }}
                 </div>
-                <div class="flex flex-col gap-2 p-4">
+                <div class="flex w-full flex-col gap-2 p-4">
                   <h3
-                    class="text-heading4 font-bold leading-tight text-blue-200"
+                    class="text-heading2 font-bold leading-tight text-blue-200 md:text-heading4"
                   >
                     {{ .Title | truncate 40 }}
                   </h3>
-                  <div class="text-body-small">
+                  <div class="text-heading4 md:text-body-small">
                     {{ .Content | truncate 55 }}
                   </div>
                 </div>
                 <div class="flex justify-between px-4">
                   <a
                     href="{{ .Permalink }}"
-                    class="btn-secondary text-body-small text-green"
+                    class="btn-secondary text-heading4 text-green md:text-body-small"
                   >
                     And many more
                   </a>
-                  <p class="mb-5 text-body-small opacity-50">
+                  <p class="mb-5 text-heading4 opacity-50 md:text-body-small">
                     {{ .Date.Format "01/02/2006" }}
                   </p>
                 </div>

@@ -3,14 +3,16 @@
 >
   <div class="absolute left-0 top-0 h-full w-full bg-blue-200 opacity-50"></div>
   <div class="container relative">
-    <h1 class="big-title green w-1/2 leading-tight text-white after:h-0">
+    <h1
+      class="big-title green w-full leading-tight text-white after:h-0 md:w-1/2"
+    >
       {{ safeHTML .title }}
     </h1>
-    <div class="mt-7 flex gap-10 text-heading2 text-white">
-      <div class="w-1/2">
+    <div class="mt-7 flex flex-col gap-10 text-heading2 text-white md:flex-row">
+      <div class="w-full md:w-1/2">
         <p>{{ .text1 }}</p>
       </div>
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2">
         <p>{{ .text2 }}</p>
       </div>
     </div>

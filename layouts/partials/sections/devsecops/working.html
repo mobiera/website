@@ -1,6 +1,6 @@
 <div class="container py-20">
-  <div class="flex flex-row-reverse justify-between">
-    <div class="flex w-5/12 justify-center">
+  <div class="flex flex-col justify-between md:flex-row-reverse">
+    <div class="mb-10 flex w-11/12 justify-center md:mb-0 md:w-5/12">
       <div class="relative w-fit">
         {{ $image := resources.Get .image }}
         {{ with $image }}
@@ -21,9 +21,9 @@
         ></div>
       </div>
     </div>
-    <div class="flex w-5/12 flex-col">
-      <h2 class="big-title mb-10">{{ safeHTML .title }}</h2>
-      <p class="missing mb-16 text-heading2 text-blue-200">
+    <div class="flex w-full flex-col md:w-5/12">
+      <h2 class="big-title mb-10 leading-snug">{{ safeHTML .title }}</h2>
+      <p class="missing mb-10 text-heading2 text-blue-200 md:mb-16">
         {{ safeHTML .subtitle }}
       </p>
       <a

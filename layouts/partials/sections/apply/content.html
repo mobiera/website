@@ -1,21 +1,27 @@
-<div class="flex h-screen w-full items-center justify-center pt-40">
+<div class="pt:20 flex h-screen w-full items-center justify-center md:pt-40">
   {{ $list := (.content.steps) }}
   {{ $len := (len $list) }}
   <div class="container">
     <form id="regForm" method="post" action="/apply.php">
       {{ range $index, $element := .content.steps }}
         <section class="tab hidden">
-          <div class="mb-20 flex items-center justify-between">
+          <div
+            class="mb-20 flex flex-col-reverse items-center justify-between md:flex-row"
+          >
             <div class="flex items-center gap-5">
               {{ $icon := resources.Get .icon }}
               {{ with $icon }}
                 <img src="{{ $icon.RelPermalink }}" class="h-12 w-12" />
               {{ end }}
-              <h2 class="text-[52px] font-bold leading-tight text-blue-200">
+              <h2
+                class="text-heading1 font-bold leading-tight text-blue-200 md:text-[52px]"
+              >
                 {{ $element.title }}
               </h2>
             </div>
-            <h5 class="text-[52px] font-bold leading-tight text-purple-200">
+            <h5
+              class="mb-20 text-heading1 font-bold leading-tight text-purple-200 md:mb-0 md:text-[52px]"
+            >
               {{ add $index 1 }}/{{ $len }}
             </h5>
           </div>
@@ -25,7 +31,7 @@
               name="{{ $element.input }}"
               id="{{ $element.input }}"
               placeholder="{{ $element.placeholder }}"
-              class="mb-[2px] w-2/3 border-b-2 border-b-blue-200 px-10 py-3 font-itc text-heading1 text-blue-200 transition-all focus:mb-0 focus:border-b-4 focus:outline-none"
+              class="mb-[2px] w-full border-b-2 border-b-blue-200 px-10 py-3 font-itc text-heading2 text-blue-200 transition-all focus:mb-0 focus:border-b-4 focus:outline-none md:w-2/3 md:text-heading1"
             />
           {{ else if (eq $element.type "file") }}
             <input
@@ -37,7 +43,7 @@
             />
             <label
               for="resume"
-              class="mb-[2px] flex w-2/3 flex-row-reverse items-center justify-between border-b-2 border-b-blue-200 py-3 pl-10  transition-all focus:mb-0 focus:border-b-4 focus:outline-none"
+              class="mb-[2px] flex w-full flex-row-reverse items-center justify-between border-b-2 border-b-blue-200 py-3 pl-10 transition-all  focus:mb-0 focus:border-b-4 focus:outline-none md:w-2/3"
               ><div
                 class="rounded-lg border-2 border-primary px-5 py-3 text-heading3"
               >
@@ -45,14 +51,16 @@
               </div>
               <span
                 id="file-chosen"
-                class="font-itc text-heading3 text-blue-200"
+                class="font-itc text-heading4 text-blue-200 md:text-heading3"
                 >{{ .placeholder }}</span
               ></label
             >
           {{ else }}
             <p class="w-2/3 text-[34px] text-blue-200">{{ .text1 }}</p>
           {{ end }}
-          <div class="mt-10 flex items-center justify-between">
+          <div
+            class="mt-10 flex flex-col-reverse items-center justify-between md:flex-row"
+          >
             <div class="flex items-center gap-8">
               <button
                 type="button"
@@ -68,7 +76,7 @@
               </div>
             </div>
             <div
-              class="error hidden-element gap-5 rounded-md border border-[#D32E20] bg-[#EF476F0A] px-7 py-4 text-heading2 text-[#D32E20]"
+              class="error hidden-element mb-5 flex gap-5 rounded-md border border-[#D32E20] bg-[#EF476F0A] px-7 py-4 text-heading2 text-[#D32E20] md:mb-0"
             >
               <img src="/images/warning-icon.svg" alt="" class="w-5" />
               <p class="">Please fill this in</p>
