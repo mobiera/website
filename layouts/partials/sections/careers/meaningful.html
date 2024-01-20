@@ -34,9 +34,9 @@
         {{ $image2 := resources.Get .image2 }}
         {{ with $image2 }}
           <img
-            src="{{ $image.RelPermalink }}"
-            width="{{ $image.Width }}"
-            height="{{ $image.Height }}"
+            src="{{ $image2.RelPermalink }}"
+            width="{{ $image2.Width }}"
+            height="{{ $image2.Height }}"
             class="w-full object-cover lg:min-h-[400px]"
           />
         {{ end }}

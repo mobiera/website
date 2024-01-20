@@ -12,6 +12,13 @@
 @font-face {
   font-family: "itc-avant-garde";
   font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/itcavantgardestd-book-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
   font-weight: 600;
   src: url(/fonts/itcavantgardestd-demi-webfont.woff) format("woff");
 }
@@ -32,7 +39,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-block rounded-md border-2 border-green px-8 py-3 text-center text-heading4 font-bold text-green lg:text-heading3;
+    @apply inline-block rounded-md border-2 border-green px-8 py-3 text-center text-heading4 font-bold text-green transition-all hover:bg-green hover:text-white lg:text-heading3;
   }
   .btn-secondary {
     @apply flex gap-3 text-heading4 font-bold text-green transition-all after:text-blue-200 after:content-['\2192'] hover:gap-4;
@@ -56,10 +63,13 @@
     @apply text-green;
   }
   .caption {
-    @apply absolute bottom-10 left-10 right-10 text-heading1 text-white drop-shadow-[0_2px_3px_rgba(25,36,66,1)] md:text-heading;
+    @apply absolute bottom-10 left-10 right-10 text-heading1 font-bold leading-tight text-white drop-shadow-[0_2px_3px_rgba(25,36,66,1)] md:text-heading;
   }
   .caption b {
     @apply text-green;
+  }
+  .purple b {
+    @apply font-bold text-purple-200;
   }
   .content b {
     @apply mb-2 mt-5 block font-bold;

@@ -1,4 +1,6 @@
-<div class="relative w-full bg-white py-16">
+<div
+  class="relative flex min-h-[calc(100vh-144px)] w-full items-center bg-white py-16 "
+>
   <div class="container">
     <h2 class="title">{{ .title }}</h2>
     <p class="subtitle">{{ .subtitle }}</p>
@@ -16,7 +18,7 @@
                   {{ .title_section }}
                 </h3>
                 <div class="mb-5 mt-1 h-6 w-6 rounded-full bg-green"></div>
-                <p class="text-body-medium font-normal">{{ .text }}</p>
+                <p class="text-body-medium font-light">{{ .text }}</p>
               </div>
             </div>
           </div>
@@ -71,7 +73,9 @@
     </div>
 
     <div class="mt-10">
-      <p class="mx-auto w-10/12 text-center text-heading4 opacity-80">
+      <p
+        class="mx-auto w-10/12 text-center text-heading4 font-light opacity-80"
+      >
         {{ .text_bottom }}
       </p>
     </div>

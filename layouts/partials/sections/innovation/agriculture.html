@@ -1,4 +1,7 @@
-<div class="container py-28">
+<div
+  class="container flex min-h-[calc(100vh-144px)] w-full items-center py-16"
+  id="agriculture"
+>
   <div class="flex flex-col justify-between md:flex-row-reverse">
     <div class="flex w-11/12 justify-center md:w-5/12">
       <div class="relative w-fit">
@@ -21,14 +24,14 @@
         ></div>
       </div>
     </div>
-    <div class="mt-10 flex w-full flex-col md:mt-0 md:w-5/12">
+    <div class="mt-10 flex w-full flex-col py-20 md:mt-0 md:w-5/12">
       <h2 class="big-title mb-10 leading-snug">{{ safeHTML .title }}</h2>
       <p class="missing mb-16 text-heading2 text-blue-200">
         {{ safeHTML .subtitle }}
       </p>
       <a
         href="{{ .link }}"
-        class="btn-primary w-fit border-purple-200 text-purple-200"
+        class="btn-primary w-fit border-purple-200 text-purple-200 hover:bg-purple-200"
         >{{ .cta }}</a
       >
     </div>

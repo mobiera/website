@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://dev.mobiera.com/'
 languageCode = 'en-us'
 title = 'Mobiera'
 
@@ -22,7 +22,7 @@ url = "/innovation"
 weight = 30
 
 [[menu.main]]
-name = "Company"
+name = "About Us"
 url = "/about-us"
 weight = 40
 
@@ -43,7 +43,7 @@ weight = 30
 
 [[menu.footer]]
 name = 'Blog'
-url = '/posts'
+url = '/blog'
 weight = 40
 
 [[menu.footer]]
@@ -59,7 +59,7 @@ url = "/"
 
 [[params.btn1]]
 name = "Blog"
-url = "/posts"
+url = "/blog"
 
 [[params.btn2]]
 name = "Contact"

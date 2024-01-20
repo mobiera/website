@@ -1,9 +1,11 @@
-<div class="w-full bg-[#8353F216] py-16">
+<div
+  class="section flex min-h-[calc(100vh-144px)] w-full items-center bg-[#8353F216] py-16"
+>
   <div class="container">
     <h2 class="title">{{ .title }}</h2>
     <p class="subtitle">{{ .subtitle }}</p>
 
-    <div class="flex flex-col pt-5 md:flex-row">
+    <div class="flex flex-col overflow-hidden pt-5 md:flex-row">
       <ul
         class="mb-10 flex w-full flex-row gap-4 border-b-4 border-[#E2D6FC] pb-6 md:mb-0 md:w-1/12 md:flex-col md:gap-0 md:border-none"
         id="tabsVertical"
@@ -22,7 +24,7 @@
       <div class="relative hidden w-1/12 justify-center pb-6 md:flex">
         <div class="h-full w-[1px] bg-purple-200 opacity-20"></div>
         <div
-          class="absolute start-1/2 top-0 h-1/4 w-[5px] -translate-x-1/2 bg-green"
+          class="trigger absolute start-1/2 top-0 h-1/4 w-[6px] -translate-x-1/2 bg-green"
         ></div>
       </div>
       <div id="tab-contentsVertical" class="flex w-full md:w-10/12">
@@ -39,7 +41,7 @@
                     >
                       {{ .title_section }}
                     </h3>
-                    <p class="mb-7 me-5 text-heading4 font-normal">
+                    <p class="purple mb-10 me-5 text-heading4 font-light">
                       {{ safeHTML .text }}
                     </p>
                     <a

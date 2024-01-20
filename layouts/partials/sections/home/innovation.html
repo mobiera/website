@@ -7,12 +7,10 @@
       class="absolute left-0 top-[25rem] h-[1px] w-full bg-[#E6E7EB] md:top-[22rem]"
     ></div>
 
-    <div
-      class="swiper3 relative mx-auto w-full overflow-hidden pt-5 md:w-4/5 2xl:w-8/12"
-    >
+    <div class="swiper3 relative mx-auto w-full overflow-hidden pt-5">
       <div class="swiper-wrapper">
         {{ range .content.steps }}
-          <div class="swiper-slide">
+          <div class="swiper-slide px-5 lg:px-28">
             <div class="group flex flex-col items-center">
               <div
                 class="rounded-full bg-[#F4EFFE] p-3 transition-all first:fill-purple-200 group-hover:bg-purple-200 group-hover:first:fill-white"
@@ -22,7 +20,7 @@
               <div class="mb-16 mt-1 h-6 w-6 rounded-full bg-green"></div>
               <div class="relative w-full">
                 <div
-                  class="flex w-11/12 -translate-y-3 translate-x-7 flex-col items-center rounded-2xl border border-[#D2F8E9] bg-white px-8 py-10 text-center shadow-[12px_13px_20px_-20px_rgba(25,36,66,0.2)] shadow-blue-200 transition-all group-hover:-translate-y-5 group-hover:translate-x-4"
+                  class="flex w-11/12 -translate-y-3 translate-x-6 flex-col items-center rounded-2xl border border-[#D2F8E9] bg-white px-8 py-10 text-center shadow-[12px_13px_20px_-20px_rgba(25,36,66,0.2)] shadow-blue-200 transition-all group-hover:-translate-y-5 group-hover:translate-x-4"
                 >
                   <h3 class="mx-3 mb-5 text-heading2 font-bold text-purple-200">
                     {{ .title_section }}

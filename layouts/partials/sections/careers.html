@@ -2,23 +2,26 @@
   class="relative w-full overflow-hidden bg-[url('/images/careers-bg.jpg')] bg-cover bg-no-repeat py-16"
 >
   <div class="absolute left-0 top-0 h-full w-full bg-blue-200 opacity-50"></div>
+  <div id="particles-js" class="absolute left-0 top-0 z-10 h-full w-full"></div>
   <div class="container relative">
     <h2 class="title mb-14 text-white">{{ .title }}</h2>
     <div class="flex w-full justify-end">
       <div
-        class="relative w-full rounded-lg bg-white p-12 py-14 md:w-7/12 md:rounded-es-lg md:rounded-ss-lg md:pe-36"
+        class="relative z-20 w-full rounded-lg bg-white p-12 py-14 md:w-7/12 md:rounded-es-lg md:rounded-ss-lg md:pe-36"
       >
-        <h4 class="mb-10 text-heading1 font-bold leading-tight text-blue-200">
+        <h4
+          class="relative z-20 mb-10 text-heading1 font-bold leading-tight text-blue-200"
+        >
           {{ .section1 }}<strong class="text-purple-200"
             >{{ .section2 }}</strong
           >
         </h4>
-        <p class="mb-10 text-heading3">{{ .text1 }}</p>
-        <p class="mb-14 text-heading3">{{ .text2 }}</p>
+        <p class="mb-10 text-heading3 font-light">{{ .text1 }}</p>
+        <p class="mb-14 text-heading3 font-light">{{ .text2 }}</p>
         <div class="flex flex-col gap-5 md:flex-row md:gap-10">
           <a
             href="{{ .link1 }}"
-            class="btn-primary border-blue-200 text-blue-200"
+            class="btn-primary border-blue-200 text-blue-200 hover:bg-blue-200"
           >
             {{ .btn1 }}
           </a>

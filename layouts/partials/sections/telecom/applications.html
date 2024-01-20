@@ -1,82 +1,84 @@
-<div class="flex flex-row-reverse items-stretch justify-between py-10">
-  <div class="relative w-3/12">
-    <div class="absolute right-0 h-full w-3/4 bg-green"></div>
-    <div
-      class="relative right-20 mb-20 mt-10 bg-white p-10 shadow-[0_3px_30px_0px_rgba(80,226,170,0.27)]"
-    >
-      <h2 class="big-title mb-10">{{ .title }}</h2>
-      <p class="text-heading2">{{ .subtitle }}</p>
-    </div>
-    <div class="swiper-pagination6"></div>
-    <div class="swiper-button-next6">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
+<div class="py-16" id="application">
+  <div class="flex flex-row-reverse items-stretch justify-between py-10">
+    <div class="relative w-3/12">
+      <div class="absolute right-0 h-full w-3/4 bg-green"></div>
+      <div
+        class="relative right-20 mb-20 mt-10 bg-white p-10 shadow-[0_3px_30px_0px_rgba(80,226,170,0.27)]"
       >
-        <g transform="translate(17029 10127)">
+        <h2 class="big-title mb-10">{{ .title }}</h2>
+        <p class="text-heading2">{{ .subtitle }}</p>
+      </div>
+      <div class="swiper-pagination6"></div>
+      <div class="swiper-button-next6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <g transform="translate(17029 10127)">
+            <rect width="24" height="24" fill="none" />
+            <path
+              d="M19.352,27a1.682,1.682,0,0,1-1.162-.458L7.231,16.107a1.513,1.513,0,0,1,0-2.214L18.19,3.458a1.7,1.7,0,0,1,2.325,0,1.513,1.513,0,0,1,0,2.214L10.718,15l9.8,9.328a1.513,1.513,0,0,1,0,2.214A1.682,1.682,0,0,1,19.352,27Z"
+              transform="translate(-17003.004 -10100) rotate(180)"
+            />
+          </g>
+        </svg>
+      </div>
+      <div class="swiper-button-prev6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
           <rect width="24" height="24" fill="none" />
           <path
-            d="M19.352,27a1.682,1.682,0,0,1-1.162-.458L7.231,16.107a1.513,1.513,0,0,1,0-2.214L18.19,3.458a1.7,1.7,0,0,1,2.325,0,1.513,1.513,0,0,1,0,2.214L10.718,15l9.8,9.328a1.513,1.513,0,0,1,0,2.214A1.682,1.682,0,0,1,19.352,27Z"
-            transform="translate(-17003.004 -10100) rotate(180)"
+            d="M12.6,0A1.682,1.682,0,0,0,11.44.458L.481,10.893a1.513,1.513,0,0,0,0,2.214L11.44,23.542a1.7,1.7,0,0,0,2.325,0,1.513,1.513,0,0,0,0-2.214L3.968,12l9.8-9.328a1.513,1.513,0,0,0,0-2.214A1.682,1.682,0,0,0,12.6,0Z"
+            transform="translate(4.754 0)"
           />
-        </g>
-      </svg>
+        </svg>
+      </div>
     </div>
-    <div class="swiper-button-prev6">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <rect width="24" height="24" fill="none" />
-        <path
-          d="M12.6,0A1.682,1.682,0,0,0,11.44.458L.481,10.893a1.513,1.513,0,0,0,0,2.214L11.44,23.542a1.7,1.7,0,0,0,2.325,0,1.513,1.513,0,0,0,0-2.214L3.968,12l9.8-9.328a1.513,1.513,0,0,0,0-2.214A1.682,1.682,0,0,0,12.6,0Z"
-          transform="translate(4.754 0)"
-        />
-      </svg>
-    </div>
-  </div>
-  <div class="w-8/12">
-    <div class="swiper6 relative overflow-hidden">
-      <div class="swiper-wrapper">
-        {{ range .content.blocks }}
-          <div class="swiper-slide h-full">
-            <div
-              class="flex h-full flex-col items-center justify-between rounded-lg border-2 border-green"
-            >
-              <div class="flex flex-col">
-                {{ $image := resources.Get .image }}
-                {{ with $image }}
-                  <img
-                    src="{{ $image.RelPermalink }}"
-                    width="{{ $image.Width }}"
-                    height="{{ $image.Height }}"
-                    class=""
-                  />
-                {{ end }}
-                <div class="flex flex-col gap-4 p-5">
-                  <h3
-                    class="text-heading2 font-bold leading-tight text-blue-200"
-                  >
-                    <strong class="text-purple-200"
-                      >{{ .title_section }}</strong
+    <div class="w-8/12">
+      <div class="swiper6 relative overflow-hidden">
+        <div class="swiper-wrapper">
+          {{ range .content.blocks }}
+            <div class="swiper-slide h-full">
+              <div
+                class="flex h-full flex-col items-center justify-between rounded-lg border-2 border-green"
+              >
+                <div class="flex flex-col">
+                  {{ $image := resources.Get .image }}
+                  {{ with $image }}
+                    <img
+                      src="{{ $image.RelPermalink }}"
+                      width="{{ $image.Width }}"
+                      height="{{ $image.Height }}"
+                      class=""
+                    />
+                  {{ end }}
+                  <div class="flex flex-col gap-4 p-5">
+                    <h3
+                      class="text-heading2 font-bold leading-tight text-blue-200"
                     >
-                    {{ .subtitle_section }}
-                  </h3>
-                  <p class="text-body-medium">{{ .text }}</p>
+                      <strong class="text-purple-200"
+                        >{{ .title_section }}</strong
+                      >
+                      {{ .subtitle_section }}
+                    </h3>
+                    <p class="text-body-medium">{{ .text }}</p>
+                  </div>
+                </div>
+                <div class="self-end p-5 pt-0">
+                  <a href="" class="btn-secondary text-purple-200">
+                    Learn more
+                  </a>
                 </div>
               </div>
-              <div class="self-end p-5 pt-0">
-                <a href="" class="btn-secondary text-purple-200">
-                  Learn more
-                </a>
-              </div>
             </div>
-          </div>
-        {{ end }}
+          {{ end }}
+        </div>
       </div>
     </div>
   </div>
