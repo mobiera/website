@@ -1174,6 +1174,10 @@ body,
   min-height: calc(100vh - 144px);
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-1\/12 {
   width: 8.333333%;
 }

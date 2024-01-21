@@ -33,7 +33,7 @@
             <div class="relative">
               {{ range .content_tab }}
                 <div
-                  class="flex flex-col-reverse items-center justify-between gap-10 pb-6 md:flex-row"
+                  class="flex flex-col-reverse items-stretch justify-between gap-10 pb-6 md:flex-row"
                 >
                   <div class="w-full md:w-7/12">
                     <h3
@@ -60,12 +60,19 @@
                           src="{{ $image.RelPermalink }}"
                           width="{{ $image.Width }}"
                           height="{{ $image.Height }}"
-                          class="w-80 overflow-hidden rounded-2xl shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200"
+                          class="h-full w-80 overflow-hidden rounded-2xl object-cover shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200"
                         />
-                        <div
-                          class="absolute right-0 top-0 -z-10 h-full w-full translate-x-6 translate-y-6 overflow-hidden rounded-2xl bg-[url('/images/charte-bg.svg')] bg-cover bg-center bg-no-repeat"
-                        ></div>
                       {{ end }}
+                      <div
+                        class="absolute left-0 top-0 h-full w-full rounded-2xl bg-gradient-to-br from-transparent to-purple-200"
+                      >
+                        <h4 class="caption text-heading1">
+                          {{ safeHTML .caption }}
+                        </h4>
+                      </div>
+                      <div
+                        class="absolute right-0 top-0 -z-10 h-full w-full translate-x-6 translate-y-6 overflow-hidden rounded-2xl bg-[url('/images/charte-bg.svg')] bg-cover bg-center bg-no-repeat"
+                      ></div>
                     </div>
                   </div>
                 </div>
