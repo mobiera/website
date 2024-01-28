@@ -158,3 +158,24 @@
 .selectedBtn {
   @apply rounded-lg border-2 border-solid border-purple-200 bg-purple-200 text-white;
 }
+
+.slick-slide .slick-nav::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 100%;
+  background-color: #50e2aa;
+  position: absolute;
+  right: -59px;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.slick-slide[style="opacity: 0;"] {
+  opacity: 0.25 !important;
+}
+
+.slick-slide[style="opacity: 1;"] .slick-nav::after {
+  visibility: visible;
+}

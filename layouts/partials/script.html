@@ -4,6 +4,21 @@
 {{ if .Params.js3 }}
   <script src="{{ .Params.js3 }}"></script>
 {{ end }}
+{{ if .Params.js4 }}
+  <script src="{{ .Params.js4 }}"></script>
+{{ end }}
+{{ if .Params.js5 }}
+  <script src="{{ .Params.js5 }}"></script>
+{{ end }}
+{{ if .Params.js6 }}
+  <script src="{{ .Params.js6 }}"></script>
+{{ end }}
+{{ if .Params.js22 }}
+  {{ $js22 := resources.Get .Params.js22 }}
+  {{ with $js22 }}
+    <script src="{{ $js22.RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
 {{ if .Params.js2 }}
   {{ $js2 := resources.Get .Params.js2 }}
   {{ with $js2 }}

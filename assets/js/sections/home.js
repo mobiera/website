@@ -85,33 +85,33 @@ tabTogglers.forEach(function (toggler) {
   });
 });
 
-let tabsContainerVertical = document.querySelector("#tabsVertical");
+// let tabsContainerVertical = document.querySelector("#tabsVertical");
 
-let tabTogglersVertical =
-  tabsContainerVertical.querySelectorAll("#tabsVertical a");
+// let tabTogglersVertical =
+//   tabsContainerVertical.querySelectorAll("#tabsVertical a");
 
-document
-  .querySelector("#tab-contentsVertical")
-  .children[0].classList.remove("hidden");
-tabTogglersVertical[0].classList.add("tab-selectedVertical");
+// document
+//   .querySelector("#tab-contentsVertical")
+//   .children[0].classList.remove("hidden");
+// tabTogglersVertical[0].classList.add("tab-selectedVertical");
 
-tabTogglersVertical.forEach(function (toggler) {
-  toggler.addEventListener("click", function (e) {
-    e.preventDefault();
-    let tabNameVertical = this.getAttribute("href");
-    let tabContentsVertical = document.querySelector("#tab-contentsVertical");
+// tabTogglersVertical.forEach(function (toggler) {
+//   toggler.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     let tabNameVertical = this.getAttribute("href");
+//     let tabContentsVertical = document.querySelector("#tab-contentsVertical");
 
-    for (let i = 0; i < tabContentsVertical.children.length; i++) {
-      tabTogglersVertical[i].classList.remove("tab-selectedVertical");
-      tabContentsVertical.children[i].classList.remove("hidden");
-      if ("#" + tabContentsVertical.children[i].id === tabNameVertical) {
-        continue;
-      }
-      tabContentsVertical.children[i].classList.add("hidden");
-    }
-    e.target.classList.add("tab-selectedVertical");
-  });
-});
+//     for (let i = 0; i < tabContentsVertical.children.length; i++) {
+//       tabTogglersVertical[i].classList.remove("tab-selectedVertical");
+//       tabContentsVertical.children[i].classList.remove("hidden");
+//       if ("#" + tabContentsVertical.children[i].id === tabNameVertical) {
+//         continue;
+//       }
+//       tabContentsVertical.children[i].classList.add("hidden");
+//     }
+//     e.target.classList.add("tab-selectedVertical");
+//   });
+// });
 
 particlesJS("particles-js", {
   particles: {
@@ -185,3 +185,125 @@ particlesJS("particles-js", {
 //   requestAnimationFrame(update);
 // };
 // requestAnimationFrame(update);
+
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.to(".trigger", {
+//   scrollTrigger: {
+//     trigger: ".section",
+//     start: "bottom bottom",
+//     end: "+=500",
+//     onEnter: () => console.log("enter"),
+//     onLeave: () => console.log("leave"),
+//     onEnterBack: () => console.log("enter back"),
+//     onLeaveBack: () => console.log("leave back"),
+//     toggleActions: "restart none reverse none",
+//     pin: ".section",
+//     markers: true,
+//   },
+//   y: 104,
+// });
+
+gsap.utils.toArray(".slick-nav").forEach((a, i) => {
+  a.clickElem = document.querySelector(a.hash);
+  a.offset = a.clickElem.offsetTop;
+  a.height = a.clickElem.offsetHeight;
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    gsap.to(window, { scrollTo: a.offset + a.height * (i + 1) });
+  });
+});
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".scroll-trigger",
+    duration: 1.5,
+    pin: true,
+    scrub: true,
+    start: "center center",
+    end: "+=1400",
+    toggleActions: "restart pause resume pause",
+    // markers: true,
+  },
+});
+
+// Slides Scroll Animation
+tl.from(
+  "[data-slide='1'] ",
+  {
+    opacity: 0,
+    duration: 1,
+    stagger: 2,
+  },
+  "+=1",
+)
+
+  .to(
+    "[data-slide='1'] ",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  )
+
+  .from(
+    "[data-slide='2'] ",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+    },
+    "+=1",
+  )
+  .to(
+    "[data-slide='2']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  )
+
+  .from(
+    "[data-slide='3']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+    },
+    "+=1",
+  )
+  .to(
+    "[data-slide='3']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  )
+
+  .from(
+    "[data-slide='4']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+    },
+    "+=1",
+  )
+  .to(
+    "[data-slide='4'] ",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  );

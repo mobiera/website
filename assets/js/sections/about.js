@@ -86,3 +86,104 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+
+var sidebar = new StickySidebar(".stick", {
+  topSpacing: 180,
+  containerSelector: ".main-content",
+  innerWrapperSelector: ".sidebar__inner",
+});
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".scroll-trigger",
+    duration: 1.5,
+    // pin: true,
+    scrub: true,
+    start: "top center",
+    end: "+=1330",
+    toggleActions: "restart pause resume pause",
+    // markers: true,
+  },
+});
+
+// Slides Scroll Animation
+tl.from(
+  "[data-slide='1'] ",
+  {
+    opacity: 0.5,
+    duration: 1,
+    stagger: 2,
+  },
+  "+=1",
+)
+
+  .to(
+    "[data-slide='1'] ",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  )
+
+  .from(
+    "[data-slide='2'] ",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+    },
+    "+=1",
+  )
+  .to(
+    "[data-slide='2']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  )
+
+  .from(
+    "[data-slide='3']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+    },
+    "+=1",
+  )
+  .to(
+    "[data-slide='3']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  )
+
+  .from(
+    "[data-slide='4']",
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 2,
+    },
+    "+=1",
+  )
+  .to(
+    "[data-slide='4'] ",
+    {
+      opacity: 0.5,
+      duration: 1,
+      stagger: 2,
+      ease: "power4",
+    },
+    "+=10",
+  );
