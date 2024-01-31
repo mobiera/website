@@ -2,7 +2,7 @@
   {{ $list := (.content.steps) }}
   {{ $len := (len $list) }}
   <div class="container">
-    <form id="regForm" method="post" action="/scripts/apply.php">
+    <form id="regForm" method="post" action="apply.php">
       {{ range $index, $element := .content.steps }}
         <section class="tab hidden">
           <div
