@@ -110,7 +110,7 @@ const tl = gsap.timeline({
 tl.from(
   "[data-slide='1'] ",
   {
-    opacity: 0.5,
+    opacity: 1,
     duration: 1,
     stagger: 2,
   },
@@ -180,7 +180,7 @@ tl.from(
   .to(
     "[data-slide='4'] ",
     {
-      opacity: 0.5,
+      opacity: 1,
       duration: 1,
       stagger: 2,
       ease: "power4",

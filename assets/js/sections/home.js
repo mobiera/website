@@ -203,15 +203,15 @@ particlesJS("particles-js", {
 //   y: 104,
 // });
 
-gsap.utils.toArray(".slick-nav").forEach((a, i) => {
-  a.clickElem = document.querySelector(a.hash);
-  a.offset = a.clickElem.offsetTop;
-  a.height = a.clickElem.offsetHeight;
-  a.addEventListener("click", (e) => {
-    e.preventDefault();
-    gsap.to(window, { scrollTo: a.offset + a.height * (i + 1) });
-  });
-});
+// gsap.utils.toArray(".slick-nav").forEach((a, i) => {
+//   a.clickElem = document.querySelector(a.hash);
+//   a.offset = a.clickElem.offsetTop;
+//   a.height = a.clickElem.offsetHeight;
+//   a.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     gsap.to(window, { scrollTo: a.offset + a.height * (i + 1) });
+//   });
+// });
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -220,7 +220,7 @@ const tl = gsap.timeline({
     pin: true,
     scrub: true,
     start: "center center",
-    end: "+=1400",
+    end: "+=2000",
     toggleActions: "restart pause resume pause",
     // markers: true,
   },
@@ -230,7 +230,7 @@ const tl = gsap.timeline({
 tl.from(
   "[data-slide='1'] ",
   {
-    opacity: 0,
+    opacity: 1,
     duration: 1,
     stagger: 2,
   },
@@ -300,7 +300,7 @@ tl.from(
   .to(
     "[data-slide='4'] ",
     {
-      opacity: 0,
+      opacity: 1,
       duration: 1,
       stagger: 2,
       ease: "power4",
