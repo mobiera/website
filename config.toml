@@ -52,7 +52,7 @@ url = '/about-us/'
 weight = 50
 
 [params]
-copyright = "© All rights reserved - 2011-2023"
+copyright = "©All rights reserved - 2011-2024 Mobiera SAS, Colombia"
 text = "We’re showcasing our Web5 Accelerator suite at Geneva."
 link = "Learn more"
 url = "/"
@@ -76,7 +76,7 @@ icon = "icons/icon-medium.html"
 
 [[params.social]]
 name = "Linkedin"
-url = "https://www.linkedin.com"
+url = "https://www.linkedin.com/company/mobiera-sas"
 icon = "icons/icon-linkedin.html"
 
 [[params.social]]
