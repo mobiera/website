@@ -80,7 +80,7 @@
         <div class="flex flex-col gap-5">
           {{ $pageId := .Params.Id }}
           <!-- {{ $similar := where (where .Site.Pages "Type" "posts") "Params.id" "ne" $pageId }} -->
-          {{ $similar := where .Site.Pages "Type" "posts" }}
+          {{ $similar := where .Site.Pages "Type" "blog" }}
           {{ $similar = where $similar "Params.id" "ne" $pageId }}
 
           {{ range last 3 $similar }}
