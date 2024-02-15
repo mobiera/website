@@ -6,7 +6,7 @@
     <p class="subtitle">{{ .subtitle }}</p>
 
     <div
-      class="scroll-trigger flex h-[500px] flex-col items-stretch pt-5 md:flex-row"
+      class="scroll-trigger relative flex h-[500px] flex-col items-stretch pt-5 md:flex-row"
     >
       <ul
         class="hidden pb-6 md:mb-0 md:flex md:w-1/12 md:flex-col md:gap-0 md:border-none"
@@ -27,7 +27,7 @@
       <div class="relative hidden w-1/12 justify-center pb-6 md:flex">
         <div class="h-full w-[1px] bg-purple-200 opacity-20"></div>
       </div>
-      <div class="relative w-full md:w-10/12">
+      <div class="w-full md:w-10/12">
         {{ range .content.tabs }}
           <div
             id="{{ .link_tab }}"
