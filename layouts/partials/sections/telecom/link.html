@@ -3,7 +3,7 @@
     <div class="mb-10 flex w-full justify-center md:mb-0 md:w-5/12">
       {{ $image := resources.Get .image }}
       {{ with $image }}
-        <img src="{{ $image.RelPermalink }}" class="w-full" />
+        <img src="{{ $image.RelPermalink }}" alt="" class="w-full" />
       {{ end }}
     </div>
     <div class="flex w-full flex-col md:w-6/12">

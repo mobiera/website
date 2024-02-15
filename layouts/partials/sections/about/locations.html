@@ -4,7 +4,11 @@
     <p class="subtitle">{{ .subtitle }}</p>
     {{ $image := resources.Get .image }}
     {{ with $image }}
-      <img src="{{ $image.RelPermalink }}" class="mx-auto w-full lg:w-9/12" />
+      <img
+        src="{{ $image.RelPermalink }}"
+        alt=""
+        class="mx-auto w-full lg:w-9/12"
+      />
     {{ end }}
   </div>
 </div>

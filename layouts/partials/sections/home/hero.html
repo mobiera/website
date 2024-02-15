@@ -10,6 +10,7 @@
               width="{{ $image.Width }}"
               height="{{ $image.Height }}"
               class="absolute left-0 top-0 h-full w-full object-cover after:mt-2"
+              alt=""
             />
           {{ end }}
           <div
@@ -52,7 +53,11 @@
       >
         {{ $image := resources.Get "images/home/hero/icon-left-arrow.svg" }}
         {{ with $image }}
-          <img src="{{ $image.RelPermalink }}" class="h-12 w-12 max-w-none" />
+          <img
+            src="{{ $image.RelPermalink }}"
+            alt=""
+            class="h-12 w-12 max-w-none"
+          />
         {{ end }}
       </div>
       <div
@@ -60,7 +65,11 @@
       >
         {{ $image := resources.Get "images/home/hero/icon-right-arrow.svg" }}
         {{ with $image }}
-          <img src="{{ $image.RelPermalink }}" class="h-12 w-12 max-w-none" />
+          <img
+            src="{{ $image.RelPermalink }}"
+            alt=""
+            class="h-12 w-12 max-w-none"
+          />
         {{ end }}
       </div>
     </div>

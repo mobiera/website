@@ -6,7 +6,11 @@
     <p class="subtitle mb-5 w-full md:w-2/3">{{ .subtitle }}</p>
     {{ $image := resources.Get .image }}
     {{ with $image }}
-      <img src="{{ $image.RelPermalink }}" class="mx-auto w-auto py-10" />
+      <img
+        src="{{ $image.RelPermalink }}"
+        alt=""
+        class="mx-auto w-auto py-10"
+      />
     {{ end }}
   </div>
 </div>

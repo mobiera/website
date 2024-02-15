@@ -3,7 +3,11 @@
     <div class="relative mb-10 w-full overflow-hidden rounded-2xl">
       {{ $image := resources.Get .image }}
       {{ with $image }}
-        <img src="{{ $image.RelPermalink }}" class="h-96 w-full object-cover" />
+        <img
+          src="{{ $image.RelPermalink }}"
+          alt=""
+          class="h-96 w-full object-cover"
+        />
       {{ end }}
       <div
         class="absolute left-0 top-0 h-full w-full bg-gradient-to-l from-transparent to-blue-200"

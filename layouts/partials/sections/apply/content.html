@@ -11,7 +11,7 @@
             <div class="flex items-center gap-5">
               {{ $icon := resources.Get .icon }}
               {{ with $icon }}
-                <img src="{{ $icon.RelPermalink }}" class="h-12 w-12" />
+                <img src="{{ $icon.RelPermalink }}" alt="" class="h-12 w-12" />
               {{ end }}
               <h2
                 class="text-heading1 font-bold leading-tight text-blue-200 md:text-[52px]"
