@@ -22,7 +22,7 @@ url = "/innovation"
 weight = 30
 
 [[menu.main]]
-name = "About Us"
+name = "Company"
 url = "/about-us"
 weight = 40
 
@@ -52,7 +52,7 @@ url = '/about-us/'
 weight = 50
 
 [params]
-copyright = "©All rights reserved - 2011-2024 Mobiera"
+copyright = "©All rights reserved - 2011-2024"
 text = "We’re showcasing our Web5 Accelerator suite at Geneva."
 link = "Learn more"
 url = "/"
@@ -73,6 +73,11 @@ url = "/login"
 name = "Medium"
 url = "https://www.medium.com"
 icon = "icons/icon-medium.html"
+
+[[params.social]]
+name = "Github"
+url = "https://github.com/mobiera"
+icon = "icons/icon-github.html"
 
 [[params.social]]
 name = "Linkedin"

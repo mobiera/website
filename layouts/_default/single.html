@@ -1,14 +1,14 @@
 {{ define "main" }}
   <div class="container pt-20 md:pt-36">
     <h1 class="mb-3 mt-5 text-heading2 font-bold text-purple-200">
-      Press Centre |
+      Blog |
       <span class="font-normal text-primary">{{ safeHTML .Page.Title }}</span>
     </h1>
     <h3 class="text-body-medium text-[#8E8E8E]">
       {{ .Page.Date.Format "01/02/2006" }}
     </h3>
     <div
-      class="relative my-7 flex h-96 w-full items-center overflow-hidden rounded-t-lg"
+      class="relative my-7 flex h-[30rem] w-full items-center overflow-hidden rounded-t-lg"
     >
       {{ $image := resources.Get .Params.image }}
       {{ with $image }}
@@ -24,24 +24,19 @@
         class="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-transparent to-purple-200 opacity-70"
       ></div>
       <h4
-        class="green relative mx-14 w-full text-heading1 font-bold leading-tight text-white shadow-[0px_3px_12px_-10px_rgba(131,83,242,0.1)] md:w-1/2 md:text-heading"
+        class="green relative mx-14 mt-20 w-full text-heading1 font-bold leading-tight text-white shadow-[0px_3px_12px_-10px_rgba(131,83,242,0.1)] md:w-1/2 md:text-heading"
       >
         {{ safeHTML .Page.Title }}
       </h4>
     </div>
     <div class="flex flex-col items-start justify-between md:flex-row">
       <div class="w-full md:w-2/3">
-        <div class="content my-2 mr-10 text-heading4 md:text-body-medium">
+        <div class="content my-2 mr-24 text-heading4 md:text-body-medium">
           {{ safeHTML .Content }}
         </div>
-        <div
-          class="mr-10 flex flex-col items-center justify-between py-20 md:flex-row"
-        >
-          <p class="mb-5 text-heading4 md:mb-0 md:text-body-medium">
-            For more information, get in touch with us
-          </p>
-          <div class="flex items-center gap-5">
-            <div class="h-28 w-28 overflow-hidden rounded-full">
+        <div class="mr-24 py-14">
+          <div class="flex items-end gap-5">
+            <div class="h-48 w-48">
               {{ $imageAuthor := resources.Get .Params.image_author }}
               {{ with $imageAuthor }}
                 <img
@@ -49,27 +44,24 @@
                   width="{{ $imageAuthor.Width }}"
                   height="{{ $imageAuthor.Height }}"
                   class="h-full w-full object-cover"
-                  alt=""
+                  alt="{{ .Params.author }}"
                 />
               {{ end }}
             </div>
-            <div class="">
-              <h6 class="mb-2 text-heading2 font-bold text-[#073B4C]">
+            <div>
+              <h6 class="mb-2 text-heading1 text-[#073B4C]">
                 {{ .Params.author }}
               </h6>
-              <p class="text-body-small text-[#575757]">
+              <p class="text-heading3 text-[#073B4C]">
                 {{ .Params.position }}
               </p>
-              <p class="text-body-small text-[#575757]">
+              <p class="text-heading3 text-purple-200">
                 <a href="mailto:{{ .Params.email }}">
                   {{ .Params.email }}
                 </a>
               </p>
-              <p class="text-body-small text-[#575757]">
+              <p class="text-heading3 text-purple-200">
                 {{ .Params.email2 }}
-              </p>
-              <p class="text-body-small text-[#575757]">
-                {{ .Params.phone }}
               </p>
             </div>
           </div>
@@ -85,7 +77,7 @@
           {{ $similar := where .Site.Pages "Type" "blog" }}
           {{ $similar = where $similar "Params.id" "ne" $pageId }}
 
-          {{ range last 3 $similar }}
+          {{ range last 4 $similar }}
             <div
               class="flex h-full flex-col items-center overflow-hidden rounded-lg border-2 border-green"
             >
@@ -108,7 +100,7 @@
                   >
                     {{ safeHTML .Title | truncate 40 }}
                   </h3>
-                  <div class="text-heading4 font-light md:text-body-small">
+                  <div class="blog-content">
                     {{ .Content | truncate 55 }}
                   </div>
                 </div>

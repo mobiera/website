@@ -15,7 +15,7 @@ content:
       link: "innovation#biometric"
       image: "icons/icon_innovation2.html"
 
-    - title_section: "Verifiable Credentials"
-      text: "Revolutionising personal information access control management by integrating cutting-edge self-sovereign identity (SSI) technologies to provide tamper-proof and reliable identity verification processes."
+    - title_section: "Verifiable Credentials & Authentic Data"
+      text: "Transforming the management of personal information access by incorporating advanced self-sovereign identity (SSI) technologies and frameworks, ensuring secure, tamper-proof and dependable identity verification procedures."
       link: "innovation#data"
       image: "icons/icon_innovation3.html"

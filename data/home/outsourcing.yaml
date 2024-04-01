@@ -1,6 +1,6 @@
 enabled: true
 
-title: "IT Outsourcing"
+title: "DevSecOps"
 subtitle: "Structured, robust and imaginative process to efficiently transform your ideas into successful digital business "
 
 content:
@@ -22,7 +22,7 @@ content:
         - title_section: "Efficiency. Resilience. Optimisation. Streamlining your Operations."
           text: "Our operations experts will ensure the seamless execution of your services. We handle every aspect, from infrastructure setup to scalability and performance tuning, guaranteeing that your software is <b>continuously delivered</b> to operate efficiently and reliably throughout its life-cycle."
           link: "operate"
-          image: "images/about/ethics-image1.jpg"
+          image: "images/home/outsourcing/operate.jpg"
           caption: "Efficiency. Resilience. <b>Optimisation</b>."
 
     - title_tab: "Integrate"
@@ -32,7 +32,7 @@ content:
         - title_section: "Integrating Possibilities, Connecting Solutions, Empowering Businesses."
           text: "From seamless integration to enhanced functionality, we specialise in integrating third-party software solutions for our clients. With meticulous planning and implementation, we ensure smooth integration, enabling your business to harness the full potential of diverse software ecosystems."
           link: "integrate"
-          image: "images/home/outsourcing/outsourcing.jpg"
+          image: "images/home/outsourcing/integrate.jpg"
           caption: "Integrating <b>Possibilities</b>"
 
     - title_tab: "Consult"
@@ -42,5 +42,5 @@ content:
         - title_section: "Unlocking Agile Transformation: Tailored DevOps Consulting."
           text: "With a thorough strategy and robust implementation, we gukeye you through your transformation journey. We analyse existing processes, identify bottlenecks, implement tailored solutions by embracing a culture of collaboration, automation, and continuous operational improvement."
           link: "consult"
-          image: "images/about/ethics-image1.jpg"
+          image: "images/home/outsourcing/consult.jpg"
           caption: "Tailored DevOps <b>Consulting</b>."

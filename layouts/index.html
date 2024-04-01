@@ -36,8 +36,8 @@
               >
                 {{ safeHTML .Title | truncate 40 }}
               </h3>
-              <div class="mb-8 text-heading4 font-light">
-                {{ .Content | truncate 55 }}
+              <div class="blog-content mb-8 text-heading4">
+                {{ .Content | truncate 200 }}
               </div>
               <a href="{{ .Permalink }}" class="btn-secondary">And many more</a>
             </div>
@@ -63,7 +63,7 @@
               >
                 {{ safeHTML .Title | truncate 40 }}
               </h3>
-              <div class="mb-2 text-body-small font-light">
+              <div class="blog-content mb-2">
                 {{ .Content | truncate 55 }}
               </div>
               <a href="{{ .Permalink }}" class="btn-secondary">And many more</a>

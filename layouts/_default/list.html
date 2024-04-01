@@ -28,15 +28,15 @@
           >
             {{ .Date.Format "01/02/2006" }}
           </p>
-          <div class="mb-5 text-heading4 md:text-body-medium">
-            {{ .Content | truncate 150 }}
+          <div class="blog-content mb-5 md:text-body-medium">
+            {{ .Content | truncate 600 }}
           </div>
           <a href="{{ .Permalink }}" class="btn-secondary">And many more</a>
         </div>
       </div>
     {{ end }}
     <div class="swiper-blog relative overflow-hidden">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper items-stretch">
         {{ range after 1 .Pages }}
           <div class="swiper-slide h-full">
             <div
@@ -60,7 +60,7 @@
                   >
                     {{ .Title | truncate 40 }}
                   </h3>
-                  <div class="text-heading4 font-light md:text-body-small">
+                  <div class="blog-content">
                     {{ .Content | truncate 55 }}
                   </div>
                 </div>

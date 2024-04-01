@@ -1,7 +1,7 @@
 <div class="">
   <div class="relative">
-    <div class="absolute left-0 h-full w-1/2 bg-purple-100"></div>
-    <div class="absolute right-0 h-full w-1/2 bg-blue-200"></div>
+    <div class="absolute left-0 h-full w-1/2 bg-[#F1F4FD]"></div>
+    <div class="absolute right-0 h-full w-1/2 "></div>
     <div class="container relative z-10 flex items-center">
       <div class="w-1/2">
         <h3 class="big-title mb-14 mr-10">{{ safeHTML .title }}</h3>
@@ -22,14 +22,14 @@
     </div>
   </div>
   <div class="relative">
-    <div class="absolute left-0 h-full w-1/2 bg-purple-100"></div>
-    <div class="absolute right-0 h-full w-1/2 bg-blue-200"></div>
+    <div class="absolute left-0 h-full w-1/2 bg-[#F1F4FD]"></div>
+    <div class="absolute right-0 h-full w-1/2"></div>
     <div class="container relative z-10 flex flex-row-reverse items-center">
       <div class="w-1/2">
-        <h3 class="big-title mb-14 ml-10 leading-tight text-white">
+        <h3 class="big-title mb-14 ml-10 leading-tight">
           {{ safeHTML .title2 }}
         </h3>
-        <p class="ml-10 text-white">{{ safeHTML .text2 }}</p>
+        <p class="ml-10 ">{{ safeHTML .text2 }}</p>
       </div>
       <div class="w-1/2">
         {{ $image2 := resources.Get .image2 }}
