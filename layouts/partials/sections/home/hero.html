@@ -5,16 +5,17 @@
         <div class="swiper-slide">
           {{ $image := resources.Get .image }}
           {{ with $image }}
-            <img
-              src="{{ $image.RelPermalink }}"
-              width="{{ $image.Width }}"
-              height="{{ $image.Height }}"
+            <div
               class="absolute left-0 top-0 h-full w-full object-cover after:mt-2"
-              alt=""
-            />
+            >
+              <video class="min-h-full min-w-fit lg:min-w-full" autoplay loop>
+                <source src="{{ $image.RelPermalink }}" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           {{ end }}
           <div
-            class="absolute left-0 top-0 h-full w-full bg-blue-200 opacity-50"
+            class="absolute left-0 top-0 h-full w-full bg-blue-200 opacity-70"
           ></div>
           <div class="relative z-20 flex h-[100vh] w-full items-center">
             <div class="container relative">

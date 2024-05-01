@@ -14,13 +14,11 @@ const swiper5 = new Swiper(".swiper5", {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      navigation: { enabled: false },
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
       spaceBetween: 30,
-      navigation: { enabled: false },
     },
     // when window width is >= 640px
     640: {
@@ -51,13 +49,11 @@ const swiper6 = new Swiper(".swiper6", {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      navigation: { enabled: false },
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
       spaceBetween: 30,
-      navigation: { enabled: false },
     },
     // when window width is >= 640px
     640: {
@@ -88,13 +84,11 @@ const swiper7 = new Swiper(".swiper7", {
     320: {
       slidesPerView: 1,
       spaceBetween: 20,
-      navigation: { enabled: false },
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 1,
       spaceBetween: 30,
-      navigation: { enabled: false },
     },
     // when window width is >= 640px
     640: {

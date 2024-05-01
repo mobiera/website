@@ -121,7 +121,7 @@
 }
 
 .platforms .swiper-pagination-bullets.swiper-pagination-horizontal {
-  @apply absolute bottom-0 right-[140px] w-fit lg:bottom-5;
+  @apply absolute bottom-5 left-5 right-auto w-fit lg:left-auto lg:right-[140px];
 }
 .platforms .swiper-pagination-bullet {
   @apply h-4 w-4 bg-purple-100 opacity-100;
@@ -131,11 +131,17 @@
 }
 
 .platforms .swiper-button-next2,
-.platforms .swiper-button-prev2 {
-  @apply absolute -right-[50px] bottom-0 z-20 bg-purple-200 fill-white p-4 shadow-lg after:content-none  lg:p-5;
+.platforms .swiper-button-prev2,
+.platforms .swiper-button-next6,
+.platforms .swiper-button-prev6,
+.platforms .swiper-button-next7,
+.platforms .swiper-button-prev7 {
+  @apply absolute bottom-0 right-0 z-20 bg-purple-200 fill-white p-4 shadow-lg after:content-none lg:-right-[50px]  lg:p-5;
 }
-.platforms .swiper-button-prev2 {
-  @apply right-[15px];
+.platforms .swiper-button-prev2,
+.platforms .swiper-button-prev6,
+.platforms .swiper-button-prev7 {
+  @apply right-20 lg:right-[15px];
 }
 .platforms .swiper-button-disabled {
   @apply bg-white fill-[#1924420E];

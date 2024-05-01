@@ -1,9 +1,11 @@
 <div class="py-16" id="platforms">
-  <div class="flex items-stretch justify-between py-10">
-    <div class="platforms relative w-3/12">
-      <div class="absolute h-full w-3/4 bg-purple-200"></div>
+  <div class="flex flex-col items-stretch justify-between py-10 lg:flex-row">
+    <div
+      class="platforms relative mx-auto mb-5 w-11/12 lg:mx-0 lg:mb-0 lg:w-3/12"
+    >
+      <div class="absolute -left-6 h-40 w-3/4 bg-purple-200 lg:h-full"></div>
       <div
-        class="relative left-20 mb-20 mt-10 bg-white p-10 shadow-[0_3px_30px_10px_rgba(131,83,242,0.27)]"
+        class="relative left-0 right-5 mb-20 mt-10 bg-white p-10 shadow-[0_3px_30px_10px_rgba(131,83,242,0.27)] lg:left-20 lg:right-0"
       >
         <h2 class="big-title mb-10">{{ .title }}</h2>
         <p class="text-heading2">{{ .subtitle }}</p>
@@ -40,7 +42,7 @@
         </svg>
       </div>
     </div>
-    <div class="w-8/12">
+    <div class="mx-auto w-11/12 lg:mx-0 lg:w-8/12">
       <div class="swiper5 relative overflow-hidden">
         <div class="swiper-wrapper">
           {{ range .content.blocks }}
