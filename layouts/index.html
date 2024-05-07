@@ -30,16 +30,18 @@
                 class="h-[28.125rem] w-auto object-cover"
               />
             {{ end }}
-            <div class="px-6 py-5">
-              <h3
-                class="mb-5 text-heading1 font-bold leading-tight text-blue-200"
-              >
-                {{ safeHTML .Title | truncate 40 }}
-              </h3>
-              <div class="blog-content mb-8 text-heading4">
-                {{ .Content | truncate 200 }}
+            <div class="flex flex-1 flex-col justify-between px-6 py-5">
+              <div>
+                <h3
+                  class="mb-5 text-heading1 font-bold leading-tight text-blue-200"
+                >
+                  {{ safeHTML .Title | truncate 40 }}
+                </h3>
+                <div class="blog-content mb-8 text-heading4">
+                  {{ .Content | truncate 200 }}
+                </div>
               </div>
-              <a href="{{ .Permalink }}" class="btn-secondary">And many more</a>
+              <a href="{{ .Permalink }}" class="btn-secondary">Read more</a>
             </div>
           </div>
         {{ end }}
@@ -48,7 +50,9 @@
         {{ $similar = where $similar "Params.id" "ne" $pageId }}
 
         {{ range last 4 $similar }}
-          <div class="overflow-hidden rounded-lg border-2 border-green">
+          <div
+            class="flex flex-col overflow-hidden rounded-lg border-2 border-green"
+          >
             {{ $image := resources.Get .Params.image }}
             {{ with $image }}
               <img
@@ -57,16 +61,18 @@
                 class="h-48 w-full object-cover"
               />
             {{ end }}
-            <div class="px-5 py-4">
-              <h3
-                class="mb-2 text-heading3 font-bold leading-tight text-blue-200"
-              >
-                {{ safeHTML .Title | truncate 40 }}
-              </h3>
-              <div class="blog-content mb-2">
-                {{ .Content | truncate 55 }}
+            <div class="flex flex-1 flex-col justify-between px-5 py-4">
+              <div>
+                <h3
+                  class="mb-2 text-heading3 font-bold leading-tight text-blue-200"
+                >
+                  {{ safeHTML .Title | truncate 40 }}
+                </h3>
+                <div class="blog-content mb-2">
+                  {{ .Content | truncate 55 }}
+                </div>
               </div>
-              <a href="{{ .Permalink }}" class="btn-secondary">And many more</a>
+              <a href="{{ .Permalink }}" class="btn-secondary">Read more</a>
             </div>
           </div>
         {{ end }}
@@ -75,7 +81,9 @@
         <div class="swiper-wrapper">
           {{ range first 5 .Site.RegularPages }}
             <div class="swiper-slide w-4/5">
-              <div class="overflow-hidden rounded-lg border-2 border-green">
+              <div
+                class="flex flex-col overflow-hidden rounded-lg border-2 border-green"
+              >
                 {{ $image := resources.Get .Params.image }}
                 {{ with $image }}
                   <img
@@ -93,9 +101,7 @@
                   <div class="mb-5 text-heading4 md:mb-2">
                     {{ .Content | truncate 55 }}
                   </div>
-                  <a href="{{ .Permalink }}" class="btn-secondary"
-                    >And many more</a
-                  >
+                  <a href="{{ .Permalink }}" class="btn-secondary">Read more</a>
                 </div>
               </div>
             </div>

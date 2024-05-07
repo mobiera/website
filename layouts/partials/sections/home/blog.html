@@ -19,14 +19,14 @@
               class="h-[28.125rem] w-auto object-cover"
             />
           {{ end }}
-          <div class="px-6 py-5">
+          <div class="flex flex-col px-6 py-5">
             <h3
               class="mb-5 text-heading1 font-bold leading-tight text-blue-200"
             >
               {{ .title_news }}
             </h3>
             <p class="mb-8 text-heading4 font-light">{{ .description }}</p>
-            <a href="{{ .link }}" class="btn-secondary">{{ .btn }}</a>
+            <a href="{{ .link }}" class="btn-secondary flex-grow">{{ .btn }}</a>
           </div>
         </div>
       {{ end }}
@@ -40,14 +40,14 @@
               class="h-48 w-full object-cover"
             />
           {{ end }}
-          <div class="px-5 py-4">
+          <div class="flex flex-col px-5 py-4">
             <h3
               class="mb-2 text-heading3 font-bold leading-tight text-blue-200"
             >
               {{ .title_news }}
             </h3>
             <p class="mb-2 text-body-small font-light">{{ .description }}</p>
-            <a href="{{ .link }}" class="btn-secondary">{{ .btn }}</a>
+            <a href="{{ .link }}" class="btn-secondary flex-grow">{{ .btn }}</a>
           </div>
         </div>
       {{ end }}
