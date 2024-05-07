@@ -7,7 +7,7 @@
           >{{ .Site.Params.Link }}</a
         >.
       </p>
-      <div class="flex gap-2">
+      <div class="flex items-center gap-2">
         {{ range .Site.Params.Btn1 }}
           <a
             href="{{ .url }}"
@@ -27,11 +27,17 @@
         {{ range .Site.Params.Btn3 }}
           <a
             href="{{ .url }}"
-            class="min-w-[100px] rounded-[4px] bg-green px-5 py-2 text-center text-caption font-bold text-white  hover:bg-white hover:text-blue-200"
+            class="min-w-[100px] rounded-[4px] border border-green bg-green px-5 py-2 text-center text-caption font-bold text-white hover:border-white hover:bg-white hover:text-blue-200"
           >
             {{ .name }}
           </a>
         {{ end }}
+        {{ range .Site.Params.Btn4 }}
+          <a href="{{ .url }}" class="">
+            {{ with .icon }}{{ partial . }}{{ end }}
+          </a>
+        {{ end }}
+
       </div>
     </div>
   </div>

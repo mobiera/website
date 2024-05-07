@@ -3,11 +3,11 @@ enabled: true
 content:
   slides:
     - title: "Entertainment"
-      subtitle: "Discover the Transformative Magic of Engagement:"
+      subtitle: "Discover the Transformative Magic of Engagement: "
       text: "Immerse yourself and your clients in captivating digital entertainment experiences."
       image: "images/home/hero/Digital-Entertainment.mp4"
     - title: "Innovation"
-      subtitle: "Unleash the Power of Ideas:"
+      subtitle: "Unleash the Power of Ideas: "
       text: "We help you break boundaries through igniting fit for purpose innovation to redefine business possibilities."
       image: "images/home/hero/Digital-Entertainment.mp4"
     - title: "Transformation"
@@ -19,6 +19,6 @@ content:
       text: "Streamline your content, products and services to capitalise on and amplify the impact of interactions."
       image: "images/home/hero/Digital-Entertainment.mp4"
     - title: "Distribution"
-      subtitle: "Embrace Digital Boundless Channels:  "
+      subtitle: "Embrace Digital Boundless Channels: "
       text: "Seamlessly connect your products and services across online sales platforms and marketplaces."
       image: "images/home/hero/Digital-Entertainment.mp4"

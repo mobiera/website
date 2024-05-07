@@ -6,28 +6,28 @@
   font-family: "itc-avant-garde";
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/itcavantgardestd-md-webfont.woff) format("woff");
+  src: url(/fonts/AvantGardeLT-Medium.woff) format("woff");
 }
 
 @font-face {
   font-family: "itc-avant-garde";
   font-style: normal;
   font-weight: 300;
-  src: url(/fonts/itcavantgardestd-book-webfont.woff) format("woff");
+  src: url(/fonts/AvantGardeCE-Book.woff) format("woff");
 }
 
 @font-face {
   font-family: "itc-avant-garde";
   font-style: normal;
   font-weight: 600;
-  src: url(/fonts/itcavantgardestd-demi-webfont.woff) format("woff");
+  src: url(/fonts/AvantGardeLT-Demi.woff) format("woff");
 }
 
 @font-face {
   font-family: "itc-avant-garde";
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/itcavantgardestd-bold-webfont.woff) format("woff");
+  src: url(/fonts/AvantGardeLT-Bold.woff) format("woff");
 }
 
 @layer base {
@@ -45,7 +45,7 @@
     @apply flex gap-3 text-heading4 font-bold text-green transition-all after:text-blue-200 after:content-['\2192'] hover:gap-4;
   }
   .title {
-    @apply mb-5 block text-left text-heading font-bold text-purple-200 lg:text-center;
+    @apply mb-5 block text-left text-heading font-semibold text-purple-200 lg:text-center;
   }
   .title b {
     @apply text-blue-200;
