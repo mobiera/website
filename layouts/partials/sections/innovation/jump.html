@@ -1,24 +1,28 @@
 <div class="container flex min-h-[calc(100vh-144px)] w-full items-center py-16">
   <div class="flex flex-col justify-between md:flex-row-reverse">
-    <div class="flex w-11/12 justify-center md:w-5/12">
+    <div class="group flex w-11/12 justify-center md:w-5/12">
       <div class="relative w-fit">
-        {{ $image := resources.Get .image }}
-        {{ with $image }}
-          <img
-            src="{{ $image.RelPermalink }}"
-            width="{{ $image.Width }}"
-            height="{{ $image.Height }}"
-            class="h-full overflow-hidden rounded-2xl object-cover shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200"
-            alt=""
-          />
-        {{ end }}
         <div
-          class="absolute left-0 top-0 h-full w-full rounded-2xl bg-gradient-to-br from-transparent to-purple-200"
+          class="h-full -translate-x-3 -translate-y-3 overflow-hidden rounded-2xl shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200 transition-all group-hover:-translate-x-6 group-hover:-translate-y-6"
         >
-          <h4 class="caption">{{ safeHTML .title }}</h4>
+          {{ $image := resources.Get .image }}
+          {{ with $image }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+              class="h-full overflow-hidden rounded-2xl object-cover shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200"
+              alt=""
+            />
+          {{ end }}
+          <div
+            class="absolute left-0 top-0 h-full w-full rounded-2xl bg-gradient-to-br from-transparent to-purple-200"
+          >
+            <h4 class="caption">{{ safeHTML .title }}</h4>
+          </div>
         </div>
         <div
-          class="absolute right-0 top-0 -z-10 h-full w-full translate-x-6 translate-y-6 overflow-hidden rounded-2xl bg-[url('/images/charte-bg.svg')] bg-cover bg-center bg-no-repeat"
+          class="absolute right-0 top-0 -z-10 h-full w-full overflow-hidden rounded-2xl bg-[url('/images/charte-bg.svg')] bg-cover bg-center bg-no-repeat"
         ></div>
       </div>
     </div>
