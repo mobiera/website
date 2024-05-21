@@ -31,12 +31,12 @@
     </div>
     <div class="flex flex-col items-start justify-between md:flex-row">
       <div class="w-full md:w-2/3">
-        <div class="content my-2 mr-24 text-heading4 md:text-body-medium">
+        <div class="content my-10 mr-24 text-heading4 md:text-body-medium">
           {{ safeHTML .Content }}
         </div>
         <div class="mr-24 py-14">
-          <div class="flex items-end gap-5">
-            <div class="h-48 w-48">
+          <div class="flex items-end gap-7">
+            <div class="h-60 w-56">
               {{ $imageAuthor := resources.Get .Params.image_author }}
               {{ with $imageAuthor }}
                 <img
@@ -49,29 +49,29 @@
               {{ end }}
             </div>
             <div>
-              <h6 class="mb-2 text-heading1 text-[#073B4C]">
+              <h6 class="mb-2 w-48 text-heading leading-tight text-[#073B4C]">
                 {{ .Params.author }}
               </h6>
-              <p class="text-heading3 text-[#073B4C]">
+              <p class="text-heading3 leading-normal text-[#073B4C]">
                 {{ .Params.position }}
               </p>
-              <p class="text-heading3 text-purple-200">
+              <p class="text-heading3 leading-tight text-purple-200">
                 <a href="mailto:{{ .Params.email }}">
                   {{ .Params.email }}
                 </a>
               </p>
-              <p class="text-heading3 text-purple-200">
+              <p class="text-heading3 leading-tight text-purple-200">
                 {{ .Params.email2 }}
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="mb-5 mt-20 w-full md:mt-0 md:w-4/12">
-        <h4 class="mb-2 text-heading2 font-bold text-blue-200">
+      <div class="mb-5 mt-20 w-full md:mt-10 md:w-4/12">
+        <h4 class="mb-5 text-heading1 font-bold text-blue-200">
           Similar Items
         </h4>
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-10">
           {{ $pageId := .Params.Id }}
           <!-- {{ $similar := where (where .Site.Pages "Type" "posts") "Params.id" "ne" $pageId }} -->
           {{ $similar := where .Site.Pages "Type" "blog" }}
