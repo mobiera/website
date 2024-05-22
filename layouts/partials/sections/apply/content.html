@@ -58,30 +58,34 @@
           {{ else }}
             <p class="w-2/3 text-[34px] text-blue-200">{{ .text1 }}</p>
           {{ end }}
-          <div
-            class="mt-10 flex flex-col-reverse items-center justify-between md:flex-row"
-          >
-            <div class="flex items-center gap-8">
-              <button
-                type="button"
-                id="nextBtn"
-                onclick="nextPrev(1)"
-                class="cursor-pointer rounded-lg bg-purple-200 px-20 py-4 font-itc text-heading2 text-white"
+          {{ if (ne $element.input "resume") }}
+            <div
+              class="mt-10 flex flex-col-reverse items-center justify-between md:flex-row"
+            >
+              <div class="flex items-center gap-8">
+                <button
+                  type="button"
+                  id="nextBtn"
+                  onclick="nextPrev(1)"
+                  class="cursor-pointer rounded-lg bg-purple-200 px-20 py-4 font-itc text-heading2 text-white"
+                >
+                  Next
+                </button>
+                <div class="flex items-center gap-5">
+                  <p class="text-heading2 text-blue-200">
+                    Or press <b>Enter</b>
+                  </p>
+                  <img src="/images/enter-icon.svg" alt="enter" class="w-6" />
+                </div>
+              </div>
+              <div
+                class="error hidden-element mb-5 flex gap-5 rounded-md border border-[#D32E20] bg-[#EF476F0A] px-7 py-4 text-heading2 text-[#D32E20] md:mb-0"
               >
-                Next
-              </button>
-              <div class="flex items-center gap-5">
-                <p class="text-heading2 text-blue-200">Or press <b>Enter</b></p>
-                <img src="/images/enter-icon.svg" alt="enter" class="w-6" />
+                <img src="/images/warning-icon.svg" alt="" class="w-5" />
+                <p class="">Please fill this in</p>
               </div>
             </div>
-            <div
-              class="error hidden-element mb-5 flex gap-5 rounded-md border border-[#D32E20] bg-[#EF476F0A] px-7 py-4 text-heading2 text-[#D32E20] md:mb-0"
-            >
-              <img src="/images/warning-icon.svg" alt="" class="w-5" />
-              <p class="">Please fill this in</p>
-            </div>
-          </div>
+          {{ end }}
           <div class="mt-20 flex justify-between">
             <div class="">
               {{ if (eq $element.input "resume") }}
@@ -115,7 +119,7 @@
                   </svg>
                 </div>
               </button>
-              {{ if (ne $element.type "recap") }}
+              {{ if (ne $element.input "resume") }}
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">
                   <div
                     class="flex h-14 w-14 rotate-90 items-center justify-center bg-purple-200 first-of-type:fill-white"
