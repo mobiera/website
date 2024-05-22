@@ -7,21 +7,26 @@ title = 'Mobiera'
 [menu]
 
 [[menu.main]]
+pageRef="/telecom"
 name = "Telecom"
 url = "/telecom"
 weight = 10
 
 [[menu.main]]
+pageRef="/devsecops"
 name = "DevSecOps"
 url = "/dev-sec-ops"
 weight = 20
 
+
 [[menu.main]]
+pageRef = "/innovation"
 name = "Innovation"
 url = "/innovation"
 weight = 30
 
 [[menu.main]]
+pageRef = "/about"
 name = "Company"
 url = "/about-us"
 weight = 40
