@@ -1,0 +1,46 @@
+enabled: true
+
+title: "DevSecOps"
+subtitle: "Structured, robust and imaginative process to efficiently transform your ideas into successful digital business "
+
+content:
+  tabs:
+    - title_tab: "Develop"
+      link_tab: "develop"
+      key: "1"
+      content_tab:
+        - title_section: "Innovate. Create. Transform. Building the Future of your Software Business."
+          text: "From conceptualisation and product design to coding, testing and delivering, our product development team will guide all the way to make sure your product is <b>continuously integrated</b> to be successfully brought to life in accordance with your budget, timelines and the expected quality."
+          link: "develop"
+          image: "images/home/outsourcing/outsourcing.jpg"
+          caption: "Innovate. Create. <b>Transform</b>."
+
+    - title_tab: "Operate"
+      link_tab: "operate"
+      key: "2"
+      content_tab:
+        - title_section: "Efficiency. Resilience. Optimisation. Streamlining your Operations."
+          text: "Our operations experts will ensure the seamless execution of your services. We handle every aspect, from infrastructure setup to scalability and performance tuning, guaranteeing that your software is <b>continuously delivered</b> to operate efficiently and reliably throughout its life-cycle."
+          link: "operate"
+          image: "images/home/outsourcing/operate.jpg"
+          caption: "Efficiency. Resilience. <b>Optimisation</b>."
+
+    - title_tab: "Integrate"
+      link_tab: "integrate"
+      key: "3"
+      content_tab:
+        - title_section: "Integrating Possibilities, Connecting Solutions, Empowering Businesses."
+          text: "From seamless integration to enhanced functionality, we specialise in integrating third-party software solutions for our clients. With meticulous planning and implementation, we ensure smooth integration, enabling your business to harness the full potential of diverse software ecosystems."
+          link: "integrate"
+          image: "images/home/outsourcing/integrate.jpg"
+          caption: "Integrating <b>Possibilities</b>"
+
+    - title_tab: "Consult"
+      link_tab: "consult"
+      key: "4"
+      content_tab:
+        - title_section: "Unlocking Agile Transformation: Tailored DevOps Consulting."
+          text: "With a thorough strategy and robust implementation, we gukeye you through your transformation journey. We analyse existing processes, identify bottlenecks, implement tailored solutions by embracing a culture of collaboration, automation, and continuous operational improvement."
+          link: "consult"
+          image: "images/home/outsourcing/consult.jpg"
+          caption: "Tailored DevOps <b>Consulting</b>."

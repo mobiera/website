@@ -1,0 +1,26 @@
+enabled: true
+
+title: "in numbers"
+subtitle: "The foundation of our growth lies in the differentiated value we deliver to our clients and partners."
+
+content:
+  blocks:
+    - image: "icons/icon_numbers1.html"
+      number: "28"
+      title_section: "Operators"
+      text: "Renown telecom groups and Mobile Virtual Network Operators work with us to deliver distinctive value to their clients."
+
+    - image: "icons/icon_numbers2.html"
+      number: "+1.2 billion"
+      title_section: "Customers"
+      text: "Reaching an ever growing customer base through our billing platforms and aggregation services."
+
+    - image: "icons/icon_numbers3.html"
+      number: "+150"
+      title_section: "Merchants"
+      text: "More than 150 partner-merchants offering their digital entertainment products and services to our clients."
+
+    - image: "icons/icon_numbers4.html"
+      number: "+400"
+      title_section: "Live Products"
+      text: "Provided directly by us or though our partner merchants, we count more than 400 deployments of digital experiences."

@@ -1,0 +1,47 @@
+enabled: true
+
+title: "Thanks for reaching out. We’ll get back to you shortly."
+
+content:
+  steps:
+    - icon: "images/contact/icon1.svg"
+      title: "What’s your name?"
+      input: "name"
+      placeholder: "Type your name here …"
+      type: input
+    - icon: "images/contact/icon2.svg"
+      title: "What’s your email address?"
+      input: "email"
+      placeholder: "Type your email here …"
+      type: input
+    - icon: "images/contact/icon3.svg"
+      title: "What’s your phone number?"
+      input: "phone"
+      placeholder: "Type your phone number here …"
+      type: input
+    - icon: "images/contact/icon4.svg"
+      title: "What’s your company’s name?"
+      input: "company"
+      placeholder: "Type your company’s name here …"
+      type: input
+    - icon: "images/contact/icon5.svg"
+      title: "What’s your job title?"
+      input: "job"
+      placeholder: "Type your job title here …"
+      type: input
+    - icon: "images/contact/icon6.svg"
+      title: "What’s your company’s size?"
+      input: "size"
+      prop1: "1 - 10 Employees"
+      prop2: "11 - 50 Employees"
+      prop3: "51 - 100 Employees"
+      prop4: "More than 100"
+      type: select
+    - icon: "images/contact/icon7.svg"
+      title: "Reason for contacting us"
+      input: "reason"
+      placeholder: "Type a short text here …."
+      type: input
+    - icon: "images/contact/icon8.svg"
+      title: "Here’s a recap!"
+      type: recap

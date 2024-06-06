@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="follow, index, all" />
+  <meta name="keywords" content="" />
+  <meta
+    name="description"
+    content="Mobiera invents, develops and provides innovative Platforms and Services for Mobile Operators (MNOs and MVNOs) and companies around the world."
+  />
+  {{ $title := print .Title " | " .Site.Title }}
+  {{ if .IsHome }}
+    {{ $title =.Site.Title }}
+  {{ end }}
+  <title>{{ $title }}</title>
+  {{ if .Params.css }}
+    <link rel="stylesheet" href="{{ .Params.css }}" />
+  {{ end }}
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/images/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/images/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/images/favicon/favicon-16x16.png"
+  />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <link rel="stylesheet" href="/dist/output.css" />
+</head>

@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/AvantGardeLT-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/fonts/AvantGardeCE-Book.woff) format("woff");
+}
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/AvantGardeLT-Demi.woff) format("woff");
+}
+
+@font-face {
+  font-family: "itc-avant-garde";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/AvantGardeLT-Bold.woff) format("woff");
+}
+
+@layer base {
+  body,
+  html {
+    @apply w-screen overflow-x-hidden font-itc text-[12px] text-primary md:text-[14px] lg:text-[16px];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block rounded-md border-2 border-green px-8 py-3 text-center text-heading4 font-bold text-green transition-all hover:bg-green hover:text-white lg:text-heading3;
+  }
+  .btn-secondary {
+    @apply flex gap-3 text-heading4 font-bold text-green transition-all after:text-blue-200 after:content-['\2192'] hover:gap-4;
+  }
+  .title {
+    @apply mb-5 block text-left text-heading font-semibold text-purple-200 lg:text-center;
+  }
+  .title b {
+    @apply text-blue-200;
+  }
+  .subtitle {
+    @apply mx-auto mb-5 w-full text-start text-heading3 lg:w-1/2 lg:text-center;
+  }
+  .big-title {
+    @apply relative text-heading font-bold text-blue-200 after:absolute after:-bottom-4 after:left-5 after:h-2 after:w-24 after:bg-green after:content-[''];
+  }
+  .big-title b {
+    @apply text-purple-200;
+  }
+  .green b {
+    @apply text-green;
+  }
+  .caption {
+    @apply absolute bottom-10 left-10 right-10 text-heading1 font-bold leading-tight text-white drop-shadow-[0_2px_3px_rgba(25,36,66,1)] md:text-heading;
+  }
+  .caption b {
+    @apply text-green;
+  }
+  .purple b {
+    @apply font-bold text-purple-200;
+  }
+  .content b {
+    @apply font-bold;
+  }
+}
+
+.missing b {
+  @apply font-normal text-purple-200;
+}
+
+.tab-selected {
+  @apply border-green font-bold text-blue-200;
+}
+.tab-selectedVertical {
+  @apply opacity-100;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply absolute bottom-4 end-[154px] left-auto w-fit lg:bottom-9;
+}
+.swiper-pagination-bullet {
+  @apply h-4 w-4 bg-blue-200 opacity-10;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-purple-200 opacity-100;
+}
+
+.swiper-button-next2,
+.swiper-button-prev2 {
+  @apply absolute bottom-0 end-1 z-20 bg-purple-200 fill-white p-4 shadow-lg after:content-none lg:bottom-5 lg:p-5;
+}
+.swiper-button-prev2 {
+  @apply end-[52px] lg:end-[64px];
+}
+.swiper2 .swiper-button-disabled,
+.swiper-blog .swiper-button-disabled {
+  @apply bg-white fill-[#1924420E];
+}
+
+.swiper4 .swiper-button-disabled svg,
+.swiper3 .swiper-button-disabled svg,
+.swiper6 .swiper-button-disabled svg {
+  @apply opacity-20 grayscale;
+}
+.swiper4 .swiper-button-disabled,
+.swiper3 .swiper-button-disabled,
+.swiper6 .swiper-button-disabled {
+  @apply bg-white;
+}
+
+.platforms .swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply absolute bottom-5 left-5 right-auto w-fit lg:left-auto lg:right-[140px];
+}
+.platforms .swiper-pagination-bullet {
+  @apply h-4 w-4 bg-purple-100 opacity-100;
+}
+.platforms .swiper-pagination-bullet-active {
+  @apply bg-green opacity-100;
+}
+
+.platforms .swiper-button-next2,
+.platforms .swiper-button-prev2,
+.platforms .swiper-button-next6,
+.platforms .swiper-button-prev6,
+.platforms .swiper-button-next7,
+.platforms .swiper-button-prev7 {
+  @apply absolute bottom-0 right-0 z-20 bg-purple-200 fill-white p-4 shadow-lg after:content-none lg:-right-[50px]  lg:p-5;
+}
+.platforms .swiper-button-prev2,
+.platforms .swiper-button-prev6,
+.platforms .swiper-button-prev7 {
+  @apply right-20 lg:right-[15px];
+}
+.platforms .swiper-button-disabled {
+  @apply bg-white fill-[#1924420E];
+}
+
+.swiper5 .swiper-slide,
+.swiper6 .swiper-slide,
+.swiper7 .swiper-slide {
+  height: initial;
+}
+
+.hidden-element {
+  @apply hidden;
+}
+
+.flex-element {
+  @apply flex;
+}
+
+.selectedBtn {
+  @apply rounded-lg border-2 border-solid border-purple-200 bg-purple-200 text-white;
+}
+
+.slick-slide .slick-nav::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 100%;
+  background-color: #50e2aa;
+  position: absolute;
+  right: -59px;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.slick-slide[style="opacity: 0;"] {
+  opacity: 0.25 !important;
+}
+
+.slick-slide[style="opacity: 1;"] .slick-nav::after {
+  visibility: visible;
+}
+
+.blog-title {
+  @apply text-[1.625rem] font-semibold leading-tight text-purple-200;
+}
+.blog-text {
+  @apply text-[1.25rem] text-[#073B4C];
+}
+.blog-content h2,
+.blog-content p {
+  @apply text-heading4 font-light text-primary md:text-body-small;
+}
+
+.blog-content br,
+.blog-content h2 br,
+.blog-content p br {
+  @apply hidden;
+}

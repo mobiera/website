@@ -1,0 +1,25 @@
+<div class="mb-5 flex items-center gap-4">
+  {{ $image := resources.Get "images/icon-newsletter.svg" }}
+  {{ with $image }}
+    <img src="{{ .RelPermalink }}" alt="newsletter" />
+  {{ end }}
+  <h5 class="text-[2rem] font-bold text-white">{{ .title }}</h5>
+</div>
+<h6 class="mb-2 text-heading3 font-bold text-green">{{ .subtitle }}</h6>
+<p class="mb-10 w-auto text-heading4 text-purple-100 lg:w-[32rem]">
+  {{ .text }}
+</p>
+<form action="/newsletter.php" method="post" class="flex gap-5">
+  <input
+    type="text"
+    name="newsletter"
+    placeholder="Your Email Address"
+    class="w-2/3 rounded-lg p-4 font-itc text-body-medium"
+  />
+  <input
+    type="button"
+    name="submit"
+    value="Submit"
+    class="cursor-pointer rounded-lg bg-purple-200 px-10 py-4 font-itc text-body-medium text-white transition-all hover:bg-green"
+  />
+</form>

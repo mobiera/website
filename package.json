@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "mobiera",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "compile": "npx tailwindcss -i ./static/src/input.css -o ./static/dist/output.css --watch --minify"
+  },
+  "devDependencies": {
+    "prettier": "3.0.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {}
+}

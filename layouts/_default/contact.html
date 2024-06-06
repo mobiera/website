@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ with .Site.Data.contact.content }}
+    {{ partial "sections/contact/content.html" . }}
+  {{ end }}
+{{ end }}

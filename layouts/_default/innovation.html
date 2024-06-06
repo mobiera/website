@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ with .Site.Data.innovation.problem }}
+    {{ partial "sections/innovation/problem.html" . }}
+  {{ end }}
+  {{ with .Site.Data.innovation.agriculture }}
+    {{ partial "sections/innovation/agriculture.html" . }}
+  {{ end }}
+  {{ with .Site.Data.innovation.biometric }}
+    {{ partial "sections/innovation/biometric.html" . }}
+  {{ end }}
+  {{ with .Site.Data.innovation.data }}
+    {{ partial "sections/innovation/data.html" . }}
+  {{ end }}
+  {{ with .Site.Data.innovation.partnerships }}
+    {{ partial "sections/innovation/partnerships.html" . }}
+  {{ end }}
+  {{ with .Site.Data.innovation.jump }}
+    {{ partial "sections/innovation/jump.html" . }}
+  {{ end }}
+  {{ with .Site.Data.home.careers }}
+    {{ partial "sections/careers.html" . }}
+  {{ end }}
+{{ end }}

@@ -1,0 +1,39 @@
+<div class="container flex min-h-[calc(100vh-144px)] w-full items-center py-24">
+  <div class="flex flex-col justify-between gap-10 lg:flex-row lg:gap-0">
+    <div class="flex w-full flex-col gap-3 lg:w-4/12">
+      <h1 class="big-title mb-10">{{ safeHTML .title }}</h1>
+      <p class="mb-7 text-heading2">{{ .subtitle }}</p>
+      <p class="text-heading3 opacity-80">{{ safeHTML .text }}</p>
+    </div>
+    <div class="w-full lg:w-7/12">
+      <div class="flex flex-col gap-5">
+        <div class="w-full">
+          {{ $image := resources.Get .image }}
+          {{ with $image }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+              class=" overflow-hidden rounded-t-lg object-cover"
+              alt="{{ .Title }}"
+              alt=""
+            />
+          {{ end }}
+        </div>
+        <h3 class="text-heading1 font-bold text-green">{{ .title_tags }}</h3>
+        <div class="flex flex-wrap justify-between">
+          {{ range .content.tags }}
+            <div
+              class="flex w-[48%] items-center gap-2 border-b-[1px] border-[#515E8128] py-2 transition-all hover:gap-4"
+            >
+              <div class="first:fill-green">
+                {{ partial "icons/bullet.html" }}
+              </div>
+              <p class="text-heading3">{{ .tag }}</p>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

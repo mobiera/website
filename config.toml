@@ -1,0 +1,102 @@
+baseURL = 'https://dev.mobiera.com/'
+languageCode = 'en-us'
+title = 'Mobiera'
+
+# theme = 'mobiera'
+# sectionPagesMenu = "main"
+[menu]
+
+[[menu.main]]
+pageRef="/telecom"
+name = "Telecom"
+url = "/telecom"
+weight = 10
+
+[[menu.main]]
+pageRef="/devsecops"
+name = "DevSecOps"
+url = "/dev-sec-ops"
+weight = 20
+
+
+[[menu.main]]
+pageRef = "/innovation"
+name = "Innovation"
+url = "/innovation"
+weight = 30
+
+[[menu.main]]
+pageRef = "/about"
+name = "Company"
+url = "/about-us"
+weight = 40
+
+[[menu.footer]]
+name = 'Contact Us'
+url = '/contact-us'
+weight = 10
+
+[[menu.footer]]
+name = 'Privacy Policy'
+url = '/privacy-policy'
+weight = 20
+
+[[menu.footer]]
+name = 'Careers'
+url = '/careers'
+weight = 30
+
+[[menu.footer]]
+name = 'Blog'
+url = '/blog'
+weight = 40
+
+[[menu.footer]]
+name = 'About Us'
+url = '/about-us/'
+weight = 50
+
+[params]
+copyright = "© All rights reserved - 2011-2024"
+text = "We’re showcasing our Web5 Accelerator suite at Geneva."
+link = "Learn more"
+url = "/"
+
+[[params.btn1]]
+name = "Blog"
+url = "/blog"
+
+[[params.btn2]]
+name = "Contact"
+url = "/contact"
+
+[[params.btn3]]
+name = "Login"
+url = "/login"
+
+[[params.btn4]]
+icon = "icons/github-mark-white.html"
+url = "https://github.com/mobiera"
+
+[[params.social]]
+name = "Medium"
+url = "https://www.medium.com"
+icon = "icons/icon-medium.html"
+
+[[params.social]]
+name = "Github"
+url = "https://github.com/mobiera"
+icon = "icons/icon-github.html"
+
+[[params.social]]
+name = "Linkedin"
+url = "https://www.linkedin.com/company/mobiera-sas"
+icon = "icons/icon-linkedin.html"
+
+[[params.social]]
+name = "X"
+url = "https://www.x.com"
+icon = "icons/icon-x.html"
+
+[markup.goldmark.renderer]
+unsafe= true

@@ -1,0 +1,26 @@
+<div class="container py-5 pb-20 md:py-16">
+  <div class="flex flex-col justify-between md:flex-row-reverse">
+    <div class="mb-10 flex w-full justify-center md:mb-0 md:w-6/12">
+      {{ $image := resources.Get .image }}
+      {{ with $image }}
+        <img
+          src="{{ $image.RelPermalink }}"
+          alt=""
+          class="mt-0 w-11/12 md:-mt-32"
+        />
+      {{ end }}
+    </div>
+    <div class="flex w-full flex-col md:w-5/12">
+      <h2 class="big-title mb-10">{{ safeHTML .title }}</h2>
+      <p class="missing mb-7 text-heading2">{{ safeHTML .subtitle }}</p>
+    </div>
+  </div>
+  <div class="mt-5 flex flex-col justify-between md:flex-row-reverse">
+    <div class="mb-10 flex w-full justify-center md:mb-0 md:w-5/12">
+      <p class="text-heading3 font-light opacity-80">{{ .text2 }}</p>
+    </div>
+    <div class="flex w-full flex-col md:w-6/12">
+      <p class="text-heading3 font-light opacity-80">{{ .text }}</p>
+    </div>
+  </div>
+</div>

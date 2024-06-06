@@ -1,0 +1,11 @@
+enabled: true
+
+subtitle: "<b>Sign in</b> to your account"
+image: "images/home/hero/slide1.jpg"
+
+content:
+  blocks:
+    - text: "Forgot your password?"
+      link: ""
+    - text: "Register a new user"
+      link: ""

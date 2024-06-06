@@ -1,0 +1,16 @@
+<div class="relative w-full bg-white py-16">
+  <div class="container">
+    <h2 class="title mx-auto w-full leading-snug md:w-2/3">
+      {{ safeHTML .title }}
+    </h2>
+    <p class="subtitle mb-5 w-full md:w-2/3">{{ .subtitle }}</p>
+    {{ $image := resources.Get .image }}
+    {{ with $image }}
+      <img
+        src="{{ $image.RelPermalink }}"
+        alt=""
+        class="mx-auto w-auto py-10"
+      />
+    {{ end }}
+  </div>
+</div>

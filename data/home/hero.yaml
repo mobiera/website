@@ -1,0 +1,24 @@
+enabled: true
+
+content:
+  slides:
+    - title: "Entertainment"
+      subtitle: "Discover the Transformative Magic of Engagement: "
+      text: "Immerse yourself and your clients in captivating digital entertainment experiences."
+      image: "images/home/hero/Digital-Entertainment.mp4"
+    - title: "Innovation"
+      subtitle: "Unleash the Power of Ideas: "
+      text: "We help you break boundaries through igniting fit for purpose innovation to redefine business possibilities."
+      image: "images/home/hero/Digital-Entertainment.mp4"
+    - title: "Transformation"
+      subtitle: "Unlock Your Digital Future: "
+      text: "Harness the digitalisation of products, services, processes, and channels to revolutionise your business."
+      image: "images/home/hero/Digital-Entertainment.mp4"
+    - title: "Aggregation"
+      subtitle: "Consolidate Your Digital Offerings: "
+      text: "Streamline your content, products and services to capitalise on and amplify the impact of interactions."
+      image: "images/home/hero/Digital-Entertainment.mp4"
+    - title: "Distribution"
+      subtitle: "Embrace Digital Boundless Channels: "
+      text: "Seamlessly connect your products and services across online sales platforms and marketplaces."
+      image: "images/home/hero/Digital-Entertainment.mp4"

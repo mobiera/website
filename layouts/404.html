@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="container pb-20 pt-40">
+    <div class="flex flex-col items-center gap-10">
+      <h1 class="big-title text-purple-200 after:h-0">Page not found!</h1>
+      {{ $image := resources.Get "images/404.svg" }}
+      {{ with $image }}
+        <img src="{{ .RelPermalink }}" alt="404" class="mx-auto mb-10 w-1/3" />
+      {{ end }}
+      <p class="w-2/3 text-center text-heading2">
+        The page you’re looking for was moved, removed, or might have never
+        existed
+      </p>
+    </div>
+  </div>
+{{ end }}

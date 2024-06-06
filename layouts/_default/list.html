@@ -1,36 +1,118 @@
 {{ define "main" }}
-  <section class="section blog-list py-5">
-    <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-12 col-xl-6">
-          {{ with .Title }}
-            <h2 class="fs-1 fw-bold text-center text-primary pb-3">{{ . }}</h2>
+  <div class="container pb-10 pt-20 md:pb-0 md:pt-36">
+    <h1 class="my-5 text-heading2 font-bold text-purple-200">
+      {{ .Page.Title }}
+    </h1>
+    {{ range first 1 .Pages }}
+      <div
+        class="mb-5 flex flex-col overflow-hidden rounded-lg border-2 border-green md:flex-row"
+      >
+        <div class="w-full md:w-1/2">
+          {{ $image := resources.Get .Params.image }}
+          {{ with $image }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+              class="h-full w-full object-cover"
+              alt="{{ .Title }}"
+            />
           {{ end }}
-          {{ with .Params.description }}
-            <p class="text-black-61 text-center pb-3">{{ . }}</p>
-          {{ end }}
+        </div>
+        <div class="w-full p-5 md:w-1/2">
+          <h2 class="mb-2 text-heading2 font-bold leading-tight text-blue-200">
+            {{ safeHTML .Title }}
+          </h2>
+          <p
+            class="mb-5 text-heading4 font-light opacity-50 md:text-body-small"
+          >
+            {{ .Date.Format "01/02/2006" }}
+          </p>
+          <div class="blog-content mb-5 md:text-body-medium">
+            {{ .Content | truncate 600 }}
+          </div>
+          <a href="{{ .Permalink }}" class="btn-secondary">Read more</a>
         </div>
       </div>
-      <div class="row g-4 pb-5">
-        {{ range (.Paginate .RegularPages).Pages }}
-        <div class="col-12 col-md-6 col-lg-4">
-          <a class="card text-decoration-none h-100" href="{{ .Permalink }}">
-            <div class="aspect-ratio-62-5">
-              {{ with ( partial "utilities/get-featured-image.html" . ) }}
-                {{ partial "utilities/card-img-top" . }}
-              {{ end }}
+    {{ end }}
+    <div class="swiper-blog relative overflow-hidden">
+      <div class="swiper-wrapper items-stretch">
+        {{ range after 1 .Pages }}
+          <div class="swiper-slide h-full">
+            <div
+              class="flex h-full flex-col items-center overflow-hidden rounded-lg border-2 border-green"
+            >
+              <div class="flex w-full flex-col">
+                <div class="h-60 w-full md:h-40">
+                  {{ $image := resources.Get .Params.image }}
+                  {{ with $image }}
+                    <img
+                      src="{{ $image.RelPermalink }}"
+                      width="{{ $image.Width }}"
+                      height="{{ $image.Height }}"
+                      class="h-full w-full object-cover"
+                    />
+                  {{ end }}
+                </div>
+                <div class="flex w-full flex-col gap-2 p-4">
+                  <h3
+                    class="text-heading2 font-bold leading-tight text-blue-200 md:text-heading4"
+                  >
+                    {{ .Title | truncate 40 }}
+                  </h3>
+                  <div class="blog-content">
+                    {{ .Content | truncate 55 }}
+                  </div>
+                </div>
+                <div class="flex justify-between px-4">
+                  <a
+                    href="{{ .Permalink }}"
+                    class="btn-secondary text-heading4 text-green md:text-body-small"
+                  >
+                    And many more
+                  </a>
+                  <p class="mb-5 text-heading4 opacity-50 md:text-body-small">
+                    {{ .Date.Format "01/02/2006" }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title fw-semibold">{{ .Title }}</h5>
-              <p class="card-text text-black-61">{{ .Summary | plainify }}</p>
-            </div>
-          </a>
-        </div>
+          </div>
         {{ end }}
       </div>
-      <div class="row pb-5">
-        {{ template "_internal/pagination.html" . }}
+      <div class="mt-24">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g transform="translate(17029 10127)">
+              <rect width="24" height="24" fill="none" />
+              <path
+                d="M19.352,27a1.682,1.682,0,0,1-1.162-.458L7.231,16.107a1.513,1.513,0,0,1,0-2.214L18.19,3.458a1.7,1.7,0,0,1,2.325,0,1.513,1.513,0,0,1,0,2.214L10.718,15l9.8,9.328a1.513,1.513,0,0,1,0,2.214A1.682,1.682,0,0,1,19.352,27Z"
+                transform="translate(-17003.004 -10100) rotate(180)"
+              />
+            </g>
+          </svg>
+        </div>
+        <div class="swiper-button-prev2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <rect width="24" height="24" fill="none" />
+            <path
+              d="M12.6,0A1.682,1.682,0,0,0,11.44.458L.481,10.893a1.513,1.513,0,0,0,0,2.214L11.44,23.542a1.7,1.7,0,0,0,2.325,0,1.513,1.513,0,0,0,0-2.214L3.968,12l9.8-9.328a1.513,1.513,0,0,0,0-2.214A1.682,1.682,0,0,0,12.6,0Z"
+              transform="translate(4.754 0)"
+            />
+          </svg>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 {{ end }}

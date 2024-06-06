@@ -1,0 +1,52 @@
+<div>
+  <div class="relative py-10 lg:py-0">
+    <div class="absolute left-0 h-full w-full bg-[#F1F4FD] lg:w-1/2"></div>
+    <div class="absolute right-0 h-full w-full lg:w-1/2 "></div>
+    <div
+      class="container relative z-10 flex flex-col-reverse items-center gap-10 lg:flex-row lg:gap-0"
+    >
+      <div class="w-full lg:w-1/2">
+        <h3 class="big-title mb-14 mr-10">{{ safeHTML .title }}</h3>
+        <p class="mr-10 text-heading2">{{ safeHTML .text }}</p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        {{ $image := resources.Get .image }}
+        {{ with $image }}
+          <img
+            src="{{ $image.RelPermalink }}"
+            width="{{ $image.Width }}"
+            height="{{ $image.Height }}"
+            class="w-full object-cover lg:min-h-[400px]"
+            alt=""
+          />
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="w-fukk absolute left-0 h-full bg-[#F1F4FD] lg:w-1/2"></div>
+    <div class="absolute right-0 h-full w-full lg:w-1/2"></div>
+    <div
+      class="container relative z-10 flex flex-col-reverse items-center gap-10 lg:flex-row-reverse lg:gap-0"
+    >
+      <div class="w-full lg:w-1/2">
+        <h3 class="big-title mb-14 ml-10 leading-tight">
+          {{ safeHTML .title2 }}
+        </h3>
+        <p class="ml-10 text-heading2">{{ safeHTML .text2 }}</p>
+      </div>
+      <div class="w-full lg:w-1/2">
+        {{ $image2 := resources.Get .image2 }}
+        {{ with $image2 }}
+          <img
+            src="{{ $image2.RelPermalink }}"
+            width="{{ $image2.Width }}"
+            height="{{ $image2.Height }}"
+            class="w-full object-cover lg:min-h-[400px]"
+            alt=""
+          />
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

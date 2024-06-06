@@ -1,25 +1,125 @@
 {{ define "main" }}
-  <section class="section blog-single py-5">
-    <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-12">
-          {{ with .Title }}
-            <h2 class="display-1 fw-bold text-center text-primary pb-3">{{ . }}</h2>
-          {{ end }}
-          {{ with .Params.description }}
-            <p class="text-black-61 text-center pb-3">{{ . }}</p>
-          {{ end }}
+  <div class="container pt-20 md:pt-36">
+    <h1 class="mb-3 mt-5 text-heading2 font-bold text-purple-200">
+      <a href="/blog">Blog</a> |
+      <span class="font-normal text-primary">{{ safeHTML .Page.Title }}</span>
+    </h1>
+    <h3 class="text-body-medium text-[#8E8E8E]">
+      {{ .Page.Date.Format "01/02/2006" }}
+    </h3>
+    <div
+      class="relative my-7 flex h-[30rem] w-full items-center overflow-hidden rounded-t-lg"
+    >
+      {{ $image := resources.Get .Params.image }}
+      {{ with $image }}
+        <img
+          src="{{ $image.RelPermalink }}"
+          width="{{ $image.Width }}"
+          height="{{ $image.Height }}"
+          class="absolute h-full w-full object-cover"
+          alt=""
+        />
+      {{ end }}
+      <div
+        class="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-transparent to-purple-200 opacity-70"
+      ></div>
+      <h4
+        class="green relative mx-14 mt-20 w-full text-heading1 font-bold leading-tight text-white shadow-[0px_3px_12px_-10px_rgba(131,83,242,0.1)] md:w-1/2 md:text-heading"
+      >
+        {{ safeHTML .Page.Title }}
+      </h4>
+    </div>
+    <div class="flex flex-col items-start justify-between md:flex-row">
+      <div class="w-full md:w-2/3">
+        <div class="content my-10 mr-24 text-heading4 md:text-body-medium">
+          {{ safeHTML .Content }}
         </div>
-      </div>
-      <div class="row pb-5">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="blog-content fs-5">
-            {{ .Content }}
+        <div class="mr-24 py-14">
+          <div class="flex items-end gap-7">
+            <div class="h-60 w-56">
+              {{ $imageAuthor := resources.Get .Params.image_author }}
+              {{ with $imageAuthor }}
+                <img
+                  src="{{ $imageAuthor.RelPermalink }}"
+                  width="{{ $imageAuthor.Width }}"
+                  height="{{ $imageAuthor.Height }}"
+                  class="h-full w-full object-cover"
+                  alt="{{ .Params.author }}"
+                />
+              {{ end }}
+            </div>
+            <div>
+              <h6 class="mb-2 w-48 text-heading leading-tight text-[#073B4C]">
+                {{ .Params.author }}
+              </h6>
+              <p class="text-heading3 leading-normal text-[#073B4C]">
+                {{ .Params.position }}
+              </p>
+              <p class="text-heading3 leading-tight text-purple-200">
+                <a href="mailto:{{ .Params.email }}">
+                  {{ .Params.email }}
+                </a>
+              </p>
+              <p class="text-heading3 leading-tight text-purple-200">
+                {{ .Params.email2 }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row pb-5">
+      <div class="mb-5 mt-20 w-full md:mt-10 md:w-4/12">
+        <h4 class="mb-5 text-heading1 font-bold text-blue-200">
+          Similar Items
+        </h4>
+        <div class="flex flex-col gap-10">
+          {{ $pageId := .Params.Id }}
+          <!-- {{ $similar := where (where .Site.Pages "Type" "posts") "Params.id" "ne" $pageId }} -->
+          {{ $similar := where .Site.Pages "Type" "blog" }}
+          {{ $similar = where $similar "Params.id" "ne" $pageId }}
+
+          {{ range last 4 $similar }}
+            <div
+              class="flex h-full flex-col items-center overflow-hidden rounded-lg border-2 border-green"
+            >
+              <div class="flex w-full flex-col">
+                <div class="h-60 w-full md:h-40">
+                  {{ $image := resources.Get .Params.image }}
+                  {{ with $image }}
+                    <img
+                      src="{{ $image.RelPermalink }}"
+                      width="{{ $image.Width }}"
+                      height="{{ $image.Height }}"
+                      class="h-full w-full object-cover"
+                      alt=""
+                    />
+                  {{ end }}
+                </div>
+                <div class="flex w-full flex-col gap-2 p-4">
+                  <h3
+                    class="text-heading2 font-bold leading-tight text-blue-200 md:text-heading4"
+                  >
+                    {{ safeHTML .Title | truncate 40 }}
+                  </h3>
+                  <div class="blog-content">
+                    {{ .Content | truncate 55 }}
+                  </div>
+                </div>
+                <div class="flex justify-between px-4">
+                  <a
+                    href="{{ .Permalink }}"
+                    class="btn-secondary text-heading4 text-green md:text-body-small"
+                  >
+                    Read more
+                  </a>
+                  <p class="mb-5 text-heading4 opacity-50 md:text-body-small">
+                    {{ .Date.Format "01/02/2006" }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 {{ end }}

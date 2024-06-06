@@ -1,0 +1,22 @@
+enabled: true
+
+title: "Our <b>Values</b>"
+subtitle: "Our values are ingrained in every aspect of our daily work, defining our behaviour and driving us to create enduring advantages for our stakeholders."
+
+content:
+  blocks:
+    - image: "icons/icon_values1.html"
+      title_section: "Customer-Centricity"
+      text: "We place our customers at the core of everything we do. Understanding their needs and providing tailored solutions is our top priority."
+
+    - image: "icons/icon_values2.html"
+      title_section: "Integrity and Transparency "
+      text: "We uphold the highest standards of integrity, ensuring transparency in interacting with our clients and partners with a direct reflection on our business practices."
+
+    - image: "icons/icon_values3.html"
+      title_section: "Excellence and Innovation "
+      text: "We strive for excellence in all our endeavours and constantly seek innovative ways to effectively drive progress and optimise our products and services."
+
+    - image: "icons/icon_values4.html"
+      title_section: "Collaboration and Continuous Learning"
+      text: "We believe in the power of collaboration, fostering a culture that encourages teamwork and continuous learning to stay at the forefront of technological advancements."

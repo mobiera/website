@@ -1,0 +1,22 @@
+enabled: true
+
+title: "Applications"
+subtitle: "Offer engaging experiences to telecommunication clients and improve interactions with the core offerings."
+
+content:
+  blocks:
+    - title_section: "Cosmos"
+      subtitle_section: "Live an unforgettable space adventure"
+      text: "Embark upon a whimsical cosmic odyssey, and partake in a captivating voyage through space. Link Cosmos to telecom core offerings and increase engagement."
+      link: "applications/1"
+      image: "images/home/telecom/cosmos.png"
+    - title_section: "Enigma"
+      subtitle_section: "The enchanting real of  mysticism"
+      text: "With the whimsical strokes of a virtual deck, this meticulously crafted creation illuminates the path to introspection and self-discovery. "
+      link: "applications/1"
+      image: "images/home/telecom/enigma.png"
+    - title_section: "Connect"
+      subtitle_section: "Gamify your Customers’ interactions"
+      text: "Experience the joy of connection through immersive chat services through several curated themes catered. Offer voice and data bundles to brighten your customers’ interactions"
+      link: "applications/1"
+      image: "images/home/telecom/connect.png"

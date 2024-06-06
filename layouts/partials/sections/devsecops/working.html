@@ -1,0 +1,41 @@
+<div class="container flex min-h-[calc(100vh-144px)] w-full items-center py-16">
+  <div class="flex flex-col justify-between md:flex-row-reverse">
+    <div class="group mb-10 flex w-11/12 justify-center md:mb-0 md:w-5/12">
+      <div class="relative w-fit">
+        <div
+          class="h-full -translate-x-3 -translate-y-3 overflow-hidden rounded-2xl shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200 transition-all group-hover:-translate-x-6 group-hover:-translate-y-6"
+        >
+          {{ $image := resources.Get .image }}
+          {{ with $image }}
+            <img
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+              class="h-full overflow-hidden rounded-2xl object-cover shadow-[9px_14px_15px_-10px_rgba(25,36,66,0.3)] shadow-blue-200"
+              alt=""
+            />
+          {{ end }}
+          <div
+            class="absolute left-0 top-0 h-full w-full rounded-2xl bg-gradient-to-br from-transparent to-purple-200"
+          >
+            <h4 class="caption">{{ safeHTML .title }}</h4>
+          </div>
+        </div>
+        <div
+          class="absolute right-0 top-0 -z-10 h-full w-full overflow-hidden rounded-2xl bg-[url('/images/charte-bg.svg')] bg-cover bg-center bg-no-repeat"
+        ></div>
+      </div>
+    </div>
+    <div class="flex w-full flex-col py-20 md:w-5/12">
+      <h2 class="big-title mb-10 leading-snug">{{ safeHTML .title }}</h2>
+      <p class="missing mb-10 text-heading2 text-blue-200 md:mb-24">
+        {{ safeHTML .subtitle }}
+      </p>
+      <a
+        href="{{ .link }}"
+        class="btn-primary w-fit border-purple-200 text-purple-200 hover:bg-purple-200"
+        >{{ .cta }}</a
+      >
+    </div>
+  </div>
+</div>

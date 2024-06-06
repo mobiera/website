@@ -1,0 +1,55 @@
+enabled: true
+
+title: "Partnerships"
+subtitle: "We partner with bluechip players and innovators to deliver world-class digital experiences and platforms."
+text1: "We aim to create lasting value for our customers by fostering win-win partnerships, to unlock greater business potential, broaden our scope, enrich our experiences, and share our expertise effectively."
+text2: "We continuously seek opportunities to expand our network of like-minded partners. Feel free to contact us and explore potential avenues for collaboration."
+btn: "Contact us"
+link: "contact"
+partners: "Some of our partners:"
+
+content:
+  logo:
+    - name: "Digicel"
+      image: "images/home/partnerships/digicel.svg"
+      link: ""
+
+    - name: "Viettel"
+      image: "images/home/partnerships/viettel.svg"
+      link: ""
+
+    - name: "2060"
+      image: "images/home/partnerships/2060.svg"
+      link: ""
+
+    - name: "Ooredoo"
+      image: "images/home/partnerships/ooredoo.svg"
+      link: ""
+
+    - name: "Viva"
+      image: "images/home/partnerships/viva.svg"
+      link: ""
+
+    - name: "Bitel"
+      image: "images/home/partnerships/bitel.svg"
+      link: ""
+
+    - name: "Claro"
+      image: "images/home/partnerships/claro.svg"
+      link: ""
+
+    - name: "Bitdefender"
+      image: "images/home/partnerships/bitdefender.svg"
+      link: ""
+
+    - name: "Halotel"
+      image: "images/home/partnerships/halotel.svg"
+      link: ""
+
+    - name: "America movil"
+      image: "images/home/partnerships/america-movil.png"
+      link: ""
+
+    - name: "Amplitudes"
+      image: "images/home/partnerships/idemia.svg"
+      link: ""
