@@ -5,6 +5,11 @@ subtitle: "Catering to mobile operators and internet service providers technolog
 
 content:
   blocks:
+    - title_section: "AI One"
+      subtitle_section: "An open platform for deploying intelligent, customizable, and cost-saving AI agents."
+      text: "Verifiable AI agents that transform your customer experience and significantly reduce your costs."
+      link: "platforms/1"
+      image: "images/home/telecom/aione.png"
     - title_section: "Kinetic"
       subtitle_section: "E2E Delivery of Telecom Value Added Services (SDP)"
       text: "A comprehensive platform to consolidate and streamline the delivery of existing and new value added services with the power of smart billing and notifications optimisation."
