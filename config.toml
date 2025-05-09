@@ -56,11 +56,11 @@ name = 'About Us'
 url = '/about-us/'
 weight = 50
 
-[params]
-copyright = "© All rights reserved - 2011-2024"
-text = "We’re showcasing our Web5 Accelerator suite at Geneva."
-link = "Learn more"
-url = "/"
+# [params]
+# copyright = "© All rights reserved - 2011-2024"
+# ext = "We’re showcasing our Web5 Accelerator suite at Geneva."
+# link = "Learn more"
+# url = "/"
 
 [[params.btn1]]
 name = "Blog"
