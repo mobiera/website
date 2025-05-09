@@ -60,7 +60,7 @@ weight = 50
 copyright = "©All rights reserved - 2011-2025"
 text = "We’re launching AI One, a powerful verifiable AI agent solution."
 link = "Learn more"
-url = "/"
+url = "https://www.linkedin.com/company/mobiera-sas/"
 
 [[params.btn1]]
 name = "Blog"
@@ -68,7 +68,7 @@ url = "/blog"
 
 [[params.btn2]]
 name = "Contact"
-url = "/contact"
+url = "https://www.linkedin.com/company/mobiera-sas/"
 
 [[params.btn3]]
 name = "Login"
@@ -93,10 +93,10 @@ name = "Linkedin"
 url = "https://www.linkedin.com/company/mobiera-sas"
 icon = "icons/icon-linkedin.html"
 
-[[params.social]]
-name = "X"
-url = "https://www.x.com"
-icon = "icons/icon-x.html"
+# [[params.social]]
+# name = "X"
+# url = "https://www.x.com"
+# icon = "icons/icon-x.html"
 
 [markup.goldmark.renderer]
 unsafe= true
