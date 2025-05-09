@@ -33,7 +33,7 @@ weight = 40
 
 [[menu.footer]]
 name = 'Contact Us'
-url = '/contact-us'
+url = 'https://www.linkedin.com/company/mobiera-sas/'
 weight = 10
 
 [[menu.footer]]
