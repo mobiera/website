@@ -57,7 +57,7 @@ url = '/about-us/'
 weight = 50
 
 [params]
-copyright = "© All rights reserved - 2011-2025"
+copyright = "©All rights reserved - 2011-2025"
 text = "We’re launching AI One, a powerful verifiable AI agent solution."
 link = "Learn more"
 url = "/"
