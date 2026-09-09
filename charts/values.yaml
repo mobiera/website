@@ -1,0 +1,73 @@
+# Default values for the mobiera.com website Helm chart. Trimmed from the
+# 2060.io-website chart: no database, no storage volume, no migrate jobs.
+
+nameOverride: "website"
+fullnameOverride: ""
+
+image:
+  repository: mobiera/website
+  # Docker Hub. Tags: dev (every push to main), main and latest (last release),
+  # vX.Y.Z and vX.Y (releases). Empty defaults to "v<appVersion>".
+  tag: ""
+  pullPolicy: Always
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: "50m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 3000
+
+ingress:
+  enabled: true
+  className: nginx
+  host: www.mobiera.com
+  tls:
+    enabled: true
+    secretName: website-mobiera-com-tls
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    # Career applications upload a PDF of up to 10 MB.
+    nginx.ingress.kubernetes.io/proxy-body-size: 12m
+
+env:
+  - name: NODE_ENV
+    value: production
+  - name: PORT
+    value: "3000"
+  - name: HOSTNAME
+    value: 0.0.0.0
+  - name: SITE_URL
+    value: https://www.mobiera.com
+
+# Secret holding MAIL_*, CONTACT_TO*, ALERT_WEBHOOK_URL (created outside the
+# chart, e.g. kubectl create secret generic mobiera-website-secrets ...).
+secretName: mobiera-website-secrets
+
+probes:
+  liveness:
+    path: /
+    initialDelaySeconds: 15
+    periodSeconds: 30
+    timeoutSeconds: 3
+    failureThreshold: 3
+  readiness:
+    path: /
+    initialDelaySeconds: 3
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+podSecurityContext: {}
+securityContext: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}

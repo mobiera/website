@@ -1,0 +1,205 @@
+<title>Mobiera Direction C: Modular</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#FFFFFF;--soft:#F3F1FB;--soft-2:#E9E6F7;--ink:#192442;--muted:#5D6483;--rule:#E8E6F3;
+    --violet:#8353F2;--violet-deep:#5E3ABE;--violet-ink:#6A3FD6;--green:#50E2AA;--green-ink:#178A5E;--navy:#192442;--navy-ink:#FFFFFF;--on-violet:#FFFFFF;--on-green:#192442;
+    --display:"Plus Jakarta Sans","Avenir Next",system-ui,sans-serif;--body:"Plus Jakarta Sans","Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",Menlo,Consolas,monospace;
+    --r:18px;
+  }
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+    --bg:#0F1329;--soft:#171C3A;--soft-2:#1F2547;--ink:#EEF0FA;--muted:#A9AEC8;--rule:#2A3155;
+    --violet:#8353F2;--violet-deep:#5E3ABE;--violet-ink:#B9A6FF;--green:#50E2AA;--green-ink:#6BE9BA;--navy:#1B2246;--navy-ink:#EEF0FA;--on-violet:#FFFFFF;--on-green:#0F1329;}}
+  :root[data-theme="dark"]{
+    --bg:#0F1329;--soft:#171C3A;--soft-2:#1F2547;--ink:#EEF0FA;--muted:#A9AEC8;--rule:#2A3155;
+    --violet:#8353F2;--violet-deep:#5E3ABE;--violet-ink:#B9A6FF;--green:#50E2AA;--green-ink:#6BE9BA;--navy:#1B2246;--navy-ink:#EEF0FA;--on-violet:#FFFFFF;--on-green:#0F1329;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:6px}
+  h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;text-wrap:balance;letter-spacing:-0.025em;font-weight:800}
+  h1{font-size:clamp(2.3rem,4.6vw,3.6rem)}
+  h2{font-size:clamp(1.6rem,2.8vw,2.3rem)}
+  h3{font-size:1.25rem}
+  p{margin:0}
+  .mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;font-weight:600;background:var(--soft);color:var(--ink);transition:transform .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.violet{background:var(--violet);color:var(--on-violet)}
+  .btn.green{background:var(--green);color:var(--on-green)}
+  .btn.navy{background:var(--navy);color:var(--navy-ink)}
+  .btn.white{background:#fff;color:#3F2A8A}
+  header{padding:18px 0}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--soft);border-radius:var(--r);padding:12px 18px 12px 20px}
+  .logo{display:flex;align-items:center;color:var(--ink)}
+  .logo svg{height:26px;width:auto}
+  .links{display:flex;gap:6px;font-weight:600;font-size:.92rem}
+  .links a{padding:8px 12px;border-radius:10px}
+  .links a:hover{background:var(--soft-2)}
+  .links a.active{background:var(--bg)}
+  /* bento */
+  .bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(120px,auto);gap:14px;margin-top:8px}
+  .tile{border-radius:var(--r);padding:26px;display:grid;gap:12px;align-content:start;position:relative;overflow:hidden}
+  .tile.soft{background:var(--soft)}
+  .tile.violet{background:var(--violet);color:var(--on-violet)}
+  .tile.violet .mono,.tile.navy .mono{color:inherit;opacity:.72}
+  .tile.green{background:var(--green);color:var(--on-green)}
+  .tile.green .mono{color:inherit;opacity:.7}
+  .tile.navy{background:var(--navy);color:var(--navy-ink)}
+  .tile.line{background:transparent;border:1.5px solid var(--rule)}
+  .t-hero{grid-column:span 8;grid-row:span 3;padding:38px;justify-content:start}
+  .t-hero .lead{color:var(--muted);font-size:1.1rem;max-width:56ch}
+  .t-cert{grid-column:span 4;grid-row:span 2}
+  .t-day{grid-column:span 4;grid-row:span 1;align-content:center}
+  .t-ops{grid-column:span 3}
+  .t-reach{grid-column:span 3}
+  .t-year{grid-column:span 3}
+  .t-found{grid-column:span 3}
+  .big{font-family:var(--display);font-weight:800;font-size:2.2rem;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
+  .tile .sub{font-size:.9rem;opacity:.85}
+  .puzzle{position:absolute;right:-18px;bottom:-22px;width:120px;height:120px;opacity:.25}
+  .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  section{padding:56px 0 0}
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:18px;flex-wrap:wrap}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .tile ul{margin:0;padding-left:1.1em;display:grid;gap:6px;opacity:.9}
+  .tile.soft ul{color:var(--muted)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .chips span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.14);padding:5px 9px;border-radius:8px}
+  .tile.soft .chips span{background:var(--bg);color:var(--muted)}
+  .more{font-weight:600;margin-top:4px}
+  .more::after{content:" →"}
+  .logos{display:flex;flex-wrap:wrap;gap:10px}
+  .logos span{font-family:var(--display);font-weight:600;font-size:.95rem;padding:10px 14px;border-radius:12px;background:var(--soft);color:var(--muted)}
+  .news{display:grid;gap:10px}
+  .news a{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:14px 16px;border-radius:12px;background:var(--soft);align-items:baseline}
+  .news a:hover{background:var(--soft-2)}
+  .news b{font-weight:600}
+  footer{padding:56px 0 28px}
+  .fbox{background:var(--soft);border-radius:var(--r);padding:32px}
+  .fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px;color:var(--muted);font-size:.92rem}
+  .fcols h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;color:var(--muted)}
+  .fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .fcols a:hover{color:var(--violet-ink)}
+  .fbottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:18px;border-top:1px solid var(--rule);font-size:.85rem;color:var(--muted)}
+  @media (max-width:960px){.bento{grid-template-columns:repeat(6,1fr)}.t-hero{grid-column:span 6;grid-row:span 2}.t-cert{grid-column:span 6}.t-day{grid-column:span 6}.t-ops,.t-reach,.t-year,.t-found{grid-column:span 3}.grid2,.grid3{grid-template-columns:1fr}.fcols{grid-template-columns:1fr 1fr}.links{display:none}}
+  @media (max-width:560px){.bento{grid-template-columns:1fr}.bento > *{grid-column:span 1 !important;grid-row:auto !important}.fcols{grid-template-columns:1fr}.t-hero{padding:26px}}
+  @media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <a class="logo" href="#" aria-label="Mobiera home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.713 51.692" aria-hidden="true"><g transform="translate(-288.851 -4163.655)"><g transform="translate(373.089 4172.129)"><rect width="5.625" height="5.16" transform="translate(92.161)" fill="#8353f2"/><path d="M353.922,4170.894a8.558,8.558,0,0,0-7.571,3.679c-.135-.209-.28-.409-.428-.6-1.535-1.986-4.872-3.078-7.417-3.078-.092,0-.188.006-.283.01-.156-.005-.315-.01-.475-.01a9.342,9.342,0,0,0-7.74,3.636,12.094,12.094,0,0,0-1.777,6.938v.331l-.026.03v13.342h5.651v-13.027l0-.086c.116-2.664.721-5.521,3.664-5.948l.058-.008a5.569,5.569,0,0,1,.726-.047,4.577,4.577,0,0,1,3.782,2.053,8.081,8.081,0,0,1,.92,4.036v13.027h5.625v-12.138c0-1.481.043-3.468.845-4.779a4.583,4.583,0,0,1,3.891-2.2c3.637,0,4.441,3.086,4.441,6.089v13.027h5.625v-13.7a12.094,12.094,0,0,0-1.777-6.938A9.343,9.343,0,0,0,353.922,4170.894Z" transform="translate(-328.207 -4163.873)" fill="currentColor"/><path d="M358.332,4170.894a12.519,12.519,0,1,0,0,25.039,12.248,12.248,0,0,0,12.436-12.562A12.41,12.41,0,0,0,358.332,4170.894Zm0,19.879a7.02,7.02,0,0,1-6.894-7.315c0-3.809,2.92-7.4,6.894-7.4s6.811,3.679,6.811,7.442A7.021,7.021,0,0,1,358.332,4190.773Z" transform="translate(-308.129 -4163.873)" fill="currentColor"/><path d="M371,4174.552a12.417,12.417,0,0,0-6.864,2.066v-9h-5.614V4186.3c-.017.27-.041.54-.041.813A12.564,12.564,0,0,0,371,4199.59a12.248,12.248,0,0,0,12.436-12.562A12.409,12.409,0,0,0,371,4174.552Zm0,19.877a7.018,7.018,0,0,1-6.894-7.315c0-3.807,2.919-7.4,6.894-7.4s6.811,3.679,6.811,7.445A7.018,7.018,0,0,1,371,4194.429Z" transform="translate(-293.683 -4167.614)" fill="currentColor"/><path d="M419.747,4183.371a12.41,12.41,0,0,0-12.436-12.477,12.519,12.519,0,1,0,0,25.039,12.4,12.4,0,0,0,7.3-2.822v2.129h5.124v-11.691C419.736,4183.488,419.747,4183.431,419.747,4183.371Zm-19.33.086c0-3.809,2.919-7.4,6.894-7.4s6.809,3.679,6.809,7.442a6.865,6.865,0,1,1-13.7-.04Z" transform="translate(-252.272 -4163.873)" fill="currentColor"/><rect width="5.625" height="23.474" transform="translate(92.161 7.825)" fill="currentColor"/><path d="M387.527,4170.894a12.263,12.263,0,0,0-12.35,12.6c0,6.96,5.343,11.74,12.337,11.77v-.013h7.166V4190.1h-7.188c-2.3-.022-4.379-.538-5.634-2.461a4.737,4.737,0,0,1-.762-1.69h18.23a12.974,12.974,0,0,0,.338-2.835A12.05,12.05,0,0,0,387.527,4170.894Zm-6.6,10.531a6.521,6.521,0,0,1,6.64-5.37,6.016,6.016,0,0,1,6.344,5.37Z" transform="translate(-274.641 -4163.873)" fill="currentColor"/><path d="M387.562,4179.486v15.3h5.788v-15.3a2.454,2.454,0,0,1,2.451-2.451h6.622v-5.788H395.8A8.246,8.246,0,0,0,387.562,4179.486Z" transform="translate(-260.517 -4163.469)" fill="currentColor"/></g><g transform="translate(288.851 4163.655)"><path d="M362.888,4182.224l-15.554-15.555a10.29,10.29,0,0,0-14.553,0l-5.4,5.4-5.4-5.4a10.292,10.292,0,0,0-14.555,0l-15.554,15.555a10.292,10.292,0,0,0,0,14.554l15.554,15.555a10.291,10.291,0,0,0,14.555,0l5.4-5.4,5.4,5.4a10.289,10.289,0,0,0,14.553,0l15.554-15.555a10.292,10.292,0,0,0,0-14.554Zm-46.177,24.846a2.847,2.847,0,0,1-4.028,0l-15.554-15.555a2.846,2.846,0,0,1,0-4.027l15.554-15.555a2.846,2.846,0,0,1,4.028,0l5.4,5.4-4.889,4.889a10.3,10.3,0,0,0,0,14.554l4.889,4.889Zm15.554-19.583a2.846,2.846,0,0,1,0,4.027l-4.889,4.889-4.889-4.889a2.85,2.85,0,0,1,0-4.027l4.889-4.891Zm5.22-5.306-4.848-4.847,5.4-5.4a2.848,2.848,0,0,1,4.03,0l15.554,15.555a2.846,2.846,0,0,1,0,4.027l-15.554,15.555a2.849,2.849,0,0,1-4.03,0l-5.4-5.4,4.891-4.889a10.291,10.291,0,0,0,.088-14.464" transform="translate(-288.851 -4163.655)" fill="#8353f2"/><g transform="translate(38.524 13.678)"><path d="M312.1,4170.045l-5.255,5.254h10.49Z" transform="translate(-306.849 -4170.045)" fill="#5e3abe"/><path d="M306.849,4186.667h10.49l-5.235-5.255Z" transform="translate(-306.849 -4157.082)" fill="#5e3abe"/></g></g></g></svg>
+      </a>
+      <nav class="links" aria-label="Primary"><a class="active" href="#">Telecom</a><a href="#">Trust</a><a href="#">Certification</a><a href="#">Services</a><a href="#">Company</a><a href="#">News</a></nav>
+      <a class="btn violet" href="#">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="bento">
+      <div class="tile soft t-hero">
+        <p class="mono">Bogotá · since 2012 · 25+ operators</p>
+        <h1>Operator-grade software. Verifiable trust.</h1>
+        <p class="lead">Mobiera builds and runs the platforms behind SIM toolkit push, messaging and AI agents in 25+ mobile networks. As a co-founder of the Verana Foundation and the official certificator for Verana integrators in Latin America, it brings the same rigor to verifiable credentials and trust networks.</p>
+        <div class="ctas"><a class="btn violet" href="#">Telecom platforms</a><a class="btn navy" href="#">Verifiable trust</a></div>
+      </div>
+      <div class="tile violet t-cert">
+        <p class="mono">Certification · Latin America</p>
+        <h3 style="font-size:1.5rem">Become trusted on Verana</h3>
+        <p class="sub">Designated by the Verana Foundation. Valid until May 2029.</p>
+        <a class="btn white" href="#" style="justify-self:start;margin-top:6px">Get certified</a>
+        <svg class="puzzle" viewBox="11 24 78 52" aria-hidden="true"><path fill="#fff" d="M85.0299 42.5693L69.4759 27.0142C68.5204 26.0585 67.386 25.3004 66.1375 24.7832C64.8889 24.266 63.5508 24 62.1994 24C60.848 24 59.5099 24.266 58.2614 24.7832C57.0128 25.3004 55.8784 26.0585 54.9229 27.0142L49.5229 32.4141L44.1229 27.0142C42.1928 25.0841 39.575 24 36.8454 24C34.1158 24 31.498 25.0841 29.5679 27.0142L14.0139 42.5693C12.0841 44.4994 11 47.1168 11 49.8462C11 52.5755 12.0841 55.193 14.0139 57.123L29.5679 72.6782C30.5235 73.634 31.6581 74.3924 32.9068 74.9097C34.1555 75.427 35.4938 75.6929 36.8454 75.6929C38.197 75.6929 39.5353 75.427 40.784 74.9097C42.0327 74.3924 43.1673 73.634 44.1229 72.6782L49.5229 67.2783L54.9229 72.6782C55.8784 73.634 57.0127 74.3919 58.2613 74.9092C59.5098 75.4264 60.848 75.6929 62.1994 75.6929C63.5508 75.6929 64.889 75.4264 66.1375 74.9092C67.3861 74.3919 68.5205 73.634 69.4759 72.6782L85.0299 57.123C86.9597 55.193 88.0438 52.5755 88.0438 49.8462C88.0438 47.1168 86.9597 44.4994 85.0299 42.5693ZM38.8529 67.415C38.5885 67.6797 38.2746 67.89 37.929 68.0332C37.5834 68.1764 37.213 68.25 36.8389 68.25C36.4648 68.25 36.0944 68.1764 35.7488 68.0332C35.4033 67.89 35.0893 67.6797 34.8249 67.415L19.2709 51.8604C19.0063 51.596 18.7964 51.282 18.6532 50.9365C18.51 50.591 18.4362 50.2207 18.4362 49.8467C18.4362 49.4727 18.51 49.1023 18.6532 48.7568C18.7964 48.4113 19.0063 48.0973 19.2709 47.833L34.8249 32.2783C35.0893 32.0136 35.4032 31.8035 35.7487 31.6602C36.0943 31.5169 36.4648 31.4429 36.8389 31.4429C37.213 31.4429 37.5835 31.5169 37.929 31.6602C38.2746 31.8035 38.5886 32.0136 38.8529 32.2783L44.2529 37.6782L39.3639 42.5674C37.4361 44.4985 36.3533 47.1155 36.3533 49.8442C36.3533 52.5729 37.4361 55.19 39.3639 57.1211L44.2529 62.0103L38.8529 67.415ZM54.4069 47.832C54.6715 48.0963 54.8814 48.4104 55.0246 48.7559C55.1678 49.1014 55.2415 49.4717 55.2415 49.8457C55.2415 50.2197 55.1678 50.5901 55.0246 50.9355C54.8814 51.281 54.6715 51.5951 54.4069 51.8594L49.5179 56.748L44.6289 51.8594C44.0955 51.325 43.7959 50.6007 43.7959 49.8457C43.7959 49.0907 44.0955 48.3664 44.6289 47.832L49.5179 42.9414L54.4069 47.832ZM59.6269 42.5264L54.7789 37.6792L60.1789 32.2793C60.4434 32.0145 60.7575 31.8045 61.1033 31.6611C61.449 31.5178 61.8196 31.4438 62.1939 31.4438C62.5682 31.4438 62.9388 31.5178 63.2845 31.6611C63.6303 31.8045 63.9444 32.0145 64.2089 32.2793L79.7629 47.834C80.0275 48.0983 80.2374 48.4123 80.3806 48.7578C80.5238 49.1033 80.5976 49.4737 80.5976 49.8477C80.5976 50.2217 80.5238 50.592 80.3806 50.9375C80.2374 51.283 80.0275 51.597 79.7629 51.8613L64.2089 67.416C63.9443 67.6807 63.6302 67.8909 63.2845 68.0342C62.9387 68.1774 62.5682 68.251 62.1939 68.251C61.8197 68.251 61.4491 68.1774 61.1033 68.0342C60.7576 67.8909 60.4435 67.6807 60.1789 67.416L54.7789 62.0161L59.6699 57.1274C61.5843 55.2129 62.6671 52.6205 62.6836 49.9131C62.7001 47.2056 61.6489 44.6008 59.7579 42.6631"/></svg>
+      </div>
+      <div class="tile green t-day"><span class="big">~60M</span><span class="sub">subscribers reached per day</span></div>
+      <div class="tile line t-ops"><span class="big">25+</span><span class="sub" style="color:var(--muted)">mobile operators run our platforms</span></div>
+      <div class="tile line t-reach"><span class="big">800M</span><span class="sub" style="color:var(--muted)">subscribers reachable through messaging services powered by Mobiera</span></div>
+      <div class="tile line t-year"><span class="big">2012</span><span class="sub" style="color:var(--muted)">founded in Bogotá; every continent served since</span></div>
+      <div class="tile navy t-found"><p class="mono">Verana Foundation</p><span class="big" style="font-size:1.5rem">Founding member</span><span class="sub">since June 2025</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Two lines of business</h2><p class="mono">What we build, and what we prove</p></div>
+      <div class="grid2">
+        <div class="tile soft"><p class="mono">01 · Telecom</p><h3>Telecom software and services</h3><p style="color:var(--muted)">Platforms that run inside the operator's network.</p>
+          <ul><li>Aircast: STK push marketing, bulk messaging and SIM OTA campaigns from one engine.</li><li>AI One: customer-support AI agents on SMS and Hologram, verifiable by design.</li><li>Integration, managed operations and SIM engineering, on your infrastructure or ours.</li></ul><a class="more" href="#">Telecom</a></div>
+        <div class="tile soft"><p class="mono">02 · Trust</p><h3>Verifiable credentials and trust networks</h3><p style="color:var(--muted)">Trust that anyone can verify, built on Verana.</p>
+          <ul><li>Founding member of the Verana Foundation since June 2025.</li><li>Trust ecosystems, issuer and verifier services, wallet and agent integration.</li><li>The official certificator for Verana integrators in Latin America.</li></ul><a class="more" href="#">Trust</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Telecom platforms</h2><p class="mono">Software that runs inside the operator's network</p></div>
+      <div class="grid2">
+        <div class="tile navy"><p class="mono">Aircast</p><h3 style="font-size:1.6rem">Campaigns over the operator's network. Any handset, no data, no balance.</h3><p class="sub">STK push marketing, bulk SMS and MMS, and SIM OTA campaigns from one engine, at whatever throughput your SMSC allows.</p><div class="chips"><span>STK · SAT · USTK</span><span>SMS · MMS · flash</span><span>OTA RAM · RFM</span><span>3DES-CBC · AES</span></div><a class="more" href="#">Aircast</a></div>
+        <div class="tile soft"><p class="mono">AI One</p><h3 style="font-size:1.6rem">AI agents your subscribers can reach on any phone, and verify.</h3><p style="color:var(--muted)">Customer support over SMS and Hologram, integrated with your billing, identified with verifiable credentials so nobody can impersonate your operator.</p><div class="chips"><span>SMS · DIDComm</span><span>MSISDN PIN</span><span>LLM-agnostic · MCP</span><span>Verifiable Service</span></div><a class="more" href="#">AI One</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head"><h2>Verifiable trust</h2><p class="mono">Built on Verana</p></div>
+      <div class="grid3">
+        <div class="tile soft"><p class="mono">Founding member</p><h3>Verana Foundation</h3><p style="color:var(--muted)">Co-founded in June 2025 with 2060 and Orchestrating Identity. Member of the Specification and Reference Implementation working groups.</p><a class="more" href="#">Mobiera and Verana</a></div>
+        <div class="tile soft"><p class="mono">Builder and operator</p><h3>Trust services</h3><p style="color:var(--muted)">Ecosystem design and governance, issuer and verifier services, wallets and AI agents as Verifiable Services, operations.</p><a class="more" href="#">Trust services</a></div>
+        <div class="tile green"><p class="mono">Official certificator</p><h3>Latin America</h3><p class="sub">Certification that makes an integrator's organization, services and wallets trust-resolvable on Verana.</p><a class="more" href="#">Get certified</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="grid2">
+        <div><div class="sec-head"><h2 style="font-size:1.4rem">Operators</h2></div><div class="logos"><span>Claro</span><span>Telefónica</span><span>América Móvil</span><span>Ooredoo</span><span>Viettel</span><span>Digicel</span><span>Bitel</span><span>Viva</span><span>Halotel</span></div></div>
+        <div><div class="sec-head"><h2 style="font-size:1.4rem">Partners</h2></div><div class="logos"><span>2060</span><span>Idemia</span><span>Bitdefender</span><span>Amplitudes</span><span>Verana Foundation</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid2">
+      <div class="tile line"><p class="mono">Open source</p><h3>Sixteen public repositories</h3><p style="color:var(--muted)">Libraries for ETSI TS 102.221, 102.222, 102.225 and 102.226, a GlobalPlatform card-content manager, the Aircast integration APIs, and the stats and service-log containers.</p><a class="more" href="#">github.com/mobiera</a></div>
+      <div><div class="sec-head" style="margin-bottom:12px"><h2 style="font-size:1.4rem">Latest news</h2></div>
+        <div class="news">
+          <a href="#"><span class="mono">Apr 2026</span><b>The Verana Foundation designates Mobiera official integrator certificator for Latin America</b></a>
+          <a href="#"><span class="mono">Jan 2026</span><b>Aircast documentation portal is live</b></a>
+          <a href="#"><span class="mono">Jun 2025</span><b>Mobiera co-founds the Verana Foundation</b></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="tile violet" style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:34px">
+        <div><h2 style="font-size:1.8rem">Tell us what you are building</h2><p class="sub" style="margin-top:8px">Every message reaches the right person. No sales queue, no email to guess.</p></div>
+        <a class="btn white" href="#">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fbox">
+      <div class="fcols">
+        <div><p style="font-family:var(--display);font-weight:800;color:var(--ink);font-size:1.05rem">Mobiera</p><p style="margin-top:8px;max-width:34ch">Operator-grade software for mobile networks and verifiable trust on Verana.</p></div>
+        <div><h4>Products and services</h4><ul><li><a href="#">Aircast</a></li><li><a href="#">AI One</a></li><li><a href="#">Services</a></li><li><a href="#">Documentation ↗</a></li><li><a href="#">GitHub ↗</a></li></ul></div>
+        <div><h4>Trust</h4><ul><li><a href="#">Verifiable trust</a></li><li><a href="#">Certification</a></li><li><a href="#">Verana Foundation ↗</a></li><li><a href="#">verana.io ↗</a></li><li><a href="#">Verana Council ↗</a></li></ul></div>
+        <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Open source</a></li><li><a href="#">Careers</a></li><li><a href="#">News</a></li><li><a href="#">Contact</a></li></ul></div>
+      </div>
+      <div class="fbottom"><span>© 2012-2026 Mobiera SAS, Bogotá D.C., Colombia</span><span><a href="#">Privacy</a> · <a href="#">Cookies</a> · <a href="#">LinkedIn</a> · <a href="#">GitHub</a></span></div>
+    </div>
+  </div>
+</footer>

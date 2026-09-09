@@ -1,0 +1,166 @@
+# Every number, date and name the site may state. A page may not carry a fact
+# that is not here. Each entry names its source. Decisions taken with Mobiera on
+# 9 September 2026 are marked "decision 2026-09-09".
+
+company:
+  legal_name: Mobiera SAS
+  short_name: Mobiera
+  nit: 900662462-4                       # decision 2026-09-09
+  founded: 2012                          # timeline; decision 2026-09-09 (the old "2011" copyright line was wrong)
+  founded_in: Bogotá, Colombia
+  registered_address: Cra 13A 86A-42, Bogotá D.C., Colombia   # decision 2026-09-09
+  data_protection_contact: privacy@mobiera.com                 # decision 2026-09-09; the only email on the site
+  offices:                               # decision 2026-09-09; cities for the last five to be named in copy
+    - Bogotá, Colombia (headquarters)
+    - Peru
+    - Bolivia
+    - Panama
+    - Spain
+    - Algeria
+  former_offices_history_only: [Mexico (2013), United States (2015), Bolivia (2015), Spain (2018), Hanoi (2018)]
+  linkedin: https://www.linkedin.com/company/mobiera-sas
+  github: https://github.com/mobiera
+  docs: https://docs.mobiera.io           # decision 2026-09-09
+
+numbers:                                 # decision 2026-09-09
+  operators: "25+"
+  subscribers_reachable: "800 million subscribers reachable through messaging services powered by Mobiera"
+  subscribers_reached_per_day: "about 60 million"
+  continents: all
+  dropped: [merchants (150+), live products (400+), "1.2 billion customers"]   # VAS figures, business discontinued
+
+timeline:                                # 2012-2023 from the current site; 2025-2026 decision 2026-09-09
+  - {year: 2012, text: "Mobiera SAS incorporated in Bogotá, Colombia"}
+  - {year: 2013, text: "Operations start in Mexico"}
+  - {year: 2014, text: "Operations start in Peru"}
+  - {year: 2015, text: "Operations start in the United States and Bolivia"}
+  - {year: 2016, text: "Innovation and IT outsourcing business units launched"}
+  - {year: 2017, text: "Colciencias tax credit for billing platforms and big data solutions for developing markets"}
+  - {year: 2018, text: "Commercial operations start in Europe (Spain) and Asia Pacific (Hanoi)"}
+  - {year: 2019, text: "IT outsourcing scales up around digital transformation and DevOps"}
+  - {year: 2020, text: "Africa and GCC expansion begins; the innovation unit scales up"}
+  - {year: 2021, text: "First biometric KYC solutions delivered"}
+  - {year: 2022, text: "Verifiable credentials offered as a service for the first time"}
+  - {year: 2023, text: "Rebranding; strategic partnerships expanded"}
+  - {year: 2025, month: 1, text: "AI One launched"}
+  - {year: 2025, month: 6, text: "Verana Foundation co-founded with 2060 OÜ and Orchestrating Identity"}
+  - {year: 2026, month: 1, text: "Aircast documentation portal launched at docs.mobiera.io"}
+  - {year: 2026, month: 4, text: "Designated by the Verana Foundation as official certificator for Verana integrators in Latin America, valid until May 2029"}
+  - {year: 2026, text: "Candidacy for a Founding Council seat filed (date to add)"}
+
+products:                                # roster: decision 2026-09-09
+  aircast:
+    name: Aircast
+    one_line: "MNO platform for STK push marketing, bulk SMS / MMS messaging and SIM OTA campaigns"
+    jobs: [push marketing channel, general messaging platform, OTA campaign manager]
+    push_properties:
+      - any handset, smartphone or feature phone
+      - no data connection and no subscriber balance needed (0-rated MO/MT SMS shortcode)
+      - bi-directional (ciphered STK bytecode down, ciphered MO-SMS up)
+      - end-to-end ciphered, 3DES-CBC or AES, keys independent from OTA keys
+    messaging: [SMS, binary SMS, flash SMS (class 0), MMS over MM7]
+    ota: [RAM (install / update / delete applets), RFM (read / update SIM files)]
+    engine: [scheduling bitmaps, targeting, whitelists and blacklists, file-drop campaign creation, statistics and service logs]
+    throughput: [per-hour TPS bitmaps per SMPP / MMSC account, per-campaign priorities, per-campaign TPS caps, stale-bandwidth reuse]
+    architecture: "stateless, queue-driven components; scale by adding instances"
+    applets:
+      sleepy: "Sleepy Full and Sleepy Lite; SIM (0x070X) and UICC (0x090X) profiles; Java Card 2.1.1; 3GPP TS 03.19 SIM Toolkit API Release 99; proprietary"
+      micro: "about 1.3 KB on card for SIMs with 1.5 to 2 KB free; DISPLAY TEXT campaigns with reply; proprietary"
+      third_party: "SAT and Oberthur / Idemia Pico through the USTK push API"
+    integration: [Sleepy Push API, USTK Push API, SMS / MMS messaging API, file drop, webhooks, SMPP accounts, operator GUI]
+    references: [Ooredoo (Algeria), Claro (Peru)]     # deployment repos; all logos cleared, decision 2026-09-09
+    source: mobiera-docs (docs/aircast/*), sleepy/documentation, micro/README
+  ai_one:
+    name: AI One                          # decision 2026-09-09; "AI Friends" is an internal label
+    one_line: "AI agents for customer support on SMS and Hologram, verifiable by design"
+    launched: 2025-01
+    channels: [SMS through the operator's SMSC, DIDComm through Hologram Messaging]
+    properties:
+      - the agent is a Verifiable Service on Verana with Service and Organization credentials
+      - phone number verification by SMS PIN binds a conversation to the MSISDN
+      - LLM-agnostic (LangChain based); tools over MCP; deployable in the operator's Kubernetes
+      - subscriptions and charging through the operator's billing integration
+    references: [Claro (Peru), Halotel (Tanzania)]   # decision 2026-09-09
+    llm_providers: "to state in copy"
+    source: aifriends-multichannel-chatbot and aircast-hologram-ai-agent repos; 2060.io Hologram description
+  cut: [Kinetic, Origami, Sherlock, Cosmos, Enigma, Connect, Olympia, Delphi, Fulcrum]   # decision 2026-09-09
+  discontinued: [biometric KYC, agriculture chain management]                             # decision 2026-09-09
+
+standards:
+  telecom: [ETSI TS 102.221, ETSI TS 102.222, ETSI TS 102.225, ETSI TS 102.226, 3GPP TS 03.19, 3GPP TS 23.038, 3GPP TS 23.048, GlobalPlatform, Java Card, SMPP, MM7]
+  trust: [W3C Verifiable Credentials, W3C DIDs, DIDComm, OpenID4VC (OpenID4VCI, OpenID4VP), SD-JWT VC, AnonCreds, ToIP TRQP]
+
+open_source:                             # public repos on github.com/mobiera, listing read 2026-09-09; licenses to read per repo
+  sim_and_ota: [etsi102221, etsi102222, etsi102225, etsi102226, gp-mobiera, common-sim]
+  aircast_integration: [aircast-api, aircast-api-javax, aircast-api-jakarta, aircast-api-stats, ustk-api]
+  platform_utilities: [stats, stats-api, service-log, service-log-api, mobiera-commons]
+  not_open: [sleepy, micro]              # decision 2026-09-09
+
+customers_and_partners:                  # all thirteen may be named, decision 2026-09-09
+  operators:
+    - {name: Claro, country: Peru}
+    - {name: Telefónica, country: ""}
+    - {name: América Móvil, country: ""}
+    - {name: Ooredoo, country: Algeria}
+    - {name: Viettel, country: Vietnam}
+    - {name: Digicel, country: Panama}
+    - {name: Bitel, country: Peru}
+    - {name: Viva, country: Bolivia}
+    - {name: Halotel, country: Tanzania}
+  partners: [2060, Idemia, Bitdefender, Amplitudes, Verana Foundation]
+  note: "country labels come from deployment repos where they exist; blank ones to fill in copy"
+
+verana:
+  foundation:
+    role: founding member
+    since: 2025-06                       # decision 2026-09-09
+    co_founders: [2060 OÜ, Orchestrating Identity]   # veranafoundation.org About
+    working_groups: [Specification WG (SPEC-WG), Reference Implementation WG]   # decision 2026-09-09
+    url: https://veranafoundation.org
+  council:
+    status: candidate for a Founding Council seat, not seated   # decision 2026-09-09
+    recruitment_window: open through Q4 2026                     # veranacouncil.org
+    url: https://veranacouncil.org
+  network:
+    url: https://verana.io
+    docs: https://docs.verana.io
+    playground: https://playground.testnet.verana.network
+    status: testnet                      # verana.io
+    roadmap: "v4 in progress 2026 Q1-Q3; v5 mainnet readiness 2026 Q4; mainnet launch 2027 Q1"   # verana.io roadmap
+    three_parts: [sovereign trust ecosystems, verifiable identity (verify first then connect), the Trust Graph (discovery)]
+  certification:                         # decision 2026-09-09
+    title: official certificator for Verana integrators in Latin America
+    designated_by: Verana Foundation
+    since: 2026-04
+    valid_until: 2029-05
+    on_page: "only the designating body and the validity date; nothing else about the designation; it will be delivered as a Verifiable Credential later"
+    scope: [organizations, verifiable services including AI agents, user agents and wallets (one authorization per product line)]
+  relationship_to_2060: "2060 OÜ (Tallinn) is an independent company that leads the Verana specifications and builds Hologram; Mobiera partners with it and co-founded the Verana Foundation alongside it. No people named."
+
+news_at_launch:
+  - {date: 2023-10-10, slug: the-end-of-affiliation-campaigns-in-telecom, kept_from_old_site: true}
+  - {date: 2024-02-15, slug: cybersecurity-the-new-frontier-for-telecom-providers, kept_from_old_site: true}
+  - {date: 2025-01, slug: ai-one-launch}
+  - {date: 2025-06, slug: verana-foundation-co-founded}
+  - {date: 2026-01, slug: aircast-documentation-portal}
+  - {date: 2026-04, slug: official-certificator-latin-america}
+  - {date: launch, slug: the-new-mobiera-com}
+
+decisions_2026_09_09:
+  - Origami and Sherlock cut
+  - founding year 2012
+  - offices: Bogotá (HQ), Peru, Bolivia, Panama, Spain, Algeria
+  - all thirteen published logos may be named
+  - VAS content catalogue and Kinetic cut
+  - Council seat: candidate; working groups SPEC-WG and Reference Implementation WG
+  - timeline dates for AI One, Foundation, docs portal, certificator
+  - outsourcing continues as a top-level Services page
+  - biometric KYC and agriculture discontinued
+  - no team members, names, bylines or photos on the site
+  - docs at docs.mobiera.io; sleepy and micro proprietary
+  - numbers: 25+ operators, 800 million reachable, about 60 million per day, every continent
+  - no sales email, all contact through the form; NIT 900662462-4; privacy@mobiera.com
+  - AI One name; Claro Perú and Halotel Tanzania references
+  - ITC Avant Garde not kept; typeface chosen in the design phase
+  - certification: designated by the Verana Foundation, valid until May 2029, nothing else on the page
+  - stack: same as 2060.io-website, not Hugo; existing logo reused; three design directions to choose from

@@ -1,0 +1,14 @@
+.git
+.github
+.next
+node_modules
+npm-debug.log*
+Dockerfile
+.dockerignore
+.DS_Store
+spec
+brandbook
+README.md
+CHANGELOG.md
+.env*
+!.env.production

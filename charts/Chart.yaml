@@ -1,0 +1,6 @@
+apiVersion: v2
+name: website
+description: Helm chart that deploys the mobiera.com Next.js website behind an nginx ingress with Let's Encrypt TLS.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

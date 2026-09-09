@@ -1,0 +1,20 @@
+# Old URL (Hugo site)            New URL                      Status
+/telecom/                        /telecom                     301
+/dev-sec-ops/                    /services                    301
+/innovation/                     /trust                       301
+/about-us/                       /company                     301
+/careers/                        /company/careers             301
+/apply/                          /company/careers             301
+/blog/                           /news                        301
+/blog/the-end-of-affiliation-campaigns-in-telecom/                 /news/the-end-of-affiliation-campaigns-in-telecom   301
+/blog/cybersecurity-the-new-frontier-for-telecom-providers/         /news/cybersecurity-the-new-frontier-for-telecom-providers   301
+/blog/digital-transformation-in-mobile-network-operators/           /news   301
+/blog/relationship-between-content-providers-telecom-operators-and-master-aggregators/   /news   301
+/blog/the-role-of-digital-consultants/                              /news   301
+/contact/                        /contact                     301
+/success/                        /contact                     301
+/privacy-policy/                 /privacy                     301
+/login/                          (none)                       410
+/send_email.php                  (none)                       410
+/apply.php                       (none)                       410
+/newsletter.php                  (none)                       410

@@ -1,39 +1,63 @@
-# Hugo Up Business Theme
+# mobiera.com
 
-Up Business is a clean and modern landing page, inspired on light illustrations
-with a modern look, that can be used for companies or to showcase a product.
+Source for [mobiera.com](https://www.mobiera.com), the Mobiera SAS website:
+operator-grade software for mobile networks (Aircast, AI One) and verifiable
+trust on Verana (trust services, integrator certification for Latin America).
 
-![Screenshot](https://gitlab.com/writeonlyhugo/up-business-theme/-/raw/f4e11eb377d9f7f1d8305d278538f8af05d365e5/images/screenshot.png)
+Built with **Next.js** (App Router, standalone output), **React 19**,
+**Tailwind CSS v4** and **TypeScript**, on the same stack as
+[2060.io-website](https://github.com/2060-io/2060.io-website). No database, no
+accounts. Delivered as a container image (`mobiera/website` on Docker Hub).
 
-## Live Demo
+## Content
 
-See [here](https://writeonlyhugo.gitlab.io/up-business-demo/).
+The copy is specified in [`spec/`](spec/): one Markdown file per page under
+`spec/pages/`, the style rules in `spec/STYLE.md`, every fact the site may
+state in `spec/facts.yaml`. Pages under `app/` implement those files; change
+the spec first, then the page.
 
-## Quick Start
+News items are Markdown files in [`content/news/`](content/news/), named
+`YYYY-MM-DD-slug.md` with front matter (`title`, `date`, `tags`, `summary`).
+They render at `/news/<slug>` and in the RSS feed at `/news/feed.xml`.
 
-If you are creating a new website, the quickest way to get up and running is to
-clone the demo website.
+Design: direction A ("Signal") from `spec/design/`. Tokens live in
+`app/globals.css`; the logo is the existing Mobiera mark and wordmark.
+
+## Develop
 
 ```bash
-git clone https://gitlab.com/writeonlyhugo/up-business-demo.git
+nvm use            # Node 22
+npm install
+cp .env.example .env.local   # optional: SMTP for the contact form
+npm run dev        # http://localhost:3000
 ```
 
-Alternatively, you can clone just the theme to your theme folder:
+Scripts: `npm run build`, `npm start`, `npm run typecheck`, `npm test`.
 
-```bash
-git clone https://gitlab.com/writeonlyhugo/up-business-theme.git themes/up-business-theme
-```
+## Contact form
 
-The folder `hugoBasicExample` contains a working version of a website with the
-theme. It includes: the configuration file `config.yaml`, the content folder
-`content` and the `data` folder. It's a good idea to copy this over to the
-project folder to get an initial version of the website up and running.
+`/contact` posts to `app/api/contact/route.ts`, which validates the
+submission (honeypot, time-to-submit, rate limit, consent) and emails it over
+SMTP with Nodemailer, the same way 2060.io-website does. Recipients come from
+`CONTACT_TO` with per-topic overrides (`CONTACT_TO_CAREERS`, ...). Career
+applications attach the PDF the candidate uploads. With `MAIL_HOST` unset the
+form accepts and logs submissions without delivering them.
 
-## Credits
+## Configuration
 
-Hugo Up Business Theme is based on a [Figma Design by Abell
-Vo](https://www.figma.com/community/file/1022163547182520272).
+Google mailbox and app password, recipients per topic, GitHub variables and
+the runtime secret: see [docs/configuration.md](docs/configuration.md).
 
-## License
+## Deploy
 
-Up Business is licensed under the MIT license.
+GitHub Actions build and push `mobiera/website` to Docker Hub: `dev` on every
+push to `main`, and `main`, `latest`, `vX.Y.Z`, `vX.Y` when release-please cuts
+a release from conventional commits (secrets `DOCKER_HUB_LOGIN`,
+`DOCKER_HUB_PWD`). Rolling the image out to a cluster is
+not wired yet: the target (the OVH Kubernetes pattern of the sister sites, or
+Mobiera's own infrastructure) is decided at launch. `charts/` holds a minimal
+Helm chart for that step.
+
+Old URLs from the Hugo site redirect (`app/lib/redirects.ts`); the PHP form
+handlers and the mock login return 410 (`proxy.ts`). `/images/*` keeps the old
+paths for the mark-only logos and hosted images linked from outside the site.

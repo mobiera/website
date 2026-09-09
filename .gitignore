@@ -1,5 +1,23 @@
-public/
-node_modules/
-# static/dist/
+# Dependencies
+/node_modules
 
+# Next.js build output
+/.next/
+/out/
+
+# Misc
 .DS_Store
+*.pem
+npm-debug.log*
+
+# Env files
+.env
+.env*.local
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Editor state
+.windsurf
+.devin
