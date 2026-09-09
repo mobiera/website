@@ -6,8 +6,7 @@ name: Deploy to Kubernetes (OVH)
 # the repository variable AUTO_DEPLOY is "true".
 #
 # Required GitHub secrets:
-#   KUBECONFIG_MOBIERA_PROD                 kubeconfig for the OVH cluster (same name as
-#                                  the other Mobiera deploy workflows)
+#   KUBECONFIG_MOBIERA_PROD        kubeconfig of the OVH production cluster
 #   MAIL_HOST MAIL_PORT MAIL_USERNAME MAIL_PASSWORD MAIL_ENCRYPTION
 #   MAIL_FROM_ADDRESS MAIL_FROM_NAME
 #   CONTACT_TO, and any CONTACT_TO_<TOPIC> override in use
