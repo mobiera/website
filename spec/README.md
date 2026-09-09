@@ -1,6 +1,6 @@
-# mobiera.com content specification
+# mobiera.io content specification
 
-This directory is the source of truth for the new mobiera.com. It holds the
+This directory is the source of truth for the new mobiera.io. It holds the
 copy for every page, the news items that ship at launch, the style rules, the
 facts file, the redirect map and the design brief. The site is built from these
 files; nothing appears on a page that is not here.

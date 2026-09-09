@@ -14,7 +14,7 @@ Announcements first, articles second. Every item is dated and signed Mobiera.
 
 | Date | Title | Tags |
 |---|---|---|
-| launch date | The new mobiera.com | Company |
+| launch date | The new mobiera.io | Company |
 | April 2026 | The Verana Foundation designates Mobiera official integrator certificator for Latin America | Trust |
 | January 2026 | Aircast documentation portal is live | Telecom |
 | June 2025 | Mobiera co-founds the Verana Foundation | Trust, Company |

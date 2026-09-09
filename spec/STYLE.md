@@ -1,8 +1,8 @@
-# Style rules for mobiera.com
+# Style rules for mobiera.io
 
 These rules apply to every page and every news item. They follow the discipline
 of the Verana family of sites (verana.io, veranafoundation.org,
-veranacouncil.org, 2060.io) with one difference: mobiera.com sells.
+veranacouncil.org, 2060.io) with one difference: mobiera.io sells.
 
 ## Writing
 

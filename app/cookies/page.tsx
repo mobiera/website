@@ -4,7 +4,7 @@ import { PageHero } from "@/app/components/ui";
 
 export const metadata: Metadata = {
   title: "Cookie policy",
-  description: "mobiera.com sets one essential cookie for your consent choice and, only if you accept, analytics cookies. No advertising cookies.",
+  description: "mobiera.io sets one essential cookie for your consent choice and, only if you accept, analytics cookies. No advertising cookies.",
   alternates: { canonical: "/cookies" },
 };
 

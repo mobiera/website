@@ -21,6 +21,7 @@ company:
   linkedin: https://www.linkedin.com/company/mobiera-sas
   github: https://github.com/mobiera
   docs: https://docs.mobiera.io           # decision 2026-09-09
+  site_url: https://mobiera.io             # decision 2026-09-09; mobiera.com addresses redirect here
 
 numbers:                                 # decision 2026-09-09
   operators: "25+"

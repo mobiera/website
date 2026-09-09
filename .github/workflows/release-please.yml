@@ -58,7 +58,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            SITE_URL=${{ vars.SITE_URL || 'https://www.mobiera.com' }}
+            SITE_URL=${{ vars.SITE_URL || 'https://mobiera.io' }}
             NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}
 
   # Every release rolls out automatically once its images are on Docker Hub.

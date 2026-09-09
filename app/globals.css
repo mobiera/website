@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ==========================================================================
- * mobiera.com, design direction A ("Signal"): dark-first, network grid,
+ * mobiera.io, design direction A ("Signal"): dark-first, network grid,
  * mono labels. Tokens are CSS custom properties switched by data-theme on
  * <html> (set before paint in app/layout.tsx); Tailwind utilities map to them
  * through @theme inline so `bg-surface`, `text-muted`, `font-display` work.

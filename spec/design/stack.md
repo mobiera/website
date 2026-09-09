@@ -19,7 +19,7 @@ Decision (9 September 2026): the same stack as 2060.io-website, not Hugo.
 | CI/CD | GitHub Actions: build and push the image, deploy | mirror 2060.io-website's `cd.yml` and `deploy.yml` |
 
 Not carried over from 2060.io-website: Prisma, the database, Auth.js, the
-dataroom. mobiera.com has no accounts.
+dataroom. mobiera.io has no accounts.
 
 Repository: this repository (mobiera/website). The Hugo site is removed when
 the new site ships; until then it stays on `main` and the new site is built on

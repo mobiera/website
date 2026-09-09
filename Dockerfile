@@ -23,7 +23,7 @@ COPY . .
 # Public, build-time configuration. NEXT_PUBLIC_* values are inlined into the
 # client bundle by `next build`, and SITE_URL is baked into the prerendered
 # metadata, sitemap and RSS, so both must be known here, not at runtime.
-ARG SITE_URL=https://www.mobiera.com
+ARG SITE_URL=https://mobiera.io
 ARG NEXT_PUBLIC_GA_ID=
 ENV SITE_URL=$SITE_URL
 ENV NEXT_PUBLIC_GA_ID=$NEXT_PUBLIC_GA_ID

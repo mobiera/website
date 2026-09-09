@@ -1,6 +1,6 @@
-# mobiera.com
+# mobiera.io
 
-Source for [mobiera.com](https://www.mobiera.com), the Mobiera SAS website:
+Source for [mobiera.io](https://mobiera.io), the Mobiera SAS website:
 operator-grade software for mobile networks (Aircast, AI One) and verifiable
 trust on Verana (trust services, integrator certification for Latin America).
 

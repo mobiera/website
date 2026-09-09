@@ -18,7 +18,7 @@ export default function OpenGraphImage() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#50E2AA", letterSpacing: 2 }}>
           <span>BOGOTÁ · SINCE 2012</span>
-          <span>mobiera.com</span>
+          <span>mobiera.io</span>
         </div>
       </div>
     ),

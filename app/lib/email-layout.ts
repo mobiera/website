@@ -31,7 +31,7 @@ export function emailLayout(opts: { heading?: string; bodyHtml: string }): strin
         <tr><td style="padding:28px;font-family:${FONT};font-size:14px;line-height:1.6;color:${INK};">${heading}${opts.bodyHtml}</td></tr>
         <tr><td style="padding:18px 28px;border-top:1px solid ${RULE};font-family:${FONT};font-size:12px;line-height:1.5;color:${MUTED};">
           Mobiera SAS, Bogotá D.C., Colombia · founding member of the Verana Foundation.<br>
-          <a href="${SITE_URL}" style="color:${VIOLET_DEEP};text-decoration:none;">mobiera.com</a>
+          <a href="${SITE_URL}" style="color:${VIOLET_DEEP};text-decoration:none;">mobiera.io</a>
         </td></tr>
       </table>
     </td></tr>

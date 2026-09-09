@@ -106,7 +106,7 @@ export async function POST(req: NextRequest) {
     await sendEmail({
       to,
       replyTo: `${name} <${email}>`,
-      subject: `[mobiera.com contact] ${label}: ${name}`,
+      subject: `[mobiera.io contact] ${label}: ${name}`,
       html: emailLayout({
         heading: `New inquiry: ${label}`,
         bodyHtml: inquiryHtml(
@@ -119,7 +119,7 @@ export async function POST(req: NextRequest) {
     console.info(`[contact] ${label} inquiry emailed to ${to.length} recipient(s)`);
   } catch (err) {
     console.error("[contact] delivery failed", err, { topic, name, email, organization });
-    await alertOps(`Contact form (mobiera.com): email delivery failed for ${name} <${email}> (${label}). ${String(err).slice(0, 300)}`);
+    await alertOps(`Contact form (mobiera.io): email delivery failed for ${name} <${email}> (${label}). ${String(err).slice(0, 300)}`);
     return NextResponse.json({ ok: false, error: "delivery" }, { status: 502 });
   }
 

@@ -1,7 +1,7 @@
 // Single source of truth for site-wide identity: metadata, JSON-LD, footer,
 // contact routing. Facts come from spec/facts.yaml.
 
-export const SITE_URL = process.env.SITE_URL ?? "https://www.mobiera.com";
+export const SITE_URL = process.env.SITE_URL ?? "https://mobiera.io";
 export const SITE_NAME = "Mobiera";
 export const SITE_TAGLINE = "Operator-grade software. Verifiable trust.";
 export const SITE_DESCRIPTION =
