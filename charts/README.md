@@ -1,7 +1,7 @@
 # mobiera.com Helm chart
 
-Minimal chart for the standalone Next.js image: Deployment, Service, Ingress
-(nginx, cert-manager TLS). Trimmed from the 2060.io-website chart: no
+Minimal chart for the standalone Next.js image (`mobiera/website` on Docker
+Hub): Deployment, Service, Ingress (nginx, cert-manager TLS). Trimmed from the 2060.io-website chart: no
 database, no storage volume, no migrate jobs.
 
 ```bash

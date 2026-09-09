@@ -7,7 +7,7 @@ trust on Verana (trust services, integrator certification for Latin America).
 Built with **Next.js** (App Router, standalone output), **React 19**,
 **Tailwind CSS v4** and **TypeScript**, on the same stack as
 [2060.io-website](https://github.com/2060-io/2060.io-website). No database, no
-accounts. Delivered as a container image (`ghcr.io/mobiera/website`).
+accounts. Delivered as a container image (`mobiera/website` on Docker Hub).
 
 ## Content
 
@@ -50,9 +50,10 @@ the runtime secret: see [docs/configuration.md](docs/configuration.md).
 
 ## Deploy
 
-GitHub Actions build and push `ghcr.io/mobiera/website` on pushes to `main`
-(`dev` tag) and on release tags (`vX.Y.Z`, `latest`). Releases are cut by
-release-please from conventional commits. Rolling the image out to a cluster is
+GitHub Actions build and push `mobiera/website` to Docker Hub: `dev` on every
+push to `main`, and `main`, `latest`, `vX.Y.Z`, `vX.Y` when release-please cuts
+a release from conventional commits (secrets `DOCKER_HUB_LOGIN`,
+`DOCKER_HUB_PWD`). Rolling the image out to a cluster is
 not wired yet: the target (the OVH Kubernetes pattern of the sister sites, or
 Mobiera's own infrastructure) is decided at launch. `charts/` holds a minimal
 Helm chart for that step.

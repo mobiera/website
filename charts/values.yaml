@@ -5,8 +5,9 @@ nameOverride: "website"
 fullnameOverride: ""
 
 image:
-  repository: ghcr.io/mobiera/website
-  # tag defaults to the chart's appVersion when empty.
+  repository: mobiera/website
+  # Docker Hub. Tags: dev (every push to main), main and latest (last release),
+  # vX.Y.Z and vX.Y (releases). Empty defaults to "v<appVersion>".
   tag: ""
   pullPolicy: Always
 

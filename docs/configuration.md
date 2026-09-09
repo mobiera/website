@@ -92,18 +92,19 @@ Settings to check once, in the `mobiera/website` repository:
   | `SITE_URL` | `https://www.mobiera.com` (optional, this is the default) |
   | `NEXT_PUBLIC_GA_ID` | the GA4 measurement id (optional) |
 
-- Secrets: none are required by the workflows in this repository. The image
-  is pushed to `ghcr.io/mobiera/website` with the workflow's own
-  `GITHUB_TOKEN`.
-- Packages: after the first push, open the `website` package in the
-  organization's Packages and set its visibility. Public lets any cluster
-  pull it; private needs an image pull secret in the cluster (a fine-grained
-  personal access token with `read:packages`).
+- Secrets (already created): `DOCKER_HUB_LOGIN` and `DOCKER_HUB_PWD`, a
+  Docker Hub account with push rights on the `mobiera` organization. The
+  workflows push `mobiera/website`: `dev` on every push to `main`; `main`,
+  `latest`, `vX.Y.Z` and `vX.Y` when release-please cuts a release. The
+  `mobiera/website` repository on Docker Hub is created on the first push if
+  the account may create repositories in the organization; otherwise create
+  it first (private or public, the cluster needs a pull secret if private).
 - Pages: once DNS points at the new deployment, disable GitHub Pages for the
   repository (Settings > Pages). Until then the old site stays up.
 
 If deployment is later automated from GitHub Actions as in 2060.io-website,
-add these secrets, mirrored into the cluster secret by the workflow:
+add these secrets alongside the Docker Hub ones, mirrored into the cluster
+secret by the workflow:
 `KUBECONFIG_MOBIERA_PROD`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`,
 `MAIL_PASSWORD`, `MAIL_ENCRYPTION`, `MAIL_FROM_ADDRESS`, `MAIL_FROM_NAME`,
 `CONTACT_TO`, the `CONTACT_TO_*` overrides you use, and optionally
@@ -133,7 +134,7 @@ helm upgrade --install website ./charts --namespace web --set image.tag=v0.1.0 -
 ```
 
 On a plain Docker host, the same names go in an env file:
-`docker run --env-file mobiera-website.env -p 3000:3000 ghcr.io/mobiera/website:latest`.
+`docker run --env-file mobiera-website.env -p 3000:3000 mobiera/website:latest`.
 
 `ALERT_WEBHOOK_URL` is optional: a Discord- or Slack-compatible webhook that
 receives a message when an inquiry could not be delivered.
