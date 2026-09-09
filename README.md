@@ -53,10 +53,11 @@ the runtime secret: see [docs/configuration.md](docs/configuration.md).
 GitHub Actions build and push `mobiera/website` to Docker Hub: `dev` on every
 push to `main`, and `main`, `latest`, `vX.Y.Z`, `vX.Y` when release-please cuts
 a release from conventional commits (secrets `DOCKER_HUB_LOGIN`,
-`DOCKER_HUB_PWD`). Rolling the image out to a cluster is
-not wired yet: the target (the OVH Kubernetes pattern of the sister sites, or
-Mobiera's own infrastructure) is decided at launch. `charts/` holds a minimal
-Helm chart for that step.
+`DOCKER_HUB_PWD`). The "Deploy to Kubernetes (OVH)" workflow rolls any tag out
+to the OVH cluster's `web` namespace with the Helm chart in `charts/` (nginx
+ingress, cert-manager TLS); with the `AUTO_DEPLOY` variable set, stable
+releases deploy themselves. Secrets and the cut-over from GitHub Pages:
+[docs/configuration.md](docs/configuration.md).
 
 Old URLs from the Hugo site redirect (`app/lib/redirects.ts`); the PHP form
 handlers and the mock login return 410 (`proxy.ts`). `/images/*` keeps the old
