@@ -1,6 +1,6 @@
 ---
 title: Privacy policy
-description: How Mobiera SAS handles personal data on mobiera.com: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact.
+description: How Mobiera SAS handles personal data on mobiera.io: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact.
 url: /privacy
 ---
 
@@ -11,7 +11,7 @@ url: /privacy
 ## Who is responsible
 
 Mobiera SAS, NIT 900662462-4, Cra 13A 86A-42, Bogotá D.C., Colombia, is the
-data controller for mobiera.com. Data-protection contact: privacy@mobiera.com.
+data controller for mobiera.io. Data-protection contact: privacy@mobiera.com.
 
 ## What we collect
 

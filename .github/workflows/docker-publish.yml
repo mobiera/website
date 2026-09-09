@@ -34,7 +34,7 @@ jobs:
           cache-to: type=gha,mode=max
           # Repository variables (Settings > Secrets and variables > Actions > Variables).
           # Both are public values, inlined at build time; leave unset to keep the
-          # defaults (canonical origin https://www.mobiera.com, analytics off).
+          # defaults (canonical origin https://mobiera.io, analytics off).
           build-args: |
-            SITE_URL=${{ vars.SITE_URL || 'https://www.mobiera.com' }}
+            SITE_URL=${{ vars.SITE_URL || 'https://mobiera.io' }}
             NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}

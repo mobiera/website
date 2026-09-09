@@ -1,0 +1,35 @@
+{{- if and .Values.redirects.enabled .Values.redirects.hosts -}}
+# Permanent redirects of secondary hosts to the canonical origin. Served by the
+# nginx ingress itself; the backend below is never reached.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "website.fullname" . }}-redirects
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "website.labels" . | nindent 4 }}
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/permanent-redirect: "https://{{ .Values.ingress.host }}$request_uri"
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  tls:
+    - hosts:
+        {{- range .Values.redirects.hosts }}
+        - {{ . | quote }}
+        {{- end }}
+      secretName: {{ .Values.redirects.tls.secretName }}
+  rules:
+    {{- range .Values.redirects.hosts }}
+    - host: {{ . | quote }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "website.fullname" $ }}
+                port:
+                  number: {{ $.Values.service.port }}
+    {{- end }}
+{{- end }}

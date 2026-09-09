@@ -1,4 +1,4 @@
-# Default values for the mobiera.com website Helm chart. Trimmed from the
+# Default values for the mobiera.io website Helm chart. Trimmed from the
 # 2060.io-website chart: no database, no storage volume, no migrate jobs.
 
 nameOverride: "website"
@@ -29,14 +29,23 @@ service:
 ingress:
   enabled: true
   className: nginx
-  host: www.mobiera.com
+  host: mobiera.io
   tls:
     enabled: true
-    secretName: website-mobiera-com-tls
+    secretName: website-mobiera-io-tls
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     # Career applications upload a PDF of up to 10 MB.
     nginx.ingress.kubernetes.io/proxy-body-size: 12m
+
+# Hosts that permanently redirect to https://<ingress.host>. Add
+# www.mobiera.com and mobiera.com here once their DNS points at the cluster.
+redirects:
+  enabled: true
+  hosts:
+    - www.mobiera.io
+  tls:
+    secretName: website-redirects-tls
 
 env:
   - name: NODE_ENV
@@ -46,7 +55,7 @@ env:
   - name: HOSTNAME
     value: 0.0.0.0
   - name: SITE_URL
-    value: https://www.mobiera.com
+    value: https://mobiera.io
 
 # Secret holding MAIL_*, CONTACT_TO*, ALERT_WEBHOOK_URL (created outside the
 # chart, e.g. kubectl create secret generic mobiera-website-secrets ...).

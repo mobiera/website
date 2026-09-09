@@ -4,7 +4,7 @@ import { LEGAL } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy policy",
-  description: "How Mobiera SAS handles personal data on mobiera.com: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact.",
+  description: "How Mobiera SAS handles personal data on mobiera.io: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -14,7 +14,7 @@ export default function Page() {
       <PageHero eyebrow="Legal" title="Privacy policy" lead="Last updated: at launch. This policy is pending legal review." ground={false} />
       <div className="container-x prose pb-20">
         <h2>Who is responsible</h2>
-        <p>{LEGAL.name}, NIT {LEGAL.nit}, {LEGAL.address}, is the data controller for mobiera.com. Data-protection contact: <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a>.</p>
+        <p>{LEGAL.name}, NIT {LEGAL.nit}, {LEGAL.address}, is the data controller for mobiera.io. Data-protection contact: <a href={`mailto:${LEGAL.privacyEmail}`}>{LEGAL.privacyEmail}</a>.</p>
         <h2>What we collect</h2>
         <p><strong>Contact form.</strong> Name, email, organization, topic and message, and a CV if you apply for a role. We use them to answer you and, for applications, to assess your profile. Submissions are stored for 24 months, applications for 12 months unless you ask us to delete them sooner.</p>
         <p><strong>Analytics.</strong> With your consent, anonymized usage statistics (pages visited, device type, approximate region) to improve the site. No analytics cookie is set before you accept. See the <a href="/cookies">cookie policy</a>.</p>

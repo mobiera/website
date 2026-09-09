@@ -17,7 +17,7 @@ from it.
    App passwords require it.
 3. Create an app password: Google Account > Security > 2-Step Verification >
    App passwords (https://myaccount.google.com/apppasswords). Name it
-   `mobiera.com contact form`. Google shows a 16-character password once;
+   `mobiera.io contact form`. Google shows a 16-character password once;
    that is `MAIL_PASSWORD`.
 4. If the From address must differ from the mailbox (for example
    `no-reply@mobiera.com` while authenticating as `website@mobiera.com`), add
@@ -89,7 +89,7 @@ Settings to check once, in the `mobiera/website` repository:
 
   | Variable | Value |
   |---|---|
-  | `SITE_URL` | `https://www.mobiera.com` (optional, this is the default) |
+  | `SITE_URL` | `https://mobiera.io` (optional, this is the default) |
   | `NEXT_PUBLIC_GA_ID` | the GA4 measurement id (optional) |
 
 - Secrets (already created): `DOCKER_HUB_LOGIN` and `DOCKER_HUB_PWD`, a
@@ -114,7 +114,7 @@ workflow mirrors the mail and routing values into the cluster secret:
 | `ALERT_WEBHOOK_URL` | optional |
 
 Optional variables: `WEBSITE_NAMESPACE` (default `web`) and `WEBSITE_HOST`
-(default `www.mobiera.com`).
+(default `mobiera.io`).
 
 ## 5. Deploy
 
@@ -134,20 +134,28 @@ The chart exposes the site through the cluster's nginx ingress with a
 cert-manager certificate from the `letsencrypt-prod` issuer, the same setup as
 the other Mobiera services.
 
-### Cut-over from GitHub Pages
+### Cut-over to mobiera.io
 
-1. Deploy first while DNS still points at GitHub Pages, then test through the
-   ingress: `curl -sI --resolve www.mobiera.com:443:<ingress IP> https://www.mobiera.com/`
-   (the certificate is issued once DNS resolves; until then expect a TLS
-   warning, use `-k`).
-2. Point `www.mobiera.com` at the ingress controller's external IP
-   (`kubectl -n ingress-nginx get svc`), as an A record or a CNAME to the
-   cluster's load balancer name. Keep the apex `mobiera.com` redirect to
-   `www` where it is today.
-3. cert-manager obtains the certificate within a few minutes of DNS
-   propagating; `kubectl -n web get certificate` shows Ready.
-4. Disable GitHub Pages for the repository (Settings > Pages) and remove the
-   custom domain there.
+Today `mobiera.io` (and `www.mobiera.io`, a CNAME to it) point at GitHub
+Pages, and `mobiera.com` / `www.mobiera.com` at the Apache proxy that serves
+the old site.
+
+1. Deploy first, then test through the ingress before touching DNS:
+   `curl -kI --resolve mobiera.io:443:<ingress IP> https://mobiera.io/`
+   (the certificate is issued only once DNS resolves, hence `-k`).
+2. Point `mobiera.io` at the ingress controller's external IP as A records
+   (`kubectl -n ingress-nginx get svc`); keep `www.mobiera.io` as a CNAME to
+   `mobiera.io`. The chart's redirect Ingress sends `www.mobiera.io` to
+   `https://mobiera.io`.
+3. cert-manager obtains the certificates within minutes of DNS propagating;
+   `kubectl -n web get certificate` shows both Ready.
+4. Remove the custom domain from whichever GitHub Pages site holds
+   `mobiera.io` today, and disable Pages for this repository.
+5. Old addresses: make `mobiera.com` and `www.mobiera.com` redirect to
+   `https://mobiera.io`, either on the Apache proxy that serves them today or
+   by pointing their DNS at the cluster and adding both names to
+   `redirects.hosts` in `charts/values.yaml`. Old paths keep working through
+   the site's own redirects.
 
 ### By hand (or on a plain Docker host)
 
@@ -181,7 +189,7 @@ receives a message when an inquiry could not be delivered.
 ## 6. Check it works
 
 1. Open `/contact`, send a message with a real topic.
-2. The recipient mailbox for that topic receives "[mobiera.com contact]
+2. The recipient mailbox for that topic receives "[mobiera.io contact]
    <topic>: <name>", with the visitor as Reply-To.
 3. Send a career application with a PDF from `/company/careers`; the CV
    arrives as an attachment.

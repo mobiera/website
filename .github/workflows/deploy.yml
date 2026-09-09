@@ -13,7 +13,7 @@ name: Deploy to Kubernetes (OVH)
 #   ALERT_WEBHOOK_URL              optional
 # Optional GitHub variables:
 #   WEBSITE_NAMESPACE              default web
-#   WEBSITE_HOST                   default www.mobiera.com
+#   WEBSITE_HOST                   default mobiera.io
 on:
   workflow_dispatch:
     inputs:
@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NAMESPACE: ${{ vars.WEBSITE_NAMESPACE || 'web' }}
-      HOST: ${{ vars.WEBSITE_HOST || 'www.mobiera.com' }}
+      HOST: ${{ vars.WEBSITE_HOST || 'mobiera.io' }}
       VERSION: ${{ inputs.version }}
     steps:
       - name: Checkout
