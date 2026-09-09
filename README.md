@@ -43,6 +43,11 @@ SMTP with Nodemailer, the same way 2060.io-website does. Recipients come from
 applications attach the PDF the candidate uploads. With `MAIL_HOST` unset the
 form accepts and logs submissions without delivering them.
 
+## Configuration
+
+Google mailbox and app password, recipients per topic, GitHub variables and
+the runtime secret: see [docs/configuration.md](docs/configuration.md).
+
 ## Deploy
 
 GitHub Actions build and push `ghcr.io/mobiera/website` on pushes to `main`

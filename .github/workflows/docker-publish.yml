@@ -42,5 +42,11 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          # Repository variables (Settings > Secrets and variables > Actions > Variables).
+          # Both are public values, inlined at build time; leave unset to keep the
+          # defaults (canonical origin https://www.mobiera.com, analytics off).
+          build-args: |
+            SITE_URL=${{ vars.SITE_URL || 'https://www.mobiera.com' }}
+            NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
