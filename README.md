@@ -55,8 +55,7 @@ push to `main`, and `main`, `latest`, `vX.Y.Z`, `vX.Y` when release-please cuts
 a release from conventional commits (secrets `DOCKER_HUB_LOGIN`,
 `DOCKER_HUB_PWD`). The "Deploy to Kubernetes (OVH)" workflow rolls any tag out
 to the OVH cluster's `web` namespace with the Helm chart in `charts/` (nginx
-ingress, cert-manager TLS); with the `AUTO_DEPLOY` variable set, stable
-releases deploy themselves. Secrets and the cut-over from GitHub Pages:
+ingress, cert-manager TLS), and every release deploys itself. Secrets and the cut-over from GitHub Pages:
 [docs/configuration.md](docs/configuration.md).
 
 Old URLs from the Hugo site redirect (`app/lib/redirects.ts`); the PHP form

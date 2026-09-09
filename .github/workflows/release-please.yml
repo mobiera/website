@@ -61,12 +61,11 @@ jobs:
             SITE_URL=${{ vars.SITE_URL || 'https://www.mobiera.com' }}
             NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}
 
-  # Automatic rollout of stable releases, enabled by the repository variable
-  # AUTO_DEPLOY=true once the KUBECONFIG_MOBIERA_PROD and mail secrets exist. Manual
-  # deploys of any tag stay available in deploy.yml.
+  # Every release rolls out automatically once its images are on Docker Hub.
+  # Manual deploys of any tag (rollback, re-pin) stay available in deploy.yml.
   deploy:
     needs: [release-please, docker-release]
-    if: needs.release-please.outputs.release_created == 'true' && vars.AUTO_DEPLOY == 'true'
+    if: needs.release-please.outputs.release_created == 'true'
     uses: ./.github/workflows/deploy.yml
     with:
       version: ${{ needs.release-please.outputs.tag_name }}

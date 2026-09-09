@@ -2,8 +2,8 @@ name: Deploy to Kubernetes (OVH)
 
 # Rolls a Docker Hub image tag of mobiera/website out to the OVH cluster with
 # the chart in charts/. Manual: pick any tag (v1.0.0, v1.0, main, latest, dev).
-# Stable releases can also deploy automatically from release-please.yml when
-# the repository variable AUTO_DEPLOY is "true".
+# Every release also deploys itself through this workflow from
+# release-please.yml.
 #
 # Required GitHub secrets:
 #   KUBECONFIG_MOBIERA_PROD        kubeconfig of the OVH production cluster

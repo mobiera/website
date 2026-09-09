@@ -113,9 +113,8 @@ workflow mirrors the mail and routing values into the cluster secret:
 | `CONTACT_TO` and the `CONTACT_TO_*` overrides you use | section 2 |
 | `ALERT_WEBHOOK_URL` | optional |
 
-Optional variables: `WEBSITE_NAMESPACE` (default `web`), `WEBSITE_HOST`
-(default `www.mobiera.com`), and `AUTO_DEPLOY=true` to roll every stable
-release out automatically.
+Optional variables: `WEBSITE_NAMESPACE` (default `web`) and `WEBSITE_HOST`
+(default `www.mobiera.com`).
 
 ## 5. Deploy
 
@@ -126,8 +125,10 @@ release out automatically.
    to deploy (`v1.0.0`, `latest`, `main`, `dev`). The job creates the
    namespace and the secret, waits for the image on Docker Hub, and runs
    `helm upgrade --install` with `charts/`.
-3. Set the variable `AUTO_DEPLOY=true` and every release cut by
-   release-please deploys itself.
+3. Every release cut by release-please deploys itself: merging the release
+   pull request creates the tag, pushes the images, then runs this workflow
+   with the new `vX.Y.Z` tag. The manual run stays for rollbacks and for
+   pinning `dev`, `main` or `latest`.
 
 The chart exposes the site through the cluster's nginx ingress with a
 cert-manager certificate from the `letsencrypt-prod` issuer, the same setup as
