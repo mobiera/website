@@ -62,7 +62,7 @@ jobs:
             NEXT_PUBLIC_GA_ID=${{ vars.NEXT_PUBLIC_GA_ID }}
 
   # Automatic rollout of stable releases, enabled by the repository variable
-  # AUTO_DEPLOY=true once the OVH_KUBECONFIG and mail secrets exist. Manual
+  # AUTO_DEPLOY=true once the KUBECONFIG_MOBIERA_PROD and mail secrets exist. Manual
   # deploys of any tag stay available in deploy.yml.
   deploy:
     needs: [release-please, docker-release]

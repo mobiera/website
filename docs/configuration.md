@@ -108,7 +108,7 @@ workflow mirrors the mail and routing values into the cluster secret:
 
 | Secret | Value |
 |---|---|
-| `OVH_KUBECONFIG` | kubeconfig of the OVH production cluster |
+| `KUBECONFIG_MOBIERA_PROD` | kubeconfig of the OVH production cluster |
 | `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_ENCRYPTION`, `MAIL_FROM_ADDRESS`, `MAIL_FROM_NAME` | section 1 |
 | `CONTACT_TO` and the `CONTACT_TO_*` overrides you use | section 2 |
 | `ALERT_WEBHOOK_URL` | optional |
