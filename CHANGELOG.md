@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/mobiera/website/compare/v1.0.0...v1.1.0) (2026-09-09)
+
+
+### Features
+
+* move the site to mobiera.io ([c414e6f](https://github.com/mobiera/website/commit/c414e6f9862ab8ae0eee25caa1e2809add13cca7))
+* move the site to mobiera.io ([61727b3](https://github.com/mobiera/website/commit/61727b3825cad8d33ef2b5c037e587193554ce2f))
+
 ## 1.0.0 (2026-09-09)
 
 
