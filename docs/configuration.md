@@ -102,15 +102,53 @@ Settings to check once, in the `mobiera/website` repository:
 - Pages: once DNS points at the new deployment, disable GitHub Pages for the
   repository (Settings > Pages). Until then the old site stays up.
 
-If deployment is later automated from GitHub Actions as in 2060.io-website,
-add these secrets alongside the Docker Hub ones, mirrored into the cluster
-secret by the workflow:
-`KUBECONFIG_MOBIERA_PROD`, `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`,
-`MAIL_PASSWORD`, `MAIL_ENCRYPTION`, `MAIL_FROM_ADDRESS`, `MAIL_FROM_NAME`,
-`CONTACT_TO`, the `CONTACT_TO_*` overrides you use, and optionally
-`ALERT_WEBHOOK_URL`.
+Deployment runs from GitHub Actions (`deploy.yml`), like the other Mobiera
+deploy workflows. Add these secrets alongside the Docker Hub ones; the
+workflow mirrors the mail and routing values into the cluster secret:
 
-## 5. Runtime secret (wherever the container runs)
+| Secret | Value |
+|---|---|
+| `OVH_KUBECONFIG` | kubeconfig of the OVH production cluster |
+| `MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_ENCRYPTION`, `MAIL_FROM_ADDRESS`, `MAIL_FROM_NAME` | section 1 |
+| `CONTACT_TO` and the `CONTACT_TO_*` overrides you use | section 2 |
+| `ALERT_WEBHOOK_URL` | optional |
+
+Optional variables: `WEBSITE_NAMESPACE` (default `web`), `WEBSITE_HOST`
+(default `www.mobiera.com`), and `AUTO_DEPLOY=true` to roll every stable
+release out automatically.
+
+## 5. Deploy
+
+### From GitHub Actions (the normal path)
+
+1. Add the secrets and variables from section 4.
+2. Actions > "Deploy to Kubernetes (OVH)" > Run workflow, with the image tag
+   to deploy (`v1.0.0`, `latest`, `main`, `dev`). The job creates the
+   namespace and the secret, waits for the image on Docker Hub, and runs
+   `helm upgrade --install` with `charts/`.
+3. Set the variable `AUTO_DEPLOY=true` and every release cut by
+   release-please deploys itself.
+
+The chart exposes the site through the cluster's nginx ingress with a
+cert-manager certificate from the `letsencrypt-prod` issuer, the same setup as
+the other Mobiera services.
+
+### Cut-over from GitHub Pages
+
+1. Deploy first while DNS still points at GitHub Pages, then test through the
+   ingress: `curl -sI --resolve www.mobiera.com:443:<ingress IP> https://www.mobiera.com/`
+   (the certificate is issued once DNS resolves; until then expect a TLS
+   warning, use `-k`).
+2. Point `www.mobiera.com` at the ingress controller's external IP
+   (`kubectl -n ingress-nginx get svc`), as an A record or a CNAME to the
+   cluster's load balancer name. Keep the apex `mobiera.com` redirect to
+   `www` where it is today.
+3. cert-manager obtains the certificate within a few minutes of DNS
+   propagating; `kubectl -n web get certificate` shows Ready.
+4. Disable GitHub Pages for the repository (Settings > Pages) and remove the
+   custom domain there.
+
+### By hand (or on a plain Docker host)
 
 The container reads the mail and routing values from its environment. On
 Kubernetes with the chart in `charts/`, they come from one Secret named
