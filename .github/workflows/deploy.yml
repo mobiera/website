@@ -6,7 +6,7 @@ name: Deploy to Kubernetes (OVH)
 # the repository variable AUTO_DEPLOY is "true".
 #
 # Required GitHub secrets:
-#   OVH_KUBECONFIG                 kubeconfig for the OVH cluster (same name as
+#   KUBECONFIG_MOBIERA_PROD                 kubeconfig for the OVH cluster (same name as
 #                                  the other Mobiera deploy workflows)
 #   MAIL_HOST MAIL_PORT MAIL_USERNAME MAIL_PASSWORD MAIL_ENCRYPTION
 #   MAIL_FROM_ADDRESS MAIL_FROM_NAME
@@ -29,7 +29,7 @@ on:
         required: true
         type: string
     secrets:
-      OVH_KUBECONFIG:
+      KUBECONFIG_MOBIERA_PROD:
         required: true
       MAIL_HOST:
         required: false
@@ -91,10 +91,10 @@ jobs:
 
       - name: Write kubeconfig
         env:
-          KUBECONFIG_DATA: ${{ secrets.OVH_KUBECONFIG }}
+          KUBECONFIG_DATA: ${{ secrets.KUBECONFIG_MOBIERA_PROD }}
         run: |
           if [ -z "$KUBECONFIG_DATA" ]; then
-            echo "::error::The OVH_KUBECONFIG secret is empty. Set it under Settings > Secrets and variables > Actions."
+            echo "::error::The KUBECONFIG_MOBIERA_PROD secret is empty. Set it under Settings > Secrets and variables > Actions."
             exit 1
           fi
           mkdir -p "$HOME/.kube"
