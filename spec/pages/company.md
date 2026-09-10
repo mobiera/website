@@ -28,17 +28,29 @@ operator's systems, and operate it, on their infrastructure or ours.
 
 ## Timeline
 
+Presented as three chapters, each with a large display-face year, a mono year
+span, a chapter title, and its entries in a left-ruled list. The third chapter
+(the Verana era) uses the green accent; the others use violet.
+
+### 2012 — 2016 · Built for operators
+
 - **2012** Mobiera SAS incorporated in Bogotá, Colombia.
 - **2013** Operations start in Mexico.
 - **2014** Operations start in Peru.
 - **2015** Operations start in the United States and Bolivia.
 - **2016** Innovation and IT outsourcing business units launched.
+
+### 2017 — 2020 · Every continent
+
 - **2017** Colciencias tax credit for billing platforms and big data solutions
   for developing markets.
 - **2018** Commercial operations start in Europe, from Spain, and in Asia
   Pacific, from Hanoi.
 - **2019** IT outsourcing scales up around digital transformation and DevOps.
 - **2020** Africa and GCC expansion begins.
+
+### 2021 — today · The trust company (green accent)
+
 - **2021** First biometric KYC solutions delivered.
 - **2022** Verifiable credentials offered as a service for the first time.
 - **2023** Rebranding; strategic partnerships expanded.
@@ -57,7 +69,7 @@ operator's systems, and operate it, on their infrastructure or ours.
 | 25+ | mobile operators run our platforms |
 | 800 million | subscribers reachable through messaging services powered by Mobiera |
 | ~60 million | subscribers reached per day |
-| 6 | offices: Bogotá, Peru, Bolivia, Panama, Spain, Algeria |
+| 8 | offices: Bogotá, Peru, Bolivia, Panama, United States, Spain, France, Algeria |
 | 2012 | founded; every continent served since |
 
 ## Values
@@ -87,7 +99,9 @@ platforms.
 - Peru <!-- city -->
 - Bolivia <!-- city -->
 - Panama <!-- city -->
+- United States <!-- city -->
 - Spain <!-- city -->
+- France <!-- city -->
 - Algeria <!-- city -->
 
 ## Customers and partners

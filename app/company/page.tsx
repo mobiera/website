@@ -15,7 +15,7 @@ const NUMBERS = [
   { value: "25+", label: "mobile operators run our platforms" },
   { value: "800M", label: "subscribers reachable through messaging services powered by Mobiera" },
   { value: "~60M", label: "subscribers reached per day", tone: "green" as const },
-  { value: "6", label: "offices: Bogotá, Peru, Bolivia, Panama, Spain, Algeria" },
+  { value: "8", label: "offices: Bogotá, Peru, Bolivia, Panama, United States, Spain, France, Algeria" },
   { value: "2012", label: "founded; every continent served since" },
   { value: "16", label: "public repositories on GitHub", tone: "violet" as const },
 ];
@@ -33,11 +33,22 @@ export default function Page() {
       </Section>
 
       <Section eyebrow="Timeline">
-        <ol className="timeline">
-          {TIMELINE.map((t) => (
-            <li key={t.when + t.text}><span className="when">{t.when}</span><span>{t.text}</span></li>
+        <div className="chapters">
+          {TIMELINE.map((c) => (
+            <div key={c.year} className={c.verana ? "chapter v" : "chapter"}>
+              <div>
+                <div className="ch-year">{c.year}</div>
+                <div className="ch-span">{c.span}</div>
+                <p className="ch-title">{c.title}</p>
+              </div>
+              <ol className="ch-list">
+                {c.items.map((t) => (
+                  <li key={t.when + t.text}><span className="when">{t.when}</span><span className="txt">{t.text}</span></li>
+                ))}
+              </ol>
+            </div>
           ))}
-        </ol>
+        </div>
       </Section>
 
       <Section eyebrow="In numbers">
