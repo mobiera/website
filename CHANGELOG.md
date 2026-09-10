@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/mobiera/website/compare/v1.1.0...v1.2.0) (2026-09-10)
+
+
+### Features
+
+* **certification:** describe the program as training and exams ([777dceb](https://github.com/mobiera/website/commit/777dcebe056ce0d17a53306abb3c7a040c59a173))
+* **certification:** describe the program as training and exams ([8f98b30](https://github.com/mobiera/website/commit/8f98b3005c81dad0fbaa3d1fca0b65ec1048675b))
+* **certification:** state the pass mark and retake rule ([f8a0715](https://github.com/mobiera/website/commit/f8a0715c1fbc29e2658ec44138911fd490e1064c))
+* lead with Verifiable Credentials and trust networks ([24c7ab5](https://github.com/mobiera/website/commit/24c7ab53934284e8de271386618d0cf87af8ad95))
+* lead with Verifiable Credentials and trust networks ([23e065b](https://github.com/mobiera/website/commit/23e065b47817c640c0fdcc4a283af964942c6ba0))
+* remove the Services page ([6df820d](https://github.com/mobiera/website/commit/6df820dcaf0fc96d68215768a3b8f6c768526196))
+* remove the Services page ([5cd2061](https://github.com/mobiera/website/commit/5cd2061dee2982becaffdfe612d62c646251f7a2))
+
 ## [1.1.0](https://github.com/mobiera/website/compare/v1.0.0...v1.1.0) (2026-09-09)
 
 
