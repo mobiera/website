@@ -75,8 +75,7 @@ Three candidates were shown per page; the chosen ones:
 | /certification | `CertificationPath` | A, horizontal roadmap | Foundation member, training, eight exams, Certified Professional, company step, Certified Integrator, directory from the Trust Graph |
 | /telecom | `DeployStack` | C, two nodes, one stack | Two active-active georedundant nodes, each a layered stack down to the operator's SMSC, MMSC and SIM base, one monitoring strip |
 | /telecom/aircast | `AircastFlow` | A, engine to handset | Campaign engine, Artemis queues and SMPP/MM7 adapters, the operator's SMSC/MMSC, three lanes: STK, SMS/MMS, OTA |
+| /trust/services | `TrustTriangle` | B reworked, standing on the registry | Holder on top with its wallet; issuer and verifier standing on the Verana public registry band; Mobiera chips where it acts |
 | /telecom/ai-agents | `AiOneHub` | B, hub | SMS and the operator mobile app on the left, LLM, MCP tools and billing on the right, Verana registry below |
 
-Still open: the trust triangle on /trust/services (B was reworked with the
-holder on top and issuer and verifier standing on the registry), the
-verify-first illustration, the locations map.
+Still open: the verify-first illustration and the locations map.
