@@ -8,7 +8,7 @@ export default function LogoWall({ title, logos, countries = false }: { title: s
         {logos.map((l) => (
           <li key={l.name} className="logo-chip" title={l.country ? `${l.name}, ${l.country}` : l.name}>
             <span className="tile">
-              <img src={`/assets/logos/${l.file}`} alt={l.name} width={l.width} height={l.height} loading="lazy" />
+              <img src={`/assets/logos/${l.file}`} alt={l.name} width={l.width} height={l.height} loading="lazy" className={l.darkArt ? "dark-art" : undefined} />
             </span>
             {countries && l.country && <span className="country">{l.country}</span>}
           </li>

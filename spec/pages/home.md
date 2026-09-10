@@ -1,21 +1,33 @@
 ---
 title: Mobiera
-description: Operator-grade software for mobile networks and verifiable trust on Verana. Aircast, AI One, trust services and integrator certification for Latin America.
+description: Trust networks and Verifiable Credentials built on Verana: ecosystems, issuer and verifier services, integrator certification for Latin America. And the telecom platforms Mobiera has run inside 25+ mobile networks since 2012.
 url: /
 ---
 
-<!-- eyebrow: BOGOTÁ · SINCE 2012 · 25+ OPERATORS -->
+<!-- eyebrow: VERIFIABLE CREDENTIALS · VERANA FOUNDATION CO-FOUNDER · LATIN AMERICA -->
 
-# Operator-grade software. Verifiable trust.
+# Trust networks and Verifiable Credentials, built on Verana.
 
-Mobiera builds and runs the platforms behind SIM toolkit push, messaging and AI
-agents in 25+ mobile networks. As a co-founder of the Verana Foundation and the
-official certificator for Verana integrators in Latin America, it brings the
-same rigor to verifiable credentials and trust networks.
+Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems
+for governments, sectors and enterprises, and certifies the integrators who
+build on Verana in Latin America. The same team has run software inside 25+
+mobile networks since 2012.
 
-> CTA: Telecom platforms → /telecom · Verifiable trust → /trust
+> CTA: Verifiable Credentials → /trust · Get Verana certified → /certification
+
+<!-- hero visual: Proof-of-Trust panel, an example resolution: a DID, its Organization credential (issued by the ECS Ecosystem), its Service credential, its Verana Certified Integrator credential (issued by Mobiera), trust score. Labelled "example". -->
 
 ## Two lines of business
+
+### Verifiable Credentials and trust networks
+
+Trust that anyone can verify, built on Verana.
+
+- Founding member of the Verana Foundation since June 2025.
+- Trust ecosystems, issuer and verifier services, wallet and agent integration.
+- Training and certification for the integrators who build on Verana.
+
+> CTA: Verifiable Credentials → /trust
 
 ### Telecom software and services
 
@@ -27,56 +39,33 @@ Platforms that run inside the operator's network.
 
 > CTA: Telecom → /telecom
 
-### Verifiable credentials and trust networks
-
-Trust that anyone can verify, built on Verana.
-
-- Founding member of the Verana Foundation since June 2025.
-- Trust ecosystems, issuer and verifier services, wallet and agent integration.
-- The official certificator for Verana integrators in Latin America.
-
-> CTA: Trust → /trust
-
 ## In numbers
-
-<!-- six tiles -->
 
 | Figure | Label |
 |---|---|
+| Founding member | Verana Foundation |
+| Official certificator | Verana integrators, Latin America |
 | 25+ | mobile operators run our platforms |
 | 800 million | subscribers reachable through messaging services powered by Mobiera |
 | ~60 million | subscribers reached per day |
 | 2012 | founded in Bogotá; every continent served since |
-| Founding member | Verana Foundation |
-| Official certificator | Verana integrators, Latin America |
 
-## Telecom platforms
+## Three roles on Verana
 
-### Aircast
+### Founding member
+Co-founded the Verana Foundation in June 2025 with 2060 OÜ and Orchestrating Identity; Specification and Reference Implementation working groups.
 
-Campaigns over the operator's network. Any handset, no data, no balance.
-STK push marketing, bulk SMS and MMS, and SIM OTA campaigns from one engine,
-at whatever throughput your SMSC allows.
+### Builder and operator
+Ecosystem design and governance frameworks; issuer and verifier services; wallets and AI agents as Verifiable Services; operations.
 
-> CTA: Aircast → /telecom/aircast
+### Official certificator
+Trains integrators to build on Verana and certifies the professionals who pass the exams, for Latin America.
 
-### AI One
+## Use cases we lead with
 
-AI agents your subscribers can reach on any phone, and verify. Customer
-support over SMS and Hologram, integrated with your billing, identified with
-verifiable credentials so nobody can impersonate your operator.
-
-> CTA: AI One → /telecom/ai-agents
-
-## Verifiable trust
-
-Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on
-the Verana network, and certifies the integrators who build on it in Latin
-America.
-
-- Ecosystem design and governance frameworks.
-- Issuer and verifier services, wallets and AI agents as Verifiable Services.
-- Training and certification for the integrators who build on Verana.
+- Telco-certified phone numbers.
+- Verifiable customer-support agents.
+- Sector ecosystems in Latin America.
 
 ### Get Verana certified
 
@@ -85,35 +74,36 @@ who pass the exams. Designated by the Verana Foundation. Valid until May 2029.
 
 > CTA: Get certified → /certification
 
-## Customers and partners
+## Telecom platforms
+
+### Aircast
+Campaigns over the operator's network. Any handset, no data, no balance.
+
+### AI One
+AI agents your subscribers can reach on any phone, and verify.
+
+> CTA: Telecom → /telecom
+
+## Partners and customers
+
+Partners: Verana Foundation · 2060 · Idemia · Bitdefender · Amplitudes
 
 Operators: Claro · Telefónica · América Móvil · Ooredoo · Viettel · Digicel ·
 Bitel · Viva · Halotel
 
-Partners: 2060 · Idemia · Bitdefender · Amplitudes · Verana Foundation
-
 ## Open source
 
-Sixteen public repositories on github.com/mobiera: libraries for ETSI TS
-102.221, 102.222, 102.225 and 102.226, a GlobalPlatform card-content manager,
-the Aircast integration APIs, and the stats and service-log containers.
-
-> CTA: GitHub → https://github.com/mobiera
+Sixteen public repositories on github.com/mobiera.
 
 ## Latest news
 
-<!-- three most recent items from /news -->
+<!-- three most recent items -->
 
 ## Tell us what you are building
-
-Every message reaches the right person. No sales queue, no email to guess.
 
 > CTA: Contact → /contact
 
 ## Sources
 
-- Numbers: facts.yaml `numbers` (decision 2026-09-09).
-- Founding member: veranafoundation.org home and About.
-- Certification: facts.yaml `verana.certification`.
-- Logos: facts.yaml `customers_and_partners`.
-- Open source: facts.yaml `open_source`.
+- Order and headline: decision 2026-09-10 (trust first, telecom second).
+- Numbers, roles, certification: facts.yaml.

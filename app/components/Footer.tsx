@@ -9,25 +9,27 @@ export default function Footer() {
         <div className="fcols">
           <div>
             <p className="font-display font-semibold text-ink">Mobiera</p>
-            <p className="mt-2 max-w-[34ch]">Operator-grade software for mobile networks and verifiable trust on Verana.</p>
+            <p className="mt-2 max-w-[34ch]">Trust networks and Verifiable Credentials built on Verana, and the platforms behind 25+ mobile networks.</p>
           </div>
           <div>
-            <h4>Products</h4>
+            <h4>Verifiable Credentials</h4>
             <ul>
-              <li><Link href="/telecom/aircast">Aircast</Link></li>
-              <li><Link href="/telecom/ai-agents">AI One</Link></li>
-              <li><a href={LINKS.docs} rel="noopener">Documentation ↗</a></li>
-              <li><a href={LINKS.github} rel="noopener">GitHub ↗</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Trust</h4>
-            <ul>
-              <li><Link href="/trust">Verifiable trust</Link></li>
+              <li><Link href="/trust">Trust networks</Link></li>
+              <li><Link href="/trust/services">Trust services</Link></li>
               <li><Link href="/certification">Certification</Link></li>
               <li><a href={LINKS.foundation} rel="noopener">Verana Foundation ↗</a></li>
               <li><a href={LINKS.verana} rel="noopener">verana.io ↗</a></li>
               <li><a href={LINKS.council} rel="noopener">Verana Council ↗</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Telecom</h4>
+            <ul>
+              <li><Link href="/telecom">Platforms</Link></li>
+              <li><Link href="/telecom/aircast">Aircast</Link></li>
+              <li><Link href="/telecom/ai-agents">AI One</Link></li>
+              <li><a href={LINKS.docs} rel="noopener">Documentation ↗</a></li>
+              <li><a href={LINKS.github} rel="noopener">GitHub ↗</a></li>
             </ul>
           </div>
           <div>

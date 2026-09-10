@@ -3,9 +3,9 @@
 
 export const SITE_URL = process.env.SITE_URL ?? "https://mobiera.io";
 export const SITE_NAME = "Mobiera";
-export const SITE_TAGLINE = "Operator-grade software. Verifiable trust.";
+export const SITE_TAGLINE = "Trust networks and Verifiable Credentials, built on Verana.";
 export const SITE_DESCRIPTION =
-  "Mobiera builds and runs the platforms behind SIM toolkit push, messaging and AI agents in 25+ mobile networks. Co-founder of the Verana Foundation and the official certificator for Verana integrators in Latin America.";
+  "Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems on Verana, and certifies the integrators who build on it in Latin America. The same team has run software inside 25+ mobile networks since 2012.";
 
 export const LEGAL = {
   name: "Mobiera SAS",
@@ -32,18 +32,18 @@ export const LINKS = {
 } as const;
 
 export const NAV = [
-  { href: "/telecom", label: "Telecom" },
-  { href: "/trust", label: "Trust" },
+  { href: "/trust", label: "Verifiable Credentials" },
   { href: "/certification", label: "Certification" },
+  { href: "/telecom", label: "Telecom" },
   { href: "/company", label: "Company" },
   { href: "/news", label: "News" },
 ] as const;
 
 export const CONTACT_TOPICS = [
-  { value: "aircast", label: "Aircast and STK push" },
-  { value: "ai-agents", label: "AI agents" },
   { value: "trust", label: "Trust services" },
   { value: "certification", label: "Certification" },
+  { value: "aircast", label: "Aircast and STK push" },
+  { value: "ai-agents", label: "AI agents" },
   { value: "partnership", label: "Partnership" },
   { value: "careers", label: "Careers" },
   { value: "press", label: "Press" },

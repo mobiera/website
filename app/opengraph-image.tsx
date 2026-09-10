@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Mobiera: Operator-grade software. Verifiable trust.";
+export const alt = "Mobiera: Trust networks and Verifiable Credentials, built on Verana.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -13,8 +13,8 @@ export default function OpenGraphImage() {
           <div style={{ fontSize: 34, fontWeight: 700 }}>Mobiera</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>Operator-grade software. Verifiable trust.</div>
-          <div style={{ fontSize: 28, color: "#9AA3C2" }}>Platforms in 25+ mobile networks. Founding member of the Verana Foundation. Official certificator for Verana integrators in Latin America.</div>
+          <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>Trust networks and Verifiable Credentials, built on Verana.</div>
+          <div style={{ fontSize: 28, color: "#9AA3C2" }}>Founding member of the Verana Foundation. Official certificator for Verana integrators in Latin America. Platforms in 25+ mobile networks since 2012.</div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#50E2AA", letterSpacing: 2 }}>
           <span>BOGOTÁ · SINCE 2012</span>

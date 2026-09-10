@@ -1,16 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import JsonLd from "./components/JsonLd";
-import TpsChart from "./components/TpsChart";
+import ProofOfTrust from "./components/ProofOfTrust";
 import LogoWall from "./components/LogoWall";
 import NewsList from "./components/NewsList";
-import { ButtonLink, Card, Chips, Eyebrow, MoreLink, ProofStrip, Section } from "./components/ui";
+import { ButtonLink, Card, Chips, Eyebrow, Feature, MoreLink, ProofStrip, Section } from "./components/ui";
 import { NUMBERS, OPERATORS, PARTNERS } from "./lib/content";
 import { getAllNews } from "./lib/news";
-import { LINKS, SITE_DESCRIPTION } from "./lib/site";
+import { LINKS, SITE_DESCRIPTION, SITE_TAGLINE } from "./lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Mobiera: Operator-grade software. Verifiable trust." },
+  title: { absolute: `Mobiera: ${SITE_TAGLINE}` },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
 };
@@ -24,17 +24,17 @@ export default function Home() {
         <section className="hero container-x">
           <div className="hero-grid">
             <div>
-              <Eyebrow>Bogotá · since 2012 · 25+ operators</Eyebrow>
-              <h1 className="mt-3">Operator-grade software. Verifiable trust.</h1>
+              <Eyebrow>Verifiable Credentials · Verana Foundation co-founder · Latin America</Eyebrow>
+              <h1 className="mt-3">Trust networks and Verifiable Credentials, built on Verana.</h1>
               <p className="lead">
-                Mobiera builds and runs the platforms behind SIM toolkit push, messaging and AI agents in 25+ mobile networks. As a co-founder of the Verana Foundation and the official certificator for Verana integrators in Latin America, it brings the same rigor to verifiable credentials and trust networks.
+                Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.
               </p>
               <div className="ctas">
-                <ButtonLink href="/telecom" variant="primary">Telecom platforms</ButtonLink>
-                <ButtonLink href="/trust">Verifiable trust</ButtonLink>
+                <ButtonLink href="/trust" variant="primary">Verifiable Credentials</ButtonLink>
+                <ButtonLink href="/certification">Get Verana certified</ButtonLink>
               </div>
             </div>
-            <TpsChart />
+            <ProofOfTrust />
           </div>
         </section>
       </div>
@@ -43,6 +43,17 @@ export default function Home() {
         <div className="grid-2">
           <Card>
             <span className="eyebrow tag">01</span>
+            <h3>Verifiable Credentials and trust networks</h3>
+            <p className="text-muted">Trust that anyone can verify, built on Verana.</p>
+            <ul>
+              <li>Founding member of the Verana Foundation since June 2025.</li>
+              <li>Trust ecosystems, issuer and verifier services, wallet and agent integration.</li>
+              <li>Training and certification for the integrators who build on Verana.</li>
+            </ul>
+            <MoreLink href="/trust">Verifiable Credentials</MoreLink>
+          </Card>
+          <Card>
+            <span className="eyebrow tag">02</span>
             <h3>Telecom software and services</h3>
             <p className="text-muted">Platforms that run inside the operator's network.</p>
             <ul>
@@ -52,22 +63,42 @@ export default function Home() {
             </ul>
             <MoreLink href="/telecom">Telecom</MoreLink>
           </Card>
-          <Card>
-            <span className="eyebrow tag">02</span>
-            <h3>Verifiable credentials and trust networks</h3>
-            <p className="text-muted">Trust that anyone can verify, built on Verana.</p>
-            <ul>
-              <li>Founding member of the Verana Foundation since June 2025.</li>
-              <li>Trust ecosystems, issuer and verifier services, wallet and agent integration.</li>
-              <li>The official certificator for Verana integrators in Latin America.</li>
-            </ul>
-            <MoreLink href="/trust">Trust</MoreLink>
-          </Card>
         </div>
       </Section>
 
       <Section>
         <ProofStrip items={NUMBERS} />
+      </Section>
+
+      <Section eyebrow="Verifiable Credentials and trust networks" title="Three roles on Verana">
+        <div className="grid-3">
+          <Card>
+            <h3>Founding member</h3>
+            <p className="text-muted">Co-founded the Verana Foundation in June 2025 with 2060 OÜ and Orchestrating Identity. Specification and Reference Implementation working groups.</p>
+            <MoreLink href="/trust/verana">Mobiera and Verana</MoreLink>
+          </Card>
+          <Card>
+            <h3>Builder and operator</h3>
+            <p className="text-muted">Ecosystem design and governance frameworks; issuer and verifier services; wallets and AI agents as Verifiable Services; operations.</p>
+            <MoreLink href="/trust/services">Trust services</MoreLink>
+          </Card>
+          <Card>
+            <h3>Official certificator</h3>
+            <p className="text-muted">Trains integrators to build on Verana and certifies the professionals who pass the exams, for Latin America.</p>
+            <MoreLink href="/certification">Get Verana certified</MoreLink>
+          </Card>
+        </div>
+        <div className="grid-3 mt-8">
+          <Feature title="Telco-certified phone numbers"><p>The operator issues a credential that binds a phone number to a subscriber; every service that accepts it verifies the issuer on the public registry.</p></Feature>
+          <Feature title="Verifiable customer-support agents"><p>An operator's AI agent proves who operates it before a subscriber types a word. Running today in AI One.</p></Feature>
+          <Feature title="Sector ecosystems in Latin America"><p>Diplomas, licenses, certifications and memberships that any partner can verify, governed by the body that issues them.</p></Feature>
+        </div>
+        <div className="cert mt-8">
+          <span className="pot"><i />Eight exams · two-year credential</span>
+          <h3 className="text-[1.4rem]">Get Verana certified</h3>
+          <p className="muted">Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams. Designated by the Verana Foundation. Valid until May 2029.</p>
+          <Link href="/certification" className="btn">Get certified <span className="arrow" aria-hidden="true">→</span></Link>
+        </div>
       </Section>
 
       <Section eyebrow="Telecom platforms" title="Software that runs inside the operator's network">
@@ -85,32 +116,13 @@ export default function Home() {
             <MoreLink href="/telecom/ai-agents">AI One</MoreLink>
           </Card>
         </div>
-      </Section>
-
-      <Section eyebrow="Verifiable trust" title="Trust that anyone can verify, built on Verana">
-        <div className="grid-2">
-          <Card>
-            <p className="text-muted">Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and certifies the integrators who build on it in Latin America.</p>
-            <ul>
-              <li>Ecosystem design and governance frameworks.</li>
-              <li>Issuer and verifier services, wallets and AI agents as Verifiable Services.</li>
-              <li>Training and certification for the integrators who build on Verana.</li>
-            </ul>
-            <MoreLink href="/trust">Trust</MoreLink>
-          </Card>
-          <div className="cert">
-            <span className="pot"><i />Eight exams · two-year credential</span>
-            <h3 className="text-[1.4rem]">Get Verana certified</h3>
-            <p className="muted">Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams. Designated by the Verana Foundation. Valid until May 2029.</p>
-            <Link href="/certification" className="btn">Get certified <span className="arrow" aria-hidden="true">→</span></Link>
-          </div>
-        </div>
+        <p className="mt-6"><MoreLink href="/telecom">Telecom software and services</MoreLink></p>
       </Section>
 
       <Section>
         <div className="grid-2">
-          <LogoWall title="Operators" logos={OPERATORS} />
           <LogoWall title="Partners" logos={PARTNERS} />
+          <LogoWall title="Operators" logos={OPERATORS} />
         </div>
       </Section>
 

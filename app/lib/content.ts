@@ -2,15 +2,15 @@
 // page only lives in that page.
 
 export const NUMBERS = [
+  { value: "Founding", label: "member, Verana Foundation", tone: "violet" as const },
+  { value: "Official", label: "certificator, Verana integrators, Latin America", tone: "violet" as const },
   { value: "25+", label: "mobile operators run our platforms" },
   { value: "800M", label: "subscribers reachable through messaging services powered by Mobiera" },
   { value: "~60M", label: "subscribers reached per day", tone: "green" as const },
   { value: "2012", label: "founded in Bogotá; every continent served since" },
-  { value: "Founding", label: "member, Verana Foundation", tone: "violet" as const },
-  { value: "Official", label: "certificator, Verana integrators, Latin America", tone: "violet" as const },
 ];
 
-export type Logo = { name: string; file: string; country?: string; width: number; height: number };
+export type Logo = { name: string; file: string; country?: string; width: number; height: number; darkArt?: boolean };
 
 export const OPERATORS: Logo[] = [
   { name: "Claro", file: "claro.svg", country: "Peru", width: 176, height: 102 },
@@ -25,6 +25,7 @@ export const OPERATORS: Logo[] = [
 ];
 
 export const PARTNERS: Logo[] = [
+  { name: "Verana Foundation", file: "verana-foundation.svg", width: 341, height: 48, darkArt: true },
   { name: "2060", file: "2060.svg", width: 176, height: 102 },
   { name: "Idemia", file: "idemia.svg", width: 176, height: 102 },
   { name: "Bitdefender", file: "bitdefender.svg", width: 176, height: 102 },

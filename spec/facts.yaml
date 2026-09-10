@@ -184,3 +184,8 @@ decisions_2026_09_09:
   - ITC Avant Garde not kept; typeface chosen in the design phase
   - certification: designated by the Verana Foundation, valid until May 2029, nothing else on the page
   - stack: same as 2060.io-website, not Hugo; existing logo reused; three design directions to choose from
+
+decisions_2026_09_10:
+  - certification is a training and exam program, not ECS onboarding (see verana.certification)
+  - the Services page is removed
+  - the site leads with Verifiable Credentials and trust networks; telecom is the secondary line. Headline "Trust networks and Verifiable Credentials, built on Verana." Nav: Verifiable Credentials · Certification · Telecom · Company · News. "Verifiable Credentials" is the line's name because the term is better known than "trust networks"

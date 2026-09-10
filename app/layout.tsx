@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: { default: `${SITE_NAME}: ${SITE_TAGLINE}`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  keywords: ["Mobiera", "Aircast", "STK push", "SIM toolkit", "OTA", "AI agents", "Verana", "verifiable credentials", "trust registry", "certification", "Latin America"],
+  keywords: ["Mobiera", "verifiable credentials", "trust networks", "Verana", "Verana certification", "trust registry", "Latin America", "Aircast", "STK push", "SIM toolkit", "OTA", "AI agents"],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   openGraph: { type: "website", siteName: SITE_NAME, url: SITE_URL, title: `${SITE_NAME}: ${SITE_TAGLINE}`, description: SITE_DESCRIPTION, locale: "en_US" },
