@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { faIdCard, faServer, faSitemap, faWallet } from "@fortawesome/free-solid-svg-icons";
 import { ButtonLink, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
+import { LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
   title: "Trust services",
@@ -13,6 +14,7 @@ export default function Page() {
     <>
       <PageHero eyebrow="Trust services" title="From governance framework to production issuer." lead="We design the ecosystem, deploy the verifiable services, integrate the wallets, and run what you do not want to run yourself.">
         <ButtonLink href="/contact?topic=trust" variant="primary">Talk to us</ButtonLink>
+        <ButtonLink href={LINKS.playground}>Playground</ButtonLink>
       </PageHero>
 
       <Section>
