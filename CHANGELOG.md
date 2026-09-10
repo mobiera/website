@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/mobiera/website/compare/v1.2.0...v1.3.0) (2026-09-10)
+
+
+### Features
+
+* **design:** replace the hero grid with the outlined logo mark ([bdfcc90](https://github.com/mobiera/website/commit/bdfcc909994799ecedd1bc7d040320797767f394))
+* **design:** replace the hero grid with the outlined logo mark ([b67b056](https://github.com/mobiera/website/commit/b67b05624285e39809b5a3040f947f38fe49f35c))
+
 ## [1.2.0](https://github.com/mobiera/website/compare/v1.1.0...v1.2.0) (2026-09-10)
 
 
