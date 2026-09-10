@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.5.0](https://github.com/mobiera/website/compare/v1.4.0...v1.5.0) (2026-09-10)
+
+
+### Features
+
+* **company:** chaptered timeline, US and France offices, bottom-right card CTAs ([c040626](https://github.com/mobiera/website/commit/c040626fef5351d84cb679d4bbc7416ed06c6aff))
+* **company:** chaptered timeline; add United States and France offices ([6a2f84c](https://github.com/mobiera/website/commit/6a2f84cf22a67f2b99c7504eecb177e6e2f35caf))
+* **design:** align bottom card CTAs to the right ([4f61c6f](https://github.com/mobiera/website/commit/4f61c6fa37c21005786850deb820f2ef1ec12d3c))
+* **home:** link the Verana Trust Infrastructure from the trust card lead ([d6aaf6e](https://github.com/mobiera/website/commit/d6aaf6e3fe392047a91cb88a89140b0ed1245d83))
+* **home:** link the Verana Trust Infrastructure from the trust card lead ([93d0727](https://github.com/mobiera/website/commit/93d07273bd59bdc3dfc3f185d6c3bdfff28f4087))
+* **home:** shorten the hero title ([654a3b0](https://github.com/mobiera/website/commit/654a3b052154fd475f140cbc745bc0b581e8747d))
+* **trust:** real Verana lockups on the three bodies' cards ([e8fba9b](https://github.com/mobiera/website/commit/e8fba9bd086b2ae0e8a5d4ded48275ef691ccb13))
+* **trust:** real Verana lockups on the three bodies' cards, Playground button ([3e3f4aa](https://github.com/mobiera/website/commit/3e3f4aa1df047fef4a64c955ca13028ba569d170))
+* **trust:** show the verana.io lockup on the Read more button ([8489da7](https://github.com/mobiera/website/commit/8489da713754691dffac7137aa5bfca12e3a37ad))
+* **trust:** swap the three Verana cards to the lockups and add a Playground button ([a99023a](https://github.com/mobiera/website/commit/a99023a9d82edd5541dc4388c309ad139c744ad5))
+
 ## [1.4.0](https://github.com/mobiera/website/compare/v1.3.0...v1.4.0) (2026-09-10)
 
 
