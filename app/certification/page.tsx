@@ -33,7 +33,7 @@ export default function Page() {
         <Steps items={TRACKS} />
       </Section>
 
-      <Section eyebrow="The exams" lead="One exam per track, eight in total. Hands-on on the Verana testnet, in person, in English or Spanish. Online exams follow. Pass every exam and you are a Verana Certified Professional. Pass mark and retakes are set at enrollment." />
+      <Section eyebrow="The exams" lead="One exam per track, eight in total. Hands-on on the Verana testnet, in person, in English or Spanish. Online exams follow. Pass mark: 90 percent per exam. A failed exam is retaken on its own, with no waiting period. Pass every exam and you are a Verana Certified Professional." />
 
       <Section eyebrow="Training" lead="Instructor-led by Mobiera, about three weeks, scheduled per company. Self-paced material on docs.verana.io as it is published." />
 

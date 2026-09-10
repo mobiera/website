@@ -47,8 +47,9 @@ Eight tracks, one exam each.
 ## The exams
 
 One exam per track, eight in total. Hands-on on the Verana testnet, in person,
-in English or Spanish. Online exams follow. Pass every exam and you are a Verana
-Certified Professional. Pass mark and retakes are set at enrollment.
+in English or Spanish. Online exams follow. Pass mark: 90 percent per exam. A
+failed exam is retaken on its own, with no waiting period. Pass every exam and
+you are a Verana Certified Professional.
 
 ## Training
 

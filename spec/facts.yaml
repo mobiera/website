@@ -144,7 +144,7 @@ verana:
       - Selling Verana-based services
       - The Verana community (working groups)
       - The Verana brand (usage rules and recommendations)
-    exams: "one per track, eight in total; hands-on on the Verana testnet; in person for now, online exams later; English or Spanish; pass mark and retakes set at enrollment"
+    exams: "one per track, eight in total; hands-on on the Verana testnet; in person for now, online exams later; English or Spanish; pass mark 90 percent per exam; a failed exam is retaken per track with no waiting period"
     training: "instructor-led by Mobiera, about three weeks, scheduled per company; self-paced material on docs.verana.io as it is published"
     prerequisites:
       professionals: Contributor member of the Verana Foundation
