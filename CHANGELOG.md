@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/mobiera/website/compare/v1.3.0...v1.4.0) (2026-09-10)
+
+
+### Features
+
+* **design:** Font Awesome icons on card and feature titles ([a98b50d](https://github.com/mobiera/website/commit/a98b50d941966f4da8c50ce05d83649a0fbc4578))
+* **design:** Font Awesome icons on card and feature titles ([85e9832](https://github.com/mobiera/website/commit/85e9832d665605dec4fee3bc277fe3bbe23f0feb))
+
 ## [1.3.0](https://github.com/mobiera/website/compare/v1.2.0...v1.3.0) (2026-09-10)
 
 
