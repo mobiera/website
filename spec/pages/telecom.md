@@ -70,7 +70,7 @@ Four of these implementations are open source on github.com/mobiera.
 Integration with your SMSC, MMSC and billing; managed operations of hosted
 nodes; SIM and OTA engineering; consulting on push channels and campaigns.
 
-> CTA: Services → /services
+> CTA: Talk to us → /contact
 
 ## Who runs it
 
