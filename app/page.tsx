@@ -47,7 +47,7 @@ export default function Home() {
           <Card>
             <span className="eyebrow tag">01</span>
             <CardTitle icon={faShieldHalved}>Verifiable Credentials and trust networks</CardTitle>
-            <p className="text-muted">Trust that anyone can verify, built on Verana.</p>
+            <p className="text-muted">Trust that anyone can verify, built on the <a href="https://verana.io" className="text-link" rel="noopener">Verana Trust Infrastructure</a>.</p>
             <ul>
               <li>Founding member of the Verana Foundation since June 2025.</li>
               <li>Trust ecosystems, issuer and verifier services, wallet and agent integration.</li>

@@ -21,7 +21,7 @@ mobile networks since 2012.
 
 ### Verifiable Credentials and trust networks
 
-Trust that anyone can verify, built on Verana.
+Trust that anyone can verify, built on the [Verana Trust Infrastructure](https://verana.io).
 
 - Founding member of the Verana Foundation since June 2025.
 - Trust ecosystems, issuer and verifier services, wallet and agent integration.
