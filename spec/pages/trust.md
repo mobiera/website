@@ -32,8 +32,9 @@ themselves.
 
 ### Official certificator
 
-Designated by the Verana Foundation as the official certificator for integrators
-building products and services on Verana in Latin America.
+Designated by the Verana Foundation as the official certificator for Latin
+America: Mobiera trains integrators to build on Verana and certifies the
+professionals who pass the exams.
 
 > CTA: Certification → /certification
 

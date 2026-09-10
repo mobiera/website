@@ -129,13 +129,32 @@ verana:
     status: testnet                      # verana.io
     roadmap: "v4 in progress 2026 Q1-Q3; v5 mainnet readiness 2026 Q4; mainnet launch 2027 Q1"   # verana.io roadmap
     three_parts: [sovereign trust ecosystems, verifiable identity (verify first then connect), the Trust Graph (discovery)]
-  certification:                         # decision 2026-09-09
+  certification:                         # decisions 2026-09-09 and 2026-09-10
     title: official certificator for Verana integrators in Latin America
     designated_by: Verana Foundation
     since: 2026-04
     valid_until: 2029-05
-    on_page: "only the designating body and the validity date; nothing else about the designation; it will be delivered as a Verifiable Credential later"
-    scope: [organizations, verifiable services including AI agents, user agents and wallets (one authorization per product line)]
+    what_it_is: "a training and certification program for integrators: how to build services using Verana. Not related to the ECS Ecosystem or credential onboarding."
+    tracks:                              # one exam per track
+      - Verana foundations
+      - Business wallets (VS-Agent)
+      - Ecosystems
+      - Hosting services for customers (issuers, verifiers, AI agents)
+      - Personal wallets (integrating and customizing wallets with Verana)
+      - Selling Verana-based services
+      - The Verana community (working groups)
+      - The Verana brand (usage rules and recommendations)
+    exams: "one per track, eight in total; hands-on on the Verana testnet; in person for now, online exams later; English or Spanish; pass mark 90 percent per exam; a failed exam is retaken per track with no waiting period"
+    training: "instructor-led by Mobiera, about three weeks, scheduled per company; self-paced material on docs.verana.io as it is published"
+    prerequisites:
+      professionals: Contributor member of the Verana Foundation
+      companies: Contributor or Associate member of the Verana Foundation
+    professional_certification: "Verana Certified Professional: pass every exam; valid two years; certificate plus a Verifiable Credential to the professional's personal wallet"
+    integrator_certification: "Verana Certified Integrator: two certified professionals and one delivered project, or a public Playground use case published on the company's own infrastructure; a Verifiable Credential to the company's business wallet"
+    directory: "generated from the Trust Graph (companies presenting a valid Verana Certified Integrator credential issued by Mobiera); no hand-maintained list; empty until the first cohort"
+    pricing: on request
+    not_yet: "the certification ecosystem and credential schemas on the registry, and online exams (decision 2026-09-10: later)"
+    on_page_about_designation: "only the designating body and the validity date"
   relationship_to_2060: "2060 OÜ (Tallinn) is an independent company that leads the Verana specifications and builds Hologram; Mobiera partners with it and co-founded the Verana Foundation alongside it. No people named."
 
 news_at_launch:

@@ -186,7 +186,24 @@ On a plain Docker host, the same names go in an env file:
 `ALERT_WEBHOOK_URL` is optional: a Discord- or Slack-compatible webhook that
 receives a message when an inquiry could not be delivered.
 
-## 6. Check it works
+## 6. Certified integrators directory (Trust Graph)
+
+The list on `/certification` is generated from the Verana Trust Graph, not
+maintained by hand. It switches on when two values are set in the runtime
+secret (or the chart's `env`):
+
+| Variable | Value |
+|---|---|
+| `TRUST_GRAPH_URL` | base URL of the Trust Graph (the search endpoint is `/v4/graph/search`) |
+| `CERTIFIED_INTEGRATOR_SCHEMA_ID` | ledger id of the "Verana Certified Integrator" credential schema, in the ecosystem Mobiera controls on the registry |
+| `VERIFY_URL_TEMPLATE` | optional; the per-entry verify link, `{did}` replaced (default: verana.io's resolve page) |
+
+A company appears once its business wallet publishes the credential as a
+Linked Verifiable Presentation and the graph has indexed it; it disappears when
+the credential expires or is revoked. Results are cached for an hour. Until
+the Trust Graph is live the section shows the first-cohort note.
+
+## 7. Check it works
 
 1. Open `/contact`, send a message with a real topic.
 2. The recipient mailbox for that topic receives "[mobiera.io contact]

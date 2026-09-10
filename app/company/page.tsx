@@ -27,7 +27,7 @@ export default function Page() {
       <Section eyebrow="Who we are">
         <div className="grid-2">
           <p className="text-muted">We build software that mobile operators run inside their networks: the SIM toolkit push and messaging platform behind campaigns that reach about 60 million subscribers a day, and the AI agents that answer their support questions over SMS. We deploy it, integrate it with the operator's systems, and operate it, on their infrastructure or ours.</p>
-          <p className="text-muted">Since 2022 we also build verifiable credential systems. In June 2025 we co-founded the Verana Foundation, the non-profit steward of the open trust layer, and in April 2026 the Foundation designated Mobiera the official certificator for integrators building on Verana in Latin America.</p>
+          <p className="text-muted">Since 2022 we also build verifiable credential systems. In June 2025 we co-founded the Verana Foundation, the non-profit steward of the open trust layer, and in April 2026 the Foundation designated Mobiera the official certificator for Latin America: we train integrators to build on Verana and certify the professionals who pass the exams.</p>
         </div>
       </Section>
 

@@ -76,12 +76,12 @@ America.
 
 - Ecosystem design and governance frameworks.
 - Issuer and verifier services, wallets and AI agents as Verifiable Services.
-- Certification that makes an integrator's products trust-resolvable on Verana.
+- Training and certification for the integrators who build on Verana.
 
-### Become trusted on Verana
+### Get Verana certified
 
-Mobiera is the official certificator for integrators building on Verana in
-Latin America. Designated by the Verana Foundation. Valid until May 2029.
+Mobiera trains integrators to build on Verana and certifies the professionals
+who pass the exams. Designated by the Verana Foundation. Valid until May 2029.
 
 > CTA: Get certified → /certification
 

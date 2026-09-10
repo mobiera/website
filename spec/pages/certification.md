@@ -1,76 +1,108 @@
 ---
-title: Verana integrator certification
-description: Mobiera is the official certificator for integrators building products and services on the Verana network in Latin America. Review, interoperability testing on the Playground, and the credentials that make your products verifiable.
+title: Verana certification
+description: Mobiera trains integrators to build on Verana and certifies the professionals who pass the eight exams. Verana Certified Professional and Verana Certified Integrator, for Latin America.
 url: /certification
 ---
 
-# Become trusted on Verana.
+# Get Verana certified.
 
-Mobiera is the official certificator for integrators building products and
-services on the Verana network in Latin America. We review your implementation,
-test it on the Playground, and issue the credentials that make your
-organization, services and wallets verifiable.
+Mobiera trains integrators to build on Verana and certifies the professionals who
+pass the exams: business wallets, ecosystems, hosting services for customers,
+personal wallets, and how to sell and represent Verana. Designated by the
+Verana Foundation as the official certificator for Latin America.
 
-> CTA: Apply for certification → /contact?topic=certification
+> CTA: Enroll → /contact?topic=certification
 
 ## Why certification exists
 
-On Verana, a service, an organization or a user agent is trusted only if it
-holds Essential Credentials issued by an issuer accredited in the ECS
-Ecosystem, the identity baseline governed by the Verana Council. Peers verify
-first, then connect. A product that cannot be trust-resolved is refused by
-wallets and by other services.
+Verana is open, public infrastructure. What a customer buys from an
+integrator is the ability to put it to work: a business wallet that stays up,
+an ecosystem whose governance holds, services hosted with the keys and the
+operations a regulated client expects. Certification proves an integrator can
+do that, against a curriculum maintained by the Foundation's official
+certificator for Latin America.
 
-Certification is how an integrator's products get there.
+## The curriculum
 
-## What we certify
+Eight tracks, one exam each.
 
-- **Organizations**: the legal entity behind the products, identified by its
-  Organization credential.
-- **Verifiable services, including AI agents**: conformance to the Verifiable
-  Trust specification, so the service proves what it is and who operates it
-  before any connection.
-- **User agents and wallets**: one authorization per product line, so every
-  instance can prove it is a genuine Verifiable User Agent.
+1. **Verana foundations.** The three parts (trust ecosystems, verifiable
+   identity, the Trust Graph), the public registry, the standards.
+2. **Business wallets.** Deploying and operating VS-Agent: DIDs, credentials
+   and Linked Verifiable Presentations, key custody, upgrades.
+3. **Ecosystems.** Credential schemas, the participant tree, permission modes,
+   business models, a governance framework from the Council's template,
+   onboarding participants.
+4. **Hosting services for customers.** Issuers, verifiers and AI agents as
+   Verifiable Services; operations, monitoring, backups, security.
+5. **Personal wallets.** Integrating and customizing wallets with Verana,
+   DIDComm and OpenID4VC flows, interoperability on the Playground.
+6. **Selling Verana-based services.** The value proposition, ecosystem
+   business models, the pitch to a customer.
+7. **The Verana community.** The Foundation's working groups, how to take
+   part and how to promote them.
+8. **The Verana brand.** Usage rules and recommendations: what an integrator
+   may claim, and how to present it.
 
-## The process
+## The exams
 
-1. **Apply.** Tell us what you build and where it runs.
-2. **Review.** DID documents, Linked Verifiable Presentations, Proof-of-Trust
-   display, fail-closed trust resolution, against the Verifiable Trust
-   specification.
-3. **Interoperability test.** On the Verana Playground: issue and present
-   credentials in SD-JWT VC and AnonCreds, over DIDComm and OpenID4VC, against
-   the reference issuers, verifiers and wallets.
-4. **Certification.** Your participant entries are validated on the registry
-   and your credentials issued.
-5. **Listing.** Your products appear in Mobiera's directory of certified
-   integrators and become discoverable through the Trust Graph.
-6. **Renewal.** Per validity period, and on major versions of a product.
+One exam per track, eight in total. Hands-on on the Verana testnet, in person,
+in English or Spanish. Online exams follow. Pass mark: 90 percent per exam. A
+failed exam is retaken on its own, with no waiting period. Pass every exam and
+you are a Verana Certified Professional.
+
+## Training
+
+Instructor-led by Mobiera, about three weeks, scheduled per company.
+Self-paced material on docs.verana.io as it is published.
+
+## Prerequisites
+
+- Professionals: a Contributor member of the Verana Foundation. Contributor
+  membership is free and open to individuals.
+- Companies: a Contributor or Associate member of the Verana Foundation.
+
+> CTA: Join the Foundation → https://veranafoundation.org/join
+
+## Two levels of recognition
+
+- **Verana Certified Professional.** By exam, valid two years. Issued as a
+  certificate and as a Verifiable Credential to the professional's personal
+  wallet.
+- **Verana Certified Integrator.** A company with two certified professionals and
+  one delivered project, or a public Playground use case published on its own
+  infrastructure. Issued as a Verifiable Credential to the company's business
+  wallet.
+
+## Certified integrators
+
+Generated from the Trust Graph: the companies whose business wallet presents a
+valid Verana Certified Integrator credential issued by Mobiera. A company
+proves its certification from its own wallet, verifiable by anyone, the same
+way it will prove everything else on Verana. Each entry: name, country, a
+verify link.
+
+<!-- empty state: "The first cohort is in training. Certified integrators appear here from the Trust Graph." -->
 
 ## Who it is for
 
-Wallet vendors, AI-agent builders, software vendors, system integrators and
-operators launching verifiable services, based or operating in Latin America.
-Requests from elsewhere are pointed to Verana's own channels.
+Integrators, software vendors, consultancies and operator IT teams in Latin
+America.
 
 ## The designation
 
 Designated by the Verana Foundation. Valid until May 2029.
 
-<!-- when the Foundation delivers the designation as a Verifiable Credential, add: "Verify this designation" → link -->
+## Pricing and schedule
 
-## Timing
+On request. Training is scheduled per company.
 
-Certification is available on the Verana testnet now. Mainnet certification
-starts at network launch.
-
-> CTA: Apply for certification → /contact?topic=certification
+> CTA: Enroll → /contact?topic=certification
 
 ## Sources
 
-- docs.verana.io: user-agent certification, ECS trust registries.
-- veranacouncil.org: ECS-EGF and the five Essential Credential Schemas.
-- verana.io: Playground, Verifiable Trust specification.
-- Designation: facts.yaml `verana.certification` (decision 2026-09-09; nothing
-  else about the designation goes on the page).
+- Program definition: facts.yaml `verana.certification` (decisions 2026-09-10).
+- Foundation membership classes: veranafoundation.org/join.
+- Trust Graph: verana-spec v4 verana-graph (search surface `Did`, filter by
+  credential schema; expired credentials are never returned).
+- Designation: facts.yaml `verana.certification` (decision 2026-09-09).

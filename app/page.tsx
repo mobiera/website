@@ -94,14 +94,14 @@ export default function Home() {
             <ul>
               <li>Ecosystem design and governance frameworks.</li>
               <li>Issuer and verifier services, wallets and AI agents as Verifiable Services.</li>
-              <li>Certification that makes an integrator's products trust-resolvable on Verana.</li>
+              <li>Training and certification for the integrators who build on Verana.</li>
             </ul>
             <MoreLink href="/trust">Trust</MoreLink>
           </Card>
           <div className="cert">
-            <span className="pot"><i />Proof-of-Trust · verified</span>
-            <h3 className="text-[1.4rem]">Become trusted on Verana</h3>
-            <p className="muted">Mobiera is the official certificator for integrators building on Verana in Latin America. Designated by the Verana Foundation. Valid until May 2029.</p>
+            <span className="pot"><i />Eight exams · two-year credential</span>
+            <h3 className="text-[1.4rem]">Get Verana certified</h3>
+            <p className="muted">Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams. Designated by the Verana Foundation. Valid until May 2029.</p>
             <Link href="/certification" className="btn">Get certified <span className="arrow" aria-hidden="true">→</span></Link>
           </div>
         </div>
