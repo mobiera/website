@@ -4,7 +4,7 @@ import { SITE_URL } from "./lib/site";
 
 const ROUTES = [
   "/", "/telecom", "/telecom/aircast", "/telecom/ai-agents", "/trust", "/trust/services", "/trust/verana",
-  "/certification", "/services", "/company", "/company/careers", "/news", "/contact", "/privacy", "/cookies",
+  "/certification", "/company", "/company/careers", "/news", "/contact", "/privacy", "/cookies",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -3,7 +3,7 @@
 ## Header
 
 Logo (normal variant; reduced mark under 640 px) · Telecom · Trust ·
-Certification · Services · Company · News · [Contact]
+Certification · Company · News · [Contact]
 
 No login. Documentation links live on product pages and in the footer.
 
@@ -21,7 +21,6 @@ launch, an event) and is removed when the item is past.
 /trust/services          Ecosystem design, issuer and verifier services, wallets and agents
 /trust/verana            Mobiera and Verana
 /certification           Verana certification: training and exams for integrators in Latin America
-/services                Engineering and operations
 /company                 About Mobiera
 /company/careers         Careers
 /news                    News and articles
@@ -31,11 +30,11 @@ launch, an event) and is removed when the item is past.
 /cookies                 Cookie policy
 ```
 
-Fifteen pages plus one per news item.
+Fourteen pages plus one per news item.
 
 ## Footer
 
-- **Products and services**: Aircast, AI One, Services, Documentation
+- **Products**: Aircast, AI One, Documentation
   (https://docs.mobiera.io), GitHub (https://github.com/mobiera)
 - **Trust**: Verifiable trust, Certification, Verana Foundation
   (https://veranafoundation.org), verana.io (https://verana.io), Verana Council

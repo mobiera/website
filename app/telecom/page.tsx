@@ -50,7 +50,7 @@ export default function Page() {
       </Section>
 
       <Section eyebrow="Services around the platforms" title="Integration, operations, SIM and OTA engineering" lead="Integration with your SMSC, MMSC and billing; managed operations of hosted nodes; SIM and OTA engineering; consulting on push channels and campaigns.">
-        <MoreLink href="/services">Services</MoreLink>
+        <MoreLink href="/contact?topic=aircast">Talk to us</MoreLink>
       </Section>
 
       <Section eyebrow="Who runs it">

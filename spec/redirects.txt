@@ -1,6 +1,6 @@
 # Old URL (Hugo site)            New URL                      Status
 /telecom/                        /telecom                     301
-/dev-sec-ops/                    /services                    301
+/dev-sec-ops/                    /telecom                     301
 /innovation/                     /trust                       301
 /about-us/                       /company                     301
 /careers/                        /company/careers             301

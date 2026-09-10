@@ -12,11 +12,10 @@ export default function Footer() {
             <p className="mt-2 max-w-[34ch]">Operator-grade software for mobile networks and verifiable trust on Verana.</p>
           </div>
           <div>
-            <h4>Products and services</h4>
+            <h4>Products</h4>
             <ul>
               <li><Link href="/telecom/aircast">Aircast</Link></li>
               <li><Link href="/telecom/ai-agents">AI One</Link></li>
-              <li><Link href="/services">Services</Link></li>
               <li><a href={LINKS.docs} rel="noopener">Documentation ↗</a></li>
               <li><a href={LINKS.github} rel="noopener">GitHub ↗</a></li>
             </ul>
