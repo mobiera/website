@@ -31,8 +31,8 @@ export default function Page() {
           </Card>
           <Card>
             <h3>Official certificator</h3>
-            <p className="text-muted">Designated by the Verana Foundation as the official certificator for integrators building products and services on Verana in Latin America.</p>
-            <MoreLink href="/certification">Certification</MoreLink>
+            <p className="text-muted">Designated by the Verana Foundation as the official certificator for Latin America: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams.</p>
+            <MoreLink href="/certification">Get Verana certified</MoreLink>
           </Card>
         </div>
       </Section>

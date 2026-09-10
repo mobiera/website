@@ -2,7 +2,7 @@
 title: The Verana Foundation designates Mobiera official integrator certificator for Latin America
 date: 2026-04-15
 tags: [Trust]
-summary: Mobiera is the official certificator for integrators building products and services on the Verana network in Latin America. The designation is valid until May 2029.
+summary: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams, as the Foundation's official certificator for Latin America. The designation is valid until May 2029.
 ---
 
 <!-- exact day in April 2026 to confirm -->
@@ -11,15 +11,14 @@ The Verana Foundation has designated Mobiera the official certificator for
 integrators building products and services on the Verana network in Latin
 America. The designation is valid until May 2029.
 
-On Verana, a service, an organization or a user agent is trusted only if it
-holds Essential Credentials issued within the ECS Ecosystem. Certification is
-how an integrator's products get there: Mobiera reviews the implementation
-against the Verifiable Trust specification, tests interoperability on the
-Verana Playground, and issues the credentials that make the organization, its
-services and its wallets verifiable.
-
-Certification is available on the Verana testnet now; mainnet certification
-starts at network launch.
+The program trains integrators to build services on Verana: deploying
+business wallets, creating ecosystems, hosting services for customers,
+integrating personal wallets, and how to sell and represent Verana. Candidates
+sit one hands-on exam per track on the Verana testnet, in English or Spanish;
+pass them all and you are a Verana Certified Professional, for two years, with
+a Verifiable Credential in your wallet. A company with two certified
+professionals and a delivered project becomes a Verana Certified Integrator,
+with the credential in its business wallet.
 
 Read more: [Certification](/certification)
 

@@ -20,7 +20,7 @@ launch, an event) and is removed when the item is past.
 /trust                   Verifiable credentials and trust networks
 /trust/services          Ecosystem design, issuer and verifier services, wallets and agents
 /trust/verana            Mobiera and Verana
-/certification           Verana integrator certification for Latin America
+/certification           Verana certification: training and exams for integrators in Latin America
 /company                 About Mobiera
 /company/careers         Careers
 /news                    News and articles

@@ -40,7 +40,7 @@ export default function Page() {
       <Section eyebrow="What we contribute">
         <div className="grid-3">
           <Feature title="Telecom channels for the trust layer"><p>SMS, SIM toolkit and phone-number verification as first-class parts of verifiable interactions.</p></Feature>
-          <Feature title="Certification of integrators"><p>Across Latin America, as the Foundation's official certificator.</p></Feature>
+          <Feature title="Training and certification of integrators"><p>Across Latin America, as the Foundation's official certificator: eight tracks, one exam each, on the testnet.</p></Feature>
           <Feature title="Two working groups"><p>The Specification WG (SPEC-WG) and the Reference Implementation WG.</p></Feature>
         </div>
       </Section>
