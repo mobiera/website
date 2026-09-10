@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <PageHero eyebrow="Trust" title="Verifiable trust for services, people and AI agents." lead="Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is the official certificator for the integrators who build on it in Latin America.">
+      <PageHero eyebrow="Verifiable Credentials and trust networks" title="Verifiable trust for services, people and AI agents." lead="Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is the official certificator for the integrators who build on it in Latin America.">
         <ButtonLink href="/trust/services" variant="primary">Our trust services</ButtonLink>
         <ButtonLink href="/certification">Get certified</ButtonLink>
       </PageHero>
@@ -35,6 +35,10 @@ export default function Page() {
             <MoreLink href="/certification">Get Verana certified</MoreLink>
           </Card>
         </div>
+      </Section>
+
+      <Section eyebrow="Why Mobiera" title="Fourteen years of software other parties depend on" lead="Trust infrastructure has to stay up. The team that designs your ecosystem has run platforms inside 25+ mobile networks since 2012, reaching about 60 million subscribers a day, and brings the same operations discipline to VS-Agents, indexers and resolvers.">
+        <MoreLink href="/telecom">Telecom software and services</MoreLink>
       </Section>
 
       <Section eyebrow="What Verana is, in one paragraph" lead="Verana is the open, public, neutral trust infrastructure for the internet, in three parts: sovereign trust ecosystems that define who is accredited to issue and verify credentials; verifiable identity, where a service, a person or an AI agent proves who is behind it before any connection; and the Trust Graph, which makes services discoverable by the credentials they hold. Open source, owned by no one.">

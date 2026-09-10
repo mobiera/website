@@ -33,6 +33,7 @@ veranacouncil.org, 2060.io) with one difference: mobiera.io sells.
 | Term | Use | Do not use |
 |---|---|---|
 | Mobiera | "Mobiera" in news, "we" on pages, "Mobiera SAS" in legal text | MOBIERA, Mobiera S.A.S. in running text |
+| The trust line | "Verifiable Credentials" (capitalized, the W3C term, better known than "trust networks") as the nav label and line name; "trust networks" in running text | "Trust" alone as a label |
 | Products | Aircast, AI One, Sleepy, Micro, USTK | AIRCAST, AI-One, AI Friends (internal only) |
 | Applets | "the Sleepy applet", "the Micro applet" | "Sleepy Applet" as a proper noun |
 | Acronyms | STK (SIM toolkit), SAT (SIM application toolkit), OTA, RAM, RFM, MNO, MVNO, VAS, SMSC, SMPP, MM7, TPS; expand on first use per page | |

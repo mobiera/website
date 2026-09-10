@@ -2,8 +2,8 @@
 
 ## Header
 
-Logo (normal variant; reduced mark under 640 px) · Telecom · Trust ·
-Certification · Company · News · [Contact]
+Logo (normal variant; reduced mark under 640 px) · Verifiable Credentials ·
+Certification · Telecom · Company · News · [Contact]
 
 No login. Documentation links live on product pages and in the footer.
 
@@ -34,11 +34,11 @@ Fourteen pages plus one per news item.
 
 ## Footer
 
-- **Products**: Aircast, AI One, Documentation
+- **Verifiable Credentials**: Trust networks, Trust services, Certification,
+  Verana Foundation (https://veranafoundation.org), verana.io
+  (https://verana.io), Verana Council (https://veranacouncil.org)
+- **Telecom**: Platforms, Aircast, AI One, Documentation
   (https://docs.mobiera.io), GitHub (https://github.com/mobiera)
-- **Trust**: Verifiable trust, Certification, Verana Foundation
-  (https://veranafoundation.org), verana.io (https://verana.io), Verana Council
-  (https://veranacouncil.org)
 - **Company**: About, Open source (anchor on /company), Careers, News, Contact
 - **Legal**: Privacy, Cookies
 - Line: "© 2012-{current year} Mobiera SAS, Bogotá D.C., Colombia"
@@ -46,7 +46,7 @@ Fourteen pages plus one per news item.
 
 ## Contact form topics
 
-Aircast and STK push · AI agents · Trust services · Certification · Partnership ·
+Trust services · Certification · Aircast and STK push · AI agents · Partnership ·
 Careers · Press · General
 
 Product pages preselect their topic through a query parameter, for example

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LogoWall from "@/app/components/LogoWall";
-import { ButtonLink, Card, Chips, CtaBand, Feature, MoreLink, PageHero, Section } from "@/app/components/ui";
+import TpsChart from "@/app/components/TpsChart";
+import { ButtonLink, Card, Chips, CtaBand, Eyebrow, Feature, MoreLink, Section } from "@/app/components/ui";
 import { OPERATORS, TELECOM_STANDARDS } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
 
@@ -13,10 +14,22 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <PageHero eyebrow="Telecom" title="Software that runs inside the operator's network." lead="Push marketing on every handset, bulk messaging and SIM OTA, AI agents on SMS. Deployed on your infrastructure or ours, shaped to your SMSC's throughput. 800 million subscribers reachable, about 60 million reached per day.">
-        <ButtonLink href={LINKS.docs} variant="primary">Read the docs</ButtonLink>
-        <ButtonLink href="/contact?topic=aircast">Talk to us</ButtonLink>
-      </PageHero>
+      <div className="ground">
+        <section className="hero container-x">
+          <div className="hero-grid">
+            <div>
+              <Eyebrow>Telecom · 25+ operators since 2012</Eyebrow>
+              <h1 className="mt-3">Software that runs inside the operator's network.</h1>
+              <p className="lead">Push marketing on every handset, bulk messaging and SIM OTA, AI agents on SMS. Deployed on your infrastructure or ours, shaped to your SMSC's throughput. 800 million subscribers reachable, about 60 million reached per day.</p>
+              <div className="ctas">
+                <ButtonLink href={LINKS.docs} variant="primary">Read the docs</ButtonLink>
+                <ButtonLink href="/contact?topic=aircast">Talk to us</ButtonLink>
+              </div>
+            </div>
+            <TpsChart />
+          </div>
+        </section>
+      </div>
 
       <Section eyebrow="Two platforms">
         <div className="grid-2">

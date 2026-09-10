@@ -38,6 +38,15 @@ professionals who pass the exams.
 
 > CTA: Certification → /certification
 
+## Why Mobiera
+
+Trust infrastructure has to stay up. The team that designs your ecosystem
+has run platforms inside 25+ mobile networks since 2012, reaching about 60
+million subscribers a day, and brings the same operations discipline to
+VS-Agents, indexers and resolvers.
+
+> CTA: Telecom → /telecom
+
 ## What Verana is, in one paragraph
 
 Verana is the open, public, neutral trust infrastructure for the internet, in
