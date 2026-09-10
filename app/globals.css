@@ -156,6 +156,11 @@ a { color: inherit; }
   border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); color: var(--muted); cursor: pointer;
 }
 .theme-toggle:hover, .menu-btn:hover { color: var(--ink); border-color: var(--violet); }
+/* Breakpoints live here, not in Tailwind utilities: these component rules are
+   unlayered, so a utility like md:hidden would lose to them. */
+.nav-contact { display: none; }
+@media (min-width: 640px) { .nav-contact { display: inline-flex; } }
+@media (min-width: 768px) { .menu-btn, .mobile-menu { display: none; } }
 .mobile-menu { border-top: 1px solid var(--rule); background: var(--bg); }
 .mobile-menu nav { display: flex; flex-direction: column; gap: 6px; padding-top: 14px; padding-bottom: 18px; }
 .mobile-menu nav a { padding: 8px 0; font-weight: 600; }
