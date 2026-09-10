@@ -25,6 +25,11 @@ Direction A is the site's design. Its tokens are the `:root` blocks in
 `app/globals.css`; Sora, Manrope and IBM Plex Mono load through `next/font`.
 Directions B and C stay here as the record of the choice.
 
+Hero background (decided 10 September 2026): the square grid is replaced by
+the puzzle-piece M from the logo, outlined large and faded, offset to the
+right, over a soft violet glow. Chosen among five candidates (glow, signal
+lines, trust graph, mark, dot field): `hero-backgrounds.html`.
+
 ## The three directions
 
 | | A · Signal | B · Paper | C · Modular |

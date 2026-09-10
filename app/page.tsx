@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import JsonLd from "./components/JsonLd";
+import HeroMark from "./components/HeroMark";
 import ProofOfTrust from "./components/ProofOfTrust";
 import LogoWall from "./components/LogoWall";
 import NewsList from "./components/NewsList";
@@ -21,6 +22,7 @@ export default function Home() {
     <>
       <JsonLd />
       <div className="ground">
+        <HeroMark />
         <section className="hero container-x">
           <div className="hero-grid">
             <div>
