@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.6.0](https://github.com/mobiera/website/compare/v1.5.0...v1.6.0) (2026-09-10)
+
+
+### Features
+
+* **illustrations:** add the five chosen page illustrations ([1ee4670](https://github.com/mobiera/website/commit/1ee46707c062ff1ed37d6f1791fe90c5c41f793b))
+* **illustrations:** add the six chosen page illustrations ([8b96d06](https://github.com/mobiera/website/commit/8b96d062cd1c0f29d417a543039888567ae34689))
+* **illustrations:** add the trust triangle to the Trust services page ([020a158](https://github.com/mobiera/website/commit/020a158354c92794653054b614835770a2e2ec11))
+
+
+### Bug Fixes
+
+* **nav:** hide the hamburger on desktop and the Contact button on phones ([b7276ed](https://github.com/mobiera/website/commit/b7276ededcde94aae008bb501713a2c183d3c207))
+* **nav:** hide the hamburger on desktop and the Contact button on phones ([1f9f8b4](https://github.com/mobiera/website/commit/1f9f8b40ffe73a5dbaba6c66417e3a40e42243bb))
+
 ## [1.5.0](https://github.com/mobiera/website/compare/v1.4.0...v1.5.0) (2026-09-10)
 
 
