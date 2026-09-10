@@ -35,7 +35,6 @@ export const NAV = [
   { href: "/telecom", label: "Telecom" },
   { href: "/trust", label: "Trust" },
   { href: "/certification", label: "Certification" },
-  { href: "/services", label: "Services" },
   { href: "/company", label: "Company" },
   { href: "/news", label: "News" },
 ] as const;

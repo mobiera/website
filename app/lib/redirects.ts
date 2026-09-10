@@ -1,6 +1,6 @@
 // Old Hugo URLs to new ones (spec/redirects.txt). 410s are in proxy.ts.
 export const REDIRECTS = [
-  { source: "/dev-sec-ops", destination: "/services", permanent: true },
+  { source: "/dev-sec-ops", destination: "/telecom", permanent: true },
   { source: "/innovation", destination: "/trust", permanent: true },
   { source: "/about-us", destination: "/company", permanent: true },
   { source: "/careers", destination: "/company/careers", permanent: true },
