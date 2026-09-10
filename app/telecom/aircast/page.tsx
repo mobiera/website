@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { faArrowUpWideShort, faBullhorn, faBullseye, faCalendarDays, faChartLine, faClock, faCommentSms, faFeather, faFileArrowUp, faGauge, faListCheck, faMicrochip, faPuzzlePiece, faRecycle, faSatelliteDish } from "@fortawesome/free-solid-svg-icons";
+import AircastFlow from "@/app/components/AircastFlow";
 import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
@@ -44,6 +45,7 @@ export default function Page() {
             <p className="text-sm text-muted">Use cases: roll out, upgrade or remove an applet on existing SIMs; push SIM file updates such as PLMN lists.</p>
           </Card>
         </div>
+        <div className="illus-block mt-6"><AircastFlow /></div>
       </Section>
 
       <Section eyebrow="One campaign engine" title="Scheduling, targeting, lists, file drop, statistics">

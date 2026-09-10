@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { faBrain, faCommentSms, faComments, faCubes, faPlug, faReceipt } from "@fortawesome/free-solid-svg-icons";
+import AiOneHub from "@/app/components/AiOneHub";
 import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
@@ -27,7 +28,8 @@ export default function Page() {
             <p className="text-muted">A private DIDComm channel through Hologram Messaging, with rich messages, credential exchange and the Proof-of-Trust a subscriber sees before the first message.</p>
           </Card>
         </div>
-        <p className="text-muted mt-4">Web and in-app front ends follow as they ship.</p>
+        <div className="illus-block mt-6"><AiOneHub /></div>
+        <p className="text-muted">Web and in-app front ends follow as they ship.</p>
       </Section>
 
       <Section eyebrow="Verifiable by design" title="The operator's agent proves it is the operator's agent" lead="The agent is a Verifiable Service on the Verana network. It holds a Service credential and your operator's Organization credential, published in its DID document, so a subscriber's wallet resolves who operates it and shows a Proof-of-Trust before the conversation starts. Nobody can stand up a lookalike support agent for your brand.">

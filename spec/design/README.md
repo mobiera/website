@@ -62,3 +62,21 @@ partners, open source and latest news, contact, footer.
 3. Two diagrams are drawn in the chosen language: Aircast's three jobs and the
    certification process.
 4. The remaining fourteen pages are built from `../pages/*.md`.
+
+## Illustrations (2026-09-10)
+
+Static inline SVG components in `app/components/`, drawn in the site's tokens
+(text classes `.illus .t-*` in `app/globals.css`) so they follow the theme.
+Three candidates were shown per page; the chosen ones:
+
+| Page | Component | Chosen | Shows |
+| --- | --- | --- | --- |
+| /trust | `EcosystemTree` | A, top-down tree | Ecosystem root, grantors, issuers and verifiers, holders; Mobiera's branch highlighted |
+| /certification | `CertificationPath` | A, horizontal roadmap | Foundation member, training, eight exams, Certified Professional, company step, Certified Integrator, directory from the Trust Graph |
+| /telecom | `DeployStack` | C, two nodes, one stack | Two active-active georedundant nodes, each a layered stack down to the operator's SMSC, MMSC and SIM base, one monitoring strip |
+| /telecom/aircast | `AircastFlow` | A, engine to handset | Campaign engine, Artemis queues and SMPP/MM7 adapters, the operator's SMSC/MMSC, three lanes: STK, SMS/MMS, OTA |
+| /telecom/ai-agents | `AiOneHub` | B, hub | SMS and the operator mobile app on the left, LLM, MCP tools and billing on the right, Verana registry below |
+
+Still open: the trust triangle on /trust/services (B was reworked with the
+holder on top and issuer and verifier standing on the registry), the
+verify-first illustration, the locations map.

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { faCertificate, faDiagramProject, faHandshake, faHeadset, faMobileScreen, faSitemap } from "@fortawesome/free-solid-svg-icons";
+import EcosystemTree from "@/app/components/EcosystemTree";
 import VeranaLockup from "@/app/components/VeranaLockup";
 import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, MoreLink, PageHero, Section } from "@/app/components/ui";
 import { TRUST_STANDARDS } from "@/app/lib/content";
@@ -37,6 +38,7 @@ export default function Page() {
             <MoreLink href="/certification">Get Verana certified</MoreLink>
           </Card>
         </div>
+        <div className="illus-block mt-6"><EcosystemTree /></div>
       </Section>
 
       <Section eyebrow="Why Mobiera" title="Fourteen years of software other parties depend on" lead="Trust infrastructure has to stay up. The team that designs your ecosystem has run platforms inside 25+ mobile networks since 2012, reaching about 60 million subscribers a day, and brings the same operations discipline to VS-Agents, indexers and resolvers.">
