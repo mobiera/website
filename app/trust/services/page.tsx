@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { faIdCard, faServer, faSitemap, faWallet } from "@fortawesome/free-solid-svg-icons";
+import TrustTriangle from "@/app/components/TrustTriangle";
 import { ButtonLink, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
@@ -16,6 +17,10 @@ export default function Page() {
         <ButtonLink href="/contact?topic=trust" variant="primary">Talk to us</ButtonLink>
         <ButtonLink href={LINKS.playground}>Playground</ButtonLink>
       </PageHero>
+
+      <Section eyebrow="How trust works on Verana" title="Three parties, one registry, and where we come in" lead="An issuer gives a holder a credential; the holder presents a proof to a verifier; the verifier trusts the issuer because the Verana public registry says the issuer is accredited in a governed ecosystem. Mobiera designs the ecosystem, runs the issuer and verifier services, and integrates the wallets.">
+        <TrustTriangle />
+      </Section>
 
       <Section>
         <div className="grid-2">

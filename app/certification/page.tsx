@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { faBuilding, faBuildingShield, faUser, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 import CertifiedIntegrators from "./CertifiedIntegrators";
+import CertificationPath from "@/app/components/CertificationPath";
 import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
@@ -29,6 +30,10 @@ export default function Page() {
       </PageHero>
 
       <Section eyebrow="Why certification exists" lead="Verana is open, public infrastructure. What a customer buys from an integrator is the ability to put it to work: a business wallet that stays up, an ecosystem whose governance holds, services hosted with the keys and the operations a regulated client expects. Certification proves an integrator can do that, against a curriculum maintained by the Foundation's official certificator for Latin America." />
+
+      <Section eyebrow="The path" title="From Foundation member to a credential in your business wallet">
+        <CertificationPath />
+      </Section>
 
       <Section eyebrow="The curriculum" title="Eight tracks, one exam each">
         <Steps items={TRACKS} />

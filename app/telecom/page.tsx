@@ -3,6 +3,7 @@ import { faGauge, faHeartPulse, faLayerGroup, faPlug, faRobot, faServer, faSimCa
 import LogoWall from "@/app/components/LogoWall";
 import HeroMark from "@/app/components/HeroMark";
 import TpsChart from "@/app/components/TpsChart";
+import DeployStack from "@/app/components/DeployStack";
 import { ButtonLink, Card, CardTitle, Chips, CtaBand, Eyebrow, Feature, MoreLink, Section } from "@/app/components/ui";
 import { OPERATORS, TELECOM_STANDARDS } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
@@ -52,6 +53,7 @@ export default function Page() {
       </Section>
 
       <Section eyebrow="How we deploy" title="Your infrastructure or ours, at your network's pace">
+        <div className="illus-block"><DeployStack /></div>
         <div className="grid-2">
           <Feature icon={faServer} title="On your infrastructure or ours"><p>Every platform ships as containers. Run it on-premise in your data center, hosted by Mobiera, or hybrid: the campaign engine with you, bearer adapters and OTA executors where the traffic is.</p></Feature>
           <Feature icon={faLayerGroup} title="Scale by adding instances"><p>Every component on the campaign path (REST endpoint, campaign manager, bearer adapters, OTA executor) is stateless and queue-driven. When you need more throughput, you deploy more instances of the component that limits you. There is no central bottleneck.</p></Feature>
