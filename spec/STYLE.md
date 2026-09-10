@@ -37,7 +37,7 @@ veranacouncil.org, 2060.io) with one difference: mobiera.io sells.
 | Applets | "the Sleepy applet", "the Micro applet" | "Sleepy Applet" as a proper noun |
 | Acronyms | STK (SIM toolkit), SAT (SIM application toolkit), OTA, RAM, RFM, MNO, MVNO, VAS, SMSC, SMPP, MM7, TPS; expand on first use per page | |
 | Verana | Verana (the network), Verana Foundation, Verana Council, ECS Ecosystem, Essential Credential Schemas, Verifiable Service, Verifiable User Agent, Proof-of-Trust, VS-Agent, Trust Graph, Playground | "the Verana blockchain", "Verana Labs" (it is a GitHub organization, not a body) |
-| Certification | "the official certificator for Verana integrators in Latin America" | "accredited" (a specific ECS term), "authorized" |
+| Certification | "The official certificator for Verana integrators in Latin America"; "Verana Certified Professional" (people), "Verana Certified Integrator" (companies). It is a training and exam program: never describe it in ECS or credential-onboarding terms. Not "accredited" or "authorized". |
 | Partners | 2060 (the company), Hologram (its product), Orchestrating Identity, Idemia, Bitdefender, Amplitudes | "idemia", "2060 OÜ" outside legal text |
 | Customers | Claro, Telefónica, América Móvil, Ooredoo, Viettel, Digicel, Bitel, Viva, Halotel | trademark symbols |
 

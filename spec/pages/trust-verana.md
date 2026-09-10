@@ -37,8 +37,8 @@ three.
 
 - Telecom channels for the trust layer: SMS, SIM toolkit and phone-number
   verification as first-class parts of verifiable interactions.
-- Certification of integrators across Latin America, as the Foundation's
-  official certificator.
+- Training and certification of integrators across Latin America, as the
+  Foundation's official certificator.
 - Work in two Foundation working groups: the Specification WG (SPEC-WG) and
   the Reference Implementation WG.
 
