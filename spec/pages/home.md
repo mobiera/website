@@ -6,7 +6,7 @@ url: /
 
 <!-- eyebrow: VERIFIABLE CREDENTIALS · VERANA FOUNDATION CO-FOUNDER · LATIN AMERICA -->
 
-# Trust networks and Verifiable Credentials, built on Verana.
+# Trust networks and Verifiable Credentials.
 
 Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems
 for governments, sectors and enterprises, and certifies the integrators who

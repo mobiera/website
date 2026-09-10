@@ -28,7 +28,7 @@ export default function Home() {
           <div className="hero-grid">
             <div>
               <Eyebrow>Verifiable Credentials · Verana Foundation co-founder · Latin America</Eyebrow>
-              <h1 className="mt-3">Trust networks and Verifiable Credentials, built on Verana.</h1>
+              <h1 className="mt-3">Trust networks and Verifiable Credentials.</h1>
               <p className="lead">
                 Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.
               </p>
