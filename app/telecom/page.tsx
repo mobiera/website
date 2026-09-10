@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LogoWall from "@/app/components/LogoWall";
+import HeroMark from "@/app/components/HeroMark";
 import TpsChart from "@/app/components/TpsChart";
 import { ButtonLink, Card, Chips, CtaBand, Eyebrow, Feature, MoreLink, Section } from "@/app/components/ui";
 import { OPERATORS, TELECOM_STANDARDS } from "@/app/lib/content";
@@ -15,6 +16,7 @@ export default function Page() {
   return (
     <>
       <div className="ground">
+        <HeroMark />
         <section className="hero container-x">
           <div className="hero-grid">
             <div>

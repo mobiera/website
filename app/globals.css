@@ -42,8 +42,9 @@
   --green-soft: #173d33;
   --danger: #f08a96;
   --danger-soft: #4a2129;
-  --grid: rgba(131, 83, 242, 0.13);
   --glow: rgba(131, 83, 242, 0.28);
+  --mark-fill: rgba(131, 83, 242, 0.06);
+  --mark-stroke: rgba(131, 83, 242, 0.35);
   --shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.7);
 }
 
@@ -64,8 +65,9 @@
   --green-soft: #e3f8ef;
   --danger: #c2414f;
   --danger-soft: #fbe9ec;
-  --grid: rgba(25, 36, 66, 0.07);
-  --glow: rgba(131, 83, 242, 0.14);
+  --glow: rgba(131, 83, 242, 0.16);
+  --mark-fill: rgba(131, 83, 242, 0.05);
+  --mark-stroke: rgba(131, 83, 242, 0.30);
   --shadow: 0 20px 50px -30px rgba(12, 18, 60, 0.5);
 }
 
@@ -158,18 +160,19 @@ a { color: inherit; }
 .mobile-menu nav a.active { color: var(--violet-ink); }
 
 /* Ground and hero --------------------------------------------------------- */
-.ground {
-  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 48px 48px;
-  background-position: center top;
-}
+/* The hero ground: the puzzle-piece M from the logo, outlined large and faded,
+   offset to the right (decision of 10 September 2026, replacing the grid),
+   over a soft violet glow. */
+.ground { position: relative; overflow: hidden; isolation: isolate; }
+.hero-mark { position: absolute; right: -6%; top: -12%; width: min(62vw, 760px); height: auto; z-index: 0; pointer-events: none; }
 .hero { position: relative; padding: 76px 24px 60px; overflow: hidden; }
 .hero::before {
   content: ""; position: absolute; inset: auto -10% -40% 30%; height: 520px;
-  background: radial-gradient(closest-side, var(--glow), transparent 70%); pointer-events: none;
+  background: radial-gradient(closest-side, var(--glow), transparent 70%); pointer-events: none; opacity: 0.7;
 }
-.hero-inner { position: relative; max-width: 66ch; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px; align-items: center; position: relative; }
+.hero-inner { position: relative; max-width: 66ch; z-index: 1; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px; align-items: center; position: relative; z-index: 1; }
+@media (max-width: 900px) { .hero-mark { width: 90vw; right: -32%; top: -6%; opacity: 0.6; } }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
 /* Cards, chips, stats ----------------------------------------------------- */

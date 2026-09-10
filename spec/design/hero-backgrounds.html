@@ -1,0 +1,269 @@
+<title>Mobiera Hero Backgrounds</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{color-scheme:dark;--bg:#0b1024;--surface:#121938;--surface-2:#1a2347;--ink:#eef0fa;--muted:#9aa3c2;--rule:#26305a;--violet:#8353f2;--violet-deep:#5e3abe;--violet-ink:#b4a0ff;--green:#50e2aa;--green-ink:#6be9ba;--green-soft:#173d33;
+    --glow:rgba(131,83,242,.30);--glow2:rgba(80,226,170,.14);--line:rgba(131,83,242,.22);--node-v:rgba(180,160,255,.85);--node-g:rgba(80,226,170,.9);--mark-fill:rgba(131,83,242,.06);--mark-stroke:rgba(131,83,242,.35);--dot:rgba(131,83,242,.34);
+    --display:"Sora","Avenir Next",system-ui,sans-serif;--body:"Manrope","Segoe UI",Roboto,sans-serif;--mono:"IBM Plex Mono",Menlo,Consolas,monospace}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]){color-scheme:light;--bg:#f4f5fb;--surface:#fff;--surface-2:#eaecf6;--ink:#12183a;--muted:#5a6285;--rule:#dcdfee;--violet-ink:#6a3fd6;--green-ink:#178a5e;--green-soft:#e3f8ef;
+    --glow:rgba(131,83,242,.16);--glow2:rgba(80,226,170,.14);--line:rgba(131,83,242,.20);--node-v:rgba(106,63,214,.75);--node-g:rgba(23,138,94,.85);--mark-fill:rgba(131,83,242,.05);--mark-stroke:rgba(131,83,242,.30);--dot:rgba(131,83,242,.28)}}
+  :root[data-theme="light"]{color-scheme:light;--bg:#f4f5fb;--surface:#fff;--surface-2:#eaecf6;--ink:#12183a;--muted:#5a6285;--rule:#dcdfee;--violet-ink:#6a3fd6;--green-ink:#178a5e;--green-soft:#e3f8ef;
+    --glow:rgba(131,83,242,.16);--glow2:rgba(80,226,170,.14);--line:rgba(131,83,242,.20);--node-v:rgba(106,63,214,.75);--node-g:rgba(23,138,94,.85);--mark-fill:rgba(131,83,242,.05);--mark-stroke:rgba(131,83,242,.30);--dot:rgba(131,83,242,.28)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  h1{font-family:var(--display);font-size:clamp(2rem,4.2vw,3.2rem);font-weight:700;line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;text-wrap:balance}
+  h2{font-family:var(--display);font-size:1.15rem;font-weight:600;margin:0}
+  p{margin:0}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .top{max-width:1180px;margin:0 auto;padding:36px 24px 8px;display:grid;gap:10px}
+  .top h2{font-size:1.5rem}
+  .top p{color:var(--muted);max-width:70ch}
+  .toggle{display:inline-flex;gap:8px;align-items:center}
+  .toggle button{font:inherit;font-weight:600;font-size:.9rem;padding:8px 14px;border-radius:6px;border:1px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer}
+  .toggle button:hover{border-color:var(--violet)}
+  .toggle button:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+  .list{display:grid;gap:40px;padding:24px 0 80px}
+  .variant{display:grid;gap:12px}
+  .label{max-width:1180px;margin:0 auto;padding:0 24px;display:grid;gap:4px;width:100%}
+  .label .name{display:flex;align-items:baseline;gap:12px}
+  .label .chip{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--violet);color:#fff}
+  .label p{color:var(--muted);max-width:76ch;font-size:.95rem}
+  .frame{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--bg)}
+  .hero{position:relative;overflow:hidden;padding:64px 24px 56px;isolation:isolate}
+  .hero-in{max-width:1180px;margin:0 auto;position:relative;z-index:2}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .lead{font-size:1.08rem;color:var(--muted);max-width:56ch;margin-top:18px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:6px;font-weight:600;font-size:.95rem;border:1px solid var(--rule);background:var(--surface);color:var(--ink)}
+  .btn.primary{background:var(--violet);border-color:var(--violet);color:#fff}
+  .btn .arrow{font-family:var(--mono)}
+  .panel{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px 18px 14px;box-shadow:0 20px 50px -30px rgba(0,0,0,.6)}
+  .panel-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+  .panel-head b{font-family:var(--display);font-weight:600;font-size:.95rem}
+  .pot-did{display:grid;gap:4px;padding:12px 14px;border:1px solid var(--rule);border-radius:8px;background:var(--surface-2);margin-bottom:12px}
+  .pot-did code{font-family:var(--mono);font-size:.8rem;word-break:break-all}
+  .pot-org{font-size:.85rem;color:var(--muted)}
+  .pot-rows{list-style:none;margin:0;padding:0;display:grid}
+  .pot-rows li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:4px 10px;padding:10px 0;border-bottom:1px solid var(--rule)}
+  .pot-check{width:20px;height:20px;border-radius:50%;background:var(--green-soft);color:var(--green-ink);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;margin-top:2px}
+  .pot-label{font-weight:600;font-size:.92rem}
+  .pot-detail{grid-column:2;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--muted)}
+  .pot-foot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:12px}
+  .pot-score{display:inline-flex;gap:4px}.pot-score i{width:10px;height:10px;border-radius:2px;background:var(--green);display:inline-block}.pot-score i.off{background:var(--rule)}
+  .pot-verdict{margin-left:auto;font-family:var(--display);font-weight:600;color:var(--green-ink)}
+  /* backgrounds */
+  .bg-svg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+  .masked{-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 30%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 30%,#000 60%)}
+  .bg-glow::before{content:"";position:absolute;inset:-20% -10% auto 30%;height:120%;background:radial-gradient(closest-side,var(--glow),transparent 70%);z-index:0;pointer-events:none}
+  .bg-glow::after{content:"";position:absolute;left:-10%;bottom:-40%;width:50%;height:90%;background:radial-gradient(closest-side,var(--glow2),transparent 70%);z-index:0;pointer-events:none}
+  .bg-signal::before,.bg-graph::before,.bg-mark::before,.bg-dots::before{content:"";position:absolute;inset:auto -10% -40% 30%;height:520px;background:radial-gradient(closest-side,var(--glow),transparent 70%);z-index:0;pointer-events:none;opacity:.7}
+  .bg-mark .bg-mark{position:absolute;right:-6%;top:-12%;width:min(62vw,760px);height:auto;z-index:0;pointer-events:none}
+  .bg-dots{background-image:radial-gradient(var(--dot) 1px,transparent 1.6px);background-size:22px 22px;background-position:center}
+  .bg-dots .hero-in::before{content:"";position:absolute;inset:-64px -24px;background:linear-gradient(90deg,var(--bg) 0%,color-mix(in srgb,var(--bg) 70%,transparent) 45%,transparent 75%);z-index:-1;pointer-events:none}
+  .note{max-width:1180px;margin:0 auto;padding:0 24px;color:var(--muted);font-size:.9rem}
+</style>
+<div class="top">
+  <p class="eyebrow">mobiera.io · hero background · pick one</p>
+  <h2>Five hero backgrounds</h2>
+  <p>Same headline, buttons and Proof-of-Trust panel in every case; only the ground changes. Each is built with the site's own tokens and works in both themes. The current square grid is not shown.</p>
+  <div class="toggle"><span class="eyebrow">Theme</span><button type="button" data-set="dark">Dark</button><button type="button" data-set="light">Light</button><button type="button" data-set="">System</button></div>
+</div>
+<div class="list">
+<div class="variant" id="vA"><div class="label"><div class="name"><span class="chip">A</span><h2>Glow</h2></div><p>Two soft radial glows, violet top right and a smaller green one bottom left, on a flat ground. No pattern at all: the quietest option, the panel and the headline do the work.</p></div><div class="frame"><section class="hero bg-glow">
+  <div class="hero-in">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Verifiable Credentials · Verana Foundation co-founder · Latin America</p>
+        <h1>Trust networks and Verifiable Credentials, built on Verana.</h1>
+        <p class="lead">Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.</p>
+        <div class="ctas"><a class="btn primary" href="#">Verifiable Credentials <span class="arrow">→</span></a><a class="btn" href="#">Get Verana certified <span class="arrow">→</span></a></div>
+      </div>
+      <div class="panel" aria-label="Example Proof-of-Trust">
+  <div class="panel-head"><b>Proof-of-Trust</b><span class="eyebrow">Verana testnet · example</span></div>
+  <div class="pot-did"><span class="eyebrow">Resolving</span><code>did:webvh:…:acme-integrators.example</code><span class="pot-org">Acme Integrators SAS · Bogotá, CO</span></div>
+  <ul class="pot-rows">
+    <li><span class="pot-check">✓</span><span class="pot-label">Organization credential</span><span class="pot-detail">issued by the ECS Ecosystem</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Service credential</span><span class="pot-detail">self-issued, verified</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Verana Certified Integrator</span><span class="pot-detail">issued by Mobiera · valid to 2028</span></li>
+  </ul>
+  <div class="pot-foot"><span class="eyebrow">Trust score</span><span class="pot-score"><i></i><i></i><i></i><i></i><i class="off"></i></span><span class="pot-verdict">Verified. Connect.</span></div>
+</div>
+    </div>
+  </div>
+</section></div></div>
+<div class="variant" id="vB"><div class="label"><div class="name"><span class="chip">B</span><h2>Signal</h2></div><p>Nine thin contour lines flowing across the hero, faded out under the headline. Reads as signal and network without any square, and echoes the TPS chart on the Telecom page.</p></div><div class="frame"><section class="hero bg-signal"><svg class="bg-svg masked" viewBox="0 0 1400 560" preserveAspectRatio="none" aria-hidden="true"><path d="M -20 40 C 250 14, 450 66, 700 40 S 1150 14, 1420 55.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 98 C 250 62, 450 134, 700 98 S 1150 62, 1420 119.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 156 C 250 110, 450 202, 700 156 S 1150 110, 1420 183.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 214 C 250 188, 450 240, 700 214 S 1150 188, 1420 229.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 272 C 250 236, 450 308, 700 272 S 1150 236, 1420 293.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 330 C 250 284, 450 376, 700 330 S 1150 284, 1420 357.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 388 C 250 362, 450 414, 700 388 S 1150 362, 1420 403.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 446 C 250 410, 450 482, 700 446 S 1150 410, 1420 467.6" fill="none" stroke="var(--line)" stroke-width="1.2"/><path d="M -20 504 C 250 458, 450 550, 700 504 S 1150 458, 1420 531.6" fill="none" stroke="var(--line)" stroke-width="1.2"/></svg>
+  <div class="hero-in">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Verifiable Credentials · Verana Foundation co-founder · Latin America</p>
+        <h1>Trust networks and Verifiable Credentials, built on Verana.</h1>
+        <p class="lead">Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.</p>
+        <div class="ctas"><a class="btn primary" href="#">Verifiable Credentials <span class="arrow">→</span></a><a class="btn" href="#">Get Verana certified <span class="arrow">→</span></a></div>
+      </div>
+      <div class="panel" aria-label="Example Proof-of-Trust">
+  <div class="panel-head"><b>Proof-of-Trust</b><span class="eyebrow">Verana testnet · example</span></div>
+  <div class="pot-did"><span class="eyebrow">Resolving</span><code>did:webvh:…:acme-integrators.example</code><span class="pot-org">Acme Integrators SAS · Bogotá, CO</span></div>
+  <ul class="pot-rows">
+    <li><span class="pot-check">✓</span><span class="pot-label">Organization credential</span><span class="pot-detail">issued by the ECS Ecosystem</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Service credential</span><span class="pot-detail">self-issued, verified</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Verana Certified Integrator</span><span class="pot-detail">issued by Mobiera · valid to 2028</span></li>
+  </ul>
+  <div class="pot-foot"><span class="eyebrow">Trust score</span><span class="pot-score"><i></i><i></i><i></i><i></i><i class="off"></i></span><span class="pot-verdict">Verified. Connect.</span></div>
+</div>
+    </div>
+  </div>
+</section></div></div>
+<div class="variant" id="vC"><div class="label"><div class="name"><span class="chip">C</span><h2>Trust graph</h2></div><p>A sparse constellation of nodes and edges, violet for services and green for verified ones, weighted to the right. The literal subject of the trust line: a graph you can be found in.</p></div><div class="frame"><section class="hero bg-graph"><svg class="bg-svg" viewBox="0 0 1400 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<line x1="804.0" y1="107.9" x2="835.7" y2="156.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="804.0" y1="107.9" x2="817.7" y2="206.2" stroke="var(--line)" stroke-width="1"/>
+<line x1="592.8" y1="297.7" x2="599.7" y2="255.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="592.8" y1="297.7" x2="551.0" y2="261.1" stroke="var(--line)" stroke-width="1"/>
+<line x1="1021.5" y1="481.9" x2="973.2" y2="464.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1021.5" y1="481.9" x2="1125.4" y2="519.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="563.5" y1="247.3" x2="551.0" y2="261.1" stroke="var(--line)" stroke-width="1"/>
+<line x1="563.5" y1="247.3" x2="599.7" y2="255.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="734.2" y1="305.2" x2="659.7" y2="274.6" stroke="var(--line)" stroke-width="1"/>
+<line x1="734.2" y1="305.2" x2="771.1" y2="223.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="1226.6" y1="94.6" x2="1177.3" y2="97.3" stroke="var(--line)" stroke-width="1"/>
+<line x1="1226.6" y1="94.6" x2="1340.1" y2="71.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1061.7" y1="320.9" x2="1052.0" y2="278.2" stroke="var(--line)" stroke-width="1"/>
+<line x1="1061.7" y1="320.9" x2="1045.2" y2="276.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1016.8" y1="229.1" x2="1019.1" y2="258.4" stroke="var(--line)" stroke-width="1"/>
+<line x1="1016.8" y1="229.1" x2="1045.2" y2="276.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="571.1" y1="456.7" x2="583.0" y2="379.3" stroke="var(--line)" stroke-width="1"/>
+<line x1="571.1" y1="456.7" x2="613.8" y2="384.5" stroke="var(--line)" stroke-width="1"/>
+<line x1="884.1" y1="300.1" x2="817.7" y2="206.2" stroke="var(--line)" stroke-width="1"/>
+<line x1="884.1" y1="300.1" x2="771.1" y2="223.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="1002.6" y1="369.7" x2="1020.5" y2="348.5" stroke="var(--line)" stroke-width="1"/>
+<line x1="1002.6" y1="369.7" x2="1061.7" y2="320.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1020.5" y1="348.5" x2="1061.7" y2="320.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="613.8" y1="384.5" x2="583.0" y2="379.3" stroke="var(--line)" stroke-width="1"/>
+<line x1="1052.0" y1="278.2" x2="1045.2" y2="276.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1052.0" y1="278.2" x2="1019.1" y2="258.4" stroke="var(--line)" stroke-width="1"/>
+<line x1="1184.9" y1="263.0" x2="1119.2" y2="153.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1184.9" y1="263.0" x2="1052.0" y2="278.2" stroke="var(--line)" stroke-width="1"/>
+<line x1="835.7" y1="156.0" x2="817.7" y2="206.2" stroke="var(--line)" stroke-width="1"/>
+<line x1="1119.2" y1="153.9" x2="1177.3" y2="97.3" stroke="var(--line)" stroke-width="1"/>
+<line x1="1119.2" y1="153.9" x2="1226.6" y2="94.6" stroke="var(--line)" stroke-width="1"/>
+<line x1="973.2" y1="464.9" x2="1002.6" y2="369.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="773.9" y1="516.6" x2="866.2" y2="485.4" stroke="var(--line)" stroke-width="1"/>
+<line x1="773.9" y1="516.6" x2="973.2" y2="464.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="962.0" y1="114.9" x2="1016.8" y2="229.1" stroke="var(--line)" stroke-width="1"/>
+<line x1="962.0" y1="114.9" x2="835.7" y2="156.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="659.7" y1="274.6" x2="599.7" y2="255.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="659.7" y1="274.6" x2="592.8" y2="297.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="1340.1" y1="71.9" x2="1177.3" y2="97.3" stroke="var(--line)" stroke-width="1"/>
+<line x1="817.7" y1="206.2" x2="771.1" y2="223.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="1019.1" y1="258.4" x2="1045.2" y2="276.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1325.5" y1="267.2" x2="1184.9" y2="263.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="1325.5" y1="267.2" x2="1274.0" y2="437.3" stroke="var(--line)" stroke-width="1"/>
+<line x1="551.0" y1="261.1" x2="599.7" y2="255.0" stroke="var(--line)" stroke-width="1"/>
+<line x1="866.2" y1="485.4" x2="973.2" y2="464.9" stroke="var(--line)" stroke-width="1"/>
+<line x1="1274.0" y1="437.3" x2="1125.4" y2="519.7" stroke="var(--line)" stroke-width="1"/>
+<line x1="1125.4" y1="519.7" x2="973.2" y2="464.9" stroke="var(--line)" stroke-width="1"/>
+<circle cx="804.0" cy="107.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="592.8" cy="297.7" r="2.2" fill="var(--node-v)"/>
+<circle cx="1021.5" cy="481.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="563.5" cy="247.3" r="2.2" fill="var(--node-v)"/>
+<circle cx="734.2" cy="305.2" r="2.2" fill="var(--node-v)"/>
+<circle cx="1226.6" cy="94.6" r="2.2" fill="var(--node-v)"/>
+<circle cx="1061.7" cy="320.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="1016.8" cy="229.1" r="2.2" fill="var(--node-v)"/>
+<circle cx="571.1" cy="456.7" r="2.2" fill="var(--node-v)"/>
+<circle cx="884.1" cy="300.1" r="2.2" fill="var(--node-v)"/>
+<circle cx="1002.6" cy="369.7" r="2.2" fill="var(--node-v)"/>
+<circle cx="1020.5" cy="348.5" r="2.2" fill="var(--node-v)"/>
+<circle cx="613.8" cy="384.5" r="2.2" fill="var(--node-v)"/>
+<circle cx="1052.0" cy="278.2" r="3" fill="var(--node-g)"/>
+<circle cx="1184.9" cy="263.0" r="3" fill="var(--node-g)"/>
+<circle cx="835.7" cy="156.0" r="2.2" fill="var(--node-v)"/>
+<circle cx="1119.2" cy="153.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="973.2" cy="464.9" r="3" fill="var(--node-g)"/>
+<circle cx="773.9" cy="516.6" r="2.2" fill="var(--node-v)"/>
+<circle cx="962.0" cy="114.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="659.7" cy="274.6" r="2.2" fill="var(--node-v)"/>
+<circle cx="1340.1" cy="71.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="817.7" cy="206.2" r="3" fill="var(--node-g)"/>
+<circle cx="1019.1" cy="258.4" r="2.2" fill="var(--node-v)"/>
+<circle cx="1325.5" cy="267.2" r="2.2" fill="var(--node-v)"/>
+<circle cx="583.0" cy="379.3" r="3" fill="var(--node-g)"/>
+<circle cx="771.1" cy="223.7" r="2.2" fill="var(--node-v)"/>
+<circle cx="551.0" cy="261.1" r="2.2" fill="var(--node-v)"/>
+<circle cx="1045.2" cy="276.9" r="2.2" fill="var(--node-v)"/>
+<circle cx="1177.3" cy="97.3" r="2.2" fill="var(--node-v)"/>
+<circle cx="866.2" cy="485.4" r="3" fill="var(--node-g)"/>
+<circle cx="599.7" cy="255.0" r="2.2" fill="var(--node-v)"/>
+<circle cx="1274.0" cy="437.3" r="2.2" fill="var(--node-v)"/>
+<circle cx="1125.4" cy="519.7" r="3" fill="var(--node-g)"/>
+</svg>
+  <div class="hero-in">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Verifiable Credentials · Verana Foundation co-founder · Latin America</p>
+        <h1>Trust networks and Verifiable Credentials, built on Verana.</h1>
+        <p class="lead">Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.</p>
+        <div class="ctas"><a class="btn primary" href="#">Verifiable Credentials <span class="arrow">→</span></a><a class="btn" href="#">Get Verana certified <span class="arrow">→</span></a></div>
+      </div>
+      <div class="panel" aria-label="Example Proof-of-Trust">
+  <div class="panel-head"><b>Proof-of-Trust</b><span class="eyebrow">Verana testnet · example</span></div>
+  <div class="pot-did"><span class="eyebrow">Resolving</span><code>did:webvh:…:acme-integrators.example</code><span class="pot-org">Acme Integrators SAS · Bogotá, CO</span></div>
+  <ul class="pot-rows">
+    <li><span class="pot-check">✓</span><span class="pot-label">Organization credential</span><span class="pot-detail">issued by the ECS Ecosystem</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Service credential</span><span class="pot-detail">self-issued, verified</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Verana Certified Integrator</span><span class="pot-detail">issued by Mobiera · valid to 2028</span></li>
+  </ul>
+  <div class="pot-foot"><span class="eyebrow">Trust score</span><span class="pot-score"><i></i><i></i><i></i><i></i><i class="off"></i></span><span class="pot-verdict">Verified. Connect.</span></div>
+</div>
+    </div>
+  </div>
+</section></div></div>
+<div class="variant" id="vD"><div class="label"><div class="name"><span class="chip">D</span><h2>Mark</h2></div><p>The puzzle-piece M from the logo, outlined at large scale and faded, offset to the right. The brand's own concept, two pieces that connect, used once and big.</p></div><div class="frame"><section class="hero bg-mark"><svg class="bg-mark" viewBox="11 24 78 52" aria-hidden="true"><path d="M85.0299 42.5693L69.4759 27.0142C68.5204 26.0585 67.386 25.3004 66.1375 24.7832C64.8889 24.266 63.5508 24 62.1994 24C60.848 24 59.5099 24.266 58.2614 24.7832C57.0128 25.3004 55.8784 26.0585 54.9229 27.0142L49.5229 32.4141L44.1229 27.0142C42.1928 25.0841 39.575 24 36.8454 24C34.1158 24 31.498 25.0841 29.5679 27.0142L14.0139 42.5693C12.0841 44.4994 11 47.1168 11 49.8462C11 52.5755 12.0841 55.193 14.0139 57.123L29.5679 72.6782C30.5235 73.634 31.6581 74.3924 32.9068 74.9097C34.1555 75.427 35.4938 75.6929 36.8454 75.6929C38.197 75.6929 39.5353 75.427 40.784 74.9097C42.0327 74.3924 43.1673 73.634 44.1229 72.6782L49.5229 67.2783L54.9229 72.6782C55.8784 73.634 57.0127 74.3919 58.2613 74.9092C59.5098 75.4264 60.848 75.6929 62.1994 75.6929C63.5508 75.6929 64.889 75.4264 66.1375 74.9092C67.3861 74.3919 68.5205 73.634 69.4759 72.6782L85.0299 57.123C86.9597 55.193 88.0438 52.5755 88.0438 49.8462C88.0438 47.1168 86.9597 44.4994 85.0299 42.5693ZM38.8529 67.415C38.5885 67.6797 38.2746 67.89 37.929 68.0332C37.5834 68.1764 37.213 68.25 36.8389 68.25C36.4648 68.25 36.0944 68.1764 35.7488 68.0332C35.4033 67.89 35.0893 67.6797 34.8249 67.415L19.2709 51.8604C19.0063 51.596 18.7964 51.282 18.6532 50.9365C18.51 50.591 18.4362 50.2207 18.4362 49.8467C18.4362 49.4727 18.51 49.1023 18.6532 48.7568C18.7964 48.4113 19.0063 48.0973 19.2709 47.833L34.8249 32.2783C35.0893 32.0136 35.4032 31.8035 35.7487 31.6602C36.0943 31.5169 36.4648 31.4429 36.8389 31.4429C37.213 31.4429 37.5835 31.5169 37.929 31.6602C38.2746 31.8035 38.5886 32.0136 38.8529 32.2783L44.2529 37.6782L39.3639 42.5674C37.4361 44.4985 36.3533 47.1155 36.3533 49.8442C36.3533 52.5729 37.4361 55.19 39.3639 57.1211L44.2529 62.0103L38.8529 67.415ZM54.4069 47.832C54.6715 48.0963 54.8814 48.4104 55.0246 48.7559C55.1678 49.1014 55.2415 49.4717 55.2415 49.8457C55.2415 50.2197 55.1678 50.5901 55.0246 50.9355C54.8814 51.281 54.6715 51.5951 54.4069 51.8594L49.5179 56.748L44.6289 51.8594C44.0955 51.325 43.7959 50.6007 43.7959 49.8457C43.7959 49.0907 44.0955 48.3664 44.6289 47.832L49.5179 42.9414L54.4069 47.832ZM59.6269 42.5264L54.7789 37.6792L60.1789 32.2793C60.4434 32.0145 60.7575 31.8045 61.1033 31.6611C61.449 31.5178 61.8196 31.4438 62.1939 31.4438C62.5682 31.4438 62.9388 31.5178 63.2845 31.6611C63.6303 31.8045 63.9444 32.0145 64.2089 32.2793L79.7629 47.834C80.0275 48.0983 80.2374 48.4123 80.3806 48.7578C80.5238 49.1033 80.5976 49.4737 80.5976 49.8477C80.5976 50.2217 80.5238 50.592 80.3806 50.9375C80.2374 51.283 80.0275 51.597 79.7629 51.8613L64.2089 67.416C63.9443 67.6807 63.6302 67.8909 63.2845 68.0342C62.9387 68.1774 62.5682 68.251 62.1939 68.251C61.8197 68.251 61.4491 68.1774 61.1033 68.0342C60.7576 67.8909 60.4435 67.6807 60.1789 67.416L54.7789 62.0161L59.6699 57.1274C61.5843 55.2129 62.6671 52.6205 62.6836 49.9131C62.7001 47.2056 61.6489 44.6008 59.7579 42.6631" fill="var(--mark-fill)" stroke="var(--mark-stroke)" stroke-width="0.35"/></svg>
+  <div class="hero-in">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Verifiable Credentials · Verana Foundation co-founder · Latin America</p>
+        <h1>Trust networks and Verifiable Credentials, built on Verana.</h1>
+        <p class="lead">Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.</p>
+        <div class="ctas"><a class="btn primary" href="#">Verifiable Credentials <span class="arrow">→</span></a><a class="btn" href="#">Get Verana certified <span class="arrow">→</span></a></div>
+      </div>
+      <div class="panel" aria-label="Example Proof-of-Trust">
+  <div class="panel-head"><b>Proof-of-Trust</b><span class="eyebrow">Verana testnet · example</span></div>
+  <div class="pot-did"><span class="eyebrow">Resolving</span><code>did:webvh:…:acme-integrators.example</code><span class="pot-org">Acme Integrators SAS · Bogotá, CO</span></div>
+  <ul class="pot-rows">
+    <li><span class="pot-check">✓</span><span class="pot-label">Organization credential</span><span class="pot-detail">issued by the ECS Ecosystem</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Service credential</span><span class="pot-detail">self-issued, verified</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Verana Certified Integrator</span><span class="pot-detail">issued by Mobiera · valid to 2028</span></li>
+  </ul>
+  <div class="pot-foot"><span class="eyebrow">Trust score</span><span class="pot-score"><i></i><i></i><i></i><i></i><i class="off"></i></span><span class="pot-verdict">Verified. Connect.</span></div>
+</div>
+    </div>
+  </div>
+</section></div></div>
+<div class="variant" id="vE"><div class="label"><div class="name"><span class="chip">E</span><h2>Dot field</h2></div><p>A fine field of dots that fades toward the headline, in place of the line grid. Keeps the technical texture of direction A with none of the squares.</p></div><div class="frame"><section class="hero bg-dots">
+  <div class="hero-in">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Verifiable Credentials · Verana Foundation co-founder · Latin America</p>
+        <h1>Trust networks and Verifiable Credentials, built on Verana.</h1>
+        <p class="lead">Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems for governments, sectors and enterprises, and certifies the integrators who build on Verana in Latin America. The same team has run software inside 25+ mobile networks since 2012.</p>
+        <div class="ctas"><a class="btn primary" href="#">Verifiable Credentials <span class="arrow">→</span></a><a class="btn" href="#">Get Verana certified <span class="arrow">→</span></a></div>
+      </div>
+      <div class="panel" aria-label="Example Proof-of-Trust">
+  <div class="panel-head"><b>Proof-of-Trust</b><span class="eyebrow">Verana testnet · example</span></div>
+  <div class="pot-did"><span class="eyebrow">Resolving</span><code>did:webvh:…:acme-integrators.example</code><span class="pot-org">Acme Integrators SAS · Bogotá, CO</span></div>
+  <ul class="pot-rows">
+    <li><span class="pot-check">✓</span><span class="pot-label">Organization credential</span><span class="pot-detail">issued by the ECS Ecosystem</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Service credential</span><span class="pot-detail">self-issued, verified</span></li>
+    <li><span class="pot-check">✓</span><span class="pot-label">Verana Certified Integrator</span><span class="pot-detail">issued by Mobiera · valid to 2028</span></li>
+  </ul>
+  <div class="pot-foot"><span class="eyebrow">Trust score</span><span class="pot-score"><i></i><i></i><i></i><i></i><i class="off"></i></span><span class="pot-verdict">Verified. Connect.</span></div>
+</div>
+    </div>
+  </div>
+</section></div></div>
+</div>
+<p class="note">The dot field and the signal lines fade toward the headline so the text always sits on a clean ground. On phones every background is trimmed to the panel's edge.</p>
+<script>
+  document.querySelectorAll('.toggle button').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-set');if(v){document.documentElement.setAttribute('data-theme',v);}else{document.documentElement.removeAttribute('data-theme');}});});
+</script>

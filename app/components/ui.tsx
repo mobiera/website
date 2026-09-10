@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import HeroMark from "./HeroMark";
 
 export function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <p className={`eyebrow ${className}`}>{children}</p>;
@@ -25,6 +26,7 @@ export function MoreLink({ href, children }: { href: string; children: ReactNode
 export function PageHero({ eyebrow, title, lead, children, ground = true }: { eyebrow?: string; title: string; lead?: ReactNode; children?: ReactNode; ground?: boolean }) {
   return (
     <div className={ground ? "ground" : undefined}>
+      {ground && <HeroMark />}
       <section className="hero container-x">
         <div className="hero-inner">
           {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
