@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ButtonLink, Card, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
+import { faBrain, faCommentSms, faComments, faCubes, faPlug, faReceipt } from "@fortawesome/free-solid-svg-icons";
+import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
@@ -18,11 +19,11 @@ export default function Page() {
       <Section eyebrow="Channels subscribers already have">
         <div className="grid-2">
           <Card>
-            <h3>SMS</h3>
+            <CardTitle icon={faCommentSms}>SMS</CardTitle>
             <p className="text-muted">Every handset, no app, no data. The agent answers through the operator's SMSC, on a shortcode your subscribers already know.</p>
           </Card>
           <Card>
-            <h3>Hologram</h3>
+            <CardTitle icon={faComments}>Hologram</CardTitle>
             <p className="text-muted">A private DIDComm channel through Hologram Messaging, with rich messages, credential exchange and the Proof-of-Trust a subscriber sees before the first message.</p>
           </Card>
         </div>
@@ -36,10 +37,10 @@ export default function Page() {
 
       <Section eyebrow="Runs on your stack">
         <div className="grid-2">
-          <Feature title="LLM-agnostic"><p>Built on LangChain; connect the model provider you choose.</p></Feature>
-          <Feature title="Your tools through MCP"><p>Balance, plans, tickets, campaigns: the agent calls your systems, not a copy of them.</p></Feature>
-          <Feature title="Deployable in your Kubernetes"><p>Or hosted by Mobiera, with the same runbooks as Aircast.</p></Feature>
-          <Feature title="Billing integration"><p>Subscriptions and charging through your billing integration; conversation logs and statistics through the same service-log and stats containers as Aircast.</p></Feature>
+          <Feature icon={faBrain} title="LLM-agnostic"><p>Built on LangChain; connect the model provider you choose.</p></Feature>
+          <Feature icon={faPlug} title="Your tools through MCP"><p>Balance, plans, tickets, campaigns: the agent calls your systems, not a copy of them.</p></Feature>
+          <Feature icon={faCubes} title="Deployable in your Kubernetes"><p>Or hosted by Mobiera, with the same runbooks as Aircast.</p></Feature>
+          <Feature icon={faReceipt} title="Billing integration"><p>Subscriptions and charging through your billing integration; conversation logs and statistics through the same service-log and stats containers as Aircast.</p></Feature>
         </div>
       </Section>
 

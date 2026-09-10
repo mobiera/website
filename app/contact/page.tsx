@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { faBuilding, faLink, faRoute } from "@fortawesome/free-solid-svg-icons";
 import ContactForm from "@/app/components/ContactForm";
-import { Card, PageHero, Section } from "@/app/components/ui";
+import { Card, CardTitle, PageHero, Section } from "@/app/components/ui";
 import { LEGAL, LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function Page() {
           </div>
           <div className="grid gap-5">
             <Card>
-              <h3>Routed internally</h3>
+              <CardTitle icon={faRoute}>Routed internally</CardTitle>
               <ul>
                 <li>No email addresses exposed on the site.</li>
                 <li>Self-hosted anti-abuse: a honeypot and timing checks, no CAPTCHA.</li>
@@ -30,7 +31,7 @@ export default function Page() {
               </ul>
             </Card>
             <Card>
-              <h3>Other ways</h3>
+              <CardTitle icon={faLink}>Other ways</CardTitle>
               <ul>
                 <li><a className="text-link" href={LINKS.github} rel="noopener">github.com/mobiera</a></li>
                 <li><a className="text-link" href={LINKS.docs} rel="noopener">docs.mobiera.io</a></li>
@@ -39,7 +40,7 @@ export default function Page() {
               </ul>
             </Card>
             <Card>
-              <h3>Who you are talking to</h3>
+              <CardTitle icon={faBuilding}>Who you are talking to</CardTitle>
               <address className="not-italic text-muted">
                 <strong className="text-ink block">{LEGAL.name}, NIT {LEGAL.nit}</strong>
                 {LEGAL.address}

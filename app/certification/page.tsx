@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { faBuilding, faBuildingShield, faUser, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 import CertifiedIntegrators from "./CertifiedIntegrators";
-import { ButtonLink, Card, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
+import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
@@ -39,8 +40,8 @@ export default function Page() {
 
       <Section eyebrow="Prerequisites">
         <div className="grid-2">
-          <Feature title="Professionals"><p>A Contributor member of the Verana Foundation. Contributor membership is free and open to individuals.</p></Feature>
-          <Feature title="Companies"><p>A Contributor or Associate member of the Verana Foundation.</p></Feature>
+          <Feature icon={faUser} title="Professionals"><p>A Contributor member of the Verana Foundation. Contributor membership is free and open to individuals.</p></Feature>
+          <Feature icon={faBuilding} title="Companies"><p>A Contributor or Associate member of the Verana Foundation.</p></Feature>
         </div>
         <p className="mt-6"><ButtonLink href={`${LINKS.foundation}/join`}>Join the Foundation</ButtonLink></p>
       </Section>
@@ -48,11 +49,11 @@ export default function Page() {
       <Section eyebrow="Two levels of recognition">
         <div className="grid-2">
           <Card>
-            <h3>Verana Certified Professional</h3>
+            <CardTitle icon={faUserGraduate}>Verana Certified Professional</CardTitle>
             <p className="text-muted">By exam, valid two years. Issued as a certificate and as a Verifiable Credential to the professional's personal wallet.</p>
           </Card>
           <Card>
-            <h3>Verana Certified Integrator</h3>
+            <CardTitle icon={faBuildingShield}>Verana Certified Integrator</CardTitle>
             <p className="text-muted">A company with two certified professionals and one delivered project, or a public Playground use case published on its own infrastructure. Issued as a Verifiable Credential to the company's business wallet.</p>
           </Card>
         </div>

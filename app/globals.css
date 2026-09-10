@@ -176,6 +176,17 @@ a { color: inherit; }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
 /* Cards, chips, stats ----------------------------------------------------- */
+.card-title { display: flex; align-items: center; gap: 12px; }
+.card-icon {
+  flex: none; width: 36px; height: 36px; border-radius: 8px;
+  background: var(--violet-soft); color: var(--violet-ink);
+  display: inline-flex; align-items: center; justify-content: center; font-size: 15px;
+}
+.card-icon svg { width: 1em; height: 1em; }
+.cert .card-icon { background: rgba(255, 255, 255, 0.16); color: #fff; }
+.feature-title { display: flex; align-items: center; gap: 10px; }
+.feature-icon { flex: none; color: var(--violet-ink); font-size: 15px; display: inline-flex; }
+.feature-icon svg { width: 1em; height: 1em; }
 .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 26px; display: grid; gap: 14px; align-content: start; position: relative; }
 .card ul { padding-left: 1.1em; display: grid; gap: 6px; color: var(--muted); list-style: disc; }
 .card .tag { position: absolute; top: 18px; right: 18px; }

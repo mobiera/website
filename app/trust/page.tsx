@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ButtonLink, Card, Chips, CtaBand, Feature, MoreLink, PageHero, Section } from "@/app/components/ui";
+import { faCertificate, faDiagramProject, faHandshake, faHeadset, faMobileScreen, faSitemap } from "@fortawesome/free-solid-svg-icons";
+import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, MoreLink, PageHero, Section } from "@/app/components/ui";
 import { TRUST_STANDARDS } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
 
@@ -20,17 +21,17 @@ export default function Page() {
       <Section eyebrow="Three roles">
         <div className="grid-3">
           <Card>
-            <h3>Founding member</h3>
+            <CardTitle icon={faHandshake}>Founding member</CardTitle>
             <p className="text-muted">Mobiera co-founded the Verana Foundation in June 2025, with 2060 OÜ and Orchestrating Identity, and contributes to its Specification and Reference Implementation working groups.</p>
             <MoreLink href="/trust/verana">Mobiera and Verana</MoreLink>
           </Card>
           <Card>
-            <h3>Builder and operator</h3>
+            <CardTitle icon={faDiagramProject}>Builder and operator</CardTitle>
             <p className="text-muted">We design trust ecosystems, deploy issuer and verifier services, integrate wallets and AI agents, and run the stack for clients who do not want to run it themselves.</p>
             <MoreLink href="/trust/services">Trust services</MoreLink>
           </Card>
           <Card>
-            <h3>Official certificator</h3>
+            <CardTitle icon={faCertificate}>Official certificator</CardTitle>
             <p className="text-muted">Designated by the Verana Foundation as the official certificator for Latin America: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams.</p>
             <MoreLink href="/certification">Get Verana certified</MoreLink>
           </Card>
@@ -47,9 +48,9 @@ export default function Page() {
 
       <Section eyebrow="Use cases we lead with">
         <div className="grid-3">
-          <Feature title="Telco-certified phone numbers"><p>The operator issues a credential that binds a phone number to a subscriber, and every service that accepts it verifies the issuer on the public registry. Reusable proof of a mobile number, without an SMS to every relying party.</p></Feature>
-          <Feature title="Verifiable customer-support agents"><p>An operator's AI agent proves who operates it before a subscriber types a word. Running today in AI One.</p></Feature>
-          <Feature title="Sector ecosystems in Latin America"><p>Diplomas, licenses, certifications and memberships that any partner can verify, governed by the sector body that issues them, on infrastructure it can host in its own jurisdiction.</p></Feature>
+          <Feature icon={faMobileScreen} title="Telco-certified phone numbers"><p>The operator issues a credential that binds a phone number to a subscriber, and every service that accepts it verifies the issuer on the public registry. Reusable proof of a mobile number, without an SMS to every relying party.</p></Feature>
+          <Feature icon={faHeadset} title="Verifiable customer-support agents"><p>An operator's AI agent proves who operates it before a subscriber types a word. Running today in AI One.</p></Feature>
+          <Feature icon={faSitemap} title="Sector ecosystems in Latin America"><p>Diplomas, licenses, certifications and memberships that any partner can verify, governed by the sector body that issues them, on infrastructure it can host in its own jurisdiction.</p></Feature>
         </div>
       </Section>
 

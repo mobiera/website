@@ -30,6 +30,11 @@ the puzzle-piece M from the logo, outlined large and faded, offset to the
 right, over a soft violet glow. Chosen among five candidates (glow, signal
 lines, trust graph, mark, dot field): `hero-backgrounds.html`.
 
+Card icons (10 September 2026): card titles carry a Font Awesome solid icon
+in a violet badge on the left; feature titles carry the icon inline. Icons
+are React SVGs from `@fortawesome/free-solid-svg-icons`, chosen per title in
+each page, decorative only (`aria-hidden`).
+
 ## The three directions
 
 | | A · Signal | B · Paper | C · Modular |

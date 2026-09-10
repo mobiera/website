@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { faCertificate, faDiagramProject, faGraduationCap, faHandshake, faHeadset, faMobileScreen, faRobot, faShieldHalved, faSimCard, faSitemap, faTowerCell } from "@fortawesome/free-solid-svg-icons";
 import type { Metadata } from "next";
 import JsonLd from "./components/JsonLd";
 import HeroMark from "./components/HeroMark";
 import ProofOfTrust from "./components/ProofOfTrust";
 import LogoWall from "./components/LogoWall";
 import NewsList from "./components/NewsList";
-import { ButtonLink, Card, Chips, Eyebrow, Feature, MoreLink, ProofStrip, Section } from "./components/ui";
+import { ButtonLink, Card, CardTitle, Chips, Eyebrow, Feature, MoreLink, ProofStrip, Section } from "./components/ui";
 import { NUMBERS, OPERATORS, PARTNERS } from "./lib/content";
 import { getAllNews } from "./lib/news";
 import { LINKS, SITE_DESCRIPTION, SITE_TAGLINE } from "./lib/site";
@@ -45,7 +46,7 @@ export default function Home() {
         <div className="grid-2">
           <Card>
             <span className="eyebrow tag">01</span>
-            <h3>Verifiable Credentials and trust networks</h3>
+            <CardTitle icon={faShieldHalved}>Verifiable Credentials and trust networks</CardTitle>
             <p className="text-muted">Trust that anyone can verify, built on Verana.</p>
             <ul>
               <li>Founding member of the Verana Foundation since June 2025.</li>
@@ -56,7 +57,7 @@ export default function Home() {
           </Card>
           <Card>
             <span className="eyebrow tag">02</span>
-            <h3>Telecom software and services</h3>
+            <CardTitle icon={faTowerCell}>Telecom software and services</CardTitle>
             <p className="text-muted">Platforms that run inside the operator's network.</p>
             <ul>
               <li>Aircast: STK push marketing, bulk messaging and SIM OTA campaigns from one engine.</li>
@@ -75,29 +76,29 @@ export default function Home() {
       <Section eyebrow="Verifiable Credentials and trust networks" title="Three roles on Verana">
         <div className="grid-3">
           <Card>
-            <h3>Founding member</h3>
+            <CardTitle icon={faHandshake}>Founding member</CardTitle>
             <p className="text-muted">Co-founded the Verana Foundation in June 2025 with 2060 OÜ and Orchestrating Identity. Specification and Reference Implementation working groups.</p>
             <MoreLink href="/trust/verana">Mobiera and Verana</MoreLink>
           </Card>
           <Card>
-            <h3>Builder and operator</h3>
+            <CardTitle icon={faDiagramProject}>Builder and operator</CardTitle>
             <p className="text-muted">Ecosystem design and governance frameworks; issuer and verifier services; wallets and AI agents as Verifiable Services; operations.</p>
             <MoreLink href="/trust/services">Trust services</MoreLink>
           </Card>
           <Card>
-            <h3>Official certificator</h3>
+            <CardTitle icon={faCertificate}>Official certificator</CardTitle>
             <p className="text-muted">Trains integrators to build on Verana and certifies the professionals who pass the exams, for Latin America.</p>
             <MoreLink href="/certification">Get Verana certified</MoreLink>
           </Card>
         </div>
         <div className="grid-3 mt-8">
-          <Feature title="Telco-certified phone numbers"><p>The operator issues a credential that binds a phone number to a subscriber; every service that accepts it verifies the issuer on the public registry.</p></Feature>
-          <Feature title="Verifiable customer-support agents"><p>An operator's AI agent proves who operates it before a subscriber types a word. Running today in AI One.</p></Feature>
-          <Feature title="Sector ecosystems in Latin America"><p>Diplomas, licenses, certifications and memberships that any partner can verify, governed by the body that issues them.</p></Feature>
+          <Feature icon={faMobileScreen} title="Telco-certified phone numbers"><p>The operator issues a credential that binds a phone number to a subscriber; every service that accepts it verifies the issuer on the public registry.</p></Feature>
+          <Feature icon={faHeadset} title="Verifiable customer-support agents"><p>An operator's AI agent proves who operates it before a subscriber types a word. Running today in AI One.</p></Feature>
+          <Feature icon={faSitemap} title="Sector ecosystems in Latin America"><p>Diplomas, licenses, certifications and memberships that any partner can verify, governed by the body that issues them.</p></Feature>
         </div>
         <div className="cert mt-8">
           <span className="pot"><i />Eight exams · two-year credential</span>
-          <h3 className="text-[1.4rem]">Get Verana certified</h3>
+          <CardTitle icon={faGraduationCap}>Get Verana certified</CardTitle>
           <p className="muted">Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams. Designated by the Verana Foundation. Valid until May 2029.</p>
           <Link href="/certification" className="btn">Get certified <span className="arrow" aria-hidden="true">→</span></Link>
         </div>
@@ -106,13 +107,13 @@ export default function Home() {
       <Section eyebrow="Telecom platforms" title="Software that runs inside the operator's network">
         <div className="grid-2">
           <Card>
-            <h3>Aircast</h3>
+            <CardTitle icon={faSimCard}>Aircast</CardTitle>
             <p className="text-muted">Campaigns over the operator's network. Any handset, no data, no balance. STK push marketing, bulk SMS and MMS, and SIM OTA campaigns from one engine, at whatever throughput your SMSC allows.</p>
             <Chips items={["STK · SAT · USTK", "SMS · MMS · flash", "OTA RAM · RFM", "3DES-CBC · AES"]} />
             <MoreLink href="/telecom/aircast">Aircast</MoreLink>
           </Card>
           <Card>
-            <h3>AI One</h3>
+            <CardTitle icon={faRobot}>AI One</CardTitle>
             <p className="text-muted">AI agents your subscribers can reach on any phone, and verify. Customer support over SMS and Hologram, integrated with your billing, identified with verifiable credentials so nobody can impersonate your operator.</p>
             <Chips items={["SMS · DIDComm", "MSISDN PIN", "LLM-agnostic · MCP", "Verifiable Service"]} />
             <MoreLink href="/telecom/ai-agents">AI One</MoreLink>

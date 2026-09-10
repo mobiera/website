@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { faIdCard, faServer, faSitemap, faWallet } from "@fortawesome/free-solid-svg-icons";
 import { ButtonLink, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
 
 export const metadata: Metadata = {
@@ -16,10 +17,10 @@ export default function Page() {
 
       <Section>
         <div className="grid-2">
-          <Feature title="Ecosystem design and governance"><p>An ecosystem on Verana is a governed list of participants authorized to issue, verify or hold certain credentials. We write yours: the credential schemas, the participant tree (grantors, issuers, verifiers, holders), the permission modes from fully open to fully governed, and the business model (onboarding fees, pay-per-issuance, pay-per-verification, or no fees at all). The Ecosystem Governance Framework starts from the template the Verana Council publishes.</p></Feature>
-          <Feature title="Issuer and verifier services"><p>We deploy VS-Agent, Verana's Business Wallet, as the runtime of your Verifiable Services: a resolvable DID, credentials and Linked Verifiable Presentations, trust resolution before every exchange, and the registry operations run for you. Issuance and verification flows over DIDComm and OpenID4VC, in JSON-LD, SD-JWT VC or AnonCreds as each credential requires. Integrated with the IAM, CRM and KYC systems you already run.</p></Feature>
-          <Feature title="Wallet and agent integration"><p>Your credentials work in the wallets already interoperating on the Verana Playground, among them Hologram, the EUDI reference wallet, swiyu, BC Wallet, NL Wallet, Inji and Paradym. Your AI agents become Verifiable Services that prove who operates them, over DIDComm, MCP or A2A.</p></Feature>
-          <Feature title="Run the stack"><p>Self-hosted VS-Agents, an indexer and a resolver for your ecosystem, on your infrastructure or ours, monitored and upgraded like the telecom platforms we have run for fourteen years.</p></Feature>
+          <Feature icon={faSitemap} title="Ecosystem design and governance"><p>An ecosystem on Verana is a governed list of participants authorized to issue, verify or hold certain credentials. We write yours: the credential schemas, the participant tree (grantors, issuers, verifiers, holders), the permission modes from fully open to fully governed, and the business model (onboarding fees, pay-per-issuance, pay-per-verification, or no fees at all). The Ecosystem Governance Framework starts from the template the Verana Council publishes.</p></Feature>
+          <Feature icon={faIdCard} title="Issuer and verifier services"><p>We deploy VS-Agent, Verana's Business Wallet, as the runtime of your Verifiable Services: a resolvable DID, credentials and Linked Verifiable Presentations, trust resolution before every exchange, and the registry operations run for you. Issuance and verification flows over DIDComm and OpenID4VC, in JSON-LD, SD-JWT VC or AnonCreds as each credential requires. Integrated with the IAM, CRM and KYC systems you already run.</p></Feature>
+          <Feature icon={faWallet} title="Wallet and agent integration"><p>Your credentials work in the wallets already interoperating on the Verana Playground, among them Hologram, the EUDI reference wallet, swiyu, BC Wallet, NL Wallet, Inji and Paradym. Your AI agents become Verifiable Services that prove who operates them, over DIDComm, MCP or A2A.</p></Feature>
+          <Feature icon={faServer} title="Run the stack"><p>Self-hosted VS-Agents, an indexer and a resolver for your ecosystem, on your infrastructure or ours, monitored and upgraded like the telecom platforms we have run for fourteen years.</p></Feature>
         </div>
       </Section>
 
