@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { faGavel, faGlobe, faGraduationCap, faLandmark, faTowerCell, faUsers } from "@fortawesome/free-solid-svg-icons";
-import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
+import { faGraduationCap, faTowerCell, faUsers } from "@fortawesome/free-solid-svg-icons";
+import VeranaLockup from "@/app/components/VeranaLockup";
+import { ButtonLink, Card, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
@@ -21,17 +22,17 @@ export default function Page() {
       <Section eyebrow="Three bodies, three sites" lead="Mobiera's site describes Mobiera's role. For the protocol itself, read those three.">
         <div className="grid-3">
           <Card>
-            <CardTitle icon={faLandmark}>Verana Foundation</CardTitle>
+            <h3 className="card-title"><VeranaLockup variant="foundation" /></h3>
             <p className="text-muted">The steward. Specifications, software, membership, working groups.</p>
             <a className="more" href={LINKS.foundation} rel="noopener">veranafoundation.org ↗</a>
           </Card>
           <Card>
-            <CardTitle icon={faGavel}>Verana Council</CardTitle>
+            <h3 className="card-title"><VeranaLockup variant="council" /></h3>
             <p className="text-muted">The governor. A non-profit Swiss association that governs and secures the live network and its ECS Ecosystem, one member one vote.</p>
             <a className="more" href={LINKS.council} rel="noopener">veranacouncil.org ↗</a>
           </Card>
           <Card>
-            <CardTitle icon={faGlobe}>verana.io</CardTitle>
+            <h3 className="card-title"><VeranaLockup variant="verana" /></h3>
             <p className="text-muted">The network and its software. Documentation, the Playground, the roadmap.</p>
             <a className="more" href={LINKS.verana} rel="noopener">verana.io ↗</a>
           </Card>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { faCertificate, faDiagramProject, faHandshake, faHeadset, faMobileScreen, faSitemap } from "@fortawesome/free-solid-svg-icons";
+import VeranaLockup from "@/app/components/VeranaLockup";
 import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, MoreLink, PageHero, Section } from "@/app/components/ui";
 import { TRUST_STANDARDS } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
@@ -43,7 +44,11 @@ export default function Page() {
       </Section>
 
       <Section eyebrow="What Verana is, in one paragraph" lead="Verana is the open, public, neutral trust infrastructure for the internet, in three parts: sovereign trust ecosystems that define who is accredited to issue and verify credentials; verifiable identity, where a service, a person or an AI agent proves who is behind it before any connection; and the Trust Graph, which makes services discoverable by the credentials they hold. Open source, owned by no one.">
-        <ButtonLink href={LINKS.verana}>Read more on verana.io</ButtonLink>
+        <a href={LINKS.verana} className="btn btn-lockup" rel="noopener">
+          <VeranaLockup variant="verana" size={22} />
+          <span>Read more on verana.io</span>
+          <span className="arrow" aria-hidden="true">→</span>
+        </a>
       </Section>
 
       <Section eyebrow="Use cases we lead with">

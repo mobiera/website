@@ -56,7 +56,7 @@ agent proves who is behind it before any connection; and the Trust Graph, which
 makes services discoverable by the credentials they hold. Open source, owned by
 no one.
 
-> CTA: Read more on verana.io → https://verana.io
+> CTA: Read more on verana.io → https://verana.io (button carries the verana.io lockup: gradient tile, white V, "Verana" in Space Grotesk)
 
 ## Use cases we lead with
 

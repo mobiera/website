@@ -9,7 +9,7 @@ url: /trust/services
 We design the ecosystem, deploy the verifiable services, integrate the wallets,
 and run what you do not want to run yourself.
 
-> CTA: Talk to us → /contact?topic=trust
+> CTA: Talk to us → /contact?topic=trust · Playground → https://playground.testnet.verana.network/
 
 ## Ecosystem design and governance
 

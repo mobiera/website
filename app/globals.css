@@ -45,6 +45,7 @@
   --glow: rgba(131, 83, 242, 0.28);
   --mark-fill: rgba(131, 83, 242, 0.06);
   --mark-stroke: rgba(131, 83, 242, 0.35);
+  --verana-purple: #a892ff; /* veranafoundation.org --color-purple, dark */
   --shadow: 0 20px 50px -30px rgba(0, 0, 0, 0.7);
 }
 
@@ -68,6 +69,7 @@
   --glow: rgba(131, 83, 242, 0.16);
   --mark-fill: rgba(131, 83, 242, 0.05);
   --mark-stroke: rgba(131, 83, 242, 0.30);
+  --verana-purple: #763ef0; /* veranafoundation.org --color-purple, light */
   --shadow: 0 20px 50px -30px rgba(12, 18, 60, 0.5);
 }
 
@@ -236,6 +238,16 @@ a { color: inherit; }
 .pot-score i { width: 10px; height: 10px; border-radius: 2px; background: var(--green); display: inline-block; }
 .pot-score i.off { background: var(--rule); }
 .pot-verdict { margin-left: auto; font-family: var(--font-display); font-weight: 600; color: var(--green-ink); }
+
+/* Verana lockups (marks and wordmarks as on the sister sites) ------------ */
+.lockup { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--ink); line-height: 1; }
+.lockup-grotesk { font-family: var(--font-space-grotesk), "Space Grotesk", sans-serif; font-weight: 700; letter-spacing: -0.03em; font-size: 1.3rem; }
+.lockup-inter { font-family: var(--font-inter), "Inter", sans-serif; font-weight: 600; letter-spacing: -0.02em; font-size: 1.3rem; }
+.lockup-inter .dot { color: var(--verana-purple); }
+.btn-lockup { gap: 12px; padding-left: 12px; }
+.btn-lockup .lockup-grotesk { font-size: 1.05rem; }
+.btn-lockup > span:not(.lockup) { border-left: 1px solid var(--rule); padding-left: 12px; }
+.btn-lockup .arrow { border-left: 0; padding-left: 0; }
 
 /* Logos ------------------------------------------------------------------- */
 /* The customer and partner logos are white artwork on transparent grounds
