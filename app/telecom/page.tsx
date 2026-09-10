@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { faGauge, faHeartPulse, faLayerGroup, faPlug, faRobot, faServer, faSimCard } from "@fortawesome/free-solid-svg-icons";
 import LogoWall from "@/app/components/LogoWall";
 import HeroMark from "@/app/components/HeroMark";
 import TpsChart from "@/app/components/TpsChart";
-import { ButtonLink, Card, Chips, CtaBand, Eyebrow, Feature, MoreLink, Section } from "@/app/components/ui";
+import { ButtonLink, Card, CardTitle, Chips, CtaBand, Eyebrow, Feature, MoreLink, Section } from "@/app/components/ui";
 import { OPERATORS, TELECOM_STANDARDS } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
 
@@ -36,13 +37,13 @@ export default function Page() {
       <Section eyebrow="Two platforms">
         <div className="grid-2">
           <Card>
-            <h3>Aircast</h3>
+            <CardTitle icon={faSimCard}>Aircast</CardTitle>
             <p className="text-muted">STK push marketing, general messaging and OTA campaign management in one platform, sharing one campaign engine, one operator GUI and one set of APIs. Works on any handset, with no data connection and no subscriber balance.</p>
             <Chips items={["STK · SAT · USTK", "SMS · MMS · flash", "OTA RAM · RFM"]} />
             <MoreLink href="/telecom/aircast">Aircast</MoreLink>
           </Card>
           <Card>
-            <h3>AI One</h3>
+            <CardTitle icon={faRobot}>AI One</CardTitle>
             <p className="text-muted">Customer-support AI agents that subscribers reach over SMS or Hologram. The agent is a Verifiable Service on Verana, so a subscriber's wallet shows who operates it before the first message.</p>
             <Chips items={["SMS · DIDComm", "MSISDN PIN", "Verifiable Service"]} />
             <MoreLink href="/telecom/ai-agents">AI One</MoreLink>
@@ -52,11 +53,11 @@ export default function Page() {
 
       <Section eyebrow="How we deploy" title="Your infrastructure or ours, at your network's pace">
         <div className="grid-2">
-          <Feature title="On your infrastructure or ours"><p>Every platform ships as containers. Run it on-premise in your data center, hosted by Mobiera, or hybrid: the campaign engine with you, bearer adapters and OTA executors where the traffic is.</p></Feature>
-          <Feature title="Scale by adding instances"><p>Every component on the campaign path (REST endpoint, campaign manager, bearer adapters, OTA executor) is stateless and queue-driven. When you need more throughput, you deploy more instances of the component that limits you. There is no central bottleneck.</p></Feature>
-          <Feature title="Shaped to your network"><p>Throughput is set by configuration, not hard limits: per-hour TPS budgets on every SMPP and MMSC account, campaign priorities, per-campaign caps, and reuse of unused budget by lower-priority campaigns. An overnight OTA roll-out never degrades daytime marketing or transactional traffic.</p></Feature>
-          <Feature title="Built for availability"><p>Active-active topologies, georedundant nodes, monitored queues, tested upgrade and rollback. The reference architectures are on the documentation portal.</p></Feature>
-          <Feature title="Integrate three ways"><p>REST APIs for one-shot pushes and messaging, file drop for operators that already run an upstream campaign manager, and SMPP accounts for bearers.</p></Feature>
+          <Feature icon={faServer} title="On your infrastructure or ours"><p>Every platform ships as containers. Run it on-premise in your data center, hosted by Mobiera, or hybrid: the campaign engine with you, bearer adapters and OTA executors where the traffic is.</p></Feature>
+          <Feature icon={faLayerGroup} title="Scale by adding instances"><p>Every component on the campaign path (REST endpoint, campaign manager, bearer adapters, OTA executor) is stateless and queue-driven. When you need more throughput, you deploy more instances of the component that limits you. There is no central bottleneck.</p></Feature>
+          <Feature icon={faGauge} title="Shaped to your network"><p>Throughput is set by configuration, not hard limits: per-hour TPS budgets on every SMPP and MMSC account, campaign priorities, per-campaign caps, and reuse of unused budget by lower-priority campaigns. An overnight OTA roll-out never degrades daytime marketing or transactional traffic.</p></Feature>
+          <Feature icon={faHeartPulse} title="Built for availability"><p>Active-active topologies, georedundant nodes, monitored queues, tested upgrade and rollback. The reference architectures are on the documentation portal.</p></Feature>
+          <Feature icon={faPlug} title="Integrate three ways"><p>REST APIs for one-shot pushes and messaging, file drop for operators that already run an upstream campaign manager, and SMPP accounts for bearers.</p></Feature>
         </div>
       </Section>
 

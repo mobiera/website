@@ -1,6 +1,18 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import HeroMark from "./HeroMark";
+
+/** Card heading with a decorative Font Awesome icon on the left. */
+export function CardTitle({ icon, children }: { icon: IconDefinition; children: ReactNode }) {
+  return (
+    <h3 className="card-title">
+      <span className="card-icon" aria-hidden="true"><FontAwesomeIcon icon={icon} /></span>
+      <span>{children}</span>
+    </h3>
+  );
+}
 
 export function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <p className={`eyebrow ${className}`}>{children}</p>;
@@ -101,10 +113,13 @@ export function Steps({ items }: { items: { title: string; body: ReactNode }[] }
   );
 }
 
-export function Feature({ title, children }: { title: string; children: ReactNode }) {
+export function Feature({ title, icon, children }: { title: string; icon?: IconDefinition; children: ReactNode }) {
   return (
     <div className="feature">
-      <h3>{title}</h3>
+      <h3 className={icon ? "feature-title" : undefined}>
+        {icon && <span className="feature-icon" aria-hidden="true"><FontAwesomeIcon icon={icon} /></span>}
+        {title}
+      </h3>
       <div className="text-muted">{children}</div>
     </div>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ButtonLink, Card, Chips, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
+import { faArrowUpWideShort, faBullhorn, faBullseye, faCalendarDays, faChartLine, faClock, faCommentSms, faFeather, faFileArrowUp, faGauge, faListCheck, faMicrochip, faPuzzlePiece, faRecycle, faSatelliteDish } from "@fortawesome/free-solid-svg-icons";
+import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export default function Page() {
         <div className="grid-3">
           <Card>
             <span className="eyebrow tag">01</span>
-            <h3>Push marketing channel</h3>
+            <CardTitle icon={faBullhorn}>Push marketing channel</CardTitle>
             <p className="text-muted">Interactive STK campaigns delivered to the handset through a small Java Card applet on the SIM: Mobiera's Sleepy or Micro applet, or a third-party applet through the USTK push API.</p>
             <ul>
               <li>Any handset, smartphone or feature phone.</li>
@@ -32,13 +33,13 @@ export default function Page() {
           </Card>
           <Card>
             <span className="eyebrow tag">02</span>
-            <h3>Messaging platform</h3>
+            <CardTitle icon={faCommentSms}>Messaging platform</CardTitle>
             <p className="text-muted">Bulk SMS, binary SMS, flash SMS (class 0) and MMS over the operator's SMSC and MMSC, with no applet required. Same campaign engine, same targeting, same throttling: only the bearer changes. One-shot pushes through the REST API, or mass campaigns from a target list and a descriptor file.</p>
             <p className="text-sm text-muted">Use cases: onboarding and welcome messages, one-time passwords, balance reminders, flash alerts, rich-media bursts, transactional bulk SMS.</p>
           </Card>
           <Card>
             <span className="eyebrow tag">03</span>
-            <h3>OTA campaign manager</h3>
+            <CardTitle icon={faSatelliteDish}>OTA campaign manager</CardTitle>
             <p className="text-muted">RAM campaigns (install, update, delete applets) and RFM campaigns (read, update SIM files) at SMSC scale on the live SIM base: TPS-aware, throttled, queued. Built on Mobiera's ETSI smart-card libraries and a GlobalPlatform card-content manager.</p>
             <p className="text-sm text-muted">Use cases: roll out, upgrade or remove an applet on existing SIMs; push SIM file updates such as PLMN lists.</p>
           </Card>
@@ -47,37 +48,37 @@ export default function Page() {
 
       <Section eyebrow="One campaign engine" title="Scheduling, targeting, lists, file drop, statistics">
         <div className="grid-2">
-          <Feature title="Scheduling"><p>Day-of-week and hour-of-day bitmaps, date ranges, maximum sends per day per MSISDN.</p></Feature>
-          <Feature title="Targeting"><p>Full base scans, filtered SIM lists (by SIM profile, country, custom flags), or operator-supplied MSISDN lists.</p></Feature>
-          <Feature title="Whitelists and blacklists"><p>Opt-in lists, opt-out lists, do-not-disturb registries, applied at execution time.</p></Feature>
-          <Feature title="File-drop campaign creation"><p>Upload a descriptor file to a watched directory and the platform creates and schedules the campaign. No REST call needed. The integration path for operators with an upstream campaign manager.</p></Feature>
-          <Feature title="Statistics and service logs"><p>Every send and every interaction recorded.</p></Feature>
+          <Feature icon={faCalendarDays} title="Scheduling"><p>Day-of-week and hour-of-day bitmaps, date ranges, maximum sends per day per MSISDN.</p></Feature>
+          <Feature icon={faBullseye} title="Targeting"><p>Full base scans, filtered SIM lists (by SIM profile, country, custom flags), or operator-supplied MSISDN lists.</p></Feature>
+          <Feature icon={faListCheck} title="Whitelists and blacklists"><p>Opt-in lists, opt-out lists, do-not-disturb registries, applied at execution time.</p></Feature>
+          <Feature icon={faFileArrowUp} title="File-drop campaign creation"><p>Upload a descriptor file to a watched directory and the platform creates and schedules the campaign. No REST call needed. The integration path for operators with an upstream campaign manager.</p></Feature>
+          <Feature icon={faChartLine} title="Statistics and service logs"><p>Every send and every interaction recorded.</p></Feature>
         </div>
       </Section>
 
       <Section eyebrow="Throughput you control" title="Shape the budget, never idle the SMSC" lead="An operator runs a massive overnight OTA roll-out without degrading daytime marketing or transactional SMS and MMS traffic.">
         <div className="grid-2">
-          <Feature title="Per-hour TPS bitmaps"><p>On every SMPP and MMSC account: high TPS for OTA at night, lower in the day.</p></Feature>
-          <Feature title="Per-campaign priorities"><p>A higher-priority campaign preempts a lower one for the shared budget.</p></Feature>
-          <Feature title="Per-campaign TPS caps"><p>Individual ceilings, regardless of the bearer budget.</p></Feature>
-          <Feature title="Stale-bandwidth reuse"><p>Budget a high-priority campaign does not use is offered to lower-priority campaigns, so the SMSC is never idle while there is work to do.</p></Feature>
+          <Feature icon={faClock} title="Per-hour TPS bitmaps"><p>On every SMPP and MMSC account: high TPS for OTA at night, lower in the day.</p></Feature>
+          <Feature icon={faArrowUpWideShort} title="Per-campaign priorities"><p>A higher-priority campaign preempts a lower one for the shared budget.</p></Feature>
+          <Feature icon={faGauge} title="Per-campaign TPS caps"><p>Individual ceilings, regardless of the bearer budget.</p></Feature>
+          <Feature icon={faRecycle} title="Stale-bandwidth reuse"><p>Budget a high-priority campaign does not use is offered to lower-priority campaigns, so the SMSC is never idle while there is work to do.</p></Feature>
         </div>
       </Section>
 
       <Section eyebrow="The applets" title="Sleepy, Micro, and third-party applets through USTK" lead="Sleepy and Micro are Mobiera products, delivered with installation guides and checksums.">
         <div className="grid-3">
           <Card>
-            <h3>Sleepy</h3>
+            <CardTitle icon={faMicrochip}>Sleepy</CardTitle>
             <p className="text-muted">The full-feature STK applet, in Full and Lite editions, with SIM (0x070X) and UICC (0x090X) profiles. Requires Java Card 2.1.1 and the 3GPP TS 03.19 SIM Toolkit API, Release 99.</p>
             <Chips items={["Full · Lite", "SIM · UICC", "Java Card 2.1.1"]} />
           </Card>
           <Card>
-            <h3>Micro</h3>
+            <CardTitle icon={faFeather}>Micro</CardTitle>
             <p className="text-muted">About 1.3 KB on card, for SIMs with 1.5 to 2 KB of free memory. Receives a campaign over OTA SMS, shows up to two DISPLAY TEXT commands, and reports the outcome back by SMS. Text is rendered exactly as encoded, in GSM-7, 8-bit or UCS-2.</p>
             <Chips items={["~1.3 KB", "DISPLAY TEXT", "GSM-7 · UCS-2"]} />
           </Card>
           <Card>
-            <h3>Third-party applets</h3>
+            <CardTitle icon={faPuzzlePiece}>Third-party applets</CardTitle>
             <p className="text-muted">SAT and Oberthur / Idemia Pico applets through the USTK push API, one contract for all of them.</p>
             <Chips items={["SAT", "Pico", "USTK"]} />
           </Card>

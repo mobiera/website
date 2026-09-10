@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { faGlobe, faLayerGroup, faServer } from "@fortawesome/free-solid-svg-icons";
 import ContactForm from "@/app/components/ContactForm";
 import { Feature, PageHero, Section } from "@/app/components/ui";
 
@@ -15,9 +16,9 @@ export default function Page() {
 
       <Section eyebrow="Why work here">
         <div className="grid-3">
-          <Feature title="Real systems"><p>What you ship runs on SMSCs and SIM cards at 25+ operators, or on the Verana network. Bugs are visible; so is good work.</p></Feature>
-          <Feature title="Two fields at once"><p>Telecom protocols from the 1990s and decentralized identity standards from this decade, in the same codebase and the same week.</p></Feature>
-          <Feature title="Distributed, bilingual"><p>Colombia, Peru, Bolivia, Panama, Spain and Algeria. Spanish and English every day. Written communication first.</p></Feature>
+          <Feature icon={faServer} title="Real systems"><p>What you ship runs on SMSCs and SIM cards at 25+ operators, or on the Verana network. Bugs are visible; so is good work.</p></Feature>
+          <Feature icon={faLayerGroup} title="Two fields at once"><p>Telecom protocols from the 1990s and decentralized identity standards from this decade, in the same codebase and the same week.</p></Feature>
+          <Feature icon={faGlobe} title="Distributed, bilingual"><p>Colombia, Peru, Bolivia, Panama, Spain and Algeria. Spanish and English every day. Written communication first.</p></Feature>
         </div>
       </Section>
 

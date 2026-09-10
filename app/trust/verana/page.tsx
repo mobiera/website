@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ButtonLink, Card, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
+import { faGavel, faGlobe, faGraduationCap, faLandmark, faTowerCell, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section } from "@/app/components/ui";
 import { LINKS } from "@/app/lib/site";
 
 export const metadata: Metadata = {
@@ -20,17 +21,17 @@ export default function Page() {
       <Section eyebrow="Three bodies, three sites" lead="Mobiera's site describes Mobiera's role. For the protocol itself, read those three.">
         <div className="grid-3">
           <Card>
-            <h3>Verana Foundation</h3>
+            <CardTitle icon={faLandmark}>Verana Foundation</CardTitle>
             <p className="text-muted">The steward. Specifications, software, membership, working groups.</p>
             <a className="more" href={LINKS.foundation} rel="noopener">veranafoundation.org ↗</a>
           </Card>
           <Card>
-            <h3>Verana Council</h3>
+            <CardTitle icon={faGavel}>Verana Council</CardTitle>
             <p className="text-muted">The governor. A non-profit Swiss association that governs and secures the live network and its ECS Ecosystem, one member one vote.</p>
             <a className="more" href={LINKS.council} rel="noopener">veranacouncil.org ↗</a>
           </Card>
           <Card>
-            <h3>verana.io</h3>
+            <CardTitle icon={faGlobe}>verana.io</CardTitle>
             <p className="text-muted">The network and its software. Documentation, the Playground, the roadmap.</p>
             <a className="more" href={LINKS.verana} rel="noopener">verana.io ↗</a>
           </Card>
@@ -39,9 +40,9 @@ export default function Page() {
 
       <Section eyebrow="What we contribute">
         <div className="grid-3">
-          <Feature title="Telecom channels for the trust layer"><p>SMS, SIM toolkit and phone-number verification as first-class parts of verifiable interactions.</p></Feature>
-          <Feature title="Training and certification of integrators"><p>Across Latin America, as the Foundation's official certificator: eight tracks, one exam each, on the testnet.</p></Feature>
-          <Feature title="Two working groups"><p>The Specification WG (SPEC-WG) and the Reference Implementation WG.</p></Feature>
+          <Feature icon={faTowerCell} title="Telecom channels for the trust layer"><p>SMS, SIM toolkit and phone-number verification as first-class parts of verifiable interactions.</p></Feature>
+          <Feature icon={faGraduationCap} title="Training and certification of integrators"><p>Across Latin America, as the Foundation's official certificator: eight tracks, one exam each, on the testnet.</p></Feature>
+          <Feature icon={faUsers} title="Two working groups"><p>The Specification WG (SPEC-WG) and the Reference Implementation WG.</p></Feature>
         </div>
       </Section>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { faBullseye, faCode, faLocationDot, faPeopleGroup, faScaleBalanced, faWrench } from "@fortawesome/free-solid-svg-icons";
 import LogoWall from "@/app/components/LogoWall";
-import { ButtonLink, Card, CtaBand, Feature, MoreLink, PageHero, ProofStrip, Section } from "@/app/components/ui";
+import { ButtonLink, Card, CardTitle, CtaBand, Feature, MoreLink, PageHero, ProofStrip, Section } from "@/app/components/ui";
 import { OFFICES, OPEN_SOURCE, OPERATORS, PARTNERS, TIMELINE } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
 
@@ -45,10 +46,10 @@ export default function Page() {
 
       <Section eyebrow="Values">
         <div className="grid-4">
-          <Feature title="Customer first"><p>We measure ourselves on what runs in the customer's network, not on what we shipped.</p></Feature>
-          <Feature title="Say what is true"><p>Concrete claims, disclosed limits, no surprises in production.</p></Feature>
-          <Feature title="Do it properly"><p>Standards implemented to the letter, tested against real SIMs and real SMSCs.</p></Feature>
-          <Feature title="Learn together"><p>A multilingual team that shares what it knows, with customers and in the open.</p></Feature>
+          <Feature icon={faBullseye} title="Customer first"><p>We measure ourselves on what runs in the customer's network, not on what we shipped.</p></Feature>
+          <Feature icon={faScaleBalanced} title="Say what is true"><p>Concrete claims, disclosed limits, no surprises in production.</p></Feature>
+          <Feature icon={faWrench} title="Do it properly"><p>Standards implemented to the letter, tested against real SIMs and real SMSCs.</p></Feature>
+          <Feature icon={faPeopleGroup} title="Learn together"><p>A multilingual team that shares what it knows, with customers and in the open.</p></Feature>
         </div>
       </Section>
 
@@ -58,7 +59,7 @@ export default function Page() {
         <div className="grid-3">
           {OFFICES.map((o) => (
             <Card key={o.place}>
-              <h3>{o.place}</h3>
+              <CardTitle icon={faLocationDot}>{o.place}</CardTitle>
               {o.note && <p className="text-muted text-sm">{o.note}</p>}
             </Card>
           ))}
@@ -76,7 +77,7 @@ export default function Page() {
         <div className="grid-3">
           {OPEN_SOURCE.map((g) => (
             <Card key={g.group}>
-              <h3>{g.group}</h3>
+              <CardTitle icon={faCode}>{g.group}</CardTitle>
               <ul>
                 {g.repos.map((r) => (
                   <li key={r}><a className="font-mono text-sm" href={`${LINKS.github}/${r}`} rel="noopener">{r}</a></li>
