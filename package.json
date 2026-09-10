@@ -1,6 +1,6 @@
 {
   "name": "mobiera-website",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "description": "mobiera.com: operator-grade software for mobile networks and verifiable trust on Verana (Next.js + Tailwind v4).",
   "license": "MIT",
