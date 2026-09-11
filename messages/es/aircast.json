@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Aircast",
+    "description": "Aircast ejecuta campañas de marketing push por STK, SMS y MMS masivos y OTA de SIM sobre la red del operador, en cualquier teléfono, sin datos y sin saldo, a la capacidad de envío que su SMSC permite."
+  },
+  "hero": {
+    "eyebrow": "Aircast · Plataforma para operadores móviles",
+    "title": "Campañas sobre la red del operador. Cualquier teléfono, sin datos, sin saldo.",
+    "lead": "Aircast ejecuta campañas de marketing push por STK, mensajería masiva y OTA de SIM desde un solo motor, a la capacidad de envío que su SMSC permita. En el conjunto de nuestros despliegues alcanza unos 60 millones de suscriptores al día.",
+    "docs": "Lea la documentación",
+    "talk": "Hable con nosotros"
+  },
+  "jobs": {
+    "eyebrow": "Una plataforma, tres trabajos",
+    "push": {
+      "title": "Canal de marketing push",
+      "body": "Campañas STK interactivas entregadas al teléfono a través de un pequeño applet Java Card en la SIM: el applet Sleepy o Micro de Mobiera, o un applet de terceros a través de la API push USTK.",
+      "bullets": [
+        "Cualquier teléfono, smartphone o teléfono básico.",
+        "Sin conexión de datos y sin saldo del suscriptor, sobre un código corto SMS MO/MT de tarifa cero.",
+        "Bidireccional: bytecode STK cifrado de bajada, la respuesta del usuario de vuelta como MO-SMS cifrado.",
+        "Cifrado de extremo a extremo con 3DES-CBC o AES, con llaves independientes de las llaves OTA."
+      ],
+      "useCases": "Casos de uso: publicidad y venta adicional, opt-in y doble opt-in, click-to-call, click-to-URL, lanzadores USSD, encuestas, menús en la SIM."
+    },
+    "messaging": {
+      "title": "Plataforma de mensajería",
+      "body": "SMS masivos, SMS binarios, SMS flash (clase 0) y MMS sobre el SMSC y el MMSC del operador, sin necesidad de applet. Mismo motor de campañas, misma segmentación, misma regulación de tráfico: solo cambia la portadora. Envíos unitarios por la API REST, o campañas masivas a partir de una lista de destinatarios y un archivo descriptor.",
+      "useCases": "Casos de uso: mensajes de bienvenida y activación, contraseñas de un solo uso, recordatorios de saldo, alertas flash, ráfagas de contenido multimedia, SMS masivos transaccionales."
+    },
+    "ota": {
+      "title": "Gestor de campañas OTA",
+      "body": "Campañas RAM (instalar, actualizar, eliminar applets) y campañas RFM (leer, actualizar archivos de la SIM) a escala del SMSC sobre la base de SIM en producción: conscientes del TPS, reguladas, en cola. Construido sobre las bibliotecas de tarjeta inteligente ETSI de Mobiera y un gestor de contenido de tarjeta GlobalPlatform.",
+      "useCases": "Casos de uso: desplegar, actualizar o eliminar un applet en SIM existentes; enviar actualizaciones de archivos de la SIM, como listas PLMN."
+    }
+  },
+  "engine": {
+    "eyebrow": "Un solo motor de campañas",
+    "title": "Programación, segmentación, listas, depósito de archivos, estadísticas",
+    "features": [
+      { "title": "Programación", "body": "Mapas de bits por día de la semana y hora del día, rangos de fechas, máximo de envíos por día por MSISDN." },
+      { "title": "Segmentación", "body": "Barridos de toda la base, listas de SIM filtradas (por perfil de SIM, país, marcadores personalizados) o listas de MSISDN provistas por el operador." },
+      { "title": "Listas blancas y listas negras", "body": "Listas de opt-in, listas de opt-out, registros de no molestar, aplicados en el momento de la ejecución." },
+      { "title": "Creación de campañas por depósito de archivos", "body": "Suba un archivo descriptor a un directorio vigilado y la plataforma crea y programa la campaña. Sin necesidad de llamada REST. La vía de integración para operadores con un gestor de campañas propio." },
+      { "title": "Estadísticas y registros de servicio", "body": "Cada envío y cada interacción quedan registrados." }
+    ]
+  },
+  "throughput": {
+    "eyebrow": "Capacidad de envío bajo su control",
+    "title": "Modele el presupuesto, nunca deje inactivo el SMSC",
+    "lead": "Un operador ejecuta un despliegue OTA masivo de noche sin degradar el tráfico diurno de marketing ni el de SMS y MMS transaccionales.",
+    "features": [
+      { "title": "Mapas de bits de TPS por hora", "body": "En cada cuenta SMPP y MMSC: TPS alto para OTA de noche, más bajo de día." },
+      { "title": "Prioridades por campaña", "body": "Una campaña de mayor prioridad se antepone a una de menor prioridad por el presupuesto compartido." },
+      { "title": "Topes de TPS por campaña", "body": "Techos individuales, independientes del presupuesto de la portadora." },
+      { "title": "Reutilización del ancho de banda ocioso", "body": "El presupuesto que una campaña de alta prioridad no usa se ofrece a las campañas de menor prioridad, así el SMSC nunca queda inactivo mientras haya trabajo pendiente." }
+    ]
+  },
+  "applets": {
+    "eyebrow": "Los applets",
+    "title": "Sleepy, Micro y applets de terceros a través de USTK",
+    "lead": "Sleepy y Micro son productos de Mobiera, entregados con guías de instalación y sumas de verificación.",
+    "sleepy": {
+      "title": "Sleepy",
+      "body": "El applet STK completo, en ediciones Full y Lite, con perfiles SIM (0x070X) y UICC (0x090X). Requiere Java Card 2.1.1 y la API SIM Toolkit 3GPP TS 03.19, Release 99."
+    },
+    "micro": {
+      "title": "Micro",
+      "body": "Unos 1.3 KB en tarjeta, para SIM con 1.5 a 2 KB de memoria libre. Recibe una campaña por SMS OTA, muestra hasta dos comandos DISPLAY TEXT e informa el resultado de vuelta por SMS. El texto se muestra exactamente como fue codificado, en GSM-7, 8 bits o UCS-2."
+    },
+    "thirdParty": {
+      "title": "Applets de terceros",
+      "body": "Applets SAT y Pico de Oberthur / Idemia a través de la API push USTK, un solo contrato para todos."
+    }
+  },
+  "integrate": {
+    "eyebrow": "Integre",
+    "title": "APIs, depósito de archivos, webhooks, cuentas SMPP, interfaz de operador",
+    "bullets": [
+      "API Sleepy Push y API USTK Push para campañas interactivas.",
+      "API de mensajería SMS y MMS para envíos unitarios.",
+      "Depósito de archivos para campañas masivas.",
+      "Webhooks para eventos de respuesta y reportes de entrega.",
+      "Cuentas SMPP por portadora, con reglas de TPS.",
+      "Interfaz de operador para campañas, archivos, listas, reglas, usuarios y estadísticas."
+    ],
+    "cta": "Documentación para desarrolladores"
+  },
+  "deploy": {
+    "eyebrow": "Despliegue",
+    "title": "Documentado para su equipo de infraestructura",
+    "lead": "Topologías de despliegue, requisitos, redes, seguridad, monitoreo, respaldos, escalado, alta disponibilidad, actualización y reversión.",
+    "cta": "Documentación de infraestructura"
+  },
+  "operators": {
+    "eyebrow": "Quién lo opera",
+    "title": "Ooredoo (Argelia) y Claro (Perú), entre más de 25 operadores."
+  },
+  "cta": {
+    "title": "Lleve Aircast a su red",
+    "lead": "Cuéntenos su SMSC, su base de SIM y su situación de applets. Respondemos en dos días hábiles.",
+    "label": "Hable con nosotros"
+  }
+}

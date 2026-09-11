@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Software y servicios de telecomunicaciones",
+    "description": "Aircast y AI One, plataformas que corren dentro de la red del operador, en sus instalaciones o alojadas, ajustadas a la capacidad de envío de su SMSC. Más de 25 operadores, unos 60 millones de suscriptores alcanzados por día."
+  },
+  "hero": {
+    "eyebrow": "Telecomunicaciones · Más de 25 operadores desde 2012",
+    "title": "Software que corre dentro de la red del operador.",
+    "lead": "Marketing push en cualquier teléfono, mensajería masiva y OTA de SIM, agentes de IA por SMS. Desplegado en su infraestructura o en la nuestra, ajustado a la capacidad de envío de su SMSC. 800 millones de suscriptores alcanzables, unos 60 millones alcanzados por día.",
+    "docs": "Lea la documentación",
+    "talk": "Hable con nosotros"
+  },
+  "tpsChart": {
+    "panelLabel": "Presupuesto de capacidad de envío de Aircast en 24 horas",
+    "head": "Presupuesto de TPS · Cuenta SMPP 1",
+    "period": "24 h · Aircast",
+    "chartLabel": "Gráfico de barras: alta capacidad OTA de noche, tráfico de marketing de día, presupuesto no usado reutilizado",
+    "legend": {
+      "ota": "Despliegue OTA, noche",
+      "day": "Marketing y transaccional, día",
+      "reuse": "Presupuesto no usado, reutilizado"
+    }
+  },
+  "platforms": {
+    "eyebrow": "Dos plataformas",
+    "aircast": {
+      "title": "Aircast",
+      "body": "Marketing push por STK, mensajería general y gestión de campañas OTA en una sola plataforma, con un mismo motor de campañas, una misma interfaz de operador y un mismo conjunto de APIs. Funciona en cualquier teléfono, sin conexión de datos y sin saldo del suscriptor.",
+      "more": "Aircast"
+    },
+    "aiOne": {
+      "title": "AI One",
+      "body": "Agentes de IA de atención al cliente que los suscriptores alcanzan por SMS o Hologram. El agente es un Servicio Verificable en Verana, así que la billetera del suscriptor muestra quién lo opera antes del primer mensaje.",
+      "chips": ["SMS · DIDComm", "PIN por MSISDN", "Servicio Verificable"],
+      "more": "AI One"
+    }
+  },
+  "deploy": {
+    "eyebrow": "Cómo desplegamos",
+    "title": "En su infraestructura o en la nuestra, al ritmo de su red",
+    "features": [
+      { "title": "En su infraestructura o en la nuestra", "body": "Cada plataforma se entrega como contenedores. Ejecútela en sus instalaciones, en su centro de datos, alojada por Mobiera, o en modo híbrido: el motor de campañas con usted, los adaptadores de portadora y los ejecutores OTA donde está el tráfico." },
+      { "title": "Escale agregando instancias", "body": "Cada componente en la ruta de la campaña (endpoint REST, gestor de campañas, adaptadores de portadora, ejecutor OTA) es sin estado y se alimenta de colas. Cuando necesita más capacidad de envío, despliega más instancias del componente que lo limita. No hay un cuello de botella central." },
+      { "title": "Ajustado a su red", "body": "La capacidad de envío se define por configuración, no por límites fijos: presupuestos de TPS por hora en cada cuenta SMPP y MMSC, prioridades de campaña, topes por campaña y reutilización del presupuesto no usado por campañas de menor prioridad. Un despliegue OTA nocturno nunca degrada el tráfico de marketing o transaccional del día." },
+      { "title": "Diseñado para la disponibilidad", "body": "Topologías activo-activo, nodos georredundantes, colas monitoreadas, actualización y reversión probadas. Las arquitecturas de referencia están en el portal de documentación." },
+      { "title": "Integre de tres maneras", "body": "APIs REST para envíos unitarios y mensajería, depósito de archivos para operadores que ya tienen un gestor de campañas propio, y cuentas SMPP para las portadoras." }
+    ]
+  },
+  "standards": {
+    "eyebrow": "Estándares que implementamos",
+    "lead": "Cuatro de estas implementaciones son de código abierto en github.com/mobiera."
+  },
+  "services": {
+    "eyebrow": "Servicios alrededor de las plataformas",
+    "title": "Integración, operación, ingeniería de SIM y OTA",
+    "lead": "Integración con su SMSC, MMSC y facturación; operación gestionada de nodos alojados; ingeniería de SIM y OTA; consultoría sobre canales push y campañas.",
+    "cta": "Hable con nosotros"
+  },
+  "operators": {
+    "eyebrow": "Quién lo opera",
+    "title": "Operadores"
+  },
+  "docs": {
+    "eyebrow": "Documentación",
+    "title": "Arquitectura, APIs, applets y operación, en público",
+    "lead": "El portal de documentación de Aircast cubre la arquitectura, las APIs para desarrolladores, las guías de instalación de applets y los manuales de operación.",
+    "docs": "Lea la documentación",
+    "talk": "Hable con nosotros"
+  },
+  "cta": {
+    "title": "¿Evalúa un canal push o un agente de IA?",
+    "lead": "Cuéntenos qué red, qué SMSC y qué caso de uso. Respondemos en dos días hábiles.",
+    "label": "Contacto"
+  }
+}

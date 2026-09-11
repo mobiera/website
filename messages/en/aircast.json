@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Aircast",
+    "description": "Aircast runs STK push marketing, bulk SMS and MMS, and SIM OTA campaigns over the operator's network, on any handset, with no data and no balance, at the throughput your SMSC allows."
+  },
+  "hero": {
+    "eyebrow": "Aircast · MNO platform",
+    "title": "Campaigns over the operator's network. Any handset, no data, no balance.",
+    "lead": "Aircast runs STK push marketing, bulk messaging and SIM OTA campaigns from one engine, at whatever throughput your SMSC allows. Across our deployments it reaches about 60 million subscribers a day.",
+    "docs": "Read the docs",
+    "talk": "Talk to us"
+  },
+  "jobs": {
+    "eyebrow": "One platform, three jobs",
+    "push": {
+      "title": "Push marketing channel",
+      "body": "Interactive STK campaigns delivered to the handset through a small Java Card applet on the SIM: Mobiera's Sleepy or Micro applet, or a third-party applet through the USTK push API.",
+      "bullets": [
+        "Any handset, smartphone or feature phone.",
+        "No data connection and no subscriber balance, over a 0-rated MO/MT SMS shortcode.",
+        "Bi-directional: ciphered STK bytecode down, the user's input back as ciphered MO-SMS.",
+        "End-to-end ciphered with 3DES-CBC or AES, keys independent from the OTA keys."
+      ],
+      "useCases": "Use cases: advertising and upsell, opt-in and double opt-in, click-to-call, click-to-URL, USSD launchers, surveys, on-SIM menus."
+    },
+    "messaging": {
+      "title": "Messaging platform",
+      "body": "Bulk SMS, binary SMS, flash SMS (class 0) and MMS over the operator's SMSC and MMSC, with no applet required. Same campaign engine, same targeting, same throttling: only the bearer changes. One-shot pushes through the REST API, or mass campaigns from a target list and a descriptor file.",
+      "useCases": "Use cases: onboarding and welcome messages, one-time passwords, balance reminders, flash alerts, rich-media bursts, transactional bulk SMS."
+    },
+    "ota": {
+      "title": "OTA campaign manager",
+      "body": "RAM campaigns (install, update, delete applets) and RFM campaigns (read, update SIM files) at SMSC scale on the live SIM base: TPS-aware, throttled, queued. Built on Mobiera's ETSI smart-card libraries and a GlobalPlatform card-content manager.",
+      "useCases": "Use cases: roll out, upgrade or remove an applet on existing SIMs; push SIM file updates such as PLMN lists."
+    }
+  },
+  "engine": {
+    "eyebrow": "One campaign engine",
+    "title": "Scheduling, targeting, lists, file drop, statistics",
+    "features": [
+      { "title": "Scheduling", "body": "Day-of-week and hour-of-day bitmaps, date ranges, maximum sends per day per MSISDN." },
+      { "title": "Targeting", "body": "Full base scans, filtered SIM lists (by SIM profile, country, custom flags), or operator-supplied MSISDN lists." },
+      { "title": "Whitelists and blacklists", "body": "Opt-in lists, opt-out lists, do-not-disturb registries, applied at execution time." },
+      { "title": "File-drop campaign creation", "body": "Upload a descriptor file to a watched directory and the platform creates and schedules the campaign. No REST call needed. The integration path for operators with an upstream campaign manager." },
+      { "title": "Statistics and service logs", "body": "Every send and every interaction recorded." }
+    ]
+  },
+  "throughput": {
+    "eyebrow": "Throughput you control",
+    "title": "Shape the budget, never idle the SMSC",
+    "lead": "An operator runs a massive overnight OTA roll-out without degrading daytime marketing or transactional SMS and MMS traffic.",
+    "features": [
+      { "title": "Per-hour TPS bitmaps", "body": "On every SMPP and MMSC account: high TPS for OTA at night, lower in the day." },
+      { "title": "Per-campaign priorities", "body": "A higher-priority campaign preempts a lower one for the shared budget." },
+      { "title": "Per-campaign TPS caps", "body": "Individual ceilings, regardless of the bearer budget." },
+      { "title": "Stale-bandwidth reuse", "body": "Budget a high-priority campaign does not use is offered to lower-priority campaigns, so the SMSC is never idle while there is work to do." }
+    ]
+  },
+  "applets": {
+    "eyebrow": "The applets",
+    "title": "Sleepy, Micro, and third-party applets through USTK",
+    "lead": "Sleepy and Micro are Mobiera products, delivered with installation guides and checksums.",
+    "sleepy": {
+      "title": "Sleepy",
+      "body": "The full-feature STK applet, in Full and Lite editions, with SIM (0x070X) and UICC (0x090X) profiles. Requires Java Card 2.1.1 and the 3GPP TS 03.19 SIM Toolkit API, Release 99."
+    },
+    "micro": {
+      "title": "Micro",
+      "body": "About 1.3 KB on card, for SIMs with 1.5 to 2 KB of free memory. Receives a campaign over OTA SMS, shows up to two DISPLAY TEXT commands, and reports the outcome back by SMS. Text is rendered exactly as encoded, in GSM-7, 8-bit or UCS-2."
+    },
+    "thirdParty": {
+      "title": "Third-party applets",
+      "body": "SAT and Oberthur / Idemia Pico applets through the USTK push API, one contract for all of them."
+    }
+  },
+  "integrate": {
+    "eyebrow": "Integrate",
+    "title": "APIs, file drop, webhooks, SMPP accounts, operator GUI",
+    "bullets": [
+      "Sleepy Push API and USTK Push API for interactive campaigns.",
+      "SMS and MMS messaging API for one-shot pushes.",
+      "File drop for mass campaigns.",
+      "Webhooks for response events and delivery reports.",
+      "SMPP accounts per bearer, with TPS rules.",
+      "Operator GUI for campaigns, files, lists, rules, users and statistics."
+    ],
+    "cta": "Developer documentation"
+  },
+  "deploy": {
+    "eyebrow": "Deploy",
+    "title": "Documented for your infrastructure team",
+    "lead": "Deployment topologies, prerequisites, networking, security, monitoring, backups, scaling, high availability, upgrade and rollback.",
+    "cta": "Infrastructure documentation"
+  },
+  "operators": {
+    "eyebrow": "Who runs it",
+    "title": "Ooredoo (Algeria) and Claro (Peru), among 25+ operators."
+  },
+  "cta": {
+    "title": "Bring Aircast to your network",
+    "lead": "Tell us your SMSC, SIM base and applet situation. We answer within two business days.",
+    "label": "Talk to us"
+  }
+}

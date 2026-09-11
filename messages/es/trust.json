@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Credenciales verificables y redes de confianza",
+    "description": "Mobiera cofundó la Verana Foundation, construye y opera ecosistemas de confianza en la red Verana y es el certificador oficial de los integradores que construyen sobre ella en América Latina."
+  },
+  "hero": {
+    "eyebrow": "Credenciales Verificables y redes de confianza",
+    "title": "Confianza verificable para servicios, personas y agentes de IA.",
+    "lead": "Mobiera cofundó la Verana Foundation, construye y opera ecosistemas de confianza en la red Verana y es el certificador oficial de los integradores que construyen sobre ella en América Latina.",
+    "services": "Nuestros servicios de confianza",
+    "certified": "Certifíquese"
+  },
+  "roles": {
+    "eyebrow": "Tres roles",
+    "cards": {
+      "founder": {
+        "title": "Miembro fundador",
+        "body": "Mobiera cofundó la Verana Foundation en junio de 2025, junto con 2060 OÜ y Orchestrating Identity, y contribuye a sus grupos de trabajo de Especificación e Implementación de Referencia.",
+        "more": "Mobiera y Verana"
+      },
+      "builder": {
+        "title": "Constructor y operador",
+        "body": "Diseñamos ecosistemas de confianza, desplegamos servicios de emisión y verificación, integramos billeteras y agentes de IA, y operamos la plataforma para los clientes que no quieren operarla por su cuenta.",
+        "more": "Servicios de confianza"
+      },
+      "certificator": {
+        "title": "Certificador oficial",
+        "body": "Designada por la Verana Foundation como certificador oficial para América Latina: Mobiera capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes.",
+        "more": "Obtenga la certificación Verana"
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Por qué Mobiera",
+    "title": "Catorce años de software del que dependen terceros",
+    "lead": "La infraestructura de confianza tiene que mantenerse en funcionamiento. El equipo que diseña su ecosistema opera plataformas dentro de más de 25 redes móviles desde 2012, alcanzando a unos 60 millones de suscriptores al día, y aplica la misma disciplina de operaciones a los VS-Agents, indexadores y resolvedores.",
+    "more": "Software y servicios de telecomunicaciones"
+  },
+  "verana": {
+    "eyebrow": "Qué es Verana, en un párrafo",
+    "lead": "Verana es la infraestructura de confianza abierta, pública y neutral para internet, en tres partes: ecosistemas de confianza soberanos que definen quién está acreditado para emitir y verificar credenciales; identidad verificable, donde un servicio, una persona o un agente de IA demuestra quién está detrás antes de cualquier conexión; y el Trust Graph, que hace que los servicios sean descubribles por las credenciales que poseen. Código abierto, sin dueño.",
+    "more": "Más en verana.io"
+  },
+  "useCases": {
+    "eyebrow": "Casos de uso con los que empezamos",
+    "lead": "Cada uno funciona como demo en el Verana Playground, con billeteras reales y credenciales reales en la testnet.",
+    "cards": {
+      "verandia": {
+        "alt": "La capital de la República de Verandia, el país de demostración del Playground",
+        "title": "Credenciales de identidad gubernamental y registro mercantil",
+        "cta": "Vea Verandia en el Playground",
+        "body": "Construya su red de confianza gubernamental soberana sobre una plataforma 100 por ciento de código abierto: registro civil, registro mercantil y autoridad tributaria emitiendo credenciales que cualquier servicio puede verificar, en un ecosistema que el Estado gobierna y aloja."
+      },
+      "cexa": {
+        "alt": "La sala de juntas de la Crypto Exchange Association, con el triángulo de confianza en pantalla",
+        "title": "KYC reutilizable",
+        "cta": "Vea la asociación de exchanges en el Playground",
+        "body": "Una credencial KYC gobernada, compartida entre un consorcio de exchanges y bancos. Verifique una vez, reutilice en todas partes y pague al emisor original en cada reutilización, en lugar de que cada parte verifique desde cero."
+      },
+      "vesta": {
+        "alt": "La fábrica de Vesta Appliances, el fabricante de demostración del Playground",
+        "title": "Ecosistemas sectoriales en América Latina",
+        "cta": "Vea un ecosistema de socios en el Playground",
+        "body": "Diplomas, licencias, certificaciones y redes de socios que cualquier parte puede verificar, gobernados por el organismo sectorial que los emite, sobre infraestructura que puede alojar en su propia jurisdicción. Vesta muestra el patrón para un fabricante y sus socios de reparación."
+      }
+    }
+  },
+  "standards": {
+    "eyebrow": "Estándares"
+  },
+  "cta": {
+    "title": "¿Construye o se une a un ecosistema de confianza?",
+    "lead": "Cuéntenos las partes que confían, las credenciales y la gobernanza que tiene en mente.",
+    "label": "Hable con nosotros"
+  }
+}

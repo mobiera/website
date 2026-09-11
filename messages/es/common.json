@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "tagline": "Redes de confianza y Credenciales Verificables, construidas sobre Verana.",
+    "description": "Mobiera cofundó la Verana Foundation, diseña y opera ecosistemas de confianza sobre Verana y certifica a los integradores que construyen sobre ella en América Latina. El mismo equipo opera software dentro de más de 25 redes móviles desde 2012.",
+    "keywords": "Mobiera, credenciales verificables, redes de confianza, Verana, certificación Verana, registro de confianza, América Latina, Aircast, STK push, SIM toolkit, OTA, agentes de IA"
+  },
+  "og": {
+    "alt": "Mobiera: Redes de confianza y Credenciales Verificables, construidas sobre Verana.",
+    "sub": "Miembro fundador de la Verana Foundation. Certificador oficial de integradores Verana en América Latina. Plataformas en más de 25 redes móviles desde 2012.",
+    "since": "BOGOTÁ · DESDE 2012"
+  },
+  "skipToContent": "Ir al contenido",
+  "nav": {
+    "home": "Inicio de Mobiera",
+    "primary": "Principal",
+    "mobile": "Móvil",
+    "trust": "Credenciales Verificables",
+    "certification": "Certificación",
+    "telecom": "Telecomunicaciones",
+    "company": "Empresa",
+    "news": "Noticias",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "toDark": "Cambiar al tema oscuro",
+    "toLight": "Cambiar al tema claro",
+    "switchLocale": "Read in English",
+    "switchLocaleShort": "EN"
+  },
+  "footer": {
+    "blurb": "Redes de confianza y Credenciales Verificables construidas sobre Verana, y las plataformas detrás de más de 25 redes móviles.",
+    "trustHead": "Credenciales Verificables",
+    "trustNetworks": "Redes de confianza",
+    "trustServices": "Servicios de confianza",
+    "certification": "Certificación",
+    "foundation": "Verana Foundation",
+    "council": "Verana Council",
+    "telecomHead": "Telecomunicaciones",
+    "platforms": "Plataformas",
+    "documentation": "Documentación",
+    "companyHead": "Empresa",
+    "about": "Quiénes somos",
+    "openSource": "Código abierto",
+    "careers": "Trabaje con nosotros",
+    "news": "Noticias",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "cookies": "Cookies"
+  },
+  "cookieBanner": {
+    "title": "Cookies",
+    "body": "Usamos cookies esenciales para operar este sitio y, con su consentimiento, cookies de analítica para mejorarlo. No vendemos datos. Consulte la <link>política de cookies</link>.",
+    "essential": "Solo esenciales",
+    "accept": "Aceptar todas"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "lead": "La página que busca fue movida, eliminada o nunca existió. Las URL del sitio anterior redirigen; si llegó desde un enlace externo, puede estar desactualizado.",
+    "home": "Inicio",
+    "contact": "Contacto"
+  },
+  "dates": {
+    "months": "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre"
+  }
+}

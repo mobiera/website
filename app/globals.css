@@ -158,6 +158,8 @@ a { color: inherit; }
 .theme-toggle:hover, .menu-btn:hover { color: var(--ink); border-color: var(--violet); }
 /* Breakpoints live here, not in Tailwind utilities: these component rules are
    unlayered, so a utility like md:hidden would lose to them. */
+.lang-switch { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; padding: 6px 9px; border-radius: 6px; border: 1px solid var(--rule); color: var(--muted); }
+.lang-switch:hover { color: var(--ink); border-color: var(--violet); }
 .nav-contact { display: none; }
 @media (min-width: 640px) { .nav-contact { display: inline-flex; } }
 @media (min-width: 768px) { .menu-btn, .mobile-menu { display: none; } }

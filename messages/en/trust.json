@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "Verifiable credentials and trust networks",
+    "description": "Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is the official certificator for the integrators who build on it in Latin America."
+  },
+  "hero": {
+    "eyebrow": "Verifiable Credentials and trust networks",
+    "title": "Verifiable trust for services, people and AI agents.",
+    "lead": "Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is the official certificator for the integrators who build on it in Latin America.",
+    "services": "Our trust services",
+    "certified": "Get certified"
+  },
+  "roles": {
+    "eyebrow": "Three roles",
+    "cards": {
+      "founder": {
+        "title": "Founding member",
+        "body": "Mobiera co-founded the Verana Foundation in June 2025, with 2060 OÜ and Orchestrating Identity, and contributes to its Specification and Reference Implementation working groups.",
+        "more": "Mobiera and Verana"
+      },
+      "builder": {
+        "title": "Builder and operator",
+        "body": "We design trust ecosystems, deploy issuer and verifier services, integrate wallets and AI agents, and run the stack for clients who do not want to run it themselves.",
+        "more": "Trust services"
+      },
+      "certificator": {
+        "title": "Official certificator",
+        "body": "Designated by the Verana Foundation as the official certificator for Latin America: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams.",
+        "more": "Get Verana certified"
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Why Mobiera",
+    "title": "Fourteen years of software other parties depend on",
+    "lead": "Trust infrastructure has to stay up. The team that designs your ecosystem has run platforms inside 25+ mobile networks since 2012, reaching about 60 million subscribers a day, and brings the same operations discipline to VS-Agents, indexers and resolvers.",
+    "more": "Telecom software and services"
+  },
+  "verana": {
+    "eyebrow": "What Verana is, in one paragraph",
+    "lead": "Verana is the open, public, neutral trust infrastructure for the internet, in three parts: sovereign trust ecosystems that define who is accredited to issue and verify credentials; verifiable identity, where a service, a person or an AI agent proves who is behind it before any connection; and the Trust Graph, which makes services discoverable by the credentials they hold. Open source, owned by no one.",
+    "more": "Read more on verana.io"
+  },
+  "useCases": {
+    "eyebrow": "Use cases we lead with",
+    "lead": "Each one runs as a demo on the Verana Playground, with real wallets and real credentials on the testnet.",
+    "cards": {
+      "verandia": {
+        "alt": "The capital of the Republic of Verandia, the Playground's demo country",
+        "title": "Government ID and Business Register credentials",
+        "cta": "See Verandia on the Playground",
+        "body": "Build your sovereign government trust network on a 100 percent open source stack: civil registry, business registry and tax authority issuing credentials that any service can verify, in an ecosystem the state governs and hosts."
+      },
+      "cexa": {
+        "alt": "The Crypto Exchange Association boardroom, with the trust triangle on screen",
+        "title": "Reusable KYC",
+        "cta": "See the exchange association on the Playground",
+        "body": "One governed KYC credential shared across a consortium of exchanges and banks. Verify once, reuse everywhere, and pay the original issuer on each reuse instead of every party verifying from scratch."
+      },
+      "vesta": {
+        "alt": "The Vesta Appliances factory, the Playground's demo manufacturer",
+        "title": "Sector ecosystems in Latin America",
+        "cta": "See a partner ecosystem on the Playground",
+        "body": "Diplomas, licenses, certifications and partner networks that any party can verify, governed by the sector body that issues them, on infrastructure it can host in its own jurisdiction. Vesta shows the pattern for a manufacturer and its repair partners."
+      }
+    }
+  },
+  "standards": {
+    "eyebrow": "Standards"
+  },
+  "cta": {
+    "title": "Building or joining a trust ecosystem?",
+    "lead": "Tell us the relying parties, the credentials and the governance you have in mind.",
+    "label": "Talk to us"
+  }
+}

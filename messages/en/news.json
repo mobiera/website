@@ -1,0 +1,10 @@
+{
+  "meta": { "title": "News", "description": "Announcements and articles from Mobiera: products, the Verana trust network, certification, and the company." },
+  "eyebrow": "News",
+  "title": "News",
+  "lead": "Announcements first, articles second. Every item is dated and signed Mobiera.",
+  "rss": "RSS feed",
+  "back": "News",
+  "untranslated": "This article is available in English only.",
+  "keptFromOldSite": "Article first published on the previous mobiera.com; wording lightly edited."
+}

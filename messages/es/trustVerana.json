@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Mobiera y Verana",
+    "description": "Mobiera cofundó la Verana Foundation, contribuye a sus grupos de trabajo de Especificación e Implementación de Referencia y es candidata a un puesto en el Consejo Fundador."
+  },
+  "hero": {
+    "eyebrow": "Mobiera y Verana",
+    "title": "Miembro fundador. Contribuyente en los grupos de trabajo. Candidata al Consejo.",
+    "lead": "Mobiera cofundó la Verana Foundation, contribuye a sus grupos de trabajo de Especificación e Implementación de Referencia y es candidata a un puesto en el Consejo Fundador."
+  },
+  "founding": {
+    "eyebrow": "Miembro fundador",
+    "lead": "La Verana Foundation es la entidad sin fines de lucro que custodia la capa de confianza abierta: es propietaria de las especificaciones Verifiable Trust y Verifiable Public Registry, custodia el software de código abierto y hace crecer el ecosistema. Está en formación, bajo la custodia de 2060 OÜ. Sus miembros fundadores son 2060 OÜ, Mobiera y Orchestrating Identity. Mobiera se unió en la fundación, en junio de 2025.",
+    "button": "Verana Foundation"
+  },
+  "bodies": {
+    "eyebrow": "Tres organismos, tres sitios",
+    "lead": "El sitio de Mobiera describe el rol de Mobiera. Para el protocolo en sí, lea esos tres.",
+    "cards": {
+      "foundation": "El custodio. Especificaciones, software, membresía, grupos de trabajo.",
+      "council": "El órgano de gobierno. Una asociación suiza sin fines de lucro que gobierna y asegura la red en producción y su ECS Ecosystem, un miembro, un voto.",
+      "verana": "La red y su software. Documentación, el Playground, la hoja de ruta."
+    }
+  },
+  "contribute": {
+    "eyebrow": "Qué aportamos",
+    "cards": {
+      "telecom": {
+        "title": "Canales de telecomunicaciones para la capa de confianza",
+        "body": "SMS, SIM toolkit y verificación del número de teléfono como partes de pleno derecho de las interacciones verificables."
+      },
+      "training": {
+        "title": "Capacitación y certificación de integradores",
+        "body": "En toda América Latina, como certificador oficial de la Foundation: ocho módulos, un examen cada uno, en la testnet."
+      },
+      "groups": {
+        "title": "Dos grupos de trabajo",
+        "body": "El grupo de trabajo de Especificación (SPEC-WG) y el grupo de trabajo de Implementación de Referencia."
+      }
+    }
+  },
+  "council": {
+    "eyebrow": "Candidatura al Consejo",
+    "lead": "La convocatoria del Consejo Fundador está abierta hasta el cuarto trimestre de 2026. Mobiera ha solicitado un puesto en el Consejo Fundador. Hasta que la votación del Consejo la confirme, Mobiera es candidata, y esta página lo dirá así.",
+    "button": "Verana Council"
+  },
+  "roadmap": {
+    "eyebrow": "La hoja de ruta que seguimos",
+    "lead": "El protocolo v4 está en desarrollo hasta el tercer trimestre de 2026 (APIs de trust graph e indexador, autorización de operadores, billeteras empresariales y en la nube, integraciones de billeteras). El protocolo v5, preparación para mainnet, está previsto para el cuarto trimestre de 2026. El lanzamiento de mainnet está previsto para el primer trimestre de 2027.",
+    "button": "Hoja de ruta completa"
+  },
+  "cta": {
+    "title": "¿Trabaja con Verana en América Latina?",
+    "lead": "Integradores, organismos sectoriales y operadores: cuéntenos qué está construyendo.",
+    "label": "Hable con nosotros"
+  }
+}

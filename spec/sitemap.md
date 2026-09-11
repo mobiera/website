@@ -51,3 +51,9 @@ Careers · Press · General
 
 Product pages preselect their topic through a query parameter, for example
 `/contact?topic=certification`.
+
+## Languages (2026-09-11)
+
+Every page above exists in English (bare path) and Latin American Spanish
+(`/es` prefix). Spanish-preferring browsers are redirected on first visit;
+the nav carries an EN/ES switch. See STYLE.md for the glossary.

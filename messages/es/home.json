@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "eyebrow": "Credenciales Verificables · Cofundador de la Verana Foundation · América Latina",
+    "title": "Redes de confianza y Credenciales Verificables.",
+    "lead": "Mobiera cofundó la Verana Foundation, diseña y opera ecosistemas de confianza para gobiernos, sectores y empresas, y certifica a los integradores que construyen sobre Verana en América Latina. El mismo equipo opera software dentro de más de 25 redes móviles desde 2012.",
+    "ctaTrust": "Credenciales Verificables",
+    "ctaCertification": "Certifíquese en Verana"
+  },
+  "lines": {
+    "eyebrow": "Dos líneas de negocio",
+    "title": "Qué construimos y qué demostramos",
+    "trust": {
+      "title": "Credenciales Verificables y redes de confianza",
+      "lead": "Confianza que cualquiera puede verificar, construida sobre la <link>Infraestructura de Confianza de Verana</link>.",
+      "bullets": [
+        "Miembro fundador de la Verana Foundation desde junio de 2025.",
+        "Ecosistemas de confianza, servicios de emisión y verificación, integración de billeteras y agentes.",
+        "Capacitación y certificación para los integradores que construyen sobre Verana."
+      ],
+      "more": "Credenciales Verificables"
+    },
+    "telecom": {
+      "title": "Software y servicios de telecomunicaciones",
+      "lead": "Plataformas que operan dentro de la red del operador.",
+      "bullets": [
+        "Aircast: marketing push STK, mensajería masiva y campañas OTA de SIM desde un solo motor.",
+        "AI One: agentes de IA de atención al cliente por SMS y Hologram, verificables por diseño.",
+        "Integración, operación gestionada e ingeniería de SIM, en su infraestructura o en la nuestra."
+      ],
+      "more": "Telecomunicaciones"
+    }
+  },
+  "roles": {
+    "eyebrow": "Credenciales Verificables y redes de confianza",
+    "title": "Tres roles en Verana",
+    "founding": {
+      "title": "Miembro fundador",
+      "body": "Cofundó la Verana Foundation en junio de 2025 junto con 2060 OÜ y Orchestrating Identity. Grupos de trabajo de Especificación e Implementación de Referencia.",
+      "more": "Mobiera y Verana"
+    },
+    "builder": {
+      "title": "Constructor y operador",
+      "body": "Diseño de ecosistemas y marcos de gobernanza; servicios de emisión y verificación; billeteras y agentes de IA como Servicios Verificables; operación.",
+      "more": "Servicios de confianza"
+    },
+    "certificator": {
+      "title": "Certificador oficial",
+      "body": "Capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes, para América Latina.",
+      "more": "Certifíquese en Verana"
+    },
+    "features": {
+      "phoneNumbers": {
+        "title": "Números de teléfono certificados por el operador",
+        "body": "El operador emite una credencial que vincula un número de teléfono a un suscriptor; cada servicio que la acepta verifica al emisor en el registro público."
+      },
+      "supportAgents": {
+        "title": "Agentes de atención al cliente verificables",
+        "body": "El agente de IA de un operador demuestra quién lo opera antes de que el suscriptor escriba una palabra. Hoy en producción en AI One."
+      },
+      "sectors": {
+        "title": "Ecosistemas sectoriales en América Latina",
+        "body": "Diplomas, licencias, certificaciones y membresías que cualquier socio puede verificar, gobernados por el organismo que los emite."
+      }
+    },
+    "cert": {
+      "pot": "Ocho exámenes · credencial de dos años",
+      "title": "Certifíquese en Verana",
+      "body": "Mobiera capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes. Designada por la Verana Foundation. Vigente hasta mayo de 2029.",
+      "cta": "Certifíquese"
+    }
+  },
+  "telecom": {
+    "eyebrow": "Plataformas de telecomunicaciones",
+    "title": "Software que opera dentro de la red del operador",
+    "aircast": {
+      "title": "Aircast",
+      "body": "Campañas sobre la red del operador. Cualquier teléfono, sin datos, sin saldo. Marketing push STK, SMS y MMS masivos y campañas OTA de SIM desde un solo motor, a la capacidad de envío que permita su SMSC.",
+      "more": "Aircast"
+    },
+    "aiOne": {
+      "title": "AI One",
+      "body": "Agentes de IA que sus suscriptores pueden contactar desde cualquier teléfono, y verificar. Atención al cliente por SMS y Hologram, integrada con su facturación, identificada con credenciales verificables para que nadie pueda suplantar a su operador.",
+      "more": "AI One"
+    },
+    "more": "Software y servicios de telecomunicaciones"
+  },
+  "logos": {
+    "partners": "Socios",
+    "operators": "Operadores"
+  },
+  "openSource": {
+    "eyebrow": "Código abierto",
+    "title": "Dieciséis repositorios públicos",
+    "body": "Bibliotecas para ETSI TS 102.221, 102.222, 102.225 y 102.226, un gestor de contenido de tarjeta GlobalPlatform, las API de integración de Aircast y los contenedores de estadísticas y registro de servicios.",
+    "more": "github.com/mobiera"
+  },
+  "news": {
+    "eyebrow": "Últimas noticias"
+  },
+  "cta": {
+    "title": "Cuéntenos qué está construyendo",
+    "body": "Cada mensaje llega a la persona indicada. Sin cola de ventas, sin correos que adivinar.",
+    "button": "Contacto"
+  },
+  "proofOfTrust": {
+    "ariaLabel": "Ejemplo de Proof-of-Trust de un servicio en Verana",
+    "title": "Proof-of-Trust",
+    "tag": "Verana testnet · ejemplo",
+    "resolving": "Resolviendo",
+    "org": "Acme Integrators SAS · Bogotá, CO",
+    "rows": [
+      { "label": "Credencial de organización", "detail": "emitida por el ECS Ecosystem" },
+      { "label": "Credencial de servicio", "detail": "autoemitida, verificada" },
+      { "label": "Verana Certified Integrator", "detail": "emitida por Mobiera · vigente hasta 2028" }
+    ],
+    "score": "Puntaje de confianza",
+    "scoreAria": "Puntaje de confianza 4 de 5",
+    "verdict": "Verificado. Conectar."
+  }
+}

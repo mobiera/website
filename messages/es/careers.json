@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "Trabaje con nosotros",
+    "description": "Trabaje en software que opera dentro de redes móviles en producción y en la capa de confianza de la internet verificable, en un equipo distribuido que trabaja en español e inglés."
+  },
+  "hero": {
+    "eyebrow": "Trabaje con nosotros",
+    "title": "Código que funciona en una red en producción.",
+    "lead": "Construimos plataformas de las que los operadores móviles dependen cada día, y los sistemas de credenciales verificables que permitirán a personas, servicios y agentes de IA demostrar quiénes son. Equipo pequeño, sistemas reales en producción, estándares implementados al pie de la letra."
+  },
+  "why": {
+    "eyebrow": "Por qué trabajar aquí",
+    "systems": { "title": "Sistemas reales", "body": "Lo que usted entrega funciona en SMSC y tarjetas SIM de más de 25 operadores, o en la red Verana. Los errores se ven; el buen trabajo también." },
+    "fields": { "title": "Dos campos a la vez", "body": "Protocolos de telecomunicaciones de los años 90 y estándares de identidad descentralizada de esta década, en la misma base de código y la misma semana." },
+    "distributed": { "title": "Distribuido y bilingüe", "body": "Colombia, Perú, Bolivia, Panamá, España y Argelia. Español e inglés todos los días. Comunicación escrita primero." }
+  },
+  "roles": {
+    "eyebrow": "Vacantes",
+    "lead": "No hay vacantes por el momento. Si ha entregado código en producción en telecomunicaciones, identidad o IA agéntica, envíenos su perfil de todos modos."
+  },
+  "apply": {
+    "eyebrow": "Postúlese",
+    "title": "Envíe un perfil",
+    "lead": "Nombre, correo electrónico, perfil de LinkedIn o GitHub, un mensaje breve y un CV (PDF). Las postulaciones llegan a nuestro equipo de Personas a través del formulario; respondemos todas."
+  }
+}

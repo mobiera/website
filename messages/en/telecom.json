@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Telecom software and services",
+    "description": "Aircast and AI One, platforms that run inside the operator's network, on-premise or hosted, shaped to your SMSC's throughput. 25+ operators, about 60 million subscribers reached per day."
+  },
+  "hero": {
+    "eyebrow": "Telecom · 25+ operators since 2012",
+    "title": "Software that runs inside the operator's network.",
+    "lead": "Push marketing on every handset, bulk messaging and SIM OTA, AI agents on SMS. Deployed on your infrastructure or ours, shaped to your SMSC's throughput. 800 million subscribers reachable, about 60 million reached per day.",
+    "docs": "Read the docs",
+    "talk": "Talk to us"
+  },
+  "tpsChart": {
+    "panelLabel": "Aircast throughput budget over 24 hours",
+    "head": "TPS budget · SMPP account 1",
+    "period": "24 h · Aircast",
+    "chartLabel": "Bar chart: high OTA throughput at night, marketing traffic in the day, unused budget reused",
+    "legend": {
+      "ota": "OTA roll-out, night",
+      "day": "Marketing and transactional, day",
+      "reuse": "Unused budget reused"
+    }
+  },
+  "platforms": {
+    "eyebrow": "Two platforms",
+    "aircast": {
+      "title": "Aircast",
+      "body": "STK push marketing, general messaging and OTA campaign management in one platform, sharing one campaign engine, one operator GUI and one set of APIs. Works on any handset, with no data connection and no subscriber balance.",
+      "more": "Aircast"
+    },
+    "aiOne": {
+      "title": "AI One",
+      "body": "Customer-support AI agents that subscribers reach over SMS or Hologram. The agent is a Verifiable Service on Verana, so a subscriber's wallet shows who operates it before the first message.",
+      "chips": ["SMS · DIDComm", "MSISDN PIN", "Verifiable Service"],
+      "more": "AI One"
+    }
+  },
+  "deploy": {
+    "eyebrow": "How we deploy",
+    "title": "Your infrastructure or ours, at your network's pace",
+    "features": [
+      { "title": "On your infrastructure or ours", "body": "Every platform ships as containers. Run it on-premise in your data center, hosted by Mobiera, or hybrid: the campaign engine with you, bearer adapters and OTA executors where the traffic is." },
+      { "title": "Scale by adding instances", "body": "Every component on the campaign path (REST endpoint, campaign manager, bearer adapters, OTA executor) is stateless and queue-driven. When you need more throughput, you deploy more instances of the component that limits you. There is no central bottleneck." },
+      { "title": "Shaped to your network", "body": "Throughput is set by configuration, not hard limits: per-hour TPS budgets on every SMPP and MMSC account, campaign priorities, per-campaign caps, and reuse of unused budget by lower-priority campaigns. An overnight OTA roll-out never degrades daytime marketing or transactional traffic." },
+      { "title": "Built for availability", "body": "Active-active topologies, georedundant nodes, monitored queues, tested upgrade and rollback. The reference architectures are on the documentation portal." },
+      { "title": "Integrate three ways", "body": "REST APIs for one-shot pushes and messaging, file drop for operators that already run an upstream campaign manager, and SMPP accounts for bearers." }
+    ]
+  },
+  "standards": {
+    "eyebrow": "Standards we implement",
+    "lead": "Four of these implementations are open source on github.com/mobiera."
+  },
+  "services": {
+    "eyebrow": "Services around the platforms",
+    "title": "Integration, operations, SIM and OTA engineering",
+    "lead": "Integration with your SMSC, MMSC and billing; managed operations of hosted nodes; SIM and OTA engineering; consulting on push channels and campaigns.",
+    "cta": "Talk to us"
+  },
+  "operators": {
+    "eyebrow": "Who runs it",
+    "title": "Operators"
+  },
+  "docs": {
+    "eyebrow": "Documentation",
+    "title": "Architecture, APIs, applets and operations, in public",
+    "lead": "The Aircast documentation portal covers architecture, the developer APIs, the applet installation guides and the operations manuals.",
+    "docs": "Read the docs",
+    "talk": "Talk to us"
+  },
+  "cta": {
+    "title": "Evaluating a push channel or an AI agent?",
+    "lead": "Tell us which network, which SMSC and which use case. We answer within two business days.",
+    "label": "Contact"
+  }
+}

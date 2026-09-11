@@ -15,5 +15,6 @@ describe("news front matter", () => {
   it("derives the slug from the dated filename", () => {
     expect(slugFromFilename("2026-04-15-official-certificator-latin-america.md")).toBe("official-certificator-latin-america");
     expect(slugFromFilename("no-date.md")).toBe("no-date");
+    expect(slugFromFilename("2026-04-15-official-certificator-latin-america.es.md")).toBe("official-certificator-latin-america");
   });
 });

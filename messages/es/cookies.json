@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Política de cookies",
+    "description": "mobiera.io instala una cookie esencial para su elección de consentimiento y, solo si acepta, cookies de analítica. Sin cookies publicitarias."
+  },
+  "eyebrow": "Legal",
+  "title": "Política de cookies",
+  "lead": "Una entrada esencial para su elección de consentimiento, analítica solo si acepta, sin cookies publicitarias.",
+  "essential": {
+    "title": "Esenciales",
+    "body": "Su elección de consentimiento se guarda en el almacenamiento local de su navegador mientras usted la mantenga. Su preferencia de tema (claro u oscuro) se guarda de la misma forma y nunca se nos envía."
+  },
+  "analytics": {
+    "title": "Analítica, con consentimiento",
+    "body": "Estadísticas de uso anonimizadas mediante Google Analytics 4, instaladas solo después de que acepte, durante 13 meses."
+  },
+  "change": {
+    "title": "Cambie su elección"
+  },
+  "prefs": {
+    "essentialOnly": "Solo esenciales",
+    "acceptAnalytics": "Aceptar analítica",
+    "current": "Elección actual: {choice}.",
+    "accepted": "analítica aceptada",
+    "declined": "solo esenciales",
+    "notMade": "aún no realizada"
+  }
+}

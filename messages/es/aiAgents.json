@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "AI One",
+    "description": "AI One opera agentes de IA de atención al cliente por SMS y Hologram, se integra con la facturación del operador y se identifica con credenciales verificables para que nadie pueda suplantar a su operador."
+  },
+  "hero": {
+    "eyebrow": "AI One · Agentes de IA para atención al cliente",
+    "title": "Agentes de IA que sus suscriptores alcanzan desde cualquier teléfono, y pueden verificar.",
+    "lead": "AI One opera agentes de atención al cliente por SMS y Hologram, se integra con su facturación y se identifica con credenciales verificables para que nadie pueda suplantar a su operador.",
+    "cta": "Solicite una demo"
+  },
+  "channels": {
+    "eyebrow": "Canales que los suscriptores ya tienen",
+    "sms": { "title": "SMS", "body": "Cualquier teléfono, sin aplicación, sin datos. El agente responde a través del SMSC del operador, en un código corto que sus suscriptores ya conocen." },
+    "hologram": { "title": "Hologram", "body": "Un canal DIDComm privado a través de Hologram Messaging, con mensajes enriquecidos, intercambio de credenciales y el Proof-of-Trust que el suscriptor ve antes del primer mensaje." },
+    "note": "Los frontales web y en aplicación llegarán a medida que se publiquen."
+  },
+  "verifiable": {
+    "eyebrow": "Verificable por diseño",
+    "title": "El agente del operador prueba que es el agente del operador",
+    "lead": "El agente es un Servicio Verificable en la red Verana. Posee una credencial de Servicio y la credencial de Organización de su operador, publicadas en su documento DID, de modo que la billetera del suscriptor resuelve quién lo opera y muestra un Proof-of-Trust antes de que empiece la conversación. Nadie puede montar un agente de soporte imitador para su marca.",
+    "pin": "La verificación del número de teléfono por PIN SMS vincula cada conversación al MSISDN, en ambos canales.",
+    "cta": "Cómo funciona la verificación"
+  },
+  "stack": {
+    "eyebrow": "Corre sobre su infraestructura",
+    "features": [
+      { "title": "Independiente del LLM", "body": "Construido sobre LangChain; conecte el proveedor de modelo que elija." },
+      { "title": "Sus herramientas a través de MCP", "body": "Saldo, planes, tickets, campañas: el agente llama a sus sistemas, no a una copia de ellos." },
+      { "title": "Desplegable en su Kubernetes", "body": "O alojado por Mobiera, con los mismos runbooks que Aircast." },
+      { "title": "Integración con facturación", "body": "Suscripciones y cobro a través de su integración de facturación; registros de conversación y estadísticas a través de los mismos contenedores de registro de servicio y estadísticas que Aircast." }
+    ]
+  },
+  "questions": {
+    "eyebrow": "Qué preguntan los suscriptores",
+    "lead": "Consultas de saldo y plan, compra de paquetes, resolución de problemas, seguimiento de campaña tras un push de Aircast, y transferencia a un agente humano con el contexto adjunto."
+  },
+  "hologram": {
+    "eyebrow": "Construido con Hologram de 2060",
+    "lead": "AI One corre sobre el framework de agentes de IA Hologram construido por 2060, la empresa que lidera las especificaciones de Verana. Mobiera lo integra con los canales, la facturación y la identidad del operador, y lo opera.",
+    "cta": "hologram.zone"
+  },
+  "operators": {
+    "eyebrow": "Quién lo opera",
+    "title": "Claro (Perú) y Halotel (Tanzania), desde 2025."
+  },
+  "cta": {
+    "title": "Vea a un agente AI One responder por SMS",
+    "lead": "Una demo en su propio código corto se configura en una tarde.",
+    "label": "Solicite una demo"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Contact",
+    "description": "Talk to Mobiera about Aircast, AI One, trust services, Verana integrator certification, partnerships, careers or press. Every message is routed to the right person."
+  },
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Talk to us.",
+    "lead": "Every message is routed to the right person. No email address to guess, no sales queue."
+  },
+  "routed": {
+    "title": "Routed internally",
+    "bullets": [
+      "No email addresses exposed on the site.",
+      "Self-hosted anti-abuse: a honeypot and timing checks, no CAPTCHA.",
+      "Inquiries go by email to the right Mobiera mailbox. No CRM, no third parties.",
+      "This form sets no cookies."
+    ]
+  },
+  "other": {
+    "title": "Other ways",
+    "inPerson": "In person: telecom industry events in Latin America, the Internet Identity Workshop and Verana community events."
+  },
+  "who": {
+    "title": "Who you are talking to"
+  },
+  "topics": {
+    "trust": "Trust services",
+    "certification": "Certification",
+    "aircast": "Aircast and STK push",
+    "ai-agents": "AI agents",
+    "partnership": "Partnership",
+    "careers": "Careers",
+    "press": "Press",
+    "general": "General"
+  },
+  "form": {
+    "validation": "Please complete the required fields, a valid email and a message of at least {min} characters, then try again.",
+    "submitError": "We could not send your message just now. Please try again in a moment.",
+    "cvTooLarge": "The CV must be a PDF of 10 MB or less.",
+    "success": {
+      "title": "Message sent",
+      "body": "Thanks. Your message is on its way to the right person; expect an answer within two business days.",
+      "again": "Send another message"
+    },
+    "error": {
+      "title": "Could not send your message"
+    },
+    "honeypot": "Leave this field empty:",
+    "topic": "Topic",
+    "selectOne": "Select one",
+    "name": "Name",
+    "email": "Email",
+    "organization": "Organization",
+    "optional": "(optional)",
+    "profile": "LinkedIn or GitHub profile",
+    "message": "Message",
+    "placeholderCareers": "What have you shipped, and what would you like to work on?",
+    "placeholderDefault": "What are you building or evaluating, and what is the question?",
+    "counter": "{count} / {max} (min {min})",
+    "cv": "CV",
+    "cvHint": "(PDF, 10 MB max)",
+    "consent": "I consent to Mobiera SAS storing this message to answer me. See the <link>privacy policy</link>.",
+    "send": "Send",
+    "sending": "Sending",
+    "footnote": "Every message is routed to the right person. We answer within two business days."
+  }
+}

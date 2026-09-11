@@ -1,0 +1,77 @@
+{
+  "numbers": [
+    { "value": "Founding", "label": "member, Verana Foundation", "tone": "violet" },
+    { "value": "Official", "label": "certificator, Verana integrators, Latin America", "tone": "violet" },
+    { "value": "25+", "label": "mobile operators run our platforms" },
+    { "value": "800M", "label": "subscribers reachable through messaging services powered by Mobiera" },
+    { "value": "~60M", "label": "subscribers reached per day", "tone": "green" },
+    { "value": "2012", "label": "founded in Bogotá; every continent served since" }
+  ],
+  "offices": [
+    { "place": "Bogotá, Colombia", "note": "headquarters and registered address, Cra 13A 86A-42, Bogotá D.C." },
+    { "place": "Peru" },
+    { "place": "Bolivia" },
+    { "place": "Panama" },
+    { "place": "United States" },
+    { "place": "Spain" },
+    { "place": "France" },
+    { "place": "Algeria" }
+  ],
+  "timeline": [
+    {
+      "year": "2012",
+      "span": "— 2016",
+      "title": "Built for operators",
+      "verana": false,
+      "items": [
+        { "when": "2012", "text": "Mobiera SAS incorporated in Bogotá, Colombia." },
+        { "when": "2013", "text": "Operations start in Mexico." },
+        { "when": "2014", "text": "Operations start in Peru." },
+        { "when": "2015", "text": "Operations start in the United States and Bolivia." },
+        { "when": "2016", "text": "Innovation and IT outsourcing business units launched." }
+      ]
+    },
+    {
+      "year": "2017",
+      "span": "— 2020",
+      "title": "Every continent",
+      "verana": false,
+      "items": [
+        { "when": "2017", "text": "Colciencias tax credit for billing platforms and big data solutions for developing markets." },
+        { "when": "2018", "text": "Commercial operations start in Europe, from Spain, and in Asia Pacific, from Hanoi." },
+        { "when": "2019", "text": "IT outsourcing scales up around digital transformation and DevOps." },
+        { "when": "2020", "text": "Africa and GCC expansion begins." }
+      ]
+    },
+    {
+      "year": "2021",
+      "span": "— today",
+      "title": "The trust company",
+      "verana": true,
+      "items": [
+        { "when": "2021", "text": "First biometric KYC solutions delivered." },
+        { "when": "2022", "text": "Verifiable credentials offered as a service for the first time." },
+        { "when": "2023", "text": "Rebranding; strategic partnerships expanded." },
+        { "when": "January 2025", "text": "AI One launched." },
+        { "when": "June 2025", "text": "Verana Foundation co-founded with 2060 OÜ and Orchestrating Identity." },
+        { "when": "January 2026", "text": "Aircast documentation portal launched at docs.mobiera.io." },
+        { "when": "April 2026", "text": "Designated by the Verana Foundation as official certificator for Verana integrators in Latin America, valid until May 2029." },
+        { "when": "2026", "text": "Candidacy filed for a Founding Council seat." }
+      ]
+    }
+  ],
+  "openSource": {
+    "sim": "SIM and OTA standards",
+    "aircast": "Aircast integration",
+    "platform": "Platform utilities"
+  },
+  "countries": {
+    "Peru": "Peru",
+    "Spain": "Spain",
+    "Algeria": "Algeria",
+    "Vietnam": "Vietnam",
+    "Panama": "Panama",
+    "Bolivia": "Bolivia",
+    "Tanzania": "Tanzania"
+  }
+}
