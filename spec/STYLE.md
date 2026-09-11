@@ -73,3 +73,33 @@ summary: One paragraph shown on the index.
 
 Body. Signed "Mobiera" by convention; no byline field.
 ```
+
+## Spanish (es-419)
+
+The site is served in Latin American Spanish under `/es` to browsers that
+prefer any Spanish variant; English stays at the bare paths. The English copy
+in `spec/` and `messages/en/` is the source; the Spanish lives only in
+`messages/es/` (one file per page) and `content/news/*.es.md`. Register is
+"usted", never "tú" or "vosotros"; neutral Latin American vocabulary; sentence
+case for titles; no em-dashes. Fixed terms:
+
+| English | Spanish |
+| --- | --- |
+| Verifiable Credentials (term, nav) | Credenciales Verificables |
+| trust network, trust ecosystem | red de confianza, ecosistema de confianza |
+| trust registry, public registry | registro de confianza, registro público |
+| issuer, holder, verifier | emisor, titular, verificador |
+| wallet (business, personal) | billetera (empresarial, personal), never cartera |
+| governance framework | marco de gobernanza |
+| Verifiable Service, Proof-of-Trust | Servicio Verificable, Proof-of-Trust |
+| integrator, certificator, exam, track, training | integrador, certificador, examen, módulo, capacitación |
+| operator, subscriber, handset | operador, suscriptor, teléfono |
+| push marketing, bulk messaging, throughput | marketing push, mensajería masiva, capacidad de envío |
+| on-premise, hosted by Mobiera, hybrid | en sus instalaciones, alojado por Mobiera, híbrido |
+| open source | código abierto |
+| Careers, About, Company, News, Telecom | Trabaje con nosotros, Quiénes somos, Empresa, Noticias, Telecomunicaciones |
+| Request a demo, Talk to us, Get certified | Solicite una demo, Hable con nosotros, Certifíquese |
+
+Product and proper names never change: Mobiera, Aircast, AI One, Sleepy,
+Micro, Verana, Verana Foundation, Verana Council, Trust Graph, Hologram, 2060,
+Verana Certified Professional, Verana Certified Integrator.

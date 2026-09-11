@@ -1,0 +1,12 @@
+{
+  "ack": {
+    "subject": "Recibimos su mensaje",
+    "heading": "Gracias, {name}",
+    "body": "Recibimos su mensaje sobre el tema \"{topic}\". Va en camino a la persona indicada en Mobiera; espere una respuesta en un plazo de dos días hábiles.",
+    "auto": "Esta es una confirmación automática; no es necesario responder.",
+    "signoff": "El equipo de Mobiera"
+  },
+  "layout": {
+    "footer": "Mobiera SAS, Bogotá D.C., Colombia · miembro fundador de la Verana Foundation."
+  }
+}

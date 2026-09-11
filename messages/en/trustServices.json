@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "Trust services",
+    "description": "Ecosystem design and governance, issuer and verifier services, wallet and agent integration, and operations for organizations building on the Verana trust network."
+  },
+  "hero": {
+    "eyebrow": "Trust services",
+    "title": "From governance framework to production issuer.",
+    "lead": "We design the ecosystem, deploy the verifiable services, integrate the wallets, and run what you do not want to run yourself.",
+    "talk": "Talk to us",
+    "playground": "Playground"
+  },
+  "how": {
+    "eyebrow": "How trust works on Verana",
+    "title": "Three parties, one registry, and where we come in",
+    "lead": "An issuer gives a holder a credential; the holder presents a proof to a verifier; the verifier trusts the issuer because the Verana public registry says the issuer is accredited in a governed ecosystem. Mobiera designs the ecosystem, runs the issuer and verifier services, and integrates the wallets."
+  },
+  "features": {
+    "ecosystem": {
+      "title": "Ecosystem design and governance",
+      "body": "An ecosystem on Verana is a governed list of participants authorized to issue, verify or hold certain credentials. We write yours: the credential schemas, the participant tree (grantors, issuers, verifiers, holders), the permission modes from fully open to fully governed, and the business model (onboarding fees, pay-per-issuance, pay-per-verification, or no fees at all). The Ecosystem Governance Framework starts from the template the Verana Council publishes."
+    },
+    "issuer": {
+      "title": "Issuer and verifier services",
+      "body": "We deploy VS-Agent, Verana's Business Wallet, as the runtime of your Verifiable Services: a resolvable DID, credentials and Linked Verifiable Presentations, trust resolution before every exchange, and the registry operations run for you. Issuance and verification flows over DIDComm and OpenID4VC, in JSON-LD, SD-JWT VC or AnonCreds as each credential requires. Integrated with the IAM, CRM and KYC systems you already run."
+    },
+    "wallet": {
+      "title": "Wallet and agent integration",
+      "body": "Your credentials work in the wallets already interoperating on the Verana Playground, among them Hologram, the EUDI reference wallet, swiyu, BC Wallet, NL Wallet, Inji and Paradym. Your AI agents become Verifiable Services that prove who operates them, over DIDComm, MCP or A2A."
+    },
+    "run": {
+      "title": "Run the stack",
+      "body": "Self-hosted VS-Agents, an indexer and a resolver for your ecosystem, on your infrastructure or ours, monitored and upgraded like the telecom platforms we have run for fourteen years."
+    }
+  },
+  "engagement": {
+    "eyebrow": "How an engagement runs",
+    "steps": [
+      { "title": "Discovery", "body": "The relying parties, the credentials, the governance, the business model. Two to four weeks." },
+      { "title": "Pilot on testnet", "body": "Your ecosystem registered on the Verana testnet, first issuer and verifier live, wallets connected." },
+      { "title": "Production at mainnet", "body": "The same ecosystem carried to mainnet at network launch, with operations handed over or kept." }
+    ]
+  },
+  "cta": {
+    "title": "Start with a discovery",
+    "lead": "Two to four weeks to a governance framework, a schema set and a pilot plan.",
+    "label": "Talk to us"
+  }
+}

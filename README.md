@@ -23,6 +23,25 @@ They render at `/news/<slug>` and in the RSS feed at `/news/feed.xml`.
 Design: direction A ("Signal") from `spec/design/`. Tokens live in
 `app/globals.css`; the logo is the existing Mobiera mark and wordmark.
 
+## Languages
+
+English at the bare paths, Latin American Spanish under `/es`. `proxy.ts`
+redirects a first visit whose `Accept-Language` prefers any Spanish variant to
+`/es`; the `NEXT_LOCALE` cookie set by the language switch wins afterwards.
+Both languages are prerendered, with `hreflang` alternates and a sitemap entry
+each.
+
+- Copy lives in `messages/<locale>/<page>.json`, one file per page or shared
+  area, same key tree in both languages. English is the source; a key missing
+  in Spanish falls back to English at build time. Keys are typed from the
+  English files (`global.d.ts`), so a typo fails `tsc`.
+- News: `content/news/<date>-<name>.es.md` beside the English file. Without it
+  the English article is shown on `/es` with an "English only" note.
+- Contact form and acknowledgement email follow the visitor's language
+  (`messages/*/contact.json`, `messages/*/email.json`).
+- The SVG illustrations keep English labels for now.
+- Glossary and register: `spec/STYLE.md`, section "Spanish (es-419)".
+
 ## Develop
 
 ```bash

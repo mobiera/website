@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "Servicios de confianza",
+    "description": "Diseño y gobernanza de ecosistemas, servicios de emisión y verificación, integración de billeteras y agentes, y operación para organizaciones que construyen sobre la red de confianza Verana."
+  },
+  "hero": {
+    "eyebrow": "Servicios de confianza",
+    "title": "Del marco de gobernanza al emisor en producción.",
+    "lead": "Diseñamos el ecosistema, desplegamos los servicios verificables, integramos las billeteras y operamos lo que usted no quiere operar por su cuenta.",
+    "talk": "Hable con nosotros",
+    "playground": "Playground"
+  },
+  "how": {
+    "eyebrow": "Cómo funciona la confianza en Verana",
+    "title": "Tres partes, un registro y dónde entramos nosotros",
+    "lead": "Un emisor entrega una credencial a un titular; el titular presenta una prueba a un verificador; el verificador confía en el emisor porque el registro público de Verana indica que el emisor está acreditado en un ecosistema gobernado. Mobiera diseña el ecosistema, opera los servicios de emisión y verificación e integra las billeteras."
+  },
+  "features": {
+    "ecosystem": {
+      "title": "Diseño y gobernanza de ecosistemas",
+      "body": "Un ecosistema en Verana es una lista gobernada de participantes autorizados a emitir, verificar o poseer ciertas credenciales. Nosotros redactamos el suyo: los esquemas de credenciales, el árbol de participantes (otorgantes, emisores, verificadores, titulares), los modos de permiso desde totalmente abierto hasta totalmente gobernado, y el modelo de negocio (cuotas de incorporación, pago por emisión, pago por verificación o sin cuotas). El Marco de Gobernanza del Ecosistema parte de la plantilla que publica el Verana Council."
+    },
+    "issuer": {
+      "title": "Servicios de emisión y verificación",
+      "body": "Desplegamos VS-Agent, la Billetera Empresarial de Verana, como entorno de ejecución de sus Servicios Verificables: un DID resoluble, credenciales y Presentaciones Verificables Enlazadas, resolución de confianza antes de cada intercambio y las operaciones de registro, que ejecutamos por usted. Flujos de emisión y verificación sobre DIDComm y OpenID4VC, en JSON-LD, SD-JWT VC o AnonCreds según lo requiera cada credencial. Integrados con los sistemas IAM, CRM y KYC que ya opera."
+    },
+    "wallet": {
+      "title": "Integración de billeteras y agentes",
+      "body": "Sus credenciales funcionan en las billeteras que ya interoperan en el Verana Playground, entre ellas Hologram, la billetera de referencia EUDI, swiyu, BC Wallet, NL Wallet, Inji y Paradym. Sus agentes de IA se convierten en Servicios Verificables que demuestran quién los opera, sobre DIDComm, MCP o A2A."
+    },
+    "run": {
+      "title": "Operación de la plataforma",
+      "body": "VS-Agents autoalojados, un indexador y un resolvedor para su ecosistema, en su infraestructura o en la nuestra, monitoreados y actualizados como las plataformas de telecomunicaciones que operamos desde hace catorce años."
+    }
+  },
+  "engagement": {
+    "eyebrow": "Cómo se desarrolla un proyecto",
+    "steps": [
+      { "title": "Descubrimiento", "body": "Las partes que confían, las credenciales, la gobernanza, el modelo de negocio. De dos a cuatro semanas." },
+      { "title": "Piloto en testnet", "body": "Su ecosistema registrado en la testnet de Verana, primer emisor y verificador en funcionamiento, billeteras conectadas." },
+      { "title": "Producción en mainnet", "body": "El mismo ecosistema trasladado a mainnet en el lanzamiento de la red, con la operación entregada o conservada." }
+    ]
+  },
+  "cta": {
+    "title": "Empiece con un descubrimiento",
+    "lead": "De dos a cuatro semanas para un marco de gobernanza, un conjunto de esquemas y un plan piloto.",
+    "label": "Hable con nosotros"
+  }
+}

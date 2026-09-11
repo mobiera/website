@@ -1,16 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { CONTACT_TOPICS } from "@/app/lib/site";
 
 const MIN_MESSAGE = 50;
 const MAX_MESSAGE = 4000;
 const MAX_CV_BYTES = 10 * 1024 * 1024;
 
-const VALIDATION_MSG = `Please complete the required fields, a valid email and a message of at least ${MIN_MESSAGE} characters, then try again.`;
-const SUBMIT_MSG = "We could not send your message just now. Please try again in a moment.";
-
 export default function ContactForm({ defaultTopic = "", careers = false }: { defaultTopic?: string; careers?: boolean }) {
+  const t = useTranslations("contact");
+  const locale = useLocale();
   const [topic, setTopic] = useState(defaultTopic);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -44,20 +45,21 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
     }
     if (!form.checkValidity() || message.trim().length < MIN_MESSAGE) {
       form.reportValidity();
-      setErrorMsg(VALIDATION_MSG);
+      setErrorMsg(t("form.validation", { min: MIN_MESSAGE }));
       setStatus("error");
       return;
     }
     const cvInput = form.elements.namedItem("cv") as HTMLInputElement | null;
     const cv = cvInput?.files?.[0];
     if (cv && cv.size > MAX_CV_BYTES) {
-      setErrorMsg("The CV must be a PDF of 10 MB or less.");
+      setErrorMsg(t("form.cvTooLarge"));
       setStatus("error");
       return;
     }
 
     const fd = new FormData(form);
     fd.set("rendered_at", renderedAt);
+    fd.set("locale", locale);
     fd.set("consent", (form.elements.namedItem("consent") as HTMLInputElement)?.checked ? "true" : "false");
 
     setStatus("submitting");
@@ -69,7 +71,7 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
       setTopic(defaultTopic);
       setMessage("");
     } catch {
-      setErrorMsg(SUBMIT_MSG);
+      setErrorMsg(t("form.submitError"));
       setStatus("error");
     }
   }
@@ -77,9 +79,9 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
   if (status === "success") {
     return (
       <div ref={bannerRef} role="status" aria-live="polite" className="card banner-ok">
-        <h3>Message sent</h3>
-        <p className="text-muted mt-2">Thanks. Your message is on its way to the right person; expect an answer within two business days.</p>
-        <button type="button" className="btn btn-primary mt-4" onClick={() => setStatus("idle")}>Send another message</button>
+        <h3>{t("form.success.title")}</h3>
+        <p className="text-muted mt-2">{t("form.success.body")}</p>
+        <button type="button" className="btn btn-primary mt-4" onClick={() => setStatus("idle")}>{t("form.success.again")}</button>
       </div>
     );
   }
@@ -90,55 +92,56 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
     <form className="form" onSubmit={handleSubmit} noValidate encType="multipart/form-data">
       {status === "error" && (
         <div ref={bannerRef} role="alert" aria-live="assertive" className="card banner-err">
-          <h3>Could not send your message</h3>
+          <h3>{t("form.error.title")}</h3>
           <p className="text-muted mt-2 text-sm">{errorMsg}</p>
         </div>
       )}
 
       <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "auto", width: 1, height: 1, overflow: "hidden" }}>
-        <label>Leave this field empty: <input name="website_hp" tabIndex={-1} autoComplete="off" /></label>
+        <label>{t("form.honeypot")} <input name="website_hp" tabIndex={-1} autoComplete="off" /></label>
       </div>
       <input type="hidden" name="rendered_at" value={renderedAt} readOnly />
+      <input type="hidden" name="locale" value={locale} readOnly />
 
       <div>
-        <label htmlFor="topic">Topic <span className="req" aria-hidden="true">*</span></label>
+        <label htmlFor="topic">{t("form.topic")} <span className="req" aria-hidden="true">*</span></label>
         <select id="topic" name="topic" required className="field" value={topic} onChange={(e) => setTopic(e.target.value)}>
-          <option value="">Select one</option>
-          {CONTACT_TOPICS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+          <option value="">{t("form.selectOne")}</option>
+          {CONTACT_TOPICS.map((o) => <option key={o.value} value={o.value}>{t(`topics.${o.value}`)}</option>)}
         </select>
       </div>
 
       <div className="grid-2">
         <div>
-          <label htmlFor="name">Name <span className="req" aria-hidden="true">*</span></label>
+          <label htmlFor="name">{t("form.name")} <span className="req" aria-hidden="true">*</span></label>
           <input id="name" name="name" type="text" required autoComplete="name" className="field" />
         </div>
         <div>
-          <label htmlFor="email">Email <span className="req" aria-hidden="true">*</span></label>
+          <label htmlFor="email">{t("form.email")} <span className="req" aria-hidden="true">*</span></label>
           <input id="email" name="email" type="email" required autoComplete="email" className="field" />
         </div>
       </div>
 
       <div className="grid-2">
         <div>
-          <label htmlFor="organization">Organization <span className="text-muted text-xs">(optional)</span></label>
+          <label htmlFor="organization">{t("form.organization")} <span className="text-muted text-xs">{t("form.optional")}</span></label>
           <input id="organization" name="organization" type="text" autoComplete="organization" className="field" />
         </div>
         <div>
-          <label htmlFor="profile">LinkedIn or GitHub profile <span className="text-muted text-xs">(optional)</span></label>
+          <label htmlFor="profile">{t("form.profile")} <span className="text-muted text-xs">{t("form.optional")}</span></label>
           <input id="profile" name="profile" type="url" autoComplete="url" className="field" placeholder="https://" />
         </div>
       </div>
 
       <div>
-        <label htmlFor="message">Message <span className="req" aria-hidden="true">*</span></label>
-        <textarea id="message" name="message" rows={6} required minLength={MIN_MESSAGE} maxLength={MAX_MESSAGE} className="field" value={message} onChange={(e) => setMessage(e.target.value)} placeholder={isCareers ? "What have you shipped, and what would you like to work on?" : "What are you building or evaluating, and what is the question?"} />
-        <p className="text-xs text-muted mt-2">{message.length} / {MAX_MESSAGE} (min {MIN_MESSAGE})</p>
+        <label htmlFor="message">{t("form.message")} <span className="req" aria-hidden="true">*</span></label>
+        <textarea id="message" name="message" rows={6} required minLength={MIN_MESSAGE} maxLength={MAX_MESSAGE} className="field" value={message} onChange={(e) => setMessage(e.target.value)} placeholder={isCareers ? t("form.placeholderCareers") : t("form.placeholderDefault")} />
+        <p className="text-xs text-muted mt-2">{t("form.counter", { count: message.length, max: MAX_MESSAGE, min: MIN_MESSAGE })}</p>
       </div>
 
       {isCareers && (
         <div>
-          <label htmlFor="cv">CV <span className="text-muted text-xs">(PDF, 10 MB max)</span></label>
+          <label htmlFor="cv">{t("form.cv")} <span className="text-muted text-xs">{t("form.cvHint")}</span></label>
           <input id="cv" name="cv" type="file" accept="application/pdf" className="field" />
         </div>
       )}
@@ -146,13 +149,13 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
       <div className="flex items-start gap-3 pt-1">
         <input id="consent" name="consent" type="checkbox" required className="mt-1" />
         <label htmlFor="consent" className="text-sm text-muted">
-          I consent to Mobiera SAS storing this message to answer me. See the <a href="/privacy" className="text-link">privacy policy</a>. <span className="req" aria-hidden="true">*</span>
+          {t.rich("form.consent", { link: (chunks) => <Link href="/privacy" className="text-link">{chunks}</Link> })} <span className="req" aria-hidden="true">*</span>
         </label>
       </div>
 
       <div className="pt-2 flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn btn-primary" disabled={submitting}>{submitting ? "Sending" : "Send"}</button>
-        <span className="text-xs text-muted">Every message is routed to the right person. We answer within two business days.</span>
+        <button type="submit" className="btn btn-primary" disabled={submitting}>{submitting ? t("form.sending") : t("form.send")}</button>
+        <span className="text-xs text-muted">{t("form.footnote")}</span>
       </div>
     </form>
   );

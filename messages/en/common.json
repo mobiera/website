@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "tagline": "Trust networks and Verifiable Credentials, built on Verana.",
+    "description": "Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems on Verana, and certifies the integrators who build on it in Latin America. The same team has run software inside 25+ mobile networks since 2012.",
+    "keywords": "Mobiera, verifiable credentials, trust networks, Verana, Verana certification, trust registry, Latin America, Aircast, STK push, SIM toolkit, OTA, AI agents"
+  },
+  "og": {
+    "alt": "Mobiera: Trust networks and Verifiable Credentials, built on Verana.",
+    "sub": "Founding member of the Verana Foundation. Official certificator for Verana integrators in Latin America. Platforms in 25+ mobile networks since 2012.",
+    "since": "BOGOTÁ · SINCE 2012"
+  },
+  "skipToContent": "Skip to content",
+  "nav": {
+    "home": "Mobiera home",
+    "primary": "Primary",
+    "mobile": "Mobile",
+    "trust": "Verifiable Credentials",
+    "certification": "Certification",
+    "telecom": "Telecom",
+    "company": "Company",
+    "news": "News",
+    "contact": "Contact",
+    "menu": "Menu",
+    "toDark": "Switch to dark theme",
+    "toLight": "Switch to light theme",
+    "switchLocale": "Leer en español",
+    "switchLocaleShort": "ES"
+  },
+  "footer": {
+    "blurb": "Trust networks and Verifiable Credentials built on Verana, and the platforms behind 25+ mobile networks.",
+    "trustHead": "Verifiable Credentials",
+    "trustNetworks": "Trust networks",
+    "trustServices": "Trust services",
+    "certification": "Certification",
+    "foundation": "Verana Foundation",
+    "council": "Verana Council",
+    "telecomHead": "Telecom",
+    "platforms": "Platforms",
+    "documentation": "Documentation",
+    "companyHead": "Company",
+    "about": "About",
+    "openSource": "Open source",
+    "careers": "Careers",
+    "news": "News",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
+  "cookieBanner": {
+    "title": "Cookies",
+    "body": "We use essential cookies to run this site and, with your consent, analytics cookies to improve it. We do not sell data. See the <link>cookie policy</link>.",
+    "essential": "Essential only",
+    "accept": "Accept all"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "The page you are looking for was moved, removed, or never existed. The old site's URLs redirect; if you followed a link from elsewhere, it may be out of date.",
+    "home": "Home",
+    "contact": "Contact"
+  },
+  "dates": {
+    "months": "January,February,March,April,May,June,July,August,September,October,November,December"
+  }
+}

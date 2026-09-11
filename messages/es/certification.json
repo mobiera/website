@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "title": "Certificación Verana",
+    "description": "Mobiera capacita a integradores para construir sobre Verana y certifica a los profesionales que aprueban los ocho exámenes. Verana Certified Professional y Verana Certified Integrator, para América Latina."
+  },
+  "hero": {
+    "eyebrow": "Certificación · América Latina",
+    "title": "Certifíquese en Verana.",
+    "lead": "Mobiera capacita a integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes: billeteras empresariales, ecosistemas, alojamiento de servicios para clientes, billeteras personales, y cómo vender y representar Verana. Designada por la Verana Foundation como certificador oficial para América Latina.",
+    "cta": "Inscríbase"
+  },
+  "why": {
+    "eyebrow": "Por qué existe la certificación",
+    "lead": "Verana es infraestructura pública y abierta. Lo que un cliente compra a un integrador es la capacidad de ponerla a trabajar: una billetera empresarial que se mantiene en línea, un ecosistema cuya gobernanza se sostiene, servicios alojados con las llaves y la operación que un cliente regulado espera. La certificación prueba que un integrador puede hacerlo, contra un plan de estudios mantenido por el certificador oficial de la Foundation para América Latina."
+  },
+  "path": {
+    "eyebrow": "El camino",
+    "title": "De miembro de la Foundation a una credencial en su billetera empresarial"
+  },
+  "curriculum": {
+    "eyebrow": "El plan de estudios",
+    "title": "Ocho módulos, un examen cada uno",
+    "tracks": [
+      { "title": "Fundamentos de Verana", "body": "Las tres partes (ecosistemas de confianza, identidad verificable, el Trust Graph), el registro público, los estándares." },
+      { "title": "Billeteras empresariales", "body": "Despliegue y operación de VS-Agent: DIDs, credenciales y Linked Verifiable Presentations, custodia de llaves, actualizaciones." },
+      { "title": "Ecosistemas", "body": "Esquemas de credenciales, el árbol de participantes, modos de permiso, modelos de negocio, un marco de gobernanza a partir de la plantilla del Council, incorporación de participantes." },
+      { "title": "Alojamiento de servicios para clientes", "body": "Emisores, verificadores y agentes de IA como Servicios Verificables; operación, monitoreo, respaldos, seguridad." },
+      { "title": "Billeteras personales", "body": "Integración y personalización de billeteras con Verana, flujos DIDComm y OpenID4VC, interoperabilidad en el Playground." },
+      { "title": "Venta de servicios basados en Verana", "body": "La propuesta de valor, los modelos de negocio de los ecosistemas, la presentación a un cliente." },
+      { "title": "La comunidad Verana", "body": "Los grupos de trabajo de la Foundation, cómo participar y cómo promoverlos." },
+      { "title": "La marca Verana", "body": "Reglas de uso y recomendaciones: qué puede afirmar un integrador y cómo presentarlo." }
+    ]
+  },
+  "exams": {
+    "eyebrow": "Los exámenes",
+    "lead": "Un examen por módulo, ocho en total. Prácticos sobre la testnet de Verana, presenciales, en inglés o español. Los exámenes en línea vendrán después. Nota mínima: 90 por ciento por examen. Un examen reprobado se repite por separado, sin período de espera. Apruebe todos los exámenes y será Verana Certified Professional."
+  },
+  "training": {
+    "eyebrow": "Capacitación",
+    "lead": "Con instructor, impartida por Mobiera, unas tres semanas, programada por empresa. Material a su ritmo en docs.verana.io a medida que se publica."
+  },
+  "prerequisites": {
+    "eyebrow": "Requisitos",
+    "professionals": { "title": "Profesionales", "body": "Ser miembro Contributor de la Verana Foundation. La membresía Contributor es gratuita y abierta a personas naturales." },
+    "companies": { "title": "Empresas", "body": "Ser miembro Contributor o Associate de la Verana Foundation." },
+    "join": "Únase a la Foundation"
+  },
+  "levels": {
+    "eyebrow": "Dos niveles de reconocimiento",
+    "professional": { "title": "Verana Certified Professional", "body": "Por examen, válida dos años. Se emite como certificado y como Credencial Verificable a la billetera personal del profesional." },
+    "integrator": { "title": "Verana Certified Integrator", "body": "Una empresa con dos profesionales certificados y un proyecto entregado, o un caso de uso público en el Playground publicado sobre su propia infraestructura. Se emite como Credencial Verificable a la billetera empresarial de la empresa." }
+  },
+  "integrators": {
+    "eyebrow": "Integradores certificados",
+    "lead": "Una empresa prueba su certificación desde su propia billetera empresarial, verificable por cualquiera, del mismo modo en que probará todo lo demás en Verana. Esta lista se genera desde el Trust Graph, no se mantiene a mano.",
+    "emptyTitle": "La primera cohorte está en capacitación",
+    "emptyBody": "Los integradores certificados aparecen aquí desde el Trust Graph: las empresas cuya billetera empresarial presenta una credencial Verana Certified Integrator válida emitida por Mobiera.",
+    "emptyDirectoryOff": "El directorio se activa cuando el Trust Graph esté en producción.",
+    "listLabel": "Integradores certificados",
+    "verify": "Verificar",
+    "website": "Sitio web"
+  },
+  "audience": {
+    "eyebrow": "Para quién es",
+    "lead": "Integradores, proveedores de software, consultoras y equipos de TI de operadores en América Latina."
+  },
+  "designation": {
+    "eyebrow": "La designación",
+    "badge": "Certificador oficial · América Latina",
+    "title": "Designada por la Verana Foundation.",
+    "validity": "Vigente hasta mayo de 2029."
+  },
+  "pricing": {
+    "eyebrow": "Precios y calendario",
+    "lead": "A solicitud. La capacitación se programa por empresa."
+  },
+  "cta": {
+    "title": "Inscríbase",
+    "lead": "Cuéntenos quién es, cuántas personas y cuándo. Respondemos en dos días hábiles.",
+    "label": "Inscríbase"
+  }
+}

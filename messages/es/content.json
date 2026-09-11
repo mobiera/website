@@ -1,0 +1,77 @@
+{
+  "numbers": [
+    { "value": "Miembro", "label": "fundador de la Verana Foundation", "tone": "violet" },
+    { "value": "Certificador", "label": "oficial de integradores Verana, América Latina", "tone": "violet" },
+    { "value": "25+", "label": "operadores móviles ejecutan nuestras plataformas" },
+    { "value": "800M", "label": "suscriptores alcanzables mediante servicios de mensajería con tecnología de Mobiera" },
+    { "value": "~60M", "label": "suscriptores alcanzados por día", "tone": "green" },
+    { "value": "2012", "label": "fundación en Bogotá; desde entonces, presencia en todos los continentes" }
+  ],
+  "offices": [
+    { "place": "Bogotá, Colombia", "note": "sede y domicilio registrado, Cra 13A 86A-42, Bogotá D.C." },
+    { "place": "Perú" },
+    { "place": "Bolivia" },
+    { "place": "Panamá" },
+    { "place": "Estados Unidos" },
+    { "place": "España" },
+    { "place": "Francia" },
+    { "place": "Argelia" }
+  ],
+  "timeline": [
+    {
+      "year": "2012",
+      "span": "— 2016",
+      "title": "Construido para operadores",
+      "verana": false,
+      "items": [
+        { "when": "2012", "text": "Mobiera SAS constituida en Bogotá, Colombia." },
+        { "when": "2013", "text": "Inicio de operaciones en México." },
+        { "when": "2014", "text": "Inicio de operaciones en Perú." },
+        { "when": "2015", "text": "Inicio de operaciones en Estados Unidos y Bolivia." },
+        { "when": "2016", "text": "Lanzamiento de las unidades de negocio de innovación y outsourcing de TI." }
+      ]
+    },
+    {
+      "year": "2017",
+      "span": "— 2020",
+      "title": "Todos los continentes",
+      "verana": false,
+      "items": [
+        { "when": "2017", "text": "Beneficio tributario de Colciencias por plataformas de facturación y soluciones de big data para mercados en desarrollo." },
+        { "when": "2018", "text": "Inicio de operaciones comerciales en Europa, desde España, y en Asia Pacífico, desde Hanói." },
+        { "when": "2019", "text": "El outsourcing de TI crece en torno a la transformación digital y DevOps." },
+        { "when": "2020", "text": "Comienza la expansión en África y el GCC." }
+      ]
+    },
+    {
+      "year": "2021",
+      "span": "— hoy",
+      "title": "La empresa de la confianza",
+      "verana": true,
+      "items": [
+        { "when": "2021", "text": "Primeras soluciones de KYC biométrico entregadas." },
+        { "when": "2022", "text": "Credenciales verificables ofrecidas como servicio por primera vez." },
+        { "when": "2023", "text": "Cambio de marca; ampliación de las alianzas estratégicas." },
+        { "when": "Enero de 2025", "text": "Lanzamiento de AI One." },
+        { "when": "Junio de 2025", "text": "Cofundación de la Verana Foundation con 2060 OÜ y Orchestrating Identity." },
+        { "when": "Enero de 2026", "text": "Lanzamiento del portal de documentación de Aircast en docs.mobiera.io." },
+        { "when": "Abril de 2026", "text": "Designación por la Verana Foundation como certificador oficial de integradores Verana en América Latina, vigente hasta mayo de 2029." },
+        { "when": "2026", "text": "Candidatura presentada a un puesto en el Founding Council." }
+      ]
+    }
+  ],
+  "openSource": {
+    "sim": "Estándares SIM y OTA",
+    "aircast": "Integración de Aircast",
+    "platform": "Utilidades de plataforma"
+  },
+  "countries": {
+    "Peru": "Perú",
+    "Spain": "España",
+    "Algeria": "Argelia",
+    "Vietnam": "Vietnam",
+    "Panama": "Panamá",
+    "Bolivia": "Bolivia",
+    "Tanzania": "Tanzania"
+  }
+}

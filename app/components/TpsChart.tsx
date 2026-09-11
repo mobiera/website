@@ -1,10 +1,13 @@
+import { getTranslations } from "next-intl/server";
+
 /**
  * Aircast's per-hour TPS budget on one SMPP account, as a bar chart: OTA
  * roll-outs take the budget at night, marketing and transactional traffic
  * during the day, and budget the high-priority campaign does not use is
  * offered to lower-priority ones (spec: docs/aircast concepts).
  */
-export default function TpsChart() {
+export default async function TpsChart() {
+  const t = await getTranslations("telecom");
   const ota = "#8353F2";
   const day = "#50E2AA";
   // [x, otaHeight, dayHeight, reuseHeight] over a 134px scale.
@@ -15,12 +18,12 @@ export default function TpsChart() {
     [382, 0, 70, 0], [401, 0, 56, 16], [420, 0, 48, 32], [439, 100, 0, 0], [458, 126, 0, 0], [477, 134, 0, 0], [496, 134, 0, 0],
   ];
   return (
-    <div className="panel" aria-label="Aircast throughput budget over 24 hours">
+    <div className="panel" aria-label={t("tpsChart.panelLabel")}>
       <div className="panel-head">
-        <b>TPS budget · SMPP account 1</b>
-        <span className="eyebrow">24 h · Aircast</span>
+        <b>{t("tpsChart.head")}</b>
+        <span className="eyebrow">{t("tpsChart.period")}</span>
       </div>
-      <svg viewBox="0 0 520 190" role="img" aria-label="Bar chart: high OTA throughput at night, marketing traffic in the day, unused budget reused">
+      <svg viewBox="0 0 520 190" role="img" aria-label={t("tpsChart.chartLabel")}>
         <g stroke="var(--rule)" strokeWidth="1">
           <line x1="36" y1="20" x2="510" y2="20" /><line x1="36" y1="60" x2="510" y2="60" /><line x1="36" y1="100" x2="510" y2="100" /><line x1="36" y1="140" x2="510" y2="140" />
         </g>
@@ -39,9 +42,9 @@ export default function TpsChart() {
         </g>
       </svg>
       <div className="legend">
-        <span><i style={{ background: ota }} />OTA roll-out, night</span>
-        <span><i style={{ background: day }} />Marketing and transactional, day</span>
-        <span><i style={{ background: ota, opacity: 0.45 }} />Unused budget reused</span>
+        <span><i style={{ background: ota }} />{t("tpsChart.legend.ota")}</span>
+        <span><i style={{ background: day }} />{t("tpsChart.legend.day")}</span>
+        <span><i style={{ background: ota, opacity: 0.45 }} />{t("tpsChart.legend.reuse")}</span>
       </div>
     </div>
   );

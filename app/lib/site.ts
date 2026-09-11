@@ -3,6 +3,8 @@
 
 export const SITE_URL = process.env.SITE_URL ?? "https://mobiera.io";
 export const SITE_NAME = "Mobiera";
+// The tagline and description are translated: messages/*/common.json (meta).
+// These English values remain for feeds and other locale-less places.
 export const SITE_TAGLINE = "Trust networks and Verifiable Credentials, built on Verana.";
 export const SITE_DESCRIPTION =
   "Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems on Verana, and certifies the integrators who build on it in Latin America. The same team has run software inside 25+ mobile networks since 2012.";
@@ -34,14 +36,17 @@ export const LINKS = {
   company2060: "https://2060.io",
 } as const;
 
+// Labels live in messages/*/common.json under nav.<key>.
 export const NAV = [
-  { href: "/trust", label: "Verifiable Credentials" },
-  { href: "/certification", label: "Certification" },
-  { href: "/telecom", label: "Telecom" },
-  { href: "/company", label: "Company" },
-  { href: "/news", label: "News" },
+  { href: "/trust", key: "trust" },
+  { href: "/certification", key: "certification" },
+  { href: "/telecom", key: "telecom" },
+  { href: "/company", key: "company" },
+  { href: "/news", key: "news" },
 ] as const;
 
+// `label` is the English fallback (internal notification email, logs). The
+// visitor-facing labels are translated in messages/*/contact.json (topics.*).
 export const CONTACT_TOPICS = [
   { value: "trust", label: "Trust services" },
   { value: "certification", label: "Certification" },

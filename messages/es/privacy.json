@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Política de privacidad",
+    "description": "Cómo Mobiera SAS trata los datos personales en mobiera.io: el formulario de contacto, analítica con consentimiento, conservación, sus derechos y cómo contactar a nuestro responsable de protección de datos."
+  },
+  "eyebrow": "Legal",
+  "title": "Política de privacidad",
+  "lead": "Última actualización: en el lanzamiento. Esta política está pendiente de revisión legal.",
+  "who": {
+    "title": "Quién es responsable",
+    "body": "{name}, NIT {nit}, {address}, es el responsable del tratamiento de mobiera.io. Contacto de protección de datos: <mail>{email}</mail>."
+  },
+  "collect": {
+    "title": "Qué recopilamos",
+    "form": "<b>Formulario de contacto.</b> Nombre, correo electrónico, organización, tema y mensaje, y un CV si se postula a una vacante. Los usamos para responderle y, en el caso de las postulaciones, para evaluar su perfil. Los envíos se conservan 24 meses, las postulaciones 12 meses, salvo que nos pida eliminarlos antes.",
+    "analytics": "<b>Analítica.</b> Con su consentimiento, estadísticas de uso anonimizadas (páginas visitadas, tipo de dispositivo, región aproximada) para mejorar el sitio. No se instala ninguna cookie de analítica antes de que usted acepte. Consulte la <link>política de cookies</link>.",
+    "logs": "<b>Registros del servidor.</b> Dirección IP, agente de usuario y URL solicitada, conservados 30 días por seguridad y resolución de problemas.",
+    "noSale": "No vendemos datos personales ni los usamos para publicidad."
+  },
+  "basis": {
+    "title": "Base legal",
+    "body": "Su consentimiento para la analítica; nuestro interés legítimo en responder su mensaje y mantener el sitio seguro; las gestiones previas a un contrato cuando consulta sobre nuestros productos."
+  },
+  "processors": {
+    "title": "Encargados del tratamiento",
+    "body": "El sitio funciona en infraestructura operada por Mobiera. Los envíos del formulario se entregan por correo a buzones de Mobiera; la analítica, si usted consiente, va a nuestro proveedor de analítica."
+  },
+  "rights": {
+    "title": "Sus derechos",
+    "body": "Acceso, rectificación, supresión, limitación, portabilidad y oposición, según la Ley 1581 de 2012 de Colombia y, cuando aplica, el RGPD. Escriba a <mail>{email}</mail>. Respondemos en un plazo de 15 días hábiles."
+  },
+  "changes": {
+    "title": "Cambios",
+    "body": "Publicamos los cambios aquí con la fecha de la actualización."
+  }
+}

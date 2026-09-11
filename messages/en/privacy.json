@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "title": "Privacy policy",
+    "description": "How Mobiera SAS handles personal data on mobiera.io: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact."
+  },
+  "eyebrow": "Legal",
+  "title": "Privacy policy",
+  "lead": "Last updated: at launch. This policy is pending legal review.",
+  "who": {
+    "title": "Who is responsible",
+    "body": "{name}, NIT {nit}, {address}, is the data controller for mobiera.io. Data-protection contact: <mail>{email}</mail>."
+  },
+  "collect": {
+    "title": "What we collect",
+    "form": "<b>Contact form.</b> Name, email, organization, topic and message, and a CV if you apply for a role. We use them to answer you and, for applications, to assess your profile. Submissions are stored for 24 months, applications for 12 months unless you ask us to delete them sooner.",
+    "analytics": "<b>Analytics.</b> With your consent, anonymized usage statistics (pages visited, device type, approximate region) to improve the site. No analytics cookie is set before you accept. See the <link>cookie policy</link>.",
+    "logs": "<b>Server logs.</b> IP address, user agent and requested URL, kept for 30 days for security and troubleshooting.",
+    "noSale": "We do not sell personal data and do not use it for advertising."
+  },
+  "basis": {
+    "title": "Legal basis",
+    "body": "Your consent for analytics; our legitimate interest in answering your message and keeping the site secure; the steps needed before a contract when you ask about our products."
+  },
+  "processors": {
+    "title": "Processors",
+    "body": "The site runs on infrastructure operated by Mobiera. Form submissions are delivered by email to Mobiera mailboxes; analytics, if you consent, go to our analytics provider."
+  },
+  "rights": {
+    "title": "Your rights",
+    "body": "Access, correction, deletion, restriction, portability and objection, under Colombian Law 1581 of 2012 and, where it applies, the GDPR. Write to <mail>{email}</mail>. We answer within 15 business days."
+  },
+  "changes": {
+    "title": "Changes",
+    "body": "We publish changes here with the date of the update."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "title": "Cookie policy",
+    "description": "mobiera.io sets one essential cookie for your consent choice and, only if you accept, analytics cookies. No advertising cookies."
+  },
+  "eyebrow": "Legal",
+  "title": "Cookie policy",
+  "lead": "One essential entry for your consent choice, analytics only if you accept, no advertising cookies.",
+  "essential": {
+    "title": "Essential",
+    "body": "Your consent choice is stored in your browser's local storage for as long as you keep it. Your theme preference (light or dark) is stored the same way and never sent to us."
+  },
+  "analytics": {
+    "title": "Analytics, with consent",
+    "body": "Anonymized usage statistics through Google Analytics 4, set only after you accept, for 13 months."
+  },
+  "change": {
+    "title": "Change your choice"
+  },
+  "prefs": {
+    "essentialOnly": "Essential only",
+    "acceptAnalytics": "Accept analytics",
+    "current": "Current choice: {choice}.",
+    "accepted": "analytics accepted",
+    "declined": "essential only",
+    "notMade": "not made yet"
+  }
+}

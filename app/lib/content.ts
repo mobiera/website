@@ -1,16 +1,12 @@
 // Facts shared by several pages (spec/facts.yaml). Copy that appears on one
-// page only lives in that page.
+// page only lives in that page. Human-readable labels (numbers, offices,
+// timeline, open-source group names, country names) live in
+// messages/{en,es}/content.json under the `content` namespace.
 
-export const NUMBERS = [
-  { value: "Founding", label: "member, Verana Foundation", tone: "violet" as const },
-  { value: "Official", label: "certificator, Verana integrators, Latin America", tone: "violet" as const },
-  { value: "25+", label: "mobile operators run our platforms" },
-  { value: "800M", label: "subscribers reachable through messaging services powered by Mobiera" },
-  { value: "~60M", label: "subscribers reached per day", tone: "green" as const },
-  { value: "2012", label: "founded in Bogotá; every continent served since" },
-];
+/** Country values used by LogoWall; translated via content.countries.<name>. */
+export type Country = "Peru" | "Spain" | "Algeria" | "Vietnam" | "Panama" | "Bolivia" | "Tanzania";
 
-export type Logo = { name: string; file: string; country?: string; width: number; height: number; darkArt?: boolean };
+export type Logo = { name: string; file: string; country?: Country; width: number; height: number; darkArt?: boolean };
 
 export const OPERATORS: Logo[] = [
   { name: "Claro", file: "claro.svg", country: "Peru", width: 176, height: 102 },
@@ -32,66 +28,17 @@ export const PARTNERS: Logo[] = [
   { name: "Amplitudes", file: "amplitudes.svg", width: 176, height: 102 },
 ];
 
-export const OFFICES = [
-  { place: "Bogotá, Colombia", note: "headquarters and registered address, Cra 13A 86A-42, Bogotá D.C." },
-  { place: "Peru" },
-  { place: "Bolivia" },
-  { place: "Panama" },
-  { place: "United States" },
-  { place: "Spain" },
-  { place: "France" },
-  { place: "Algeria" },
-];
+/** Shape of the arrays in messages/{en,es}/content.json, read with t.raw. */
+export type Stat = { value: string; label: string; tone?: "green" | "violet" };
+export type Office = { place: string; note?: string };
+export type TimelineChapter = { year: string; span: string; title: string; verana: boolean; items: { when: string; text: string }[] };
 
-export const TIMELINE = [
-  {
-    year: "2012",
-    span: "— 2016",
-    title: "Built for operators",
-    verana: false,
-    items: [
-      { when: "2012", text: "Mobiera SAS incorporated in Bogotá, Colombia." },
-      { when: "2013", text: "Operations start in Mexico." },
-      { when: "2014", text: "Operations start in Peru." },
-      { when: "2015", text: "Operations start in the United States and Bolivia." },
-      { when: "2016", text: "Innovation and IT outsourcing business units launched." },
-    ],
-  },
-  {
-    year: "2017",
-    span: "— 2020",
-    title: "Every continent",
-    verana: false,
-    items: [
-      { when: "2017", text: "Colciencias tax credit for billing platforms and big data solutions for developing markets." },
-      { when: "2018", text: "Commercial operations start in Europe, from Spain, and in Asia Pacific, from Hanoi." },
-      { when: "2019", text: "IT outsourcing scales up around digital transformation and DevOps." },
-      { when: "2020", text: "Africa and GCC expansion begins." },
-    ],
-  },
-  {
-    year: "2021",
-    span: "— today",
-    title: "The trust company",
-    verana: true,
-    items: [
-      { when: "2021", text: "First biometric KYC solutions delivered." },
-      { when: "2022", text: "Verifiable credentials offered as a service for the first time." },
-      { when: "2023", text: "Rebranding; strategic partnerships expanded." },
-      { when: "January 2025", text: "AI One launched." },
-      { when: "June 2025", text: "Verana Foundation co-founded with 2060 OÜ and Orchestrating Identity." },
-      { when: "January 2026", text: "Aircast documentation portal launched at docs.mobiera.io." },
-      { when: "April 2026", text: "Designated by the Verana Foundation as official certificator for Verana integrators in Latin America, valid until May 2029." },
-      { when: "2026", text: "Candidacy filed for a Founding Council seat." },
-    ],
-  },
-];
-
+/** Group names live in content.openSource.<key>; repository names stay here. */
 export const OPEN_SOURCE = [
-  { group: "SIM and OTA standards", repos: ["etsi102221", "etsi102222", "etsi102225", "etsi102226", "gp-mobiera", "common-sim"] },
-  { group: "Aircast integration", repos: ["aircast-api", "aircast-api-javax", "aircast-api-jakarta", "aircast-api-stats", "ustk-api"] },
-  { group: "Platform utilities", repos: ["stats", "stats-api", "service-log", "service-log-api", "mobiera-commons"] },
-];
+  { key: "sim", repos: ["etsi102221", "etsi102222", "etsi102225", "etsi102226", "gp-mobiera", "common-sim"] },
+  { key: "aircast", repos: ["aircast-api", "aircast-api-javax", "aircast-api-jakarta", "aircast-api-stats", "ustk-api"] },
+  { key: "platform", repos: ["stats", "stats-api", "service-log", "service-log-api", "mobiera-commons"] },
+] as const;
 
 export const TELECOM_STANDARDS = [
   "ETSI TS 102.221", "ETSI TS 102.222", "ETSI TS 102.225", "ETSI TS 102.226",

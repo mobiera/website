@@ -1,0 +1,12 @@
+{
+  "ack": {
+    "subject": "We received your message",
+    "heading": "Thanks, {name}",
+    "body": "We received your message on the topic \"{topic}\". It is on its way to the right person at Mobiera; expect an answer within two business days.",
+    "auto": "This is an automatic confirmation; no reply is needed.",
+    "signoff": "The Mobiera team"
+  },
+  "layout": {
+    "footer": "Mobiera SAS, Bogotá D.C., Colombia · founding member of the Verana Foundation."
+  }
+}

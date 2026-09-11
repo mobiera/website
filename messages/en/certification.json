@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "title": "Verana certification",
+    "description": "Mobiera trains integrators to build on Verana and certifies the professionals who pass the eight exams. Verana Certified Professional and Verana Certified Integrator, for Latin America."
+  },
+  "hero": {
+    "eyebrow": "Certification · Latin America",
+    "title": "Get Verana certified.",
+    "lead": "Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams: business wallets, ecosystems, hosting services for customers, personal wallets, and how to sell and represent Verana. Designated by the Verana Foundation as the official certificator for Latin America.",
+    "cta": "Enroll"
+  },
+  "why": {
+    "eyebrow": "Why certification exists",
+    "lead": "Verana is open, public infrastructure. What a customer buys from an integrator is the ability to put it to work: a business wallet that stays up, an ecosystem whose governance holds, services hosted with the keys and the operations a regulated client expects. Certification proves an integrator can do that, against a curriculum maintained by the Foundation's official certificator for Latin America."
+  },
+  "path": {
+    "eyebrow": "The path",
+    "title": "From Foundation member to a credential in your business wallet"
+  },
+  "curriculum": {
+    "eyebrow": "The curriculum",
+    "title": "Eight tracks, one exam each",
+    "tracks": [
+      { "title": "Verana foundations", "body": "The three parts (trust ecosystems, verifiable identity, the Trust Graph), the public registry, the standards." },
+      { "title": "Business wallets", "body": "Deploying and operating VS-Agent: DIDs, credentials and Linked Verifiable Presentations, key custody, upgrades." },
+      { "title": "Ecosystems", "body": "Credential schemas, the participant tree, permission modes, business models, a governance framework from the Council's template, onboarding participants." },
+      { "title": "Hosting services for customers", "body": "Issuers, verifiers and AI agents as Verifiable Services; operations, monitoring, backups, security." },
+      { "title": "Personal wallets", "body": "Integrating and customizing wallets with Verana, DIDComm and OpenID4VC flows, interoperability on the Playground." },
+      { "title": "Selling Verana-based services", "body": "The value proposition, ecosystem business models, the pitch to a customer." },
+      { "title": "The Verana community", "body": "The Foundation's working groups, how to take part and how to promote them." },
+      { "title": "The Verana brand", "body": "Usage rules and recommendations: what an integrator may claim, and how to present it." }
+    ]
+  },
+  "exams": {
+    "eyebrow": "The exams",
+    "lead": "One exam per track, eight in total. Hands-on on the Verana testnet, in person, in English or Spanish. Online exams follow. Pass mark: 90 percent per exam. A failed exam is retaken on its own, with no waiting period. Pass every exam and you are a Verana Certified Professional."
+  },
+  "training": {
+    "eyebrow": "Training",
+    "lead": "Instructor-led by Mobiera, about three weeks, scheduled per company. Self-paced material on docs.verana.io as it is published."
+  },
+  "prerequisites": {
+    "eyebrow": "Prerequisites",
+    "professionals": { "title": "Professionals", "body": "A Contributor member of the Verana Foundation. Contributor membership is free and open to individuals." },
+    "companies": { "title": "Companies", "body": "A Contributor or Associate member of the Verana Foundation." },
+    "join": "Join the Foundation"
+  },
+  "levels": {
+    "eyebrow": "Two levels of recognition",
+    "professional": { "title": "Verana Certified Professional", "body": "By exam, valid two years. Issued as a certificate and as a Verifiable Credential to the professional's personal wallet." },
+    "integrator": { "title": "Verana Certified Integrator", "body": "A company with two certified professionals and one delivered project, or a public Playground use case published on its own infrastructure. Issued as a Verifiable Credential to the company's business wallet." }
+  },
+  "integrators": {
+    "eyebrow": "Certified integrators",
+    "lead": "A company proves its certification from its own business wallet, verifiable by anyone, the same way it will prove everything else on Verana. This list is generated from the Trust Graph, not maintained by hand.",
+    "emptyTitle": "The first cohort is in training",
+    "emptyBody": "Certified integrators appear here from the Trust Graph: the companies whose business wallet presents a valid Verana Certified Integrator credential issued by Mobiera.",
+    "emptyDirectoryOff": "The directory switches on when the Trust Graph is live.",
+    "listLabel": "Certified integrators",
+    "verify": "Verify",
+    "website": "Website"
+  },
+  "audience": {
+    "eyebrow": "Who it is for",
+    "lead": "Integrators, software vendors, consultancies and operator IT teams in Latin America."
+  },
+  "designation": {
+    "eyebrow": "The designation",
+    "badge": "Official certificator · Latin America",
+    "title": "Designated by the Verana Foundation.",
+    "validity": "Valid until May 2029."
+  },
+  "pricing": {
+    "eyebrow": "Pricing and schedule",
+    "lead": "On request. Training is scheduled per company."
+  },
+  "cta": {
+    "title": "Enroll",
+    "lead": "Tell us who you are, how many people, and when. We answer within two business days.",
+    "label": "Enroll"
+  }
+}

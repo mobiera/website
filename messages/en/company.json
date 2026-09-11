@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "About Mobiera",
+    "description": "Mobiera SAS was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and official certificator for Verana integrators in Latin America."
+  },
+  "hero": {
+    "eyebrow": "Company",
+    "title": "Fourteen years inside operators' networks.",
+    "lead": "Mobiera SAS was founded in Bogotá in 2012 and has since put its platforms in 25+ mobile networks on every continent, within reach of 800 million subscribers."
+  },
+  "who": {
+    "eyebrow": "Who we are",
+    "trust": "We build trust networks and verifiable credential systems on Verana: the ecosystems, issuer and verifier services and wallets that let people, organizations, services and AI agents prove who they are. In June 2025 we co-founded the Verana Foundation, the non-profit steward of the open trust layer, and in April 2026 the Foundation designated Mobiera the official certificator for Latin America: we train integrators to build on Verana and certify the professionals who pass the exams.",
+    "telecom": "Since 2012 we have also built the software that mobile operators run inside their networks: the SIM toolkit push and messaging platform behind campaigns that reach about 60 million subscribers a day, and the AI agents that answer their support questions over SMS. We deploy it, integrate it with the operator's systems, and operate it, on their infrastructure or ours."
+  },
+  "timeline": {
+    "eyebrow": "Timeline"
+  },
+  "numbers": {
+    "eyebrow": "In numbers",
+    "items": [
+      { "value": "25+", "label": "mobile operators run our platforms" },
+      { "value": "800M", "label": "subscribers reachable through messaging services powered by Mobiera" },
+      { "value": "~60M", "label": "subscribers reached per day", "tone": "green" },
+      { "value": "8", "label": "offices: Bogotá, Peru, Bolivia, Panama, United States, Spain, France, Algeria" },
+      { "value": "2012", "label": "founded; every continent served since" },
+      { "value": "16", "label": "public repositories on GitHub", "tone": "violet" }
+    ]
+  },
+  "values": {
+    "eyebrow": "Values",
+    "customer": { "title": "Customer first", "body": "We measure ourselves on what runs in the customer's network, not on what we shipped." },
+    "truth": { "title": "Say what is true", "body": "Concrete claims, disclosed limits, no surprises in production." },
+    "properly": { "title": "Do it properly", "body": "Standards implemented to the letter, tested against real SIMs and real SMSCs." },
+    "learn": { "title": "Learn together", "body": "A multilingual team that shares what it knows, with customers and in the open." }
+  },
+  "partners": {
+    "eyebrow": "Partners",
+    "lead": "2060 OÜ, based in Tallinn, is an independent company that leads the Verana specifications and builds Hologram. Mobiera partners with 2060 on AI One and co-founded the Verana Foundation alongside it and Orchestrating Identity. Idemia, Bitdefender and Amplitudes are technology partners on the telecom platforms."
+  },
+  "locations": {
+    "eyebrow": "Locations"
+  },
+  "logos": {
+    "eyebrow": "Customers and partners",
+    "operators": "Operators",
+    "partners": "Partners"
+  },
+  "openSource": {
+    "eyebrow": "Open source",
+    "title": "Sixteen public repositories on github.com/mobiera",
+    "more": "github.com/mobiera"
+  },
+  "careers": {
+    "eyebrow": "Careers",
+    "lead": "We hire rarely, for people who want their code to run in a live network.",
+    "button": "Careers"
+  },
+  "cta": {
+    "title": "Talk to us",
+    "lead": "Every message reaches the right person.",
+    "label": "Contact"
+  }
+}

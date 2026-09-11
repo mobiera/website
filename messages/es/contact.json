@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Contacto",
+    "description": "Hable con Mobiera sobre Aircast, AI One, servicios de confianza, certificación de integradores Verana, alianzas, empleo o prensa. Cada mensaje llega a la persona indicada."
+  },
+  "hero": {
+    "eyebrow": "Contacto",
+    "title": "Hable con nosotros.",
+    "lead": "Cada mensaje llega a la persona indicada. Sin direcciones de correo que adivinar, sin cola de ventas."
+  },
+  "routed": {
+    "title": "Enrutado internamente",
+    "bullets": [
+      "Ninguna dirección de correo expuesta en el sitio.",
+      "Antiabuso autoalojado: un honeypot y verificación de tiempos, sin CAPTCHA.",
+      "Las consultas van por correo al buzón correcto de Mobiera. Sin CRM, sin terceros.",
+      "Este formulario no instala cookies."
+    ]
+  },
+  "other": {
+    "title": "Otras vías",
+    "inPerson": "En persona: eventos del sector de telecomunicaciones en América Latina, el Internet Identity Workshop y eventos de la comunidad Verana."
+  },
+  "who": {
+    "title": "Con quién está hablando"
+  },
+  "topics": {
+    "trust": "Servicios de confianza",
+    "certification": "Certificación",
+    "aircast": "Aircast y STK push",
+    "ai-agents": "Agentes de IA",
+    "partnership": "Alianzas",
+    "careers": "Trabaje con nosotros",
+    "press": "Prensa",
+    "general": "General"
+  },
+  "form": {
+    "validation": "Complete los campos obligatorios, un correo válido y un mensaje de al menos {min} caracteres, e intente de nuevo.",
+    "submitError": "No pudimos enviar su mensaje en este momento. Intente de nuevo en unos instantes.",
+    "cvTooLarge": "El CV debe ser un PDF de 10 MB o menos.",
+    "success": {
+      "title": "Mensaje enviado",
+      "body": "Gracias. Su mensaje va en camino a la persona indicada; espere una respuesta en un plazo de dos días hábiles.",
+      "again": "Enviar otro mensaje"
+    },
+    "error": {
+      "title": "No se pudo enviar su mensaje"
+    },
+    "honeypot": "Deje este campo vacío:",
+    "topic": "Tema",
+    "selectOne": "Seleccione uno",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "organization": "Organización",
+    "optional": "(opcional)",
+    "profile": "Perfil de LinkedIn o GitHub",
+    "message": "Mensaje",
+    "placeholderCareers": "¿Qué ha desarrollado y en qué le gustaría trabajar?",
+    "placeholderDefault": "¿Qué está construyendo o evaluando, y cuál es la pregunta?",
+    "counter": "{count} / {max} (mín. {min})",
+    "cv": "CV",
+    "cvHint": "(PDF, 10 MB máx.)",
+    "consent": "Autorizo a Mobiera SAS a almacenar este mensaje para responderme. Consulte la <link>política de privacidad</link>.",
+    "send": "Enviar",
+    "sending": "Enviando",
+    "footnote": "Cada mensaje llega a la persona indicada. Respondemos en un plazo de dos días hábiles."
+  }
+}

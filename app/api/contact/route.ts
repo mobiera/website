@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { sendEmail, escapeHtml } from "@/app/lib/email";
 import { emailLayout } from "@/app/lib/email-layout";
 import { alertOps } from "@/app/lib/ops-alert";
 import { contactRecipients, smtpServer } from "@/app/lib/smtp";
-import { CONTACT_TOPICS, topicLabel } from "@/app/lib/site";
+import { CONTACT_TOPICS, topicLabel, type ContactTopic } from "@/app/lib/site";
+import { HTML_LANG, routing, type Locale } from "@/i18n/routing";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -41,6 +44,20 @@ function inquiryHtml(rows: [string, string][], message: string): string {
 }
 
 type Cv = { filename: string; content: Buffer; contentType: string };
+
+/** Acknowledgement to the visitor, in the visitor's language. */
+async function acknowledgementEmail(locale: Locale, name: string, topic: ContactTopic): Promise<{ subject: string; html: string }> {
+  const t = await getTranslations({ locale, namespace: "email" });
+  const tc = await getTranslations({ locale, namespace: "contact" });
+  const bodyHtml = `
+    <p style="margin:0 0 12px;">${t("ack.body", { topic: tc(`topics.${topic}`) })}</p>
+    <p style="margin:0 0 12px;color:#5A6285;font-size:12px;">${t("ack.auto")}</p>
+    <p style="margin:0;">${t("ack.signoff")}</p>`;
+  return {
+    subject: t("ack.subject"),
+    html: emailLayout({ heading: t("ack.heading", { name: escapeHtml(name) }), bodyHtml, lang: HTML_LANG[locale], footer: t("layout.footer") }),
+  };
+}
 
 export async function POST(req: NextRequest) {
   let data: Record<string, string> = {};
@@ -92,11 +109,15 @@ export async function POST(req: NextRequest) {
 
   const organization = (data.organization ?? "").trim();
   const profile = (data.profile ?? "").trim();
+  // Validated above against CONTACT_TOPICS.
+  const topicValue = topic as ContactTopic;
   const label = topicLabel(topic);
+  // Language of the form the visitor used; only known locales, default English.
+  const locale: Locale = hasLocale(routing.locales, data.locale) ? data.locale : routing.defaultLocale;
 
   // Without SMTP (local dev) do not fail the user: log and report success.
   if (!smtpServer()) {
-    console.warn("[contact] SMTP not configured; inquiry not delivered:", { topic, name, email, organization, cv: cv?.filename });
+    console.warn("[contact] SMTP not configured; inquiry not delivered:", { topic, name, email, organization, locale, cv: cv?.filename });
     return NextResponse.json({ ok: true });
   }
 
@@ -110,7 +131,7 @@ export async function POST(req: NextRequest) {
       html: emailLayout({
         heading: `New inquiry: ${label}`,
         bodyHtml: inquiryHtml(
-          [["Topic", label], ["Name", name], ["Email", email], ["Organization", organization], ["Profile", profile], ["CV", cv ? cv.filename : ""], ["Consent", new Date().toISOString()]],
+          [["Topic", label], ["Name", name], ["Email", email], ["Organization", organization], ["Profile", profile], ["Language", HTML_LANG[locale]], ["CV", cv ? cv.filename : ""], ["Consent", new Date().toISOString()]],
           message,
         ),
       }),
@@ -121,6 +142,15 @@ export async function POST(req: NextRequest) {
     console.error("[contact] delivery failed", err, { topic, name, email, organization });
     await alertOps(`Contact form (mobiera.io): email delivery failed for ${name} <${email}> (${label}). ${String(err).slice(0, 300)}`);
     return NextResponse.json({ ok: false, error: "delivery" }, { status: 502 });
+  }
+
+  // Acknowledgement to the visitor. Best effort: the inquiry is already
+  // delivered, so a failure here is logged and does not fail the request.
+  try {
+    const ack = await acknowledgementEmail(locale, name, topicValue);
+    await sendEmail({ to: email, subject: ack.subject, html: ack.html });
+  } catch (err) {
+    console.error("[contact] acknowledgement failed", err, { email, locale });
   }
 
   return NextResponse.json({ ok: true });

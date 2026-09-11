@@ -1,11 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ConsentValue, EVENT_NAME, STORAGE_KEY, readStoredConsent } from "@/app/lib/consent";
 
 /** First-visit consent dialog. Nothing analytic loads before a choice. */
 export default function CookieConsent() {
+  const t = useTranslations("common.cookieBanner");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -31,15 +33,14 @@ export default function CookieConsent() {
     <div role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-body" className="cookie-banner">
       <div className="container-x flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
         <div className="flex-1 text-sm leading-relaxed">
-          <p id="cookie-title" className="font-display font-semibold text-ink">Cookies</p>
+          <p id="cookie-title" className="font-display font-semibold text-ink">{t("title")}</p>
           <p id="cookie-body" className="text-muted">
-            We use essential cookies to run this site and, with your consent, analytics cookies to improve it. We do not sell data. See the{" "}
-            <Link href="/cookies" className="text-link">cookie policy</Link>.
+            {t.rich("body", { link: (chunks) => <Link href="/cookies" className="text-link">{chunks}</Link> })}
           </p>
         </div>
         <div className="flex items-center gap-3 shrink-0">
-          <button type="button" className="btn" onClick={() => record("declined")}>Essential only</button>
-          <button type="button" className="btn btn-primary" onClick={() => record("accepted")} autoFocus>Accept all</button>
+          <button type="button" className="btn" onClick={() => record("declined")}>{t("essential")}</button>
+          <button type="button" className="btn btn-primary" onClick={() => record("accepted")} autoFocus>{t("accept")}</button>
         </div>
       </div>
     </div>
