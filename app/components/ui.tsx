@@ -138,3 +138,17 @@ export function CtaBand({ title, lead, href, label }: { title: string; lead?: st
     </section>
   );
 }
+
+/** A card with a picture on top, for use cases that link out to a live demo. */
+export function UseCase({ image, alt, title, href, cta, children }: { image: string; alt: string; title: string; href: string; cta: string; children: ReactNode }) {
+  return (
+    <article className="card usecase">
+      <a href={href} className="usecase-media" rel="noopener" tabIndex={-1} aria-hidden="true">
+        <img src={image} alt={alt} width={1200} height={675} loading="lazy" />
+      </a>
+      <h3 className="card-title">{title}</h3>
+      <p className="text-muted">{children}</p>
+      <MoreLink href={href}>{cta}</MoreLink>
+    </article>
+  );
+}

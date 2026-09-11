@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { faCertificate, faDiagramProject, faHandshake, faHeadset, faMobileScreen, faSitemap } from "@fortawesome/free-solid-svg-icons";
+import { faCertificate, faDiagramProject, faHandshake } from "@fortawesome/free-solid-svg-icons";
 import EcosystemTree from "@/app/components/EcosystemTree";
 import VeranaLockup from "@/app/components/VeranaLockup";
-import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, MoreLink, PageHero, Section } from "@/app/components/ui";
+import { ButtonLink, Card, CardTitle, Chips, CtaBand, Feature, MoreLink, PageHero, Section, UseCase } from "@/app/components/ui";
 import { TRUST_STANDARDS } from "@/app/lib/content";
 import { LINKS } from "@/app/lib/site";
 
@@ -53,11 +53,17 @@ export default function Page() {
         </a>
       </Section>
 
-      <Section eyebrow="Use cases we lead with">
+      <Section eyebrow="Use cases we lead with" lead="Each one runs as a demo on the Verana Playground, with real wallets and real credentials on the testnet.">
         <div className="grid-3">
-          <Feature icon={faMobileScreen} title="Telco-certified phone numbers"><p>The operator issues a credential that binds a phone number to a subscriber, and every service that accepts it verifies the issuer on the public registry. Reusable proof of a mobile number, without an SMS to every relying party.</p></Feature>
-          <Feature icon={faHeadset} title="Verifiable customer-support agents"><p>An operator's AI agent proves who operates it before a subscriber types a word. Running today in AI One.</p></Feature>
-          <Feature icon={faSitemap} title="Sector ecosystems in Latin America"><p>Diplomas, licenses, certifications and memberships that any partner can verify, governed by the sector body that issues them, on infrastructure it can host in its own jurisdiction.</p></Feature>
+          <UseCase image="/images/usecases/verandia.webp" alt="The capital of the Republic of Verandia, the Playground's demo country" title="Government ID and Business Register credentials" href={LINKS.playgroundVerandia} cta="See Verandia on the Playground">
+            Build your sovereign government trust network on a 100 percent open source stack: civil registry, business registry and tax authority issuing credentials that any service can verify, in an ecosystem the state governs and hosts.
+          </UseCase>
+          <UseCase image="/images/usecases/cexa.webp" alt="The Crypto Exchange Association boardroom, with the trust triangle on screen" title="Reusable KYC" href={LINKS.playgroundCexa} cta="See the exchange association on the Playground">
+            One governed KYC credential shared across a consortium of exchanges and banks. Verify once, reuse everywhere, and pay the original issuer on each reuse instead of every party verifying from scratch.
+          </UseCase>
+          <UseCase image="/images/usecases/vesta.webp" alt="The Vesta Appliances factory, the Playground's demo manufacturer" title="Sector ecosystems in Latin America" href={LINKS.playgroundVesta} cta="See a partner ecosystem on the Playground">
+            Diplomas, licenses, certifications and partner networks that any party can verify, governed by the sector body that issues them, on infrastructure it can host in its own jurisdiction. Vesta shows the pattern for a manufacturer and its repair partners.
+          </UseCase>
         </div>
       </Section>
 
