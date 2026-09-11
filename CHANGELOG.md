@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.7.0](https://github.com/mobiera/website/compare/v1.6.0...v1.7.0) (2026-09-11)
+
+
+### Features
+
+* **i18n:** serve the site in Latin American Spanish under /es ([1025ba5](https://github.com/mobiera/website/commit/1025ba515df0756281ae879a2713eabf93e1a3b5))
+* **i18n:** serve the site in Latin American Spanish under /es ([3ec5c37](https://github.com/mobiera/website/commit/3ec5c3766b32df6a17fff5645d5483c8c3d92cf5))
+* **trust:** lead with the three Playground use cases ([6490e30](https://github.com/mobiera/website/commit/6490e3053fe7f56c064c86e7d691e6711d765d8c))
+* **trust:** lead with the three Playground use cases ([8361a15](https://github.com/mobiera/website/commit/8361a15b421d87c78d04d1cb9baea8bb6d2bd123))
+
 ## [1.6.0](https://github.com/mobiera/website/compare/v1.5.0...v1.6.0) (2026-09-10)
 
 
