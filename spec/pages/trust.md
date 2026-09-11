@@ -60,17 +60,31 @@ no one.
 
 ## Use cases we lead with
 
-**Telco-certified phone numbers.** The operator issues a credential that binds
-a phone number to a subscriber, and every service that accepts it verifies the
-issuer on the public registry. Reusable proof of a mobile number, without an
-SMS to every relying party.
+Lead: Each one runs as a demo on the Verana Playground, with real wallets and
+real credentials on the testnet. Cards reuse the Playground home images.
 
-**Verifiable customer-support agents.** An operator's AI agent proves who
-operates it before a subscriber types a word. Running today in AI One.
+**Government ID and Business Register credentials.** Build your sovereign
+government trust network on a 100 percent open source stack: civil registry,
+business registry and tax authority issuing credentials that any service can
+verify, in an ecosystem the state governs and hosts.
+Link: See Verandia on the Playground
+(https://playground.testnet.verana.network/usecases/verandia)
+
+**Reusable KYC.** One governed KYC credential shared across a consortium of
+exchanges and banks. Verify once, reuse everywhere, and pay the original issuer
+on each reuse instead of every party verifying from scratch.
+Link: See the exchange association on the Playground
+(https://playground.testnet.verana.network/usecases/cexa)
 
 **Sector ecosystems in Latin America.** Diplomas, licenses, certifications and
-memberships that any partner can verify, governed by the sector body that
-issues them, on infrastructure it can host in its own jurisdiction.
+partner networks that any party can verify, governed by the sector body that
+issues them, on infrastructure it can host in its own jurisdiction. Vesta shows
+the pattern for a manufacturer and its repair partners.
+Link: See a partner ecosystem on the Playground
+(https://playground.testnet.verana.network/usecases/vesta)
+
+Dropped on 2026-09-11 (Fabrice): telco-certified phone numbers and verifiable
+customer-support agents; both remain covered on the AI One page.
 
 ## Standards
 
