@@ -3,7 +3,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { faBuilding, faBuildingShield, faUser, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
 import CertifiedIntegrators from "./CertifiedIntegrators";
 import CertificationPath from "@/app/components/CertificationPath";
-import { ButtonLink, Card, CardTitle, CtaBand, Feature, PageHero, Section, Steps } from "@/app/components/ui";
+import CertifiedProof from "@/app/components/CertifiedProof";
+import HeroMark from "@/app/components/HeroMark";
+import { ButtonLink, Card, CardTitle, CtaBand, Eyebrow, Feature, Section, Steps } from "@/app/components/ui";
 import { alternates, pageLocale, type PageParams } from "@/app/lib/seo";
 import { LINKS } from "@/app/lib/site";
 
@@ -20,9 +22,22 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   const tracks = t.raw("curriculum.tracks") as { title: string; body: string }[];
   return (
     <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} lead={t("hero.lead")}>
-        <ButtonLink href="/contact?topic=certification" variant="primary">{t("hero.cta")}</ButtonLink>
-      </PageHero>
+      <div className="ground">
+        <HeroMark />
+        <section className="hero container-x">
+          <div className="hero-grid">
+            <div>
+              <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
+              <h1 className="mt-3">{t("hero.title")}</h1>
+              <p className="lead">{t("hero.lead")}</p>
+              <div className="ctas">
+                <ButtonLink href="/contact?topic=certification" variant="primary">{t("hero.cta")}</ButtonLink>
+              </div>
+            </div>
+            <CertifiedProof />
+          </div>
+        </section>
+      </div>
 
       <Section eyebrow={t("why.eyebrow")} lead={t("why.lead")} />
 

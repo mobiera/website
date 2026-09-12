@@ -21,14 +21,38 @@
     "eyebrow": "El plan de estudios",
     "title": "Ocho módulos, un examen cada uno",
     "tracks": [
-      { "title": "Fundamentos de Verana", "body": "Las tres partes (ecosistemas de confianza, identidad verificable, el Trust Graph), el registro público, los estándares." },
-      { "title": "Billeteras empresariales", "body": "Despliegue y operación de VS-Agent: DIDs, credenciales y Linked Verifiable Presentations, custodia de llaves, actualizaciones." },
-      { "title": "Ecosistemas", "body": "Esquemas de credenciales, el árbol de participantes, modos de permiso, modelos de negocio, un marco de gobernanza a partir de la plantilla del Council, incorporación de participantes." },
-      { "title": "Alojamiento de servicios para clientes", "body": "Emisores, verificadores y agentes de IA como Servicios Verificables; operación, monitoreo, respaldos, seguridad." },
-      { "title": "Billeteras personales", "body": "Integración y personalización de billeteras con Verana, flujos DIDComm y OpenID4VC, interoperabilidad en el Playground." },
-      { "title": "Venta de servicios basados en Verana", "body": "La propuesta de valor, los modelos de negocio de los ecosistemas, la presentación a un cliente." },
-      { "title": "La comunidad Verana", "body": "Los grupos de trabajo de la Foundation, cómo participar y cómo promoverlos." },
-      { "title": "La marca Verana", "body": "Reglas de uso y recomendaciones: qué puede afirmar un integrador y cómo presentarlo." }
+      {
+        "title": "Fundamentos de Verana",
+        "body": "Las tres partes (ecosistemas de confianza, identidad verificable, el Trust Graph), el registro público, los estándares."
+      },
+      {
+        "title": "Billeteras empresariales",
+        "body": "Despliegue y operación de VS-Agent: DIDs, credenciales y Linked Verifiable Presentations, custodia de llaves, actualizaciones."
+      },
+      {
+        "title": "Ecosistemas",
+        "body": "Esquemas de credenciales, el árbol de participantes, modos de permiso, modelos de negocio, un marco de gobernanza a partir de la plantilla del Council, incorporación de participantes."
+      },
+      {
+        "title": "Alojamiento de servicios para clientes",
+        "body": "Emisores, verificadores y agentes de IA como Servicios Verificables; operación, monitoreo, respaldos, seguridad."
+      },
+      {
+        "title": "Billeteras personales",
+        "body": "Integración y personalización de billeteras con Verana, flujos DIDComm y OpenID4VC, interoperabilidad en el Playground."
+      },
+      {
+        "title": "Venta de servicios basados en Verana",
+        "body": "La propuesta de valor, los modelos de negocio de los ecosistemas, la presentación a un cliente."
+      },
+      {
+        "title": "La comunidad Verana",
+        "body": "Los grupos de trabajo de la Foundation, cómo participar y cómo promoverlos."
+      },
+      {
+        "title": "La marca Verana",
+        "body": "Reglas de uso y recomendaciones: qué puede afirmar un integrador y cómo presentarlo."
+      }
     ]
   },
   "exams": {
@@ -41,14 +65,26 @@
   },
   "prerequisites": {
     "eyebrow": "Requisitos",
-    "professionals": { "title": "Profesionales", "body": "Ser miembro Contributor de la Verana Foundation. La membresía Contributor es gratuita y abierta a personas naturales." },
-    "companies": { "title": "Empresas", "body": "Ser miembro Contributor o Associate de la Verana Foundation." },
+    "professionals": {
+      "title": "Profesionales",
+      "body": "Ser miembro Contributor de la Verana Foundation. La membresía Contributor es gratuita y abierta a personas naturales."
+    },
+    "companies": {
+      "title": "Empresas",
+      "body": "Ser miembro Contributor o Associate de la Verana Foundation."
+    },
     "join": "Únase a la Foundation"
   },
   "levels": {
     "eyebrow": "Dos niveles de reconocimiento",
-    "professional": { "title": "Verana Certified Professional", "body": "Por examen, válida dos años. Se emite como certificado y como Credencial Verificable a la billetera personal del profesional." },
-    "integrator": { "title": "Verana Certified Integrator", "body": "Una empresa con dos profesionales certificados y un proyecto entregado, o un caso de uso público en el Playground publicado sobre su propia infraestructura. Se emite como Credencial Verificable a la billetera empresarial de la empresa." }
+    "professional": {
+      "title": "Verana Certified Professional",
+      "body": "Por examen, válida dos años. Se emite como certificado y como Credencial Verificable a la billetera personal del profesional."
+    },
+    "integrator": {
+      "title": "Verana Certified Integrator",
+      "body": "Una empresa con dos profesionales certificados y un proyecto entregado, o un caso de uso público en el Playground publicado sobre su propia infraestructura. Se emite como Credencial Verificable a la billetera empresarial de la empresa."
+    }
   },
   "integrators": {
     "eyebrow": "Integradores certificados",
@@ -78,5 +114,35 @@
     "title": "Inscríbase",
     "lead": "Cuéntenos quién es, cuántas personas y cuándo. Respondemos en dos días hábiles.",
     "label": "Inscríbase"
+  },
+  "proof": {
+    "ariaLabel": "Proof-of-Trust de ejemplo de un integrador certificado: sus credenciales de organización y de servicio, y la credencial Verana Certified Integrator emitida por Mobiera, todas verificadas",
+    "title": "Proof-of-Trust",
+    "tag": "Testnet de Verana · ejemplo",
+    "resolving": "Resolviendo",
+    "org": "Acme Integrators SAS · Bogotá, CO",
+    "rows": [
+      {
+        "label": "Credencial de organización",
+        "detail": "Registro Mercantil"
+      },
+      {
+        "label": "Credencial de servicio",
+        "detail": "autoemitida · verificada"
+      },
+      {
+        "label": "Verana Certified Integrator",
+        "detail": "emitida por Mobiera · vigente hasta 2028",
+        "hi": true
+      }
+    ],
+    "score": "Puntaje de confianza",
+    "scoreAria": "Puntaje de confianza 4 de 5",
+    "verdict": "Verificado. Conectar.",
+    "dir": {
+      "title": "En el directorio",
+      "body": "generado desde el Trust Graph"
+    },
+    "caption": "Resolución de ejemplo"
   }
 }

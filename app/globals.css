@@ -318,6 +318,17 @@ a { color: inherit; }
 .pot-score i { width: 10px; height: 10px; border-radius: 2px; background: var(--green); display: inline-block; }
 .pot-score i.off { background: var(--rule); }
 .pot-verdict { margin-left: auto; font-family: var(--font-display); font-weight: 600; color: var(--green-ink); }
+/* Certification hero: the Proof-of-Trust of a certified integrator */
+.proof-stage { margin: 0; display: grid; gap: 44px; justify-items: center; }
+.panel.cert-proof { position: relative; width: 100%; max-width: 440px; padding-bottom: 44px; }
+.cert-proof .pot-rows li.hi { background: var(--violet-soft); margin: 4px -10px 0; padding: 10px; border-radius: 8px; border-bottom: 0; }
+.cert-proof .pot-rows li.hi .pot-label { color: var(--violet-ink); }
+.pot-dir { position: absolute; right: -14px; bottom: -20px; z-index: 2; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; box-shadow: var(--shadow); display: flex; gap: 10px; align-items: center; font-size: 0.8rem; }
+.pot-dir > i { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, #063d2e, #1fb57a); flex: none; }
+.pot-dir b { font-family: var(--font-display); font-weight: 600; display: block; line-height: 1.2; }
+.pot-dir small { color: var(--muted); font-size: 0.72rem; }
+.proof-cap { text-align: center; }
+@media (max-width: 900px) { .proof-stage { margin-top: 28px; } .pot-dir { right: 8px; } }
 
 /* Verana lockups (marks and wordmarks as on the sister sites) ------------ */
 .lockup { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--ink); line-height: 1; }
