@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.1](https://github.com/mobiera/website/compare/v1.7.0...v1.7.1) (2026-09-12)
+
+
+### Bug Fixes
+
+* **contact:** stop autofill from swallowing submissions ([d4ed474](https://github.com/mobiera/website/commit/d4ed47436f7e5fb47ee35d4c6a42146c059756c7))
+* **contact:** stop autofill from swallowing submissions ([cfffe17](https://github.com/mobiera/website/commit/cfffe17c75e7cf5d469a6da29be28d4ba022b021))
+
 ## [1.7.0](https://github.com/mobiera/website/compare/v1.6.0...v1.7.0) (2026-09-11)
 
 
