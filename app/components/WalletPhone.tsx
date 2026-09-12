@@ -17,7 +17,6 @@ export default async function WalletPhone() {
   const tabs = t.raw("tabs") as string[];
   return (
     <div className="wp-stage" role="img" aria-label={t("ariaLabel")}>
-      <div className="wp-ring" aria-hidden="true" />
       <div className="wp-scale" aria-hidden="true">
         <div className="wp-phone">
           <div className="wp-screen">
