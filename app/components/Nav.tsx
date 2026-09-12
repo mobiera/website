@@ -55,9 +55,10 @@ export default function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href={pathname} locale={other} className="lang-switch" lang={other === "es" ? "es-419" : "en"} aria-label={t("switchLocale")} title={t("switchLocale")}>
+          {/* A full navigation, not a client-side one: the proxy records the choice in the NEXT_LOCALE cookie and redirects to the canonical path. */}
+          <a href={`/${other}${pathname === "/" ? "" : pathname}`} className="lang-switch" lang={other === "es" ? "es-419" : "en"} aria-label={t("switchLocale")} title={t("switchLocale")}>
             {t("switchLocaleShort")}
-          </Link>
+          </a>
           <button type="button" className="theme-toggle" aria-label={mounted && theme === "light" ? t("toDark") : t("toLight")} onClick={toggleTheme}>
             {mounted && theme === "light" ? (
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>

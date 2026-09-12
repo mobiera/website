@@ -72,5 +72,51 @@
     "title": "¿Construye o se une a un ecosistema de confianza?",
     "lead": "Cuéntenos las partes que confían, las credenciales y la gobernanza que tiene en mente.",
     "label": "Hable con nosotros"
+  },
+  "phone": {
+    "ariaLabel": "Una billetera en un teléfono que muestra tres credenciales de ejemplo: una identidad ciudadana, un registro mercantil y una credencial de Verana Certified Integrator",
+    "app": "Billetera",
+    "sub": "3 credenciales · todos los emisores acreditados en Verana",
+    "cards": {
+      "id": {
+        "tab": "Identidad",
+        "holder": "María Fernanda Rojas",
+        "type": "Credencial de identidad ciudadana",
+        "issuer": "Registro Civil · República de Verandia (demo)"
+      },
+      "business": {
+        "tab": "Empresa",
+        "holder": "Mobiera SAS",
+        "type": "Credencial de registro mercantil",
+        "issuer": "Registro Mercantil (demo)"
+      },
+      "cert": {
+        "tab": "Certificación",
+        "holder": "Acme Integrators SAS",
+        "type": "Verana Certified Integrator",
+        "issuer": "Emitida por Mobiera · vigente hasta 2028"
+      }
+    },
+    "activityTitle": "Actividad reciente",
+    "activity": [
+      {
+        "text": "Presentada a Novara Bank (demo)",
+        "when": "2 min"
+      },
+      {
+        "text": "Recibida de Mobiera",
+        "when": "ayer"
+      },
+      {
+        "text": "Conectado a AI One · Claro (demo)",
+        "when": "mar"
+      }
+    ],
+    "tabs": [
+      "Credenciales",
+      "Escanear",
+      "Actividad",
+      "Ajustes"
+    ]
   }
 }

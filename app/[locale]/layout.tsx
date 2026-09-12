@@ -47,7 +47,12 @@ export async function generateMetadata({ params }: { params: Promise<PageParams>
   };
 }
 
-/** Sets data-theme before first paint: stored choice, else OS preference, else dark. */
+/**
+ * Sets data-theme before first paint: stored choice, else OS preference, else
+ * dark. The server never renders the attribute itself: a client-side
+ * navigation between locales re-renders <html> and would reset a server value
+ * to "dark" without running this script again.
+ */
 const themeInitScript = `
 (function(){try{var s=localStorage.getItem('mobiera-theme');var t=(s==='light'||s==='dark')?s:(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();
 `;
@@ -57,7 +62,7 @@ export default async function RootLayout({ children, params }: { children: React
   setRequestLocale(locale);
   const t = await getTranslations("common");
   return (
-    <html lang={HTML_LANG[locale]} data-theme="dark" suppressHydrationWarning className={`${sora.variable} ${manrope.variable} ${plexMono.variable} ${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang={HTML_LANG[locale]} suppressHydrationWarning className={`${sora.variable} ${manrope.variable} ${plexMono.variable} ${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>

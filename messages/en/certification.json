@@ -21,14 +21,38 @@
     "eyebrow": "The curriculum",
     "title": "Eight tracks, one exam each",
     "tracks": [
-      { "title": "Verana foundations", "body": "The three parts (trust ecosystems, verifiable identity, the Trust Graph), the public registry, the standards." },
-      { "title": "Business wallets", "body": "Deploying and operating VS-Agent: DIDs, credentials and Linked Verifiable Presentations, key custody, upgrades." },
-      { "title": "Ecosystems", "body": "Credential schemas, the participant tree, permission modes, business models, a governance framework from the Council's template, onboarding participants." },
-      { "title": "Hosting services for customers", "body": "Issuers, verifiers and AI agents as Verifiable Services; operations, monitoring, backups, security." },
-      { "title": "Personal wallets", "body": "Integrating and customizing wallets with Verana, DIDComm and OpenID4VC flows, interoperability on the Playground." },
-      { "title": "Selling Verana-based services", "body": "The value proposition, ecosystem business models, the pitch to a customer." },
-      { "title": "The Verana community", "body": "The Foundation's working groups, how to take part and how to promote them." },
-      { "title": "The Verana brand", "body": "Usage rules and recommendations: what an integrator may claim, and how to present it." }
+      {
+        "title": "Verana foundations",
+        "body": "The three parts (trust ecosystems, verifiable identity, the Trust Graph), the public registry, the standards."
+      },
+      {
+        "title": "Business wallets",
+        "body": "Deploying and operating VS-Agent: DIDs, credentials and Linked Verifiable Presentations, key custody, upgrades."
+      },
+      {
+        "title": "Ecosystems",
+        "body": "Credential schemas, the participant tree, permission modes, business models, a governance framework from the Council's template, onboarding participants."
+      },
+      {
+        "title": "Hosting services for customers",
+        "body": "Issuers, verifiers and AI agents as Verifiable Services; operations, monitoring, backups, security."
+      },
+      {
+        "title": "Personal wallets",
+        "body": "Integrating and customizing wallets with Verana, DIDComm and OpenID4VC flows, interoperability on the Playground."
+      },
+      {
+        "title": "Selling Verana-based services",
+        "body": "The value proposition, ecosystem business models, the pitch to a customer."
+      },
+      {
+        "title": "The Verana community",
+        "body": "The Foundation's working groups, how to take part and how to promote them."
+      },
+      {
+        "title": "The Verana brand",
+        "body": "Usage rules and recommendations: what an integrator may claim, and how to present it."
+      }
     ]
   },
   "exams": {
@@ -41,14 +65,26 @@
   },
   "prerequisites": {
     "eyebrow": "Prerequisites",
-    "professionals": { "title": "Professionals", "body": "A Contributor member of the Verana Foundation. Contributor membership is free and open to individuals." },
-    "companies": { "title": "Companies", "body": "A Contributor or Associate member of the Verana Foundation." },
+    "professionals": {
+      "title": "Professionals",
+      "body": "A Contributor member of the Verana Foundation. Contributor membership is free and open to individuals."
+    },
+    "companies": {
+      "title": "Companies",
+      "body": "A Contributor or Associate member of the Verana Foundation."
+    },
     "join": "Join the Foundation"
   },
   "levels": {
     "eyebrow": "Two levels of recognition",
-    "professional": { "title": "Verana Certified Professional", "body": "By exam, valid two years. Issued as a certificate and as a Verifiable Credential to the professional's personal wallet." },
-    "integrator": { "title": "Verana Certified Integrator", "body": "A company with two certified professionals and one delivered project, or a public Playground use case published on its own infrastructure. Issued as a Verifiable Credential to the company's business wallet." }
+    "professional": {
+      "title": "Verana Certified Professional",
+      "body": "By exam, valid two years. Issued as a certificate and as a Verifiable Credential to the professional's personal wallet."
+    },
+    "integrator": {
+      "title": "Verana Certified Integrator",
+      "body": "A company with two certified professionals and one delivered project, or a public Playground use case published on its own infrastructure. Issued as a Verifiable Credential to the company's business wallet."
+    }
   },
   "integrators": {
     "eyebrow": "Certified integrators",
@@ -78,5 +114,35 @@
     "title": "Enroll",
     "lead": "Tell us who you are, how many people, and when. We answer within two business days.",
     "label": "Enroll"
+  },
+  "proof": {
+    "ariaLabel": "Example Proof-of-Trust of a certified integrator: its organization and service credentials, and the Verana Certified Integrator credential issued by Mobiera, all verified",
+    "title": "Proof-of-Trust",
+    "tag": "Verana testnet · example",
+    "resolving": "Resolving",
+    "org": "Acme Integrators SAS · Bogotá, CO",
+    "rows": [
+      {
+        "label": "Organization credential",
+        "detail": "Business Registry"
+      },
+      {
+        "label": "Service credential",
+        "detail": "self-issued · verified"
+      },
+      {
+        "label": "Verana Certified Integrator",
+        "detail": "issued by Mobiera · valid to 2028",
+        "hi": true
+      }
+    ],
+    "score": "Trust score",
+    "scoreAria": "Trust score 4 of 5",
+    "verdict": "Verified. Connect.",
+    "dir": {
+      "title": "Listed in the directory",
+      "body": "generated from the Trust Graph"
+    },
+    "caption": "Example resolution"
   }
 }
