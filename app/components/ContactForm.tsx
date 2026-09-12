@@ -38,11 +38,6 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
     e.preventDefault();
     const form = e.currentTarget;
 
-    const honeypot = (form.elements.namedItem("website_hp") as HTMLInputElement)?.value;
-    if (honeypot) {
-      setStatus("success");
-      return;
-    }
     if (!form.checkValidity() || message.trim().length < MIN_MESSAGE) {
       form.reportValidity();
       setErrorMsg(t("form.validation", { min: MIN_MESSAGE }));
@@ -58,7 +53,8 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
     }
 
     const fd = new FormData(form);
-    fd.set("rendered_at", renderedAt);
+    // Time on the page, measured here so the server never compares two clocks.
+    fd.set("elapsed_ms", String(Date.now() - Number(renderedAt)));
     fd.set("locale", locale);
     fd.set("consent", (form.elements.namedItem("consent") as HTMLInputElement)?.checked ? "true" : "false");
 
@@ -97,10 +93,12 @@ export default function ContactForm({ defaultTopic = "", careers = false }: { de
         </div>
       )}
 
+      {/* Honeypot: off screen, never autofilled. The name avoids every word
+          browser autofill matches (website, url, company...), and the field
+          is only inspected by the API, which also logs the drop. */}
       <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "auto", width: 1, height: 1, overflow: "hidden" }}>
-        <label>{t("form.honeypot")} <input name="website_hp" tabIndex={-1} autoComplete="off" /></label>
+        <label>{t("form.honeypot")} <input name="hp_check" tabIndex={-1} autoComplete="off" data-lpignore="true" data-1p-ignore="true" data-bwignore="true" /></label>
       </div>
-      <input type="hidden" name="rendered_at" value={renderedAt} readOnly />
       <input type="hidden" name="locale" value={locale} readOnly />
 
       <div>
