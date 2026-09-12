@@ -216,6 +216,42 @@ a { color: inherit; }
 }
 @media (prefers-reduced-motion: reduce) { .vc-card { transition: none; } .vc-stack:hover .vc-card { transform: inherit; } }
 
+/* Hero wallet phone (/trust) ------------------------------------------------ */
+/* The phone is drawn at 296x612 and scaled down so its height matches the copy column, like the chart panel on the Telecom hero. */
+.wp-stage { --wp-scale: 0.73; position: relative; display: grid; place-items: center; font-size: 12px; line-height: 1.35; }
+.wp-scale { position: relative; width: calc(296px * var(--wp-scale)); height: calc(612px * var(--wp-scale)); }
+.wp-scale > * { transform-origin: top left; }
+.wp-phone { position: absolute; top: 0; left: 0; transform: scale(var(--wp-scale)); overflow: hidden; width: 296px; height: 612px; border-radius: 44px; background: #0a0d1f; border: 1px solid rgba(255, 255, 255, 0.22); box-shadow: 0 40px 80px -30px rgba(5, 8, 30, 0.8), inset 0 0 0 2px #1c2140; padding: 5px; }
+.wp-phone::before { content: ""; position: absolute; left: 50%; top: 14px; transform: translateX(-50%); width: 92px; height: 26px; border-radius: 14px; background: #050714; z-index: 3; }
+.wp-screen { position: relative; width: 100%; height: 100%; border-radius: 40px; overflow: hidden; background: var(--surface); color: var(--ink); display: flex; flex-direction: column; }
+.wp-status { display: flex; justify-content: space-between; padding: 14px 22px 0; font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+.wp-apphead { display: flex; align-items: center; justify-content: space-between; padding: 26px 18px 8px; }
+.wp-apphead b { font-family: var(--font-display); font-size: 17px; font-weight: 600; }
+.wp-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--green)); }
+.wp-sub { padding: 0 18px; color: var(--muted); font-size: 11px; margin: 0; }
+.wp-list { padding: 10px 14px 0; }
+.wp-vc { position: relative; border-radius: 14px; color: #fff; padding: 12px 14px; height: 118px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.8); }
+.wp-vc + .wp-vc { margin-top: -46px; }
+.wp-id { background: linear-gradient(135deg, #1a1450, #33257e 50%, #5e3abe); }
+.wp-business { background: linear-gradient(135deg, #0b1024, #192442 55%, #2f4a8a); }
+.wp-cert { background: linear-gradient(135deg, #063d2e, #0f6a4f 50%, #1fb57a); }
+.wp-tab { position: absolute; top: 0; right: 0; padding: 4px 9px; border-radius: 0 0 0 9px; background: rgba(255, 255, 255, 0.16); font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase; }
+.wp-cert .wp-tab { background: var(--green); color: #063d2e; }
+.wp-vc b { display: block; font-family: var(--font-display); font-size: 13.5px; font-weight: 600; line-height: 1.15; max-width: 72%; }
+.wp-vc span:not(.wp-tab) { display: block; font-size: 10px; color: rgba(255, 255, 255, 0.8); margin-top: 2px; }
+.wp-mark { position: absolute; right: -8px; bottom: -14px; width: 78px; height: auto; color: #fff; opacity: 0.35; }
+.wp-act { padding: 14px 18px 0; display: grid; gap: 8px; }
+.wp-act-h { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.wp-act-i { display: flex; align-items: center; gap: 9px; font-size: 11px; }
+.wp-act-i i { width: 20px; height: 20px; border-radius: 6px; background: var(--surface-2); flex: none; }
+.wp-act-i small { margin-left: auto; color: var(--muted); font-family: var(--font-mono); font-size: 9.5px; white-space: nowrap; }
+.wp-tabbar { margin-top: auto; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); padding: 10px 8px 16px; font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.wp-tabbar span { display: grid; gap: 4px; justify-items: center; }
+.wp-tabbar i { width: 18px; height: 18px; border-radius: 5px; background: var(--surface-2); display: block; }
+.wp-tabbar .on { color: var(--violet-ink); }
+.wp-tabbar .on i { background: var(--violet-soft); }
+@media (max-width: 900px) { .wp-stage { margin-top: 8px; } }
+
 /* Cards, chips, stats ----------------------------------------------------- */
 .card-title { display: flex; align-items: center; gap: 12px; }
 .card-icon {
