@@ -184,6 +184,74 @@ a { color: inherit; }
 @media (max-width: 900px) { .hero-mark { width: 90vw; right: -32%; top: -6%; opacity: 0.6; } }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
+/* Hero credential cards ---------------------------------------------------- */
+.vc-figure { margin: 0; display: grid; gap: 14px; justify-items: center; }
+.vc-stack { display: grid; width: 100%; max-width: 440px; aspect-ratio: 1 / 0.92; align-items: center; justify-items: center; }
+.vc-card { grid-area: 1 / 1; width: min(100%, 360px); aspect-ratio: 1.6 / 1; border-radius: 16px; color: #fff; position: relative; overflow: hidden; box-shadow: 0 30px 60px -28px rgba(5, 8, 30, 0.75); border: 1px solid rgba(255, 255, 255, 0.14); transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.vc-card::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.18), transparent 44%); pointer-events: none; }
+.vc-id { background: linear-gradient(135deg, #1a1450 0%, #33257e 50%, #5e3abe 100%); transform: translate(-16%, -30%) rotate(-7deg); z-index: 1; }
+.vc-business { background: linear-gradient(135deg, #0b1024 0%, #192442 55%, #2f4a8a 100%); transform: translate(17%, -2%) rotate(5deg); z-index: 2; }
+.vc-integrator { background: linear-gradient(135deg, #063d2e 0%, #0f6a4f 50%, #1fb57a 100%); transform: translate(-6%, 28%) rotate(-2deg); z-index: 3; }
+.vc-stack:hover .vc-id { transform: translate(-22%, -38%) rotate(-9deg); }
+.vc-stack:hover .vc-business { transform: translate(24%, -4%) rotate(7deg); }
+.vc-stack:hover .vc-integrator { transform: translate(-8%, 34%) rotate(-3deg); }
+.vc-tab { position: absolute; top: 0; right: 0; z-index: 2; padding: 6px 12px; border-radius: 0 0 0 12px; background: rgba(255, 255, 255, 0.16); font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.vc-integrator .vc-tab { background: var(--green); color: #063d2e; font-weight: 500; }
+.vc-scene { position: absolute; right: -4%; bottom: -6%; height: 78%; width: auto; color: #fff; opacity: 0.6; z-index: 1; }
+.vc-integrator .vc-scene { height: 92%; right: -10%; bottom: -14%; }
+.vc-body { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; padding: 18px 20px 16px; }
+.vc-holder { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; line-height: 1.15; max-width: 70%; }
+.vc-type { font-size: 0.78rem; color: rgba(255, 255, 255, 0.82); margin-top: 3px; max-width: 70%; }
+.vc-issuer { font-size: 0.72rem; color: rgba(255, 255, 255, 0.7); margin-top: 10px; max-width: 72%; line-height: 1.35; }
+.vc-meta { margin-top: auto; display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.04em; color: rgba(255, 255, 255, 0.85); }
+.vc-check { display: inline-flex; width: 16px; height: 16px; border-radius: 50%; background: var(--green); color: #063d2e; align-items: center; justify-content: center; }
+.vc-dot { opacity: 0.5; }
+.vc-caption { text-align: center; }
+@media (max-width: 900px) {
+  .vc-stack { max-width: 380px; margin: 24px auto 0; aspect-ratio: 1 / 0.98; }
+  .vc-card { width: min(100%, 300px); }
+  .vc-id, .vc-stack:hover .vc-id { transform: translate(-6%, -34%) rotate(-6deg); }
+  .vc-business, .vc-stack:hover .vc-business { transform: translate(7%, -4%) rotate(4deg); }
+  .vc-integrator, .vc-stack:hover .vc-integrator { transform: translate(-2%, 28%) rotate(-2deg); }
+}
+@media (prefers-reduced-motion: reduce) { .vc-card { transition: none; } .vc-stack:hover .vc-card { transform: inherit; } }
+
+/* Hero wallet phone (/trust) ------------------------------------------------ */
+/* The phone is drawn at 296x612 and scaled down so its height matches the copy column, like the chart panel on the Telecom hero. */
+.wp-stage { --wp-scale: 0.73; position: relative; display: grid; place-items: center; font-size: 12px; line-height: 1.35; }
+.wp-scale { position: relative; width: calc(296px * var(--wp-scale)); height: calc(612px * var(--wp-scale)); }
+.wp-scale > * { transform-origin: top left; }
+.wp-phone { position: absolute; top: 0; left: 0; transform: scale(var(--wp-scale)); overflow: hidden; width: 296px; height: 612px; border-radius: 44px; background: #0a0d1f; border: 1px solid rgba(255, 255, 255, 0.22); box-shadow: 0 40px 80px -30px rgba(5, 8, 30, 0.8), inset 0 0 0 2px #1c2140; padding: 5px; }
+.wp-phone::before { content: ""; position: absolute; left: 50%; top: 14px; transform: translateX(-50%); width: 92px; height: 26px; border-radius: 14px; background: #050714; z-index: 3; }
+.wp-screen { position: relative; width: 100%; height: 100%; border-radius: 40px; overflow: hidden; background: var(--surface); color: var(--ink); display: flex; flex-direction: column; }
+.wp-status { display: flex; justify-content: space-between; padding: 14px 22px 0; font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+.wp-apphead { display: flex; align-items: center; justify-content: space-between; padding: 26px 18px 8px; }
+.wp-apphead b { font-family: var(--font-display); font-size: 17px; font-weight: 600; }
+.wp-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--green)); }
+.wp-sub { padding: 0 18px; color: var(--muted); font-size: 11px; margin: 0; }
+.wp-list { padding: 10px 14px 0; }
+.wp-vc { position: relative; border-radius: 14px; color: #fff; padding: 12px 14px; height: 118px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.8); }
+.wp-vc + .wp-vc { margin-top: -46px; }
+.wp-id { background: linear-gradient(135deg, #1a1450, #33257e 50%, #5e3abe); }
+.wp-business { background: linear-gradient(135deg, #0b1024, #192442 55%, #2f4a8a); }
+.wp-cert { background: linear-gradient(135deg, #063d2e, #0f6a4f 50%, #1fb57a); }
+.wp-tab { position: absolute; top: 0; right: 0; padding: 4px 9px; border-radius: 0 0 0 9px; background: rgba(255, 255, 255, 0.16); font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase; }
+.wp-cert .wp-tab { background: var(--green); color: #063d2e; }
+.wp-vc b { display: block; font-family: var(--font-display); font-size: 13.5px; font-weight: 600; line-height: 1.15; max-width: 72%; }
+.wp-vc span:not(.wp-tab) { display: block; font-size: 10px; color: rgba(255, 255, 255, 0.8); margin-top: 2px; }
+.wp-mark { position: absolute; right: -8px; bottom: -14px; width: 78px; height: auto; color: #fff; opacity: 0.35; }
+.wp-act { padding: 14px 18px 0; display: grid; gap: 8px; }
+.wp-act-h { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.wp-act-i { display: flex; align-items: center; gap: 9px; font-size: 11px; }
+.wp-act-i i { width: 20px; height: 20px; border-radius: 6px; background: var(--surface-2); flex: none; }
+.wp-act-i small { margin-left: auto; color: var(--muted); font-family: var(--font-mono); font-size: 9.5px; white-space: nowrap; }
+.wp-tabbar { margin-top: auto; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); padding: 10px 8px 16px; font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: center; }
+.wp-tabbar span { display: grid; gap: 4px; justify-items: center; }
+.wp-tabbar i { width: 18px; height: 18px; border-radius: 5px; background: var(--surface-2); display: block; }
+.wp-tabbar .on { color: var(--violet-ink); }
+.wp-tabbar .on i { background: var(--violet-soft); }
+@media (max-width: 900px) { .wp-stage { margin-top: 8px; } }
+
 /* Cards, chips, stats ----------------------------------------------------- */
 .card-title { display: flex; align-items: center; gap: 12px; }
 .card-icon {
@@ -250,6 +318,17 @@ a { color: inherit; }
 .pot-score i { width: 10px; height: 10px; border-radius: 2px; background: var(--green); display: inline-block; }
 .pot-score i.off { background: var(--rule); }
 .pot-verdict { margin-left: auto; font-family: var(--font-display); font-weight: 600; color: var(--green-ink); }
+/* Certification hero: the Proof-of-Trust of a certified integrator */
+.proof-stage { margin: 0; display: grid; gap: 44px; justify-items: center; }
+.panel.cert-proof { position: relative; width: 100%; max-width: 440px; padding-bottom: 44px; }
+.cert-proof .pot-rows li.hi { background: var(--violet-soft); margin: 4px -10px 0; padding: 10px; border-radius: 8px; border-bottom: 0; }
+.cert-proof .pot-rows li.hi .pot-label { color: var(--violet-ink); }
+.pot-dir { position: absolute; right: -14px; bottom: -20px; z-index: 2; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 10px 12px; box-shadow: var(--shadow); display: flex; gap: 10px; align-items: center; font-size: 0.8rem; }
+.pot-dir > i { width: 30px; height: 30px; border-radius: 8px; background: linear-gradient(135deg, #063d2e, #1fb57a); flex: none; }
+.pot-dir b { font-family: var(--font-display); font-weight: 600; display: block; line-height: 1.2; }
+.pot-dir small { color: var(--muted); font-size: 0.72rem; }
+.proof-cap { text-align: center; }
+@media (max-width: 900px) { .proof-stage { margin-top: 28px; } .pot-dir { right: 8px; } }
 
 /* Verana lockups (marks and wordmarks as on the sister sites) ------------ */
 .lockup { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--ink); line-height: 1; }
