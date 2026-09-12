@@ -1,6 +1,6 @@
 ---
 title: About Mobiera
-description: Mobiera SAS was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and official certificator for Verana integrators in Latin America.
+description: Mobiera SAS was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and an official certificator for Verana integrators in Latin America.
 url: /company
 ---
 

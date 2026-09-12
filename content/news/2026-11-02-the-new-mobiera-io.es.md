@@ -13,7 +13,7 @@ Telecomunicaciones: Aircast, la plataforma de push STK, mensajería y OTA que
 opera en 25+ operadores y llega a unos 60 millones de suscriptores al día, y
 AI One, agentes de IA de atención al cliente por SMS y Hologram. Confianza: el
 papel de Mobiera como miembro fundador de la Verana Foundation, sus servicios
-de confianza y su designación como certificador oficial de integradores
+de confianza y su designación como uno de los certificadores oficiales de integradores
 Verana en América Latina.
 
 Las antiguas direcciones de mobiera.com redirigen. El portal de documentación en docs.mobiera.io y los dieciséis repositorios

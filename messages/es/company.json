@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Quiénes somos",
-    "description": "Mobiera SAS fue fundada en Bogotá en 2012 y ha puesto sus plataformas en más de 25 redes móviles en todos los continentes. Miembro fundador de la Verana Foundation y certificador oficial de integradores Verana en América Latina."
+    "description": "Mobiera SAS fue fundada en Bogotá en 2012 y ha puesto sus plataformas en más de 25 redes móviles en todos los continentes. Miembro fundador de la Verana Foundation y uno de los certificadores oficiales de integradores Verana en América Latina."
   },
   "hero": {
     "eyebrow": "Empresa",
@@ -10,7 +10,7 @@
   },
   "who": {
     "eyebrow": "Quiénes somos",
-    "trust": "Construimos redes de confianza y sistemas de credenciales verificables sobre Verana: los ecosistemas, los servicios de emisión y verificación y las billeteras que permiten a personas, organizaciones, servicios y agentes de IA demostrar quiénes son. En junio de 2025 cofundamos la Verana Foundation, la entidad sin fines de lucro que custodia la capa de confianza abierta, y en abril de 2026 la Foundation designó a Mobiera certificador oficial para América Latina: capacitamos a los integradores para construir sobre Verana y certificamos a los profesionales que aprueban los exámenes.",
+    "trust": "Construimos redes de confianza y sistemas de credenciales verificables sobre Verana: los ecosistemas, los servicios de emisión y verificación y las billeteras que permiten a personas, organizaciones, servicios y agentes de IA demostrar quiénes son. En junio de 2025 cofundamos la Verana Foundation, la entidad sin fines de lucro que custodia la capa de confianza abierta, y en abril de 2026 la Foundation designó a Mobiera como uno de los certificadores oficiales para América Latina: capacitamos a los integradores para construir sobre Verana y certificamos a los profesionales que aprueban los exámenes.",
     "telecom": "Desde 2012 también construimos el software que los operadores móviles ejecutan dentro de sus redes: la plataforma de push y mensajería por SIM toolkit detrás de campañas que llegan a unos 60 millones de suscriptores al día, y los agentes de IA que responden sus consultas de soporte por SMS. Lo desplegamos, lo integramos con los sistemas del operador y lo operamos, en su infraestructura o en la nuestra."
   },
   "timeline": {
