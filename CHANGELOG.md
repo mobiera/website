@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/mobiera/website/compare/v1.7.1...v1.8.0) (2026-09-12)
+
+
+### Features
+
+* **heroes:** credential cards, wallet phone, certified Proof-of-Trust, theme fix ([b457c5e](https://github.com/mobiera/website/commit/b457c5eb241d6d7bc8130d3b296177bbbaec1430))
+
 ## [1.7.1](https://github.com/mobiera/website/compare/v1.7.0...v1.7.1) (2026-09-12)
 
 
