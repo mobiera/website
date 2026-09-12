@@ -14,6 +14,7 @@ export const dynamic = "force-dynamic";
 const MIN_MESSAGE = 50;
 const MAX_MESSAGE = 4000;
 const MAX_CV_BYTES = 10 * 1024 * 1024;
+const MIN_ELAPSED_MS = 2500;
 
 // Naive in-memory rate limit: the deployment runs a single replica, so a
 // per-process map is a sufficient best-effort guard (same as 2060.io-website).
@@ -83,12 +84,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false, error: "bad_request" }, { status: 400 });
   }
 
-  // Honeypot: a filled hidden field means a bot. Pretend success, do nothing.
-  if ((data.website_hp ?? "").trim() !== "") return NextResponse.json({ ok: true });
+  // Honeypot: a filled hidden field means a bot. Pretend success, do nothing,
+  // but say so in the log: a silent drop once hid a real problem.
+  if ((data.hp_check ?? "").trim() !== "") {
+    console.info("[contact] dropped: honeypot filled");
+    return NextResponse.json({ ok: true });
+  }
 
-  // Time-to-submit: human submissions take more than a couple of seconds.
-  const renderedAt = Number(data.rendered_at);
-  if (Number.isFinite(renderedAt) && Date.now() - renderedAt < 2500) return NextResponse.json({ ok: true });
+  // Time-to-submit: human submissions take more than a couple of seconds. The
+  // browser reports its own elapsed time; comparing a browser timestamp with
+  // this server's clock dropped every visitor whose clock ran ahead.
+  const elapsed = Number(data.elapsed_ms);
+  if (Number.isFinite(elapsed) && elapsed >= 0 && elapsed < MIN_ELAPSED_MS) {
+    console.info(`[contact] dropped: submitted after ${Math.round(elapsed)} ms`);
+    return NextResponse.json({ ok: true });
+  }
 
   const topic = (data.topic ?? "").trim();
   const name = (data.name ?? "").trim();

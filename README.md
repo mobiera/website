@@ -57,7 +57,10 @@ Scripts: `npm run build`, `npm start`, `npm run typecheck`, `npm test`.
 
 `/contact` posts to `app/api/contact/route.ts`, which validates the
 submission (honeypot, time-to-submit, rate limit, consent) and emails it over
-SMTP with Nodemailer, the same way 2060.io-website does. Recipients come from
+SMTP with Nodemailer, the same way 2060.io-website does. A submission dropped
+by the honeypot or the timing check still answers success to the browser, but
+the pod log says why (`[contact] dropped: ...`); a delivered inquiry logs
+`[contact] <topic> inquiry emailed`. Recipients come from
 `CONTACT_TO` with per-topic overrides (`CONTACT_TO_CAREERS`, ...). Career
 applications attach the PDF the candidate uploads. With `MAIL_HOST` unset the
 form accepts and logs submissions without delivering them.
