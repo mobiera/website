@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.1](https://github.com/mobiera/website/compare/v1.8.0...v1.8.1) (2026-09-12)
+
+
+### Bug Fixes
+
+* **copy:** Mobiera is an official certificator, not the official certificator ([6702787](https://github.com/mobiera/website/commit/6702787eaf8552a672d37b3b6c5f02102948ed57))
+* **copy:** Mobiera is an official certificator, not the official certificator ([bf4661f](https://github.com/mobiera/website/commit/bf4661f8d06013ad9af217aea3a430fa388d657f))
+
 ## [1.8.0](https://github.com/mobiera/website/compare/v1.7.1...v1.8.0) (2026-09-12)
 
 
