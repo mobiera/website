@@ -217,10 +217,12 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) { .vc-card { transition: none; } .vc-stack:hover .vc-card { transform: inherit; } }
 
 /* Hero wallet phone (/trust) ------------------------------------------------ */
-.wp-stage { position: relative; display: grid; place-items: center; min-height: 560px; font-size: 12px; line-height: 1.35; }
-.wp-scale { position: relative; display: grid; place-items: center; transform: scale(0.85); transform-origin: center; }
-.wp-ring { position: absolute; width: 380px; height: 380px; border-radius: 50%; border: 1px dashed var(--rule); }
-.wp-phone { position: relative; overflow: hidden; width: 296px; height: 612px; border-radius: 44px; background: #0a0d1f; border: 1px solid rgba(255, 255, 255, 0.22); box-shadow: 0 40px 80px -30px rgba(5, 8, 30, 0.8), inset 0 0 0 2px #1c2140; padding: 5px; }
+/* The phone is drawn at 296x612 and scaled down so its height matches the copy column, like the chart panel on the Telecom hero. */
+.wp-stage { --wp-scale: 0.66; position: relative; display: grid; place-items: center; font-size: 12px; line-height: 1.35; }
+.wp-scale { position: relative; width: calc(296px * var(--wp-scale)); height: calc(612px * var(--wp-scale)); }
+.wp-scale > * { transform-origin: top left; }
+.wp-ring { position: absolute; width: 300px; height: 300px; border-radius: 50%; border: 1px dashed var(--rule); }
+.wp-phone { position: absolute; top: 0; left: 0; transform: scale(var(--wp-scale)); overflow: hidden; width: 296px; height: 612px; border-radius: 44px; background: #0a0d1f; border: 1px solid rgba(255, 255, 255, 0.22); box-shadow: 0 40px 80px -30px rgba(5, 8, 30, 0.8), inset 0 0 0 2px #1c2140; padding: 5px; }
 .wp-phone::before { content: ""; position: absolute; left: 50%; top: 14px; transform: translateX(-50%); width: 92px; height: 26px; border-radius: 14px; background: #050714; z-index: 3; }
 .wp-screen { position: relative; width: 100%; height: 100%; border-radius: 40px; overflow: hidden; background: var(--surface); color: var(--ink); display: flex; flex-direction: column; }
 .wp-status { display: flex; justify-content: space-between; padding: 14px 22px 0; font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
@@ -255,12 +257,12 @@ a { color: inherit; }
 .wp-two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .wp-cta { padding: 11px; border-radius: 9px; background: var(--violet); color: #fff; text-align: center; font-weight: 600; font-size: 12.5px; }
 .wp-cta.ghost { background: transparent; border: 1px solid var(--rule); color: var(--ink); }
-.wp-notif { position: absolute; top: calc(50% - 326px); left: calc(50% - 214px); z-index: 5; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 10px 12px; display: flex; gap: 10px; align-items: center; box-shadow: 0 24px 48px -24px rgba(5, 8, 30, 0.8); width: 268px; }
+.wp-notif { position: absolute; top: -20px; left: -66px; transform: scale(var(--wp-scale)); z-index: 5; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 10px 12px; display: flex; gap: 10px; align-items: center; box-shadow: 0 24px 48px -24px rgba(5, 8, 30, 0.8); width: 268px; }
 .wp-notif > i { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, #063d2e, #1fb57a); flex: none; }
 .wp-notif b { display: block; font-family: var(--font-display); font-size: 12px; font-weight: 600; }
 .wp-notif small { color: var(--muted); font-size: 10.5px; }
 .wp-notif em { margin-left: auto; font-style: normal; font-family: var(--font-mono); font-size: 9.5px; color: var(--muted); align-self: flex-start; }
-@media (max-width: 900px) { .wp-stage { min-height: 0; margin-top: 8px; } .wp-notif { left: calc(50% - 134px); } }
+@media (max-width: 900px) { .wp-stage { margin-top: 8px; } .wp-notif { left: 14px; } }
 
 /* Cards, chips, stats ----------------------------------------------------- */
 .card-title { display: flex; align-items: center; gap: 12px; }
