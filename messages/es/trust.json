@@ -72,5 +72,29 @@
     "title": "¿Construye o se une a un ecosistema de confianza?",
     "lead": "Cuéntenos las partes que confían, las credenciales y la gobernanza que tiene en mente.",
     "label": "Hable con nosotros"
+  },
+  "phone": {
+    "ariaLabel": "Una billetera en un teléfono que muestra una solicitud de conexión de un banco de demostración con su Proof-of-Trust, y una credencial recién recibida",
+    "app": "Billetera",
+    "notif": {
+      "title": "Credencial recibida",
+      "body": "Verana Certified Integrator · Mobiera",
+      "when": "ahora"
+    },
+    "card": {
+      "tab": "Identidad",
+      "holder": "María Fernanda Rojas",
+      "type": "Credencial de identidad ciudadana",
+      "issuer": "Registro Civil · República de Verandia (demo)"
+    },
+    "request": {
+      "title": "Novara Bank (demo) quiere conectarse",
+      "org": "Credencial de organización · Ecosistema financiero",
+      "service": "Credencial de servicio · verificada",
+      "asks": "Solicita",
+      "claims": "su nombre y que es mayor de 18 años",
+      "decline": "Rechazar",
+      "share": "Compartir"
+    }
   }
 }

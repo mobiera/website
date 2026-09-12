@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { faCertificate, faDiagramProject, faHandshake } from "@fortawesome/free-solid-svg-icons";
 import EcosystemTree from "@/app/components/EcosystemTree";
+import HeroMark from "@/app/components/HeroMark";
+import WalletPhone from "@/app/components/WalletPhone";
 import VeranaLockup from "@/app/components/VeranaLockup";
-import { ButtonLink, Card, CardTitle, Chips, CtaBand, MoreLink, PageHero, Section, UseCase } from "@/app/components/ui";
+import { ButtonLink, Card, CardTitle, Chips, CtaBand, Eyebrow, MoreLink, Section, UseCase } from "@/app/components/ui";
 import { TRUST_STANDARDS } from "@/app/lib/content";
 import { alternates, pageLocale, type PageParams } from "@/app/lib/seo";
 import { LINKS } from "@/app/lib/site";
@@ -20,10 +22,23 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   const t = await getTranslations("trust");
   return (
     <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} lead={t("hero.lead")}>
-        <ButtonLink href="/trust/services" variant="primary">{t("hero.services")}</ButtonLink>
-        <ButtonLink href="/certification">{t("hero.certified")}</ButtonLink>
-      </PageHero>
+      <div className="ground">
+        <HeroMark />
+        <section className="hero container-x">
+          <div className="hero-grid">
+            <div>
+              <Eyebrow>{t("hero.eyebrow")}</Eyebrow>
+              <h1 className="mt-3">{t("hero.title")}</h1>
+              <p className="lead">{t("hero.lead")}</p>
+              <div className="ctas">
+                <ButtonLink href="/trust/services" variant="primary">{t("hero.services")}</ButtonLink>
+                <ButtonLink href="/certification">{t("hero.certified")}</ButtonLink>
+              </div>
+            </div>
+            <WalletPhone />
+          </div>
+        </section>
+      </div>
 
       <Section eyebrow={t("roles.eyebrow")}>
         <div className="grid-3">

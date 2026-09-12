@@ -72,5 +72,29 @@
     "title": "Building or joining a trust ecosystem?",
     "lead": "Tell us the relying parties, the credentials and the governance you have in mind.",
     "label": "Talk to us"
+  },
+  "phone": {
+    "ariaLabel": "A wallet on a phone showing a connection request from a demo bank with its Proof-of-Trust, and a newly received credential",
+    "app": "Wallet",
+    "notif": {
+      "title": "Credential received",
+      "body": "Verana Certified Integrator · Mobiera",
+      "when": "now"
+    },
+    "card": {
+      "tab": "National ID",
+      "holder": "María Fernanda Rojas",
+      "type": "Citizen identity credential",
+      "issuer": "Civil Registry · Republic of Verandia (demo)"
+    },
+    "request": {
+      "title": "Novara Bank (demo) wants to connect",
+      "org": "Organization credential · Finance Ecosystem",
+      "service": "Service credential · verified",
+      "asks": "Asks for",
+      "claims": "your name and that you are over 18",
+      "decline": "Decline",
+      "share": "Share"
+    }
   }
 }
