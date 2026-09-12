@@ -2,12 +2,12 @@
 title: La Verana Foundation designa a Mobiera certificador oficial de integradores para América Latina
 date: 2026-04-15
 tags: [Confianza]
-summary: Mobiera capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes, como certificador oficial de la Fundación para América Latina. La designación es válida hasta mayo de 2029.
+summary: Mobiera capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes, como certificador oficial designado por la Fundación para América Latina. La designación es válida hasta mayo de 2029.
 ---
 
 <!-- exact day in April 2026 to confirm -->
 
-La Verana Foundation ha designado a Mobiera certificador oficial de los
+La Verana Foundation ha designado a Mobiera como uno de los certificadores oficiales de los
 integradores que construyen productos y servicios sobre la red Verana en
 América Latina. La designación es válida hasta mayo de 2029.
 

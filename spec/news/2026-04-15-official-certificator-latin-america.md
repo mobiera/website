@@ -2,12 +2,12 @@
 title: The Verana Foundation designates Mobiera official integrator certificator for Latin America
 date: 2026-04-15
 tags: [Trust]
-summary: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams, as the Foundation's official certificator for Latin America. The designation is valid until May 2029.
+summary: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams, as an official certificator designated by the Foundation for Latin America. The designation is valid until May 2029.
 ---
 
 <!-- exact day in April 2026 to confirm -->
 
-The Verana Foundation has designated Mobiera the official certificator for
+The Verana Foundation has designated Mobiera an official certificator for
 integrators building products and services on the Verana network in Latin
 America. The designation is valid until May 2029.
 

@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Verifiable credentials and trust networks",
-    "description": "Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is the official certificator for the integrators who build on it in Latin America."
+    "description": "Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is an official certificator for the integrators who build on it in Latin America."
   },
   "hero": {
     "eyebrow": "Verifiable Credentials and trust networks",
     "title": "Verifiable trust for services, people and AI agents.",
-    "lead": "Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is the official certificator for the integrators who build on it in Latin America.",
+    "lead": "Mobiera co-founded the Verana Foundation, builds and runs trust ecosystems on the Verana network, and is an official certificator for the integrators who build on it in Latin America.",
     "services": "Our trust services",
     "certified": "Get certified"
   },
@@ -25,7 +25,7 @@
       },
       "certificator": {
         "title": "Official certificator",
-        "body": "Designated by the Verana Foundation as the official certificator for Latin America: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams.",
+        "body": "Designated by the Verana Foundation as an official certificator for Latin America: Mobiera trains integrators to build on Verana and certifies the professionals who pass the exams.",
         "more": "Get Verana certified"
       }
     }

@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Credenciales verificables y redes de confianza",
-    "description": "Mobiera cofundó la Verana Foundation, construye y opera ecosistemas de confianza en la red Verana y es el certificador oficial de los integradores que construyen sobre ella en América Latina."
+    "description": "Mobiera cofundó la Verana Foundation, construye y opera ecosistemas de confianza en la red Verana y es un certificador oficial de los integradores que construyen sobre ella en América Latina."
   },
   "hero": {
     "eyebrow": "Credenciales Verificables y redes de confianza",
     "title": "Confianza verificable para servicios, personas y agentes de IA.",
-    "lead": "Mobiera cofundó la Verana Foundation, construye y opera ecosistemas de confianza en la red Verana y es el certificador oficial de los integradores que construyen sobre ella en América Latina.",
+    "lead": "Mobiera cofundó la Verana Foundation, construye y opera ecosistemas de confianza en la red Verana y es un certificador oficial de los integradores que construyen sobre ella en América Latina.",
     "services": "Nuestros servicios de confianza",
     "certified": "Certifíquese"
   },
@@ -25,7 +25,7 @@
       },
       "certificator": {
         "title": "Certificador oficial",
-        "body": "Designada por la Verana Foundation como certificador oficial para América Latina: Mobiera capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes.",
+        "body": "Designada por la Verana Foundation como uno de los certificadores oficiales para América Latina: Mobiera capacita a los integradores para construir sobre Verana y certifica a los profesionales que aprueban los exámenes.",
         "more": "Obtenga la certificación Verana"
       }
     }

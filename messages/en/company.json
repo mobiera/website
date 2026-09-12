@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "About Mobiera",
-    "description": "Mobiera SAS was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and official certificator for Verana integrators in Latin America."
+    "description": "Mobiera SAS was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and an official certificator for Verana integrators in Latin America."
   },
   "hero": {
     "eyebrow": "Company",
@@ -10,7 +10,7 @@
   },
   "who": {
     "eyebrow": "Who we are",
-    "trust": "We build trust networks and verifiable credential systems on Verana: the ecosystems, issuer and verifier services and wallets that let people, organizations, services and AI agents prove who they are. In June 2025 we co-founded the Verana Foundation, the non-profit steward of the open trust layer, and in April 2026 the Foundation designated Mobiera the official certificator for Latin America: we train integrators to build on Verana and certify the professionals who pass the exams.",
+    "trust": "We build trust networks and verifiable credential systems on Verana: the ecosystems, issuer and verifier services and wallets that let people, organizations, services and AI agents prove who they are. In June 2025 we co-founded the Verana Foundation, the non-profit steward of the open trust layer, and in April 2026 the Foundation designated Mobiera an official certificator for Latin America: we train integrators to build on Verana and certify the professionals who pass the exams.",
     "telecom": "Since 2012 we have also built the software that mobile operators run inside their networks: the SIM toolkit push and messaging platform behind campaigns that reach about 60 million subscribers a day, and the AI agents that answer their support questions over SMS. We deploy it, integrate it with the operator's systems, and operate it, on their infrastructure or ours."
   },
   "timeline": {

@@ -13,7 +13,7 @@ Telecom: Aircast, the STK push, messaging and OTA platform running in 25+
 operators and reaching about 60 million subscribers a day, and AI One,
 customer-support AI agents on SMS and Hologram. Trust: Mobiera's role as a
 founding member of the Verana Foundation, its trust services, and its
-designation as the official certificator for Verana integrators in Latin
+designation as an official certificator for Verana integrators in Latin
 America.
 
 The old mobiera.com addresses redirect. The documentation portal at docs.mobiera.io and the sixteen public repositories

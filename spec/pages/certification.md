@@ -9,7 +9,7 @@ url: /certification
 Mobiera trains integrators to build on Verana and certifies the professionals who
 pass the exams: business wallets, ecosystems, hosting services for customers,
 personal wallets, and how to sell and represent Verana. Designated by the
-Verana Foundation as the official certificator for Latin America.
+Verana Foundation as an official certificator for Latin America.
 
 > CTA: Enroll → /contact?topic=certification
 
@@ -19,8 +19,8 @@ Verana is open, public infrastructure. What a customer buys from an
 integrator is the ability to put it to work: a business wallet that stays up,
 an ecosystem whose governance holds, services hosted with the keys and the
 operations a regulated client expects. Certification proves an integrator can
-do that, against a curriculum maintained by the Foundation's official
-certificator for Latin America.
+do that, against a curriculum maintained by Mobiera as an official
+certificator designated by the Foundation for Latin America.
 
 ## The curriculum
 

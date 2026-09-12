@@ -189,3 +189,6 @@ decisions_2026_09_10:
   - certification is a training and exam program, not ECS onboarding (see verana.certification)
   - the Services page is removed
   - the site leads with Verifiable Credentials and trust networks; telecom is the secondary line. Headline "Trust networks and Verifiable Credentials, built on Verana." Nav: Verifiable Credentials · Certification · Telecom · Company · News. "Verifiable Credentials" is the line's name because the term is better known than "trust networks"
+
+decisions_2026_09_12:
+  - the certificator designation is not exclusive: Mobiera is "an official certificator" for Latin America, never "the official certificator"; the Foundation can designate others
