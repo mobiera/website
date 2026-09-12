@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import JsonLd from "@/app/components/JsonLd";
 import HeroMark from "@/app/components/HeroMark";
-import ProofOfTrust from "@/app/components/ProofOfTrust";
+import CredentialCards from "@/app/components/CredentialCards";
 import LogoWall from "@/app/components/LogoWall";
 import NewsList from "@/app/components/NewsList";
 import { ButtonLink, Card, CardTitle, Chips, Eyebrow, Feature, MoreLink, ProofStrip, Section } from "@/app/components/ui";
@@ -48,7 +48,7 @@ export default async function Home({ params }: { params: Promise<PageParams> }) 
                 <ButtonLink href="/certification">{t("hero.ctaCertification")}</ButtonLink>
               </div>
             </div>
-            <ProofOfTrust />
+            <CredentialCards />
           </div>
         </section>
       </div>
