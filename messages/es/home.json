@@ -128,7 +128,7 @@
   },
   "cards": {
     "ariaLabel": "Tres credenciales verificables de ejemplo, como las muestra una billetera",
-    "caption": "Credenciales de ejemplo en la testnet de Verana · todos los nombres son ficticios",
+    "caption": "Credenciales de ejemplo",
     "id": {
       "tab": "Identidad",
       "holder": "María Fernanda Rojas",
@@ -139,14 +139,14 @@
     },
     "business": {
       "tab": "Empresa",
-      "holder": "Acme Integrators SAS",
+      "holder": "Mobiera SAS",
       "type": "Credencial de registro mercantil",
       "issuer": "Registro Mercantil · República de Verandia (demo)",
       "status": "Emisor acreditado",
       "valid": "vigente hasta 2027"
     },
     "integrator": {
-      "tab": "Certificado Verana",
+      "tab": "Certificación",
       "holder": "Acme Integrators SAS",
       "type": "Verana Certified Integrator",
       "issuer": "Emitida por Mobiera · América Latina",

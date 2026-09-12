@@ -128,7 +128,7 @@
   },
   "cards": {
     "ariaLabel": "Three example verifiable credentials, as a wallet shows them",
-    "caption": "Example credentials on the Verana testnet · every name is fictional",
+    "caption": "Example credentials",
     "id": {
       "tab": "National ID",
       "holder": "María Fernanda Rojas",
@@ -139,14 +139,14 @@
     },
     "business": {
       "tab": "Business",
-      "holder": "Acme Integrators SAS",
+      "holder": "Mobiera SAS",
       "type": "Business registration credential",
       "issuer": "Business Registry · Republic of Verandia (demo)",
       "status": "Issuer accredited",
       "valid": "valid to 2027"
     },
     "integrator": {
-      "tab": "Verana certified",
+      "tab": "Certification",
       "holder": "Acme Integrators SAS",
       "type": "Verana Certified Integrator",
       "issuer": "Issued by Mobiera · Latin America",
