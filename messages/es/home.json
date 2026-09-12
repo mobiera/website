@@ -109,12 +109,49 @@
     "resolving": "Resolviendo",
     "org": "Acme Integrators SAS · Bogotá, CO",
     "rows": [
-      { "label": "Credencial de organización", "detail": "emitida por el ECS Ecosystem" },
-      { "label": "Credencial de servicio", "detail": "autoemitida, verificada" },
-      { "label": "Verana Certified Integrator", "detail": "emitida por Mobiera · vigente hasta 2028" }
+      {
+        "label": "Credencial de organización",
+        "detail": "emitida por el ECS Ecosystem"
+      },
+      {
+        "label": "Credencial de servicio",
+        "detail": "autoemitida, verificada"
+      },
+      {
+        "label": "Verana Certified Integrator",
+        "detail": "emitida por Mobiera · vigente hasta 2028"
+      }
     ],
     "score": "Puntaje de confianza",
     "scoreAria": "Puntaje de confianza 4 de 5",
     "verdict": "Verificado. Conectar."
+  },
+  "cards": {
+    "ariaLabel": "Tres credenciales verificables de ejemplo, como las muestra una billetera",
+    "caption": "Credenciales de ejemplo",
+    "id": {
+      "tab": "Identidad",
+      "holder": "María Fernanda Rojas",
+      "type": "Credencial de identidad ciudadana",
+      "issuer": "Registro Civil · República de Verandia (demo)",
+      "status": "Emisor acreditado",
+      "valid": "vigente hasta 2031"
+    },
+    "business": {
+      "tab": "Empresa",
+      "holder": "Mobiera SAS",
+      "type": "Credencial de registro mercantil",
+      "issuer": "Registro Mercantil · República de Verandia (demo)",
+      "status": "Emisor acreditado",
+      "valid": "vigente hasta 2027"
+    },
+    "integrator": {
+      "tab": "Certificación",
+      "holder": "Acme Integrators SAS",
+      "type": "Verana Certified Integrator",
+      "issuer": "Emitida por Mobiera · América Latina",
+      "status": "Dos profesionales certificados",
+      "valid": "vigente hasta 2028"
+    }
   }
 }
