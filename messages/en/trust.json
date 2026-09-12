@@ -74,27 +74,49 @@
     "label": "Talk to us"
   },
   "phone": {
-    "ariaLabel": "A wallet on a phone showing a connection request from a demo bank with its Proof-of-Trust, and a newly received credential",
+    "ariaLabel": "A wallet on a phone showing three example credentials: a citizen identity, a business registration and a Verana Certified Integrator credential",
     "app": "Wallet",
-    "notif": {
-      "title": "Credential received",
-      "body": "Verana Certified Integrator · Mobiera",
-      "when": "now"
+    "sub": "3 credentials · all issuers accredited on Verana",
+    "cards": {
+      "id": {
+        "tab": "National ID",
+        "holder": "María Fernanda Rojas",
+        "type": "Citizen identity credential",
+        "issuer": "Civil Registry · Republic of Verandia (demo)"
+      },
+      "business": {
+        "tab": "Business",
+        "holder": "Mobiera SAS",
+        "type": "Business registration credential",
+        "issuer": "Business Registry (demo)"
+      },
+      "cert": {
+        "tab": "Certification",
+        "holder": "Acme Integrators SAS",
+        "type": "Verana Certified Integrator",
+        "issuer": "Issued by Mobiera · valid to 2028"
+      }
     },
-    "card": {
-      "tab": "National ID",
-      "holder": "María Fernanda Rojas",
-      "type": "Citizen identity credential",
-      "issuer": "Civil Registry · Republic of Verandia (demo)"
-    },
-    "request": {
-      "title": "Novara Bank (demo) wants to connect",
-      "org": "Organization credential · Finance Ecosystem",
-      "service": "Service credential · verified",
-      "asks": "Asks for",
-      "claims": "your name and that you are over 18",
-      "decline": "Decline",
-      "share": "Share"
-    }
+    "activityTitle": "Recent activity",
+    "activity": [
+      {
+        "text": "Presented to Novara Bank (demo)",
+        "when": "2 min"
+      },
+      {
+        "text": "Received from Mobiera",
+        "when": "yesterday"
+      },
+      {
+        "text": "Connected to AI One · Claro (demo)",
+        "when": "Tue"
+      }
+    ],
+    "tabs": [
+      "Credentials",
+      "Scan",
+      "Activity",
+      "Settings"
+    ]
   }
 }

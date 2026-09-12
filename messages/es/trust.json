@@ -74,27 +74,49 @@
     "label": "Hable con nosotros"
   },
   "phone": {
-    "ariaLabel": "Una billetera en un teléfono que muestra una solicitud de conexión de un banco de demostración con su Proof-of-Trust, y una credencial recién recibida",
+    "ariaLabel": "Una billetera en un teléfono que muestra tres credenciales de ejemplo: una identidad ciudadana, un registro mercantil y una credencial de Verana Certified Integrator",
     "app": "Billetera",
-    "notif": {
-      "title": "Credencial recibida",
-      "body": "Verana Certified Integrator · Mobiera",
-      "when": "ahora"
+    "sub": "3 credenciales · todos los emisores acreditados en Verana",
+    "cards": {
+      "id": {
+        "tab": "Identidad",
+        "holder": "María Fernanda Rojas",
+        "type": "Credencial de identidad ciudadana",
+        "issuer": "Registro Civil · República de Verandia (demo)"
+      },
+      "business": {
+        "tab": "Empresa",
+        "holder": "Mobiera SAS",
+        "type": "Credencial de registro mercantil",
+        "issuer": "Registro Mercantil (demo)"
+      },
+      "cert": {
+        "tab": "Certificación",
+        "holder": "Acme Integrators SAS",
+        "type": "Verana Certified Integrator",
+        "issuer": "Emitida por Mobiera · vigente hasta 2028"
+      }
     },
-    "card": {
-      "tab": "Identidad",
-      "holder": "María Fernanda Rojas",
-      "type": "Credencial de identidad ciudadana",
-      "issuer": "Registro Civil · República de Verandia (demo)"
-    },
-    "request": {
-      "title": "Novara Bank (demo) quiere conectarse",
-      "org": "Credencial de organización · Ecosistema financiero",
-      "service": "Credencial de servicio · verificada",
-      "asks": "Solicita",
-      "claims": "su nombre y que es mayor de 18 años",
-      "decline": "Rechazar",
-      "share": "Compartir"
-    }
+    "activityTitle": "Actividad reciente",
+    "activity": [
+      {
+        "text": "Presentada a Novara Bank (demo)",
+        "when": "2 min"
+      },
+      {
+        "text": "Recibida de Mobiera",
+        "when": "ayer"
+      },
+      {
+        "text": "Conectado a AI One · Claro (demo)",
+        "when": "mar"
+      }
+    ],
+    "tabs": [
+      "Credenciales",
+      "Escanear",
+      "Actividad",
+      "Ajustes"
+    ]
   }
 }

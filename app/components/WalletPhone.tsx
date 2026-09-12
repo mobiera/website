@@ -1,47 +1,53 @@
 import { getTranslations } from "next-intl/server";
 
+const MARK = "M85 42.6 69.5 27A9.7 9.7 0 0 0 55 27l-5.5 5.4L44 27a9.7 9.7 0 0 0-14.5 0L14 42.6a9.7 9.7 0 0 0 0 14.5L29.6 72.7a9.7 9.7 0 0 0 14.5 0l5.4-5.4 5.4 5.4a9.7 9.7 0 0 0 14.6 0L85 57.1a9.7 9.7 0 0 0 0-14.5ZM38.9 67.4a2.9 2.9 0 0 1-4 0L19.3 51.9a2.9 2.9 0 0 1 0-4l15.6-15.6a2.9 2.9 0 0 1 4 0l5.4 5.4-4.9 4.9a10.3 10.3 0 0 0 0 14.6l4.9 4.9-5.4 5.4Zm15.5-19.6a2.9 2.9 0 0 1 0 4l-4.9 4.9-4.9-4.9a2.9 2.9 0 0 1 0-4l4.9-4.9 4.9 4.9Zm5.2-5.3-4.8-4.8 5.4-5.4a2.9 2.9 0 0 1 4 0l15.6 15.6a2.9 2.9 0 0 1 0 4L64.2 67.4a2.9 2.9 0 0 1-4 0l-5.4-5.4 4.9-4.9a10.3 10.3 0 0 0 0-14.6";
+
 /**
- * Verifiable Credentials hero: a phone running a fictional wallet, caught at
- * the moment of trust. A demo bank asks to connect, the wallet shows the
- * bank's Proof-of-Trust (credentials checked against the Verana registry) and
- * the credential it asks for, with Share and Decline; a "credential received"
- * notification overlaps the top. Pure markup and CSS (.wp-* in globals.css),
- * so it follows the theme. Text in trust.phone (messages/*). Design C of
- * 12 September 2026.
+ * Verifiable Credentials hero: a phone running a fictional wallet at rest.
+ * The home screen with the three example credentials stacked as cards, the
+ * recent activity and a tab bar. Pure markup and CSS (.wp-* in globals.css),
+ * so it follows the theme; the phone is drawn at 296x612 and scaled to the
+ * hero height. Text in trust.phone (messages/*). Design A of 12 September
+ * 2026.
  */
 export default async function WalletPhone() {
   const t = await getTranslations("trust.phone");
+  const cards = ["id", "business", "cert"] as const;
+  const activity = t.raw("activity") as { text: string; when: string }[];
+  const tabs = t.raw("tabs") as string[];
   return (
     <div className="wp-stage" role="img" aria-label={t("ariaLabel")}>
       <div className="wp-ring" aria-hidden="true" />
-      <div className="wp-scale">
-      <div className="wp-notif" aria-hidden="true">
-        <i />
-        <div><b>{t("notif.title")}</b><small>{t("notif.body")}</small></div>
-        <em>{t("notif.when")}</em>
-      </div>
-      <div className="wp-phone" aria-hidden="true">
-        <div className="wp-screen">
-          <div className="wp-status"><span>9:41</span><span>●●● ▮</span></div>
-          <div className="wp-apphead"><b>{t("app")}</b><span className="wp-avatar" /></div>
-          <div className="wp-list">
-            <div className="wp-vc"><span className="wp-tab">{t("card.tab")}</span><b>{t("card.holder")}</b><span>{t("card.type")}</span></div>
-          </div>
-          <div className="wp-dim" />
-          <div className="wp-sheet">
-            <div className="wp-grab" />
-            <div className="wp-who"><i /><div><b>{t("request.title")}</b><small>did:webvh:…:novara.example</small></div></div>
-            <div className="wp-pot">
-              <div className="wp-pot-h"><span>Proof-of-Trust</span><span className="wp-score"><i /><i /><i /><i /><i className="off" /></span></div>
-              <div className="wp-pot-l"><i>✓</i>{t("request.org")}</div>
-              <div className="wp-pot-l"><i>✓</i>{t("request.service")}</div>
+      <div className="wp-scale" aria-hidden="true">
+        <div className="wp-phone">
+          <div className="wp-screen">
+            <div className="wp-status"><span>9:41</span><span>●●● ▮</span></div>
+            <div className="wp-apphead"><b>{t("app")}</b><span className="wp-avatar" /></div>
+            <p className="wp-sub">{t("sub")}</p>
+            <div className="wp-list">
+              {cards.map((c) => (
+                <div key={c} className={`wp-vc wp-${c}`}>
+                  <span className="wp-tab">{t(`cards.${c}.tab`)}</span>
+                  <b>{t(`cards.${c}.holder`)}</b>
+                  <span>{t(`cards.${c}.type`)}</span>
+                  <span>{t(`cards.${c}.issuer`)}</span>
+                  {c === "cert" && <svg className="wp-mark" viewBox="11 24 78 52"><path d={MARK} fill="currentColor" /></svg>}
+                </div>
+              ))}
             </div>
-            <p className="wp-ask">{t("request.asks")} <b>{t("request.claims")}</b></p>
-            <div className="wp-mini"><i /><div><b>{t("card.type")}</b><small>{t("card.issuer")}</small></div></div>
-            <div className="wp-two"><span className="wp-cta ghost">{t("request.decline")}</span><span className="wp-cta">{t("request.share")}</span></div>
+            <div className="wp-act">
+              <span className="wp-act-h">{t("activityTitle")}</span>
+              {activity.map((a) => (
+                <div key={a.text} className="wp-act-i"><i />{a.text}<small>{a.when}</small></div>
+              ))}
+            </div>
+            <div className="wp-tabbar">
+              {tabs.map((label, i) => (
+                <span key={label} className={i === 0 ? "on" : undefined}><i />{label}</span>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
