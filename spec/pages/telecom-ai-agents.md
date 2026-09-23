@@ -57,10 +57,6 @@ AI One runs on the Hologram AI agent framework built by 2060, the company that
 leads the Verana specifications. Mobiera integrates it with the operator's
 channels, billing and identity, and operates it.
 
-## Who runs it
-
-Claro (Peru) and Halotel (Tanzania), since 2025.
-
 > CTA: Request a demo → /contact?topic=ai-agents
 
 ## Sources

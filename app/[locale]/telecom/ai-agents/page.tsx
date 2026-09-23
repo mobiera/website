@@ -59,8 +59,6 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         <ButtonLink href={LINKS.hologram}>{t("hologram.cta")}</ButtonLink>
       </Section>
 
-      <Section eyebrow={t("operators.eyebrow")} title={t("operators.title")} />
-
       <CtaBand title={t("cta.title")} lead={t("cta.lead")} href="/contact?topic=ai-agents" label={t("cta.label")} />
     </>
   );
