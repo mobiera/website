@@ -11,8 +11,14 @@
   },
   "channels": {
     "eyebrow": "Channels subscribers already have",
-    "sms": { "title": "SMS", "body": "Every handset, no app, no data. The agent answers through the operator's SMSC, on a shortcode your subscribers already know." },
-    "hologram": { "title": "Hologram", "body": "A private DIDComm channel through Hologram Messaging, with rich messages, credential exchange and the Proof-of-Trust a subscriber sees before the first message." },
+    "sms": {
+      "title": "SMS",
+      "body": "Every handset, no app, no data. The agent answers through the operator's SMSC, on a shortcode your subscribers already know."
+    },
+    "hologram": {
+      "title": "Hologram",
+      "body": "A private DIDComm channel through Hologram Messaging, with rich messages, credential exchange and the Proof-of-Trust a subscriber sees before the first message."
+    },
     "note": "Web and in-app front ends follow as they ship."
   },
   "verifiable": {
@@ -25,10 +31,22 @@
   "stack": {
     "eyebrow": "Runs on your stack",
     "features": [
-      { "title": "LLM-agnostic", "body": "Built on LangChain; connect the model provider you choose." },
-      { "title": "Your tools through MCP", "body": "Balance, plans, tickets, campaigns: the agent calls your systems, not a copy of them." },
-      { "title": "Deployable in your Kubernetes", "body": "Or hosted by Mobiera, with the same runbooks as Aircast." },
-      { "title": "Billing integration", "body": "Subscriptions and charging through your billing integration; conversation logs and statistics through the same service-log and stats containers as Aircast." }
+      {
+        "title": "LLM-agnostic",
+        "body": "Built on LangChain; connect the model provider you choose."
+      },
+      {
+        "title": "Your tools through MCP",
+        "body": "Balance, plans, tickets, campaigns: the agent calls your systems, not a copy of them."
+      },
+      {
+        "title": "Deployable in your Kubernetes",
+        "body": "Or hosted by Mobiera, with the same runbooks as Aircast."
+      },
+      {
+        "title": "Billing integration",
+        "body": "Subscriptions and charging through your billing integration; conversation logs and statistics through the same service-log and stats containers as Aircast."
+      }
     ]
   },
   "questions": {
@@ -39,10 +57,6 @@
     "eyebrow": "Built with 2060's Hologram",
     "lead": "AI One runs on the Hologram AI agent framework built by 2060, the company that leads the Verana specifications. Mobiera integrates it with the operator's channels, billing and identity, and operates it.",
     "cta": "hologram.zone"
-  },
-  "operators": {
-    "eyebrow": "Who runs it",
-    "title": "Claro (Peru) and Halotel (Tanzania), since 2025."
   },
   "cta": {
     "title": "See an AI One agent answer over SMS",
