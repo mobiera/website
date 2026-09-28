@@ -3,6 +3,7 @@ import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { sendEmail, escapeHtml } from "@/app/lib/email";
 import { emailLayout } from "@/app/lib/email-layout";
+import { entityFor, setRequestSite, siteFromHeaders, type Entity } from "@/app/lib/entity";
 import { alertOps } from "@/app/lib/ops-alert";
 import { contactRecipients, smtpServer } from "@/app/lib/smtp";
 import { CONTACT_TOPICS, topicLabel, type ContactTopic } from "@/app/lib/site";
@@ -47,7 +48,7 @@ function inquiryHtml(rows: [string, string][], message: string): string {
 type Cv = { filename: string; content: Buffer; contentType: string };
 
 /** Acknowledgement to the visitor, in the visitor's language. */
-async function acknowledgementEmail(locale: Locale, name: string, topic: ContactTopic): Promise<{ subject: string; html: string }> {
+async function acknowledgementEmail(entity: Entity, locale: Locale, name: string, topic: ContactTopic): Promise<{ subject: string; html: string }> {
   const t = await getTranslations({ locale, namespace: "email" });
   const tc = await getTranslations({ locale, namespace: "contact" });
   const bodyHtml = `
@@ -56,11 +57,15 @@ async function acknowledgementEmail(locale: Locale, name: string, topic: Contact
     <p style="margin:0;">${t("ack.signoff")}</p>`;
   return {
     subject: t("ack.subject"),
-    html: emailLayout({ heading: t("ack.heading", { name: escapeHtml(name) }), bodyHtml, lang: HTML_LANG[locale], footer: t("layout.footer") }),
+    html: emailLayout({ heading: t("ack.heading", { name: escapeHtml(name) }), bodyHtml, site: entity, lang: HTML_LANG[locale], footer: t("layout.footer") }),
   };
 }
 
 export async function POST(req: NextRequest) {
+  // The domain the form was served from decides the legal entity named in
+  // the emails; registering it also resolves the [[tokens]] in the messages.
+  const site = siteFromHeaders(req.headers);
+  setRequestSite(site);
   let data: Record<string, string> = {};
   let cv: Cv | undefined;
   const contentType = req.headers.get("content-type") ?? "";
@@ -124,6 +129,7 @@ export async function POST(req: NextRequest) {
   const label = topicLabel(topic);
   // Language of the form the visitor used; only known locales, default English.
   const locale: Locale = hasLocale(routing.locales, data.locale) ? data.locale : routing.defaultLocale;
+  const entity = entityFor(site, locale);
 
   // Without SMTP (local dev) do not fail the user: log and report success.
   if (!smtpServer()) {
@@ -137,11 +143,13 @@ export async function POST(req: NextRequest) {
     await sendEmail({
       to,
       replyTo: `${name} <${email}>`,
-      subject: `[mobiera.io contact] ${label}: ${name}`,
+      subject: `[${entity.domain} contact] ${label}: ${name}`,
       html: emailLayout({
         heading: `New inquiry: ${label}`,
+        site: entity,
+        footer: `${entity.name}, ${entity.city}. Sent from the contact form on ${entity.domain}.`,
         bodyHtml: inquiryHtml(
-          [["Topic", label], ["Name", name], ["Email", email], ["Organization", organization], ["Profile", profile], ["Language", HTML_LANG[locale]], ["CV", cv ? cv.filename : ""], ["Consent", new Date().toISOString()]],
+          [["Topic", label], ["Name", name], ["Email", email], ["Organization", organization], ["Profile", profile], ["Language", HTML_LANG[locale]], ["Site", entity.domain], ["CV", cv ? cv.filename : ""], ["Consent", new Date().toISOString()]],
           message,
         ),
       }),
@@ -150,14 +158,14 @@ export async function POST(req: NextRequest) {
     console.info(`[contact] ${label} inquiry emailed to ${to.length} recipient(s)`);
   } catch (err) {
     console.error("[contact] delivery failed", err, { topic, name, email, organization });
-    await alertOps(`Contact form (mobiera.io): email delivery failed for ${name} <${email}> (${label}). ${String(err).slice(0, 300)}`);
+    await alertOps(`Contact form (${entity.domain}): email delivery failed for ${name} <${email}> (${label}). ${String(err).slice(0, 300)}`);
     return NextResponse.json({ ok: false, error: "delivery" }, { status: 502 });
   }
 
   // Acknowledgement to the visitor. Best effort: the inquiry is already
   // delivered, so a failure here is logged and does not fail the request.
   try {
-    const ack = await acknowledgementEmail(locale, name, topicValue);
+    const ack = await acknowledgementEmail(entity, locale, name, topicValue);
     await sendEmail({ to: email, subject: ack.subject, html: ack.html });
   } catch (err) {
     console.error("[contact] acknowledgement failed", err, { email, locale });

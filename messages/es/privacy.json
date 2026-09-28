@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Política de privacidad",
-    "description": "Cómo Mobiera SAS trata los datos personales en mobiera.io: el formulario de contacto, analítica con consentimiento, conservación, sus derechos y cómo contactar a nuestro responsable de protección de datos."
+    "description": "Cómo [[legalName]] trata los datos personales en [[siteDomain]]: el formulario de contacto, analítica con consentimiento, conservación, sus derechos y cómo contactar a nuestro responsable de protección de datos."
   },
   "eyebrow": "Legal",
   "title": "Política de privacidad",
   "lead": "Última actualización: en el lanzamiento. Esta política está pendiente de revisión legal.",
   "who": {
     "title": "Quién es responsable",
-    "body": "{name}, NIT {nit}, {address}, es el responsable del tratamiento de mobiera.io. Contacto de protección de datos: <mail>{email}</mail>."
+    "body": "[[legalName]], [[legalRegistration]], [[legalAddress]], es el responsable del tratamiento de [[siteDomain]]. Contacto de protección de datos: <mail>{email}</mail>."
   },
   "collect": {
     "title": "Qué recopilamos",
@@ -27,7 +27,7 @@
   },
   "rights": {
     "title": "Sus derechos",
-    "body": "Acceso, rectificación, supresión, limitación, portabilidad y oposición, según la Ley 1581 de 2012 de Colombia y, cuando aplica, el RGPD. Escriba a <mail>{email}</mail>. Respondemos en un plazo de 15 días hábiles."
+    "body": "Acceso, rectificación, supresión, limitación, portabilidad y oposición, según [[dataLaw]] y, cuando aplica, el RGPD. Escriba a <mail>{email}</mail>. Respondemos en un plazo de [[rightsDays]] días hábiles."
   },
   "changes": {
     "title": "Cambios",

@@ -1,4 +1,3 @@
-import { SITE_URL } from "@/app/lib/site";
 
 // Branded HTML shell for transactional email. Table-based with inline styles
 // for broad client support. Colors follow the site's light tokens.
@@ -11,16 +10,14 @@ const SURFACE = "#F4F5FB";
 const CARD = "#FFFFFF";
 const FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
 
-const DEFAULT_FOOTER = "Mobiera SAS, Bogotá D.C., Colombia · founding member of the Verana Foundation.";
-
-// `lang` is the BCP 47 tag of the email body (default "en"); `footer` the
-// translated footer line (default English). Translations live in the `email`
-// namespace (layout.footer); the caller passes them so this module stays free
-// of next-intl.
-export function emailLayout(opts: { heading?: string; bodyHtml: string; lang?: string; footer?: string }): string {
-  const logo = `${SITE_URL}/images/favicon/android-chrome-192x192.png`;
+// `site` is the origin and domain the email speaks for (entity.ts); `lang` the
+// BCP 47 tag of the body (default "en"); `footer` the footer line naming the
+// legal entity, translated by the caller (email namespace, layout.footer) so
+// this module stays free of next-intl.
+export function emailLayout(opts: { heading?: string; bodyHtml: string; site: { url: string; domain: string }; footer: string; lang?: string }): string {
+  const logo = `${opts.site.url}/images/favicon/android-chrome-192x192.png`;
   const lang = opts.lang ?? "en";
-  const footer = opts.footer ?? DEFAULT_FOOTER;
+  const footer = opts.footer;
   const heading = opts.heading
     ? `<h1 style="margin:0 0 14px;font-family:${FONT};font-size:20px;line-height:1.3;font-weight:600;color:${INK};">${opts.heading}</h1>`
     : "";
@@ -39,7 +36,7 @@ export function emailLayout(opts: { heading?: string; bodyHtml: string; lang?: s
         <tr><td style="padding:28px;font-family:${FONT};font-size:14px;line-height:1.6;color:${INK};">${heading}${opts.bodyHtml}</td></tr>
         <tr><td style="padding:18px 28px;border-top:1px solid ${RULE};font-family:${FONT};font-size:12px;line-height:1.5;color:${MUTED};">
           ${footer}<br>
-          <a href="${SITE_URL}" style="color:${VIOLET_DEEP};text-decoration:none;">mobiera.io</a>
+          <a href="${opts.site.url}" style="color:${VIOLET_DEEP};text-decoration:none;">${opts.site.domain}</a>
         </td></tr>
       </table>
     </td></tr>

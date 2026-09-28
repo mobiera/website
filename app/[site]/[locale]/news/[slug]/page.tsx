@@ -5,7 +5,8 @@ import ReactMarkdown, { type Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Eyebrow } from "@/app/components/ui";
 import { formatDate, getAllNews, getNewsBySlug } from "@/app/lib/news";
-import { alternates, pageLocale, type PageParams } from "@/app/lib/seo";
+import { SITES, type Site } from "@/app/lib/entity";
+import { alternates, localizedPath, pageLocale, type PageParams } from "@/app/lib/seo";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 
@@ -17,8 +18,8 @@ const components: Components = {
   a: ({ href = "", children }) => (href.startsWith("/") ? <Link href={href}>{children}</Link> : <a href={href} rel="noopener">{children}</a>),
 };
 
-export function generateStaticParams(): { locale: Locale; slug: string }[] {
-  return routing.locales.flatMap((locale) => getAllNews().map((n) => ({ locale, slug: n.slug })));
+export function generateStaticParams(): { site: Site; locale: Locale; slug: string }[] {
+  return SITES.flatMap((site) => routing.locales.flatMap((locale) => getAllNews().map((n) => ({ site, locale, slug: n.slug }))));
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const { slug } = await params;
   const item = getNewsBySlug(slug, locale);
   if (!item) return {};
-  return { title: item.title, description: item.summary, alternates: alternates(locale, `/news/${item.slug}`), openGraph: { type: "article", title: item.title, description: item.summary, publishedTime: item.date } };
+  return { title: item.title, description: item.summary, alternates: alternates(locale, `/news/${item.slug}`), openGraph: { type: "article", title: item.title, description: item.summary, publishedTime: item.date, images: [localizedPath(locale, "/og-image")] } };
 }
 
 export default async function Page({ params }: { params: Promise<Params> }) {

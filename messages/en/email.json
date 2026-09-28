@@ -7,6 +7,6 @@
     "signoff": "The Mobiera team"
   },
   "layout": {
-    "footer": "Mobiera SAS, Bogotá D.C., Colombia · founding member of the Verana Foundation."
+    "footer": "[[legalName]], [[legalCity]] · founding member of the Verana Foundation."
   }
 }

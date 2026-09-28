@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "./lib/site";
+import { headers } from "next/headers";
+import { entityFor, siteFromHeaders } from "./lib/entity";
 
-export default function robots(): MetadataRoute.Robots {
+export default async function robots(): Promise<MetadataRoute.Robots> {
+  const { url } = entityFor(siteFromHeaders(await headers()), "en");
   return {
     rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: `${url}/sitemap.xml`,
   };
 }

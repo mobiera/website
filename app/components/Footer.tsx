@@ -1,9 +1,11 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { LEGAL, LINKS } from "@/app/lib/site";
+import { FOUNDED, getEntity } from "@/app/lib/entity";
+import { LINKS } from "@/app/lib/site";
 
 export default async function Footer() {
   const t = await getTranslations("common.footer");
+  const entity = getEntity(await getLocale());
   const year = new Date().getFullYear();
   return (
     <footer className="site-footer">
@@ -46,7 +48,7 @@ export default async function Footer() {
           </div>
         </div>
         <div className="fbottom">
-          <span>© {LEGAL.founded}-{year} {LEGAL.name}, {LEGAL.city}</span>
+          <span>© {FOUNDED}-{year} {entity.name}, {entity.city}</span>
           <span className="flex flex-wrap gap-x-3">
             <Link href="/privacy">{t("privacy")}</Link>
             <Link href="/cookies">{t("cookies")}</Link>

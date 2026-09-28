@@ -4,15 +4,16 @@ import { NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
-import "../globals.css";
+import "../../globals.css";
 
 faConfig.autoAddCss = false;
 import Nav from "@/app/components/Nav";
 import Footer from "@/app/components/Footer";
 import CookieConsent from "@/app/components/CookieConsent";
 import Analytics from "@/app/components/Analytics";
-import { SITE_NAME, SITE_URL } from "@/app/lib/site";
-import { alternates, pageLocale, type PageParams } from "@/app/lib/seo";
+import { SITES, getEntity, type Site } from "@/app/lib/entity";
+import { SITE_NAME } from "@/app/lib/site";
+import { alternates, localizedPath, pageLocale, type PageParams } from "@/app/lib/seo";
 import { HTML_LANG, OG_LOCALE, routing, type Locale } from "@/i18n/routing";
 
 const sora = Sora({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-sora", display: "swap" });
@@ -22,24 +23,26 @@ const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], var
 const inter = Inter({ subsets: ["latin"], weight: ["600"], variable: "--font-inter", display: "swap" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["700"], variable: "--font-space-grotesk", display: "swap" });
 
-export function generateStaticParams(): { locale: Locale }[] {
-  return routing.locales.map((locale) => ({ locale }));
+export function generateStaticParams(): { site: Site; locale: Locale }[] {
+  return SITES.flatMap((site) => routing.locales.map((locale) => ({ site, locale })));
 }
 
 export async function generateMetadata({ params }: { params: Promise<PageParams> }): Promise<Metadata> {
   const locale = await pageLocale(params);
   const t = await getTranslations({ locale, namespace: "common.meta" });
   const title = `${SITE_NAME}: ${t("tagline")}`;
+  const { url } = getEntity(locale);
+  const image = { url: localizedPath(locale, "/og-image"), width: 1200, height: 630, alt: title, type: "image/png" };
   return {
-    metadataBase: new URL(SITE_URL),
+    metadataBase: new URL(url),
     title: { default: title, template: `%s | ${SITE_NAME}` },
     description: t("description"),
     applicationName: SITE_NAME,
     keywords: t("keywords").split(",").map((k) => k.trim()),
     alternates: alternates(locale, "/"),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
-    openGraph: { type: "website", siteName: SITE_NAME, url: SITE_URL, title, description: t("description"), locale: OG_LOCALE[locale] },
-    twitter: { card: "summary_large_image", title, description: t("description") },
+    openGraph: { type: "website", siteName: SITE_NAME, url, title, description: t("description"), locale: OG_LOCALE[locale], images: [image] },
+    twitter: { card: "summary_large_image", title, description: t("description"), images: [image.url] },
     icons: {
       icon: [{ url: "/images/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" }, { url: "/images/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" }],
       apple: "/apple-touch-icon.png",

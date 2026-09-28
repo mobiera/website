@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "About Mobiera",
-    "description": "Mobiera SAS was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and an official certificator for Verana integrators in Latin America."
+    "description": "[[historyName]] was founded in Bogotá in 2012 and has put its platforms in 25+ mobile networks on every continent. Founding member of the Verana Foundation and an official certificator for Verana integrators in Latin America."
   },
   "hero": {
     "eyebrow": "Company",
     "title": "Fourteen years inside operators' networks.",
-    "lead": "Mobiera SAS was founded in Bogotá in 2012 and has since put its platforms in 25+ mobile networks on every continent, within reach of 800 million subscribers."
+    "lead": "[[historyName]] was founded in Bogotá in 2012 and has since put its platforms in 25+ mobile networks on every continent, within reach of 800 million subscribers."
   },
   "who": {
     "eyebrow": "Who we are",
@@ -19,20 +19,52 @@
   "numbers": {
     "eyebrow": "In numbers",
     "items": [
-      { "value": "25+", "label": "mobile operators run our platforms" },
-      { "value": "800M", "label": "subscribers reachable through messaging services powered by Mobiera" },
-      { "value": "~60M", "label": "subscribers reached per day", "tone": "green" },
-      { "value": "8", "label": "offices: Bogotá, Peru, Bolivia, Panama, United States, Spain, France, Algeria" },
-      { "value": "2012", "label": "founded; every continent served since" },
-      { "value": "16", "label": "public repositories on GitHub", "tone": "violet" }
+      {
+        "value": "25+",
+        "label": "mobile operators run our platforms"
+      },
+      {
+        "value": "800M",
+        "label": "subscribers reachable through messaging services powered by Mobiera"
+      },
+      {
+        "value": "~60M",
+        "label": "subscribers reached per day",
+        "tone": "green"
+      },
+      {
+        "value": "8",
+        "label": "offices: Bogotá, Peru, Bolivia, Panama, United States, Spain, France, Algeria"
+      },
+      {
+        "value": "2012",
+        "label": "founded; every continent served since"
+      },
+      {
+        "value": "16",
+        "label": "public repositories on GitHub",
+        "tone": "violet"
+      }
     ]
   },
   "values": {
     "eyebrow": "Values",
-    "customer": { "title": "Customer first", "body": "We measure ourselves on what runs in the customer's network, not on what we shipped." },
-    "truth": { "title": "Say what is true", "body": "Concrete claims, disclosed limits, no surprises in production." },
-    "properly": { "title": "Do it properly", "body": "Standards implemented to the letter, tested against real SIMs and real SMSCs." },
-    "learn": { "title": "Learn together", "body": "A multilingual team that shares what it knows, with customers and in the open." }
+    "customer": {
+      "title": "Customer first",
+      "body": "We measure ourselves on what runs in the customer's network, not on what we shipped."
+    },
+    "truth": {
+      "title": "Say what is true",
+      "body": "Concrete claims, disclosed limits, no surprises in production."
+    },
+    "properly": {
+      "title": "Do it properly",
+      "body": "Standards implemented to the letter, tested against real SIMs and real SMSCs."
+    },
+    "learn": {
+      "title": "Learn together",
+      "body": "A multilingual team that shares what it knows, with customers and in the open."
+    }
   },
   "partners": {
     "eyebrow": "Partners",

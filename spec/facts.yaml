@@ -192,3 +192,19 @@ decisions_2026_09_10:
 
 decisions_2026_09_12:
   - the certificator designation is not exclusive: Mobiera is "an official certificator" for Latin America, never "the official certificator"; the Foundation can designate others
+
+# 2026-09-27 (Fabrice): the site answers on two domains for two legal entities.
+entities:
+  mobiera.com:
+    legal_name: Mobiera SAS
+    registration: NIT 900662462-4
+    address: Cra 13A 86A-42, Bogotá D.C., Colombia
+  mobiera.io:
+    legal_name: Mobiera Norte SA
+    registration: Registro Mercantil, folio número 812363
+    address: World Trade Center 200-B, Suite 214, Calle 53 Este, Marbella, Panama City, Panama
+  shared: brand "Mobiera", founding year 2012, privacy@mobiera.com, all product and trust copy
+  assumptions_to_confirm:
+    - privacy policy on mobiera.io cites Panamanian Law 81 of 2019 and a 10 business day answer
+    - history copy on mobiera.io says "Mobiera was founded in Bogotá in 2012"; the timeline keeps "Mobiera SAS incorporated in Bogotá"
+    - footer copyright on mobiera.io keeps 2012 as the first year
