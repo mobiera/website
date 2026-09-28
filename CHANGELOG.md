@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.9.0](https://github.com/mobiera/website/compare/v1.8.1...v1.9.0) (2026-09-28)
+
+
+### Features
+
+* **site:** one legal entity per domain ([90bcae8](https://github.com/mobiera/website/commit/90bcae8be114f2eaa7c9cd78eb1d94c3fb24fb93))
+* **site:** one legal entity per domain ([18800e9](https://github.com/mobiera/website/commit/18800e9a5144adf85451a82a50a1a18e1a63bc9c))
+
+
+### Bug Fixes
+
+* **ai-agents:** remove the Who runs it section ([d21a5ba](https://github.com/mobiera/website/commit/d21a5ba3b204b16748942ff8c6cc5dedeb4f0a69))
+* **ai-agents:** remove the Who runs it section ([99820c4](https://github.com/mobiera/website/commit/99820c42edaf3a55dc2ae795fc7ede63c99865e8))
+
 ## [1.8.1](https://github.com/mobiera/website/compare/v1.8.0...v1.8.1) (2026-09-12)
 
 
