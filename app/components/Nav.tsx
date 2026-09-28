@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/use-pathname";
 import Logo from "./Logo";
 import { NAV } from "@/app/lib/site";
 

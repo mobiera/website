@@ -1,12 +1,15 @@
 import { ImageResponse } from "next/og";
 import { getTranslations } from "next-intl/server";
+import { getEntity } from "@/app/lib/entity";
 import { pageLocale, type PageParams } from "@/app/lib/seo";
 
-export const alt = "Mobiera: Trust networks and Verifiable Credentials, built on Verana.";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+// Social preview image, per site and language. A route instead of the
+// opengraph-image file convention: that one publishes the internal
+// /<site>/<locale>/ path, which does not exist for visitors. The layout
+// links it as /og-image (or /es/og-image).
+const size = { width: 1200, height: 630 };
 
-export default async function OpenGraphImage({ params }: { params: Promise<PageParams> }) {
+export async function GET(_req: Request, { params }: { params: Promise<PageParams> }) {
   const locale = await pageLocale(params);
   const t = await getTranslations({ locale, namespace: "common" });
   return new ImageResponse(
@@ -22,7 +25,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<PageP
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#50E2AA", letterSpacing: 2 }}>
           <span>{t("og.since")}</span>
-          <span>mobiera.io</span>
+          <span>{getEntity(locale).domain}</span>
         </div>
       </div>
     ),

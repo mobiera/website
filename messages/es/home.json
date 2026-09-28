@@ -139,7 +139,7 @@
     },
     "business": {
       "tab": "Empresa",
-      "holder": "Mobiera SAS",
+      "holder": "[[legalName]]",
       "type": "Credencial de registro mercantil",
       "issuer": "Registro Mercantil · República de Verandia (demo)",
       "status": "Emisor acreditado",

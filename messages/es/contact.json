@@ -60,7 +60,7 @@
     "counter": "{count} / {max} (mín. {min})",
     "cv": "CV",
     "cvHint": "(PDF, 10 MB máx.)",
-    "consent": "Autorizo a Mobiera SAS a almacenar este mensaje para responderme. Consulte la <link>política de privacidad</link>.",
+    "consent": "Autorizo a [[legalName]] a almacenar este mensaje para responderme. Consulte la <link>política de privacidad</link>.",
     "send": "Enviar",
     "sending": "Enviando",
     "footnote": "Cada mensaje llega a la persona indicada. Respondemos en un plazo de dos días hábiles."

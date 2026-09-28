@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Quiénes somos",
-    "description": "Mobiera SAS fue fundada en Bogotá en 2012 y ha puesto sus plataformas en más de 25 redes móviles en todos los continentes. Miembro fundador de la Verana Foundation y uno de los certificadores oficiales de integradores Verana en América Latina."
+    "description": "[[historyName]] fue fundada en Bogotá en 2012 y ha puesto sus plataformas en más de 25 redes móviles en todos los continentes. Miembro fundador de la Verana Foundation y uno de los certificadores oficiales de integradores Verana en América Latina."
   },
   "hero": {
     "eyebrow": "Empresa",
     "title": "Catorce años dentro de las redes de los operadores.",
-    "lead": "Mobiera SAS fue fundada en Bogotá en 2012 y desde entonces ha puesto sus plataformas en más de 25 redes móviles en todos los continentes, al alcance de 800 millones de suscriptores."
+    "lead": "[[historyName]] fue fundada en Bogotá en 2012 y desde entonces ha puesto sus plataformas en más de 25 redes móviles en todos los continentes, al alcance de 800 millones de suscriptores."
   },
   "who": {
     "eyebrow": "Quiénes somos",
@@ -19,20 +19,52 @@
   "numbers": {
     "eyebrow": "En cifras",
     "items": [
-      { "value": "25+", "label": "operadores móviles ejecutan nuestras plataformas" },
-      { "value": "800M", "label": "suscriptores alcanzables mediante servicios de mensajería con tecnología de Mobiera" },
-      { "value": "~60M", "label": "suscriptores alcanzados por día", "tone": "green" },
-      { "value": "8", "label": "oficinas: Bogotá, Perú, Bolivia, Panamá, Estados Unidos, España, Francia, Argelia" },
-      { "value": "2012", "label": "fundación; desde entonces, presencia en todos los continentes" },
-      { "value": "16", "label": "repositorios públicos en GitHub", "tone": "violet" }
+      {
+        "value": "25+",
+        "label": "operadores móviles ejecutan nuestras plataformas"
+      },
+      {
+        "value": "800M",
+        "label": "suscriptores alcanzables mediante servicios de mensajería con tecnología de Mobiera"
+      },
+      {
+        "value": "~60M",
+        "label": "suscriptores alcanzados por día",
+        "tone": "green"
+      },
+      {
+        "value": "8",
+        "label": "oficinas: Bogotá, Perú, Bolivia, Panamá, Estados Unidos, España, Francia, Argelia"
+      },
+      {
+        "value": "2012",
+        "label": "fundación; desde entonces, presencia en todos los continentes"
+      },
+      {
+        "value": "16",
+        "label": "repositorios públicos en GitHub",
+        "tone": "violet"
+      }
     ]
   },
   "values": {
     "eyebrow": "Valores",
-    "customer": { "title": "El cliente primero", "body": "Nos medimos por lo que funciona en la red del cliente, no por lo que entregamos." },
-    "truth": { "title": "Decir lo que es cierto", "body": "Afirmaciones concretas, límites declarados, sin sorpresas en producción." },
-    "properly": { "title": "Hacerlo bien", "body": "Estándares implementados al pie de la letra, probados con SIM y SMSC reales." },
-    "learn": { "title": "Aprender juntos", "body": "Un equipo multilingüe que comparte lo que sabe, con los clientes y en abierto." }
+    "customer": {
+      "title": "El cliente primero",
+      "body": "Nos medimos por lo que funciona en la red del cliente, no por lo que entregamos."
+    },
+    "truth": {
+      "title": "Decir lo que es cierto",
+      "body": "Afirmaciones concretas, límites declarados, sin sorpresas en producción."
+    },
+    "properly": {
+      "title": "Hacerlo bien",
+      "body": "Estándares implementados al pie de la letra, probados con SIM y SMSC reales."
+    },
+    "learn": {
+      "title": "Aprender juntos",
+      "body": "Un equipo multilingüe que comparte lo que sabe, con los clientes y en abierto."
+    }
   },
   "partners": {
     "eyebrow": "Socios",

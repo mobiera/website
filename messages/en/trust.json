@@ -86,7 +86,7 @@
       },
       "business": {
         "tab": "Business",
-        "holder": "Mobiera SAS",
+        "holder": "[[legalName]]",
         "type": "Business registration credential",
         "issuer": "Business Registry (demo)"
       },

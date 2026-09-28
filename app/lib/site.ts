@@ -1,22 +1,13 @@
 // Single source of truth for site-wide identity: metadata, JSON-LD, footer,
 // contact routing. Facts come from spec/facts.yaml.
 
-export const SITE_URL = process.env.SITE_URL ?? "https://mobiera.io";
+// The canonical origin and the legal entity depend on the domain: entity.ts.
 export const SITE_NAME = "Mobiera";
 // The tagline and description are translated: messages/*/common.json (meta).
 // These English values remain for feeds and other locale-less places.
 export const SITE_TAGLINE = "Trust networks and Verifiable Credentials, built on Verana.";
 export const SITE_DESCRIPTION =
   "Mobiera co-founded the Verana Foundation, designs and runs trust ecosystems on Verana, and certifies the integrators who build on it in Latin America. The same team has run software inside 25+ mobile networks since 2012.";
-
-export const LEGAL = {
-  name: "Mobiera SAS",
-  nit: "900662462-4",
-  address: "Cra 13A 86A-42, Bogotá D.C., Colombia",
-  city: "Bogotá D.C., Colombia",
-  founded: 2012,
-  privacyEmail: "privacy@mobiera.com",
-};
 
 export const LINKS = {
   docs: "https://docs.mobiera.io",

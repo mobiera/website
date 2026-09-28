@@ -89,7 +89,7 @@ Settings to check once, in the `mobiera/website` repository:
 
   | Variable | Value |
   |---|---|
-  | `SITE_URL` | `https://mobiera.io` (optional, this is the default) |
+  | `SITE_URL` | no longer read: the canonical origin follows the domain (README, "Two domains, two legal entities") |
   | `NEXT_PUBLIC_GA_ID` | the GA4 measurement id (optional) |
 
 - Secrets (already created): `DOCKER_HUB_LOGIN` and `DOCKER_HUB_PWD`, a
@@ -216,3 +216,19 @@ the Trust Graph is live the section shows the first-cohort note.
 If SMTP is misconfigured the visitor sees "We could not send your message",
 the container logs `[contact] delivery failed`, and the webhook, if set, gets
 an alert.
+
+## mobiera.com behind the reverse proxy
+
+The app decides the legal entity from the domain. mobiera.com is served by a
+reverse proxy in front of the cluster, so the app only knows the visitor came
+through mobiera.com if the proxy says so. Any one of these is enough:
+
+- the proxy forwards `X-Forwarded-Host` or `X-Forwarded-Server` naming
+  mobiera.com and the ingress passes it on (Apache mod_proxy sends both by
+  default; ingress-nginx overwrites `X-Forwarded-Host` unless
+  `use-forwarded-headers` is on, and leaves `X-Forwarded-Server` alone);
+- the proxy sets the explicit header, in Apache:
+  `RequestHeader set X-Mobiera-Site "com"`.
+
+Check: `curl -sI https://www.mobiera.com/ | grep -i x-mobiera-site` must
+answer `com`, and `https://mobiera.io/` must answer `io`.

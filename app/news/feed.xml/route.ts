@@ -1,11 +1,13 @@
 import { getAllNews } from "@/app/lib/news";
-import { SITE_NAME, SITE_URL } from "@/app/lib/site";
+import { entityFor, siteFromHeaders } from "@/app/lib/entity";
+import { SITE_NAME } from "@/app/lib/site";
 
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 }
 
-export function GET() {
+export function GET(req: Request) {
+  const SITE_URL = entityFor(siteFromHeaders(req.headers), "en").url;
   const items = getAllNews()
     .map((n) => `    <item>
       <title>${esc(n.title)}</title>

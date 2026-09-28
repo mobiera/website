@@ -1,6 +1,6 @@
 # mobiera.io
 
-Source for [mobiera.io](https://mobiera.io), the Mobiera SAS website:
+Source for the Mobiera website, served as [mobiera.io](https://mobiera.io) (Mobiera Norte SA, Panama) and [mobiera.com](https://mobiera.com) (Mobiera SAS, Colombia):
 operator-grade software for mobile networks (Aircast, AI One) and verifiable
 trust on Verana (trust services, integrator certification for Latin America).
 
@@ -22,6 +22,38 @@ They render at `/news/<slug>` and in the RSS feed at `/news/feed.xml`.
 
 Design: direction A ("Signal") from `spec/design/`. Tokens live in
 `app/globals.css`; the logo is the existing Mobiera mark and wordmark.
+
+## Two domains, two legal entities
+
+The same site answers on two domains, and the domain decides which company of
+the group the visitor deals with:
+
+| Domain | Legal entity | Registration | Address |
+| --- | --- | --- | --- |
+| mobiera.com | Mobiera SAS | NIT 900662462-4 | Cra 13A 86A-42, Bogotá D.C., Colombia |
+| mobiera.io | Mobiera Norte SA | Registro Mercantil, folio número 812363 | World Trade Center 200-B, Suite 214, Calle 53 Este, Marbella, Panama City, Panama |
+
+Everything that differs lives in `app/lib/entity.ts`: name, registration,
+address, city, data-protection law, canonical origin. Nothing else is
+duplicated.
+
+- `proxy.ts` picks the site from the request (`x-mobiera-site`, then any
+  forwarded-host header, then `Host`; a header naming mobiera.com wins) and
+  rewrites to the internal path `/<site>/<locale>/...`. Pages stay
+  prerendered, once per site and language. Visitors never see the site
+  segment. The response header `x-mobiera-site` tells which one was served:
+  `curl -sI https://mobiera.com/ | grep -i x-mobiera-site`.
+- Message files name the entity with tokens, resolved per site when messages
+  load: `[[legalName]]`, `[[legalRegistration]]`, `[[legalAddress]]`,
+  `[[legalCity]]`, `[[siteDomain]]`, `[[historyName]]`, `[[dataLaw]]`,
+  `[[rightsDays]]`, `[[noteBogota]]`, `[[notePanama]]`. Never write a company
+  name, registration or address in a message file.
+- Server components read the entity with `getEntity(locale)`. Canonical URLs,
+  hreflang, the sitemap, robots.txt, the RSS feed, the structured data, the
+  social image and the contact emails all follow the domain.
+- mobiera.com reaches the app through a reverse proxy. If that proxy hides its
+  name from the app, make it send `X-Mobiera-Site: com`.
+- Unknown hosts (localhost) get `DEFAULT_SITE` (`io` unless set to `com`).
 
 ## Languages
 

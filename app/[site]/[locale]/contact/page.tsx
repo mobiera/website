@@ -4,7 +4,8 @@ import { faBuilding, faLink, faRoute } from "@fortawesome/free-solid-svg-icons";
 import ContactForm from "@/app/components/ContactForm";
 import { Card, CardTitle, PageHero, Section } from "@/app/components/ui";
 import { alternates, pageLocale, type PageParams } from "@/app/lib/seo";
-import { LEGAL, LINKS } from "@/app/lib/site";
+import { getEntity } from "@/app/lib/entity";
+import { LINKS } from "@/app/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<PageParams> }): Promise<Metadata> {
   const locale = await pageLocale(params);
@@ -15,6 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<PageParams>
 export default async function Page({ params }: { params: Promise<PageParams> }) {
   const locale = await pageLocale(params);
   setRequestLocale(locale);
+  const entity = getEntity(locale);
   const t = await getTranslations("contact");
   const bullets = t.raw("routed.bullets") as string[];
   return (
@@ -45,8 +47,9 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
             <Card>
               <CardTitle icon={faBuilding}>{t("who.title")}</CardTitle>
               <address className="not-italic text-muted">
-                <strong className="text-ink block">{LEGAL.name}, NIT {LEGAL.nit}</strong>
-                {LEGAL.address}
+                <strong className="text-ink block">{entity.name}</strong>
+                <span className="block">{entity.registration}</span>
+                {entity.address}
               </address>
             </Card>
           </div>

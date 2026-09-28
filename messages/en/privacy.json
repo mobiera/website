@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Privacy policy",
-    "description": "How Mobiera SAS handles personal data on mobiera.io: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact."
+    "description": "How [[legalName]] handles personal data on [[siteDomain]]: the contact form, analytics with consent, retention, your rights, and how to reach our data-protection contact."
   },
   "eyebrow": "Legal",
   "title": "Privacy policy",
   "lead": "Last updated: at launch. This policy is pending legal review.",
   "who": {
     "title": "Who is responsible",
-    "body": "{name}, NIT {nit}, {address}, is the data controller for mobiera.io. Data-protection contact: <mail>{email}</mail>."
+    "body": "[[legalName]], [[legalRegistration]], [[legalAddress]], is the data controller for [[siteDomain]]. Data-protection contact: <mail>{email}</mail>."
   },
   "collect": {
     "title": "What we collect",
@@ -27,7 +27,7 @@
   },
   "rights": {
     "title": "Your rights",
-    "body": "Access, correction, deletion, restriction, portability and objection, under Colombian Law 1581 of 2012 and, where it applies, the GDPR. Write to <mail>{email}</mail>. We answer within 15 business days."
+    "body": "Access, correction, deletion, restriction, portability and objection, under [[dataLaw]] and, where it applies, the GDPR. Write to <mail>{email}</mail>. We answer within [[rightsDays]] business days."
   },
   "changes": {
     "title": "Changes",

@@ -139,7 +139,7 @@
     },
     "business": {
       "tab": "Business",
-      "holder": "Mobiera SAS",
+      "holder": "[[legalName]]",
       "type": "Business registration credential",
       "issuer": "Business Registry · Republic of Verandia (demo)",
       "status": "Issuer accredited",
